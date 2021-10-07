@@ -1,0 +1,94 @@
+.ui-process-content {
+    line-height: 40px;
+    border-left: 1px solid  #DEDEDE;
+    border-right: 1px solid  #DEDEDE;
+    border-bottom: 1px solid  #DEDEDE;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    /*display: none;*/
+}
+.ui-process-content p{
+    padding: 5px 15px;
+}
+.ui-process-radius {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+/*收起*/
+.fold {
+    -webkit-animation: 1s fold forwards;
+    animation: 1s fold forwards;
+    overflow: hidden;
+    z-index: -1;
+    /*display: none;*/
+}
+
+/*展开*/
+.unfold {
+    -webkit-animation: 1s unfold forwards;
+    animation: 1s unfold forwards;
+    height: 200px;
+    overflow: hidden;
+    /*display: block;*/
+}
+
+@-webkit-keyframes unfold{
+    /*0%{transform: translatey(-200px)}*/
+    100%{transform: translatey(0px)}
+}
+
+@-webkit-keyframes fold{
+    100%{transform: translatey(-64px)}
+}
+
+.list-content {
+    overflow:hidden;
+    height: auto;
+}
+.ui-process-content {
+    transition: transform 0.3s;
+    transform: translateY(0);
+}
+.list-close .list-content{
+    /*height: 0;*/
+}
+.list-close  .ui-process-content {
+    transform: translateY(-100%);
+}
+.ui-icon-mylist-arrow{
+
+}
+
+.ui-icon-mylist-arrow:after {
+    content: "\e617";
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    font-family: iconfont;
+    font-size: larger;
+    font-size: 25px;
+    font-weight: 600;
+    color: #DDDDDD;
+    animation: deg 0.5s forwards;
+}
+.arr-change{
+
+}
+
+.arr-change:after{
+    animation: deg 0.5s forwards;
+}
+
+.change{
+    background-color:#003e8b!important;
+}
+
+@keyframes deg {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(90deg) ;}
+}
+
+@keyframes deg2 {
+    0% {transform: rotate(90deg); }
+    100% {transform: rotate(0deg) ;}
+}
