@@ -1,0 +1,424 @@
+{
+  "words": [
+    {
+      "word": "algorithm",
+      "meaning": "算法；解决问题的步骤与规则",
+      "example": "On Monday this morning, we implemented 'algorithm' during code review on GitHub."
+    },
+    {
+      "word": "API",
+      "meaning": "应用程序编程接口；定义组件交互的契约",
+      "example": "On Tuesday this afternoon, we refactored 'API' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "SDK",
+      "meaning": "软件开发工具包；封装的开发与调试工具集合",
+      "example": "On Wednesday yesterday, we benchmarked 'SDK' while refactoring in Kubernetes."
+    },
+    {
+      "word": "library",
+      "meaning": "库；可复用的函数或类集合",
+      "example": "On Thursday today, we documented 'library' in production behind a load balancer."
+    },
+    {
+      "word": "framework",
+      "meaning": "框架；带约束的应用骨架与运行时",
+      "example": "On Friday last night, we rolled back 'framework' on the staging cluster with Kafka."
+    },
+    {
+      "word": "module",
+      "meaning": "模块；实现特定功能的代码单元",
+      "example": "On Saturday before release, we deployed 'module' during a sprint via REST."
+    },
+    {
+      "word": "package",
+      "meaning": "包；按规范组织并可分发的代码集合",
+      "example": "On Sunday after rollback, we monitored 'package' in the microservice over gRPC."
+    },
+    {
+      "word": "repository",
+      "meaning": "代码仓库；用于版本管理与协作",
+      "example": "On Monday during on-call, we optimized 'repository' under high load with feature flags."
+    },
+    {
+      "word": "version control",
+      "meaning": "版本控制；记录并管理代码变更",
+      "example": "On Tuesday this morning, we patched 'version control' during code review on GitHub."
+    },
+    {
+      "word": "branch",
+      "meaning": "分支；并行开发的变更线路",
+      "example": "On Wednesday this afternoon, we containerized 'branch' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "merge",
+      "meaning": "合并；将多个分支变更整合",
+      "example": "On Thursday yesterday, we implemented 'merge' while refactoring in Kubernetes."
+    },
+    {
+      "word": "commit",
+      "meaning": "提交；一次原子化代码变更记录",
+      "example": "On Friday today, we refactored 'commit' in production behind a load balancer."
+    },
+    {
+      "word": "tag",
+      "meaning": "标签；为特定版本打标记",
+      "example": "On Saturday last night, we benchmarked 'tag' on the staging cluster with Kafka."
+    },
+    {
+      "word": "release",
+      "meaning": "发布；交付可用的软件版本",
+      "example": "On Sunday before release, we documented 'release' during a sprint via REST."
+    },
+    {
+      "word": "CI",
+      "meaning": "持续集成；频繁合并并自动构建测试",
+      "example": "On Monday after rollback, we rolled back 'CI' in the microservice over gRPC."
+    },
+    {
+      "word": "CD",
+      "meaning": "持续交付/部署；自动化发布到环境",
+      "example": "On Tuesday during on-call, we deployed 'CD' under high load with feature flags."
+    },
+    {
+      "word": "pipeline",
+      "meaning": "流水线；构建/测试/发布的自动化流程",
+      "example": "On Wednesday this morning, we monitored 'pipeline' during code review on GitHub."
+    },
+    {
+      "word": "build",
+      "meaning": "构建；将源代码生成可执行产物",
+      "example": "On Thursday this afternoon, we optimized 'build' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "artifact",
+      "meaning": "制品；构建产生的可分发产物",
+      "example": "On Friday yesterday, we patched 'artifact' while refactoring in Kubernetes."
+    },
+    {
+      "word": "dependency",
+      "meaning": "依赖；代码运行/构建所需的外部组件",
+      "example": "On Saturday today, we containerized 'dependency' in production behind a load balancer."
+    },
+    {
+      "word": "container",
+      "meaning": "容器；隔离运行环境的打包单元",
+      "example": "On Sunday last night, we implemented 'container' on the staging cluster with Kafka."
+    },
+    {
+      "word": "Docker",
+      "meaning": "Docker；主流容器化平台",
+      "example": "On Monday before release, we refactored 'Docker' during a sprint via REST."
+    },
+    {
+      "word": "Kubernetes",
+      "meaning": "K8s；容器编排系统",
+      "example": "On Tuesday after rollback, we benchmarked 'Kubernetes' in the microservice over gRPC."
+    },
+    {
+      "word": "microservice",
+      "meaning": "微服务；按业务拆分的独立服务",
+      "example": "On Wednesday during on-call, we documented 'microservice' under high load with feature flags."
+    },
+    {
+      "word": "monolith",
+      "meaning": "单体；所有功能集中在单一进程",
+      "example": "On Thursday this morning, we rolled back 'monolith' during code review on GitHub."
+    },
+    {
+      "word": "REST",
+      "meaning": "表述性状态转移；基于HTTP的接口风格",
+      "example": "On Friday this afternoon, we deployed 'REST' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "GraphQL",
+      "meaning": "查询语言；按需获取数据的API规范",
+      "example": "On Saturday yesterday, we monitored 'GraphQL' while refactoring in Kubernetes."
+    },
+    {
+      "word": "gRPC",
+      "meaning": "高性能RPC框架；基于HTTP/2与Protobuf",
+      "example": "On Sunday today, we optimized 'gRPC' in production behind a load balancer."
+    },
+    {
+      "word": "endpoint",
+      "meaning": "端点；API对外暴露的接口地址",
+      "example": "On Monday last night, we patched 'endpoint' on the staging cluster with Kafka."
+    },
+    {
+      "word": "request",
+      "meaning": "请求；客户端发起的操作",
+      "example": "On Tuesday before release, we containerized 'request' during a sprint via REST."
+    },
+    {
+      "word": "response",
+      "meaning": "响应；服务端返回的结果",
+      "example": "On Wednesday after rollback, we implemented 'response' in the microservice over gRPC."
+    },
+    {
+      "word": "JSON",
+      "meaning": "JSON；轻量级数据交换格式",
+      "example": "On Thursday during on-call, we refactored 'JSON' under high load with feature flags."
+    },
+    {
+      "word": "YAML",
+      "meaning": "YAML；人类可读的配置格式",
+      "example": "On Friday this morning, we benchmarked 'YAML' during code review on GitHub."
+    },
+    {
+      "word": "protobuf",
+      "meaning": "协议缓冲；结构化数据序列化格式",
+      "example": "On Saturday this afternoon, we documented 'protobuf' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "cache",
+      "meaning": "缓存；以空间换时间的加速机制",
+      "example": "On Sunday yesterday, we rolled back 'cache' while refactoring in Kubernetes."
+    },
+    {
+      "word": "database",
+      "meaning": "数据库；持久化存储系统",
+      "example": "On Monday today, we deployed 'database' in production behind a load balancer."
+    },
+    {
+      "word": "SQL",
+      "meaning": "结构化查询语言；关系型数据库查询语言",
+      "example": "On Tuesday last night, we monitored 'SQL' on the staging cluster with Kafka."
+    },
+    {
+      "word": "NoSQL",
+      "meaning": "非关系型数据库；键值/文档/列式等",
+      "example": "On Wednesday before release, we optimized 'NoSQL' during a sprint via REST."
+    },
+    {
+      "word": "transaction",
+      "meaning": "事务；满足ACID的操作单元",
+      "example": "On Thursday after rollback, we patched 'transaction' in the microservice over gRPC."
+    },
+    {
+      "word": "index",
+      "meaning": "索引；加速查询的数据结构",
+      "example": "On Friday during on-call, we containerized 'index' under high load with feature flags."
+    },
+    {
+      "word": "schema",
+      "meaning": "模式；数据结构定义",
+      "example": "On Saturday this morning, we implemented 'schema' during code review on GitHub."
+    },
+    {
+      "word": "migration",
+      "meaning": "迁移；变更数据库结构/数据",
+      "example": "On Sunday this afternoon, we refactored 'migration' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "ORM",
+      "meaning": "对象关系映射；用对象操作关系数据",
+      "example": "On Monday yesterday, we benchmarked 'ORM' while refactoring in Kubernetes."
+    },
+    {
+      "word": "latency",
+      "meaning": "时延；请求往返所需时间",
+      "example": "On Tuesday today, we documented 'latency' in production behind a load balancer."
+    },
+    {
+      "word": "throughput",
+      "meaning": "吞吐量；单位时间处理能力",
+      "example": "On Wednesday last night, we rolled back 'throughput' on the staging cluster with Kafka."
+    },
+    {
+      "word": "scalability",
+      "meaning": "可扩展性；随负载增长保持性能能力",
+      "example": "On Thursday before release, we deployed 'scalability' during a sprint via REST."
+    },
+    {
+      "word": "availability",
+      "meaning": "可用性；系统可正常服务的比例",
+      "example": "On Friday after rollback, we monitored 'availability' in the microservice over gRPC."
+    },
+    {
+      "word": "reliability",
+      "meaning": "可靠性；长期无故障运行能力",
+      "example": "On Saturday during on-call, we optimized 'reliability' under high load with feature flags."
+    },
+    {
+      "word": "fault tolerance",
+      "meaning": "容错；故障发生仍保持服务能力",
+      "example": "On Sunday this morning, we patched 'fault tolerance' during code review on GitHub."
+    },
+    {
+      "word": "load balancer",
+      "meaning": "负载均衡器；分配流量到多实例",
+      "example": "On Monday this afternoon, we containerized 'load balancer' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "message queue",
+      "meaning": "消息队列；解耦与削峰填谷组件",
+      "example": "On Tuesday yesterday, we implemented 'message queue' while refactoring in Kubernetes."
+    },
+    {
+      "word": "Kafka",
+      "meaning": "Kafka；分布式流处理平台",
+      "example": "On Wednesday today, we refactored 'Kafka' in production behind a load balancer."
+    },
+    {
+      "word": "RabbitMQ",
+      "meaning": "RabbitMQ；AMQP消息代理",
+      "example": "On Thursday last night, we benchmarked 'RabbitMQ' on the staging cluster with Kafka."
+    },
+    {
+      "word": "event-driven",
+      "meaning": "事件驱动；以事件触发处理流程",
+      "example": "On Friday before release, we documented 'event-driven' during a sprint via REST."
+    },
+    {
+      "word": "logging",
+      "meaning": "日志；记录运行时关键事件",
+      "example": "On Saturday after rollback, we rolled back 'logging' in the microservice over gRPC."
+    },
+    {
+      "word": "tracing",
+      "meaning": "链路追踪；跨服务请求路径观测",
+      "example": "On Sunday during on-call, we deployed 'tracing' under high load with feature flags."
+    },
+    {
+      "word": "metrics",
+      "meaning": "指标；可量化的运行数据",
+      "example": "On Monday this morning, we monitored 'metrics' during code review on GitHub."
+    },
+    {
+      "word": "monitoring",
+      "meaning": "监控；采集并观测运行健康度",
+      "example": "On Tuesday this afternoon, we optimized 'monitoring' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "alerting",
+      "meaning": "告警；指标异常时的通知机制",
+      "example": "On Wednesday yesterday, we patched 'alerting' while refactoring in Kubernetes."
+    },
+    {
+      "word": "dashboard",
+      "meaning": "看板；可视化监控与指标",
+      "example": "On Thursday today, we containerized 'dashboard' in production behind a load balancer."
+    },
+    {
+      "word": "feature flag",
+      "meaning": "特性开关；按用户/环境开关功能",
+      "example": "On Friday last night, we implemented 'feature flag' on the staging cluster with Kafka."
+    },
+    {
+      "word": "configuration",
+      "meaning": "配置；行为参数化设置",
+      "example": "On Saturday before release, we refactored 'configuration' during a sprint via REST."
+    },
+    {
+      "word": "staging",
+      "meaning": "预发布环境；与生产近似的验证环境",
+      "example": "On Sunday after rollback, we benchmarked 'staging' in the microservice over gRPC."
+    },
+    {
+      "word": "production",
+      "meaning": "生产环境；真实用户访问环境",
+      "example": "On Monday during on-call, we documented 'production' under high load with feature flags."
+    },
+    {
+      "word": "rollback",
+      "meaning": "回滚；恢复到先前稳定版本",
+      "example": "On Tuesday this morning, we rolled back 'rollback' during code review on GitHub."
+    },
+    {
+      "word": "hotfix",
+      "meaning": "热修复；紧急问题快速修补",
+      "example": "On Wednesday this afternoon, we deployed 'hotfix' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "refactor",
+      "meaning": "重构；不改功能优化内部设计",
+      "example": "On Thursday yesterday, we monitored 'refactor' while refactoring in Kubernetes."
+    },
+    {
+      "word": "code review",
+      "meaning": "代码评审；同伴检查变更质量",
+      "example": "On Friday today, we optimized 'code review' in production behind a load balancer."
+    },
+    {
+      "word": "lint",
+      "meaning": "静态检查；依据规则扫描代码问题",
+      "example": "On Saturday last night, we patched 'lint' on the staging cluster with Kafka."
+    },
+    {
+      "word": "formatter",
+      "meaning": "格式化器；统一代码风格的工具",
+      "example": "On Sunday before release, we containerized 'formatter' during a sprint via REST."
+    },
+    {
+      "word": "interface",
+      "meaning": "接口；对外暴露的方法/契约",
+      "example": "On Monday after rollback, we implemented 'interface' in the microservice over gRPC."
+    },
+    {
+      "word": "class",
+      "meaning": "类；封装数据与行为的类型",
+      "example": "On Tuesday during on-call, we refactored 'class' under high load with feature flags."
+    },
+    {
+      "word": "function",
+      "meaning": "函数；可复用的执行单元",
+      "example": "On Wednesday this morning, we benchmarked 'function' during code review on GitHub."
+    },
+    {
+      "word": "variable",
+      "meaning": "变量；可变的存储单元",
+      "example": "On Thursday this afternoon, we documented 'variable' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "memory leak",
+      "meaning": "内存泄漏；分配未释放导致可用内存减少",
+      "example": "On Friday yesterday, we rolled back 'memory leak' while refactoring in Kubernetes."
+    },
+    {
+      "word": "garbage collection",
+      "meaning": "垃圾回收；自动释放不再使用的内存",
+      "example": "On Saturday today, we deployed 'garbage collection' in production behind a load balancer."
+    },
+    {
+      "word": "thread",
+      "meaning": "线程；进程内的执行实体",
+      "example": "On Sunday last night, we monitored 'thread' on the staging cluster with Kafka."
+    },
+    {
+      "word": "process",
+      "meaning": "进程；资源与执行的基本单位",
+      "example": "On Monday before release, we optimized 'process' during a sprint via REST."
+    },
+    {
+      "word": "deadlock",
+      "meaning": "死锁；多个执行单元互相等待",
+      "example": "On Tuesday after rollback, we patched 'deadlock' in the microservice over gRPC."
+    },
+    {
+      "word": "race condition",
+      "meaning": "竞态；并发访问顺序不确定引发问题",
+      "example": "On Wednesday during on-call, we containerized 'race condition' under high load with feature flags."
+    },
+    {
+      "word": "lock",
+      "meaning": "锁；并发控制的互斥机制",
+      "example": "On Thursday this morning, we implemented 'lock' during code review on GitHub."
+    },
+    {
+      "word": "semaphore",
+      "meaning": "信号量；控制并发访问数量",
+      "example": "On Friday this afternoon, we refactored 'semaphore' in the CI pipeline on GitLab."
+    },
+    {
+      "word": "asynchronous",
+      "meaning": "异步；非阻塞的调用方式",
+      "example": "On Saturday yesterday, we benchmarked 'asynchronous' while refactoring in Kubernetes."
+    },
+    {
+      "word": "coroutine",
+      "meaning": "协程；轻量级用户态并发单元",
+      "example": "On Sunday today, we documented 'coroutine' in production behind a load balancer."
+    }
+  ]
+}

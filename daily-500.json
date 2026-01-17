@@ -1,0 +1,2504 @@
+{
+  "words": [
+    {
+      "word": "water",
+      "meaning": "水",
+      "example": "Drink more water during the day."
+    },
+    {
+      "word": "tea",
+      "meaning": "茶",
+      "example": "I made a cup of tea to relax."
+    },
+    {
+      "word": "coffee",
+      "meaning": "咖啡",
+      "example": "I need coffee to wake up in the morning."
+    },
+    {
+      "word": "milk",
+      "meaning": "牛奶",
+      "example": "She bought milk for breakfast."
+    },
+    {
+      "word": "bread",
+      "meaning": "面包",
+      "example": "We sliced fresh bread for dinner."
+    },
+    {
+      "word": "rice",
+      "meaning": "米饭",
+      "example": "I cooked rice to go with the stir‑fry."
+    },
+    {
+      "word": "noodles",
+      "meaning": "面条",
+      "example": "Let’s have noodles for lunch."
+    },
+    {
+      "word": "egg",
+      "meaning": "鸡蛋",
+      "example": "I fried an egg for a quick meal."
+    },
+    {
+      "word": "eggs",
+      "meaning": "鸡蛋",
+      "example": "We scrambled two eggs for breakfast."
+    },
+    {
+      "word": "fruit",
+      "meaning": "水果",
+      "example": "Eat some fruit after your workout."
+    },
+    {
+      "word": "apple",
+      "meaning": "苹果",
+      "example": "He ate an apple as a snack."
+    },
+    {
+      "word": "banana",
+      "meaning": "香蕉",
+      "example": "Grab a banana before you leave."
+    },
+    {
+      "word": "orange",
+      "meaning": "橙子",
+      "example": "Peel an orange for vitamin C."
+    },
+    {
+      "word": "grape",
+      "meaning": "葡萄",
+      "example": "She bought a bag of grapes."
+    },
+    {
+      "word": "lemon",
+      "meaning": "柠檬",
+      "example": "Add a slice of lemon to your water."
+    },
+    {
+      "word": "strawberry",
+      "meaning": "草莓",
+      "example": "Strawberries go well with yogurt."
+    },
+    {
+      "word": "tomato",
+      "meaning": "西红柿",
+      "example": "Dice a tomato for the salad."
+    },
+    {
+      "word": "potato",
+      "meaning": "土豆",
+      "example": "Boil a potato for mash."
+    },
+    {
+      "word": "onion",
+      "meaning": "洋葱",
+      "example": "Chop the onion finely."
+    },
+    {
+      "word": "garlic",
+      "meaning": "大蒜",
+      "example": "Add garlic for extra flavor."
+    },
+    {
+      "word": "carrot",
+      "meaning": "胡萝卜",
+      "example": "Shred a carrot into the soup."
+    },
+    {
+      "word": "cabbage",
+      "meaning": "卷心菜",
+      "example": "Stir‑fry the cabbage with pork."
+    },
+    {
+      "word": "beef",
+      "meaning": "牛肉",
+      "example": "We cooked beef with black pepper."
+    },
+    {
+      "word": "pork",
+      "meaning": "猪肉",
+      "example": "She marinated the pork overnight."
+    },
+    {
+      "word": "chicken",
+      "meaning": "鸡肉",
+      "example": "Grill the chicken until it’s done."
+    },
+    {
+      "word": "fish",
+      "meaning": "鱼",
+      "example": "Steam the fish with ginger."
+    },
+    {
+      "word": "tofu",
+      "meaning": "豆腐",
+      "example": "Tofu absorbs the sauce well."
+    },
+    {
+      "word": "salad",
+      "meaning": "沙拉",
+      "example": "Make a simple salad with olive oil."
+    },
+    {
+      "word": "soup",
+      "meaning": "汤",
+      "example": "Heat the soup before serving."
+    },
+    {
+      "word": "sandwich",
+      "meaning": "三明治",
+      "example": "Pack a sandwich for the trip."
+    },
+    {
+      "word": "burger",
+      "meaning": "汉堡",
+      "example": "We ordered a burger and fries."
+    },
+    {
+      "word": "pizza",
+      "meaning": "披萨",
+      "example": "They shared a large pizza."
+    },
+    {
+      "word": "noodle",
+      "meaning": "面条",
+      "example": "This noodle dish is spicy."
+    },
+    {
+      "word": "dumpling",
+      "meaning": "饺子",
+      "example": "Let’s make dumplings together."
+    },
+    {
+      "word": "yogurt",
+      "meaning": "酸奶",
+      "example": "Have yogurt after dinner."
+    },
+    {
+      "word": "cheese",
+      "meaning": "奶酪",
+      "example": "Melt cheese on the toast."
+    },
+    {
+      "word": "butter",
+      "meaning": "黄油",
+      "example": "Spread butter on the bread."
+    },
+    {
+      "word": "sugar",
+      "meaning": "糖",
+      "example": "Cut down on sugar if possible."
+    },
+    {
+      "word": "salt",
+      "meaning": "盐",
+      "example": "Add a pinch of salt."
+    },
+    {
+      "word": "pepper",
+      "meaning": "胡椒",
+      "example": "Season with black pepper."
+    },
+    {
+      "word": "oil",
+      "meaning": "油",
+      "example": "Use less oil when frying."
+    },
+    {
+      "word": "sauce",
+      "meaning": "酱",
+      "example": "Drizzle sauce over the noodles."
+    },
+    {
+      "word": "spice",
+      "meaning": "香料",
+      "example": "This spice mix smells great."
+    },
+    {
+      "word": "cookie",
+      "meaning": "饼干",
+      "example": "She baked chocolate chip cookies."
+    },
+    {
+      "word": "cake",
+      "meaning": "蛋糕",
+      "example": "We bought a birthday cake."
+    },
+    {
+      "word": "chocolate",
+      "meaning": "巧克力",
+      "example": "Dark chocolate is my favorite."
+    },
+    {
+      "word": "icecream",
+      "meaning": "冰淇淋",
+      "example": "Let’s get ice cream after dinner."
+    },
+    {
+      "word": "juice",
+      "meaning": "果汁",
+      "example": "Fresh orange juice tastes better."
+    },
+    {
+      "word": "watermelon",
+      "meaning": "西瓜",
+      "example": "Slice the watermelon for dessert."
+    },
+    {
+      "word": "wake",
+      "meaning": "醒来",
+      "example": "I wake up at 6:30 on weekdays."
+    },
+    {
+      "word": "sleep",
+      "meaning": "睡觉",
+      "example": "Try to get eight hours of sleep."
+    },
+    {
+      "word": "study",
+      "meaning": "学习",
+      "example": "He studies English every night."
+    },
+    {
+      "word": "work",
+      "meaning": "工作",
+      "example": "I work from nine to six."
+    },
+    {
+      "word": "read",
+      "meaning": "阅读",
+      "example": "Read for fifteen minutes before bed."
+    },
+    {
+      "word": "write",
+      "meaning": "写",
+      "example": "Write a short summary after each meeting."
+    },
+    {
+      "word": "watch",
+      "meaning": "观看",
+      "example": "We watch a movie on weekends."
+    },
+    {
+      "word": "listen",
+      "meaning": "听",
+      "example": "Listen to podcasts on your commute."
+    },
+    {
+      "word": "learn",
+      "meaning": "学习",
+      "example": "I learn new words daily."
+    },
+    {
+      "word": "teach",
+      "meaning": "教授",
+      "example": "She teaches math at school."
+    },
+    {
+      "word": "cook",
+      "meaning": "做饭",
+      "example": "I cook dinner for my family."
+    },
+    {
+      "word": "eat",
+      "meaning": "吃",
+      "example": "Let’s eat before the call."
+    },
+    {
+      "word": "drink",
+      "meaning": "喝",
+      "example": "Drink plenty of water."
+    },
+    {
+      "word": "wash",
+      "meaning": "清洗",
+      "example": "Wash the dishes after dinner."
+    },
+    {
+      "word": "clean",
+      "meaning": "打扫",
+      "example": "Clean the room every Sunday."
+    },
+    {
+      "word": "shop",
+      "meaning": "购物",
+      "example": "We shop online for groceries."
+    },
+    {
+      "word": "drive",
+      "meaning": "驾驶",
+      "example": "He drives to work."
+    },
+    {
+      "word": "walk",
+      "meaning": "走路",
+      "example": "Walk ten thousand steps a day."
+    },
+    {
+      "word": "run",
+      "meaning": "跑步",
+      "example": "She runs three times a week."
+    },
+    {
+      "word": "exercise",
+      "meaning": "锻炼",
+      "example": "Do some exercise in the morning."
+    },
+    {
+      "word": "rest",
+      "meaning": "休息",
+      "example": "Take a short rest after lunch."
+    },
+    {
+      "word": "play",
+      "meaning": "玩耍",
+      "example": "Kids play outside after school."
+    },
+    {
+      "word": "swim",
+      "meaning": "游泳",
+      "example": "I swim at the gym on Fridays."
+    },
+    {
+      "word": "call",
+      "meaning": "打电话",
+      "example": "Call me when you arrive."
+    },
+    {
+      "word": "text",
+      "meaning": "发短信",
+      "example": "Text me the address."
+    },
+    {
+      "word": "chat",
+      "meaning": "聊天",
+      "example": "We chat on WeChat in the evening."
+    },
+    {
+      "word": "meet",
+      "meaning": "见面",
+      "example": "Let’s meet at 3 p.m."
+    },
+    {
+      "word": "visit",
+      "meaning": "拜访",
+      "example": "We will visit the museum tomorrow."
+    },
+    {
+      "word": "travel",
+      "meaning": "旅行",
+      "example": "They love to travel abroad."
+    },
+    {
+      "word": "plan",
+      "meaning": "计划",
+      "example": "Plan your week on Sunday night."
+    },
+    {
+      "word": "pack",
+      "meaning": "打包",
+      "example": "Pack a light bag for the trip."
+    },
+    {
+      "word": "pay",
+      "meaning": "付款",
+      "example": "Pay the bill online."
+    },
+    {
+      "word": "order",
+      "meaning": "下单",
+      "example": "Order a taxi to the airport."
+    },
+    {
+      "word": "book",
+      "meaning": "预订",
+      "example": "Book a table for two."
+    },
+    {
+      "word": "buy",
+      "meaning": "购买",
+      "example": "Buy fresh vegetables today."
+    },
+    {
+      "word": "sell",
+      "meaning": "销售",
+      "example": "They sell fruit at the market."
+    },
+    {
+      "word": "open",
+      "meaning": "打开",
+      "example": "Open the window for fresh air."
+    },
+    {
+      "word": "close",
+      "meaning": "关闭",
+      "example": "Close the door quietly."
+    },
+    {
+      "word": "fix",
+      "meaning": "修理",
+      "example": "Can you fix the leaking tap?"
+    },
+    {
+      "word": "repair",
+      "meaning": "修理",
+      "example": "He repaired the broken chair."
+    },
+    {
+      "word": "charge",
+      "meaning": "充电",
+      "example": "Charge your phone before you leave."
+    },
+    {
+      "word": "print",
+      "meaning": "打印",
+      "example": "Print the ticket at home."
+    },
+    {
+      "word": "scan",
+      "meaning": "扫描",
+      "example": "Scan the document to PDF."
+    },
+    {
+      "word": "home",
+      "meaning": "家",
+      "example": "Let’s head home after dinner."
+    },
+    {
+      "word": "house",
+      "meaning": "房子",
+      "example": "Their house has a small garden."
+    },
+    {
+      "word": "room",
+      "meaning": "房间",
+      "example": "The room feels cozy."
+    },
+    {
+      "word": "kitchen",
+      "meaning": "厨房",
+      "example": "Keep the kitchen clean."
+    },
+    {
+      "word": "bathroom",
+      "meaning": "卫生间",
+      "example": "The bathroom needs new tiles."
+    },
+    {
+      "word": "bedroom",
+      "meaning": "卧室",
+      "example": "The bedroom faces east."
+    },
+    {
+      "word": "livingroom",
+      "meaning": "客厅",
+      "example": "We put a plant in the living room."
+    },
+    {
+      "word": "office",
+      "meaning": "办公室",
+      "example": "I’ll be at the office all day."
+    },
+    {
+      "word": "school",
+      "meaning": "学校",
+      "example": "The school opens at eight."
+    },
+    {
+      "word": "classroom",
+      "meaning": "教室",
+      "example": "The classroom has a projector."
+    },
+    {
+      "word": "library",
+      "meaning": "图书馆",
+      "example": "Return the book to the library."
+    },
+    {
+      "word": "store",
+      "meaning": "商店",
+      "example": "That store sells good coffee."
+    },
+    {
+      "word": "supermarket",
+      "meaning": "超市",
+      "example": "The supermarket is crowded today."
+    },
+    {
+      "word": "market",
+      "meaning": "市场",
+      "example": "Buy fresh fish at the market."
+    },
+    {
+      "word": "mall",
+      "meaning": "商场",
+      "example": "The mall is close to the station."
+    },
+    {
+      "word": "restaurant",
+      "meaning": "餐馆",
+      "example": "This restaurant is popular."
+    },
+    {
+      "word": "cafe",
+      "meaning": "咖啡馆",
+      "example": "Meet me at the cafe."
+    },
+    {
+      "word": "bakery",
+      "meaning": "面包店",
+      "example": "The bakery opens early."
+    },
+    {
+      "word": "hospital",
+      "meaning": "医院",
+      "example": "He went to the hospital for a checkup."
+    },
+    {
+      "word": "clinic",
+      "meaning": "诊所",
+      "example": "Visit the clinic if needed."
+    },
+    {
+      "word": "pharmacy",
+      "meaning": "药店",
+      "example": "The pharmacy sells masks."
+    },
+    {
+      "word": "bank",
+      "meaning": "银行",
+      "example": "The bank closes at five."
+    },
+    {
+      "word": "postoffice",
+      "meaning": "邮局",
+      "example": "Send the parcel from the post office."
+    },
+    {
+      "word": "station",
+      "meaning": "车站",
+      "example": "The station is two stops away."
+    },
+    {
+      "word": "airport",
+      "meaning": "机场",
+      "example": "Get to the airport two hours early."
+    },
+    {
+      "word": "park",
+      "meaning": "公园",
+      "example": "We jog in the park."
+    },
+    {
+      "word": "gym",
+      "meaning": "健身房",
+      "example": "The gym is busy in the evening."
+    },
+    {
+      "word": "museum",
+      "meaning": "博物馆",
+      "example": "The museum is free on Mondays."
+    },
+    {
+      "word": "hotel",
+      "meaning": "酒店",
+      "example": "The hotel offers breakfast."
+    },
+    {
+      "word": "street",
+      "meaning": "街道",
+      "example": "The street is quiet at night."
+    },
+    {
+      "word": "road",
+      "meaning": "道路",
+      "example": "Drive carefully on this road."
+    },
+    {
+      "word": "bridge",
+      "meaning": "桥",
+      "example": "The bridge is under repair."
+    },
+    {
+      "word": "subway",
+      "meaning": "地铁",
+      "example": "Take the subway to downtown."
+    },
+    {
+      "word": "busstop",
+      "meaning": "公交站",
+      "example": "Wait at the bus stop."
+    },
+    {
+      "word": "parking",
+      "meaning": "停车场",
+      "example": "Parking is full after 9 a.m."
+    },
+    {
+      "word": "car",
+      "meaning": "汽车",
+      "example": "She drives a small car."
+    },
+    {
+      "word": "bus",
+      "meaning": "公交车",
+      "example": "The bus arrives every ten minutes."
+    },
+    {
+      "word": "bike",
+      "meaning": "自行车",
+      "example": "Lock your bike outside."
+    },
+    {
+      "word": "bicycle",
+      "meaning": "自行车",
+      "example": "He rides a bicycle to work."
+    },
+    {
+      "word": "train",
+      "meaning": "火车",
+      "example": "Catch the train at 8:05."
+    },
+    {
+      "word": "subwaycar",
+      "meaning": "地铁车厢",
+      "example": "This subway car is crowded."
+    },
+    {
+      "word": "taxi",
+      "meaning": "出租车",
+      "example": "Take a taxi to the hotel."
+    },
+    {
+      "word": "plane",
+      "meaning": "飞机",
+      "example": "The plane landed on time."
+    },
+    {
+      "word": "flight",
+      "meaning": "航班",
+      "example": "Our flight departs at noon."
+    },
+    {
+      "word": "ticket",
+      "meaning": "票",
+      "example": "Buy a return ticket."
+    },
+    {
+      "word": "seat",
+      "meaning": "座位",
+      "example": "Choose a window seat."
+    },
+    {
+      "word": "helmet",
+      "meaning": "头盔",
+      "example": "Wear a helmet when cycling."
+    },
+    {
+      "word": "traffic",
+      "meaning": "交通",
+      "example": "Traffic is heavy this morning."
+    },
+    {
+      "word": "signal",
+      "meaning": "交通信号灯",
+      "example": "Wait for the green signal."
+    },
+    {
+      "word": "map",
+      "meaning": "地图",
+      "example": "Check the map on your phone."
+    },
+    {
+      "word": "table",
+      "meaning": "桌子",
+      "example": "The table is made of wood."
+    },
+    {
+      "word": "chair",
+      "meaning": "椅子",
+      "example": "Pull up a chair and sit."
+    },
+    {
+      "word": "desk",
+      "meaning": "书桌",
+      "example": "Keep your desk tidy."
+    },
+    {
+      "word": "sofa",
+      "meaning": "沙发",
+      "example": "We replaced the old sofa."
+    },
+    {
+      "word": "bed",
+      "meaning": "床",
+      "example": "Make the bed after you wake."
+    },
+    {
+      "word": "pillow",
+      "meaning": "枕头",
+      "example": "This pillow feels soft."
+    },
+    {
+      "word": "blanket",
+      "meaning": "毯子",
+      "example": "Grab a blanket if you’re cold."
+    },
+    {
+      "word": "sheet",
+      "meaning": "床单",
+      "example": "Change the sheet weekly."
+    },
+    {
+      "word": "towel",
+      "meaning": "毛巾",
+      "example": "Use a fresh towel."
+    },
+    {
+      "word": "toothbrush",
+      "meaning": "牙刷",
+      "example": "Replace your toothbrush every three months."
+    },
+    {
+      "word": "toothpaste",
+      "meaning": "牙膏",
+      "example": "Buy fluoride toothpaste."
+    },
+    {
+      "word": "soap",
+      "meaning": "肥皂",
+      "example": "This soap smells nice."
+    },
+    {
+      "word": "shampoo",
+      "meaning": "洗发水",
+      "example": "Use shampoo twice a week."
+    },
+    {
+      "word": "mirror",
+      "meaning": "镜子",
+      "example": "The mirror needs cleaning."
+    },
+    {
+      "word": "clock",
+      "meaning": "时钟",
+      "example": "Set the clock to alarm at 7."
+    },
+    {
+      "word": "lamp",
+      "meaning": "台灯",
+      "example": "Turn on the lamp."
+    },
+    {
+      "word": "light",
+      "meaning": "灯光",
+      "example": "The light is too bright."
+    },
+    {
+      "word": "door",
+      "meaning": "门",
+      "example": "Close the door gently."
+    },
+    {
+      "word": "window",
+      "meaning": "窗户",
+      "example": "Open the window to air the room."
+    },
+    {
+      "word": "key",
+      "meaning": "钥匙",
+      "example": "Don’t forget your key."
+    },
+    {
+      "word": "phone",
+      "meaning": "手机",
+      "example": "Your phone is ringing."
+    },
+    {
+      "word": "computer",
+      "meaning": "电脑",
+      "example": "The computer runs slow."
+    },
+    {
+      "word": "laptop",
+      "meaning": "笔记本电脑",
+      "example": "Charge the laptop overnight."
+    },
+    {
+      "word": "tablet",
+      "meaning": "平板电脑",
+      "example": "Download the app on your tablet."
+    },
+    {
+      "word": "keyboard",
+      "meaning": "键盘",
+      "example": "The keyboard is noisy."
+    },
+    {
+      "word": "mouse",
+      "meaning": "鼠标",
+      "example": "The mouse battery is low."
+    },
+    {
+      "word": "screen",
+      "meaning": "屏幕",
+      "example": "Adjust the screen brightness."
+    },
+    {
+      "word": "cable",
+      "meaning": "线缆",
+      "example": "Replace the broken cable."
+    },
+    {
+      "word": "charger",
+      "meaning": "充电器",
+      "example": "Where is my charger?"
+    },
+    {
+      "word": "battery",
+      "meaning": "电池",
+      "example": "The battery drains fast."
+    },
+    {
+      "word": "camera",
+      "meaning": "相机",
+      "example": "The camera takes sharp photos."
+    },
+    {
+      "word": "tv",
+      "meaning": "电视",
+      "example": "Turn off the TV before bed."
+    },
+    {
+      "word": "remote",
+      "meaning": "遥控器",
+      "example": "Use the remote to change channels."
+    },
+    {
+      "word": "cash",
+      "meaning": "现金",
+      "example": "Pay in cash at the kiosk."
+    },
+    {
+      "word": "coin",
+      "meaning": "硬币",
+      "example": "Keep some coins for the bus."
+    },
+    {
+      "word": "card",
+      "meaning": "卡",
+      "example": "Tap your card to pay."
+    },
+    {
+      "word": "wallet",
+      "meaning": "钱包",
+      "example": "I left my wallet at home."
+    },
+    {
+      "word": "bill",
+      "meaning": "账单",
+      "example": "The electricity bill came today."
+    },
+    {
+      "word": "receipt",
+      "meaning": "收据",
+      "example": "Save the receipt for returns."
+    },
+    {
+      "word": "change",
+      "meaning": "零钱",
+      "example": "Do you have small change?"
+    },
+    {
+      "word": "price",
+      "meaning": "价格",
+      "example": "The price is too high."
+    },
+    {
+      "word": "cost",
+      "meaning": "成本",
+      "example": "This costs less online."
+    },
+    {
+      "word": "discount",
+      "meaning": "折扣",
+      "example": "Ask if there’s a discount."
+    },
+    {
+      "word": "queue",
+      "meaning": "排队",
+      "example": "Join the queue over there."
+    },
+    {
+      "word": "line",
+      "meaning": "队伍",
+      "example": "Stand in line and wait."
+    },
+    {
+      "word": "mask",
+      "meaning": "口罩",
+      "example": "Wear a mask in crowded places."
+    },
+    {
+      "word": "medicine",
+      "meaning": "药",
+      "example": "Take the medicine after meals."
+    },
+    {
+      "word": "vitamin",
+      "meaning": "维生素",
+      "example": "Vitamin D helps bone health."
+    },
+    {
+      "word": "bandage",
+      "meaning": "绷带",
+      "example": "Put a bandage on the cut."
+    },
+    {
+      "word": "thermometer",
+      "meaning": "体温计",
+      "example": "Use a thermometer to check your temperature."
+    },
+    {
+      "word": "fever",
+      "meaning": "发烧",
+      "example": "He has a mild fever."
+    },
+    {
+      "word": "cough",
+      "meaning": "咳嗽",
+      "example": "Her cough got better."
+    },
+    {
+      "word": "headache",
+      "meaning": "头痛",
+      "example": "I have a headache today."
+    },
+    {
+      "word": "toothache",
+      "meaning": "牙痛",
+      "example": "A toothache needs a dentist."
+    },
+    {
+      "word": "backache",
+      "meaning": "背痛",
+      "example": "Stretch to ease your backache."
+    },
+    {
+      "word": "weather",
+      "meaning": "天气",
+      "example": "The weather is getting warmer."
+    },
+    {
+      "word": "sun",
+      "meaning": "太阳",
+      "example": "The sun is out today."
+    },
+    {
+      "word": "rain",
+      "meaning": "雨",
+      "example": "It might rain this afternoon."
+    },
+    {
+      "word": "snow",
+      "meaning": "雪",
+      "example": "It rarely snows here."
+    },
+    {
+      "word": "cloud",
+      "meaning": "云",
+      "example": "Clouds cover the sky."
+    },
+    {
+      "word": "wind",
+      "meaning": "风",
+      "example": "The wind is strong tonight."
+    },
+    {
+      "word": "storm",
+      "meaning": "暴风雨",
+      "example": "A storm is coming."
+    },
+    {
+      "word": "warm",
+      "meaning": "温暖",
+      "example": "It feels warm indoors."
+    },
+    {
+      "word": "hot",
+      "meaning": "炎热",
+      "example": "It’s too hot to run."
+    },
+    {
+      "word": "cold",
+      "meaning": "寒冷",
+      "example": "The room is cold."
+    },
+    {
+      "word": "cool",
+      "meaning": "凉爽",
+      "example": "The evening is cool."
+    },
+    {
+      "word": "dry",
+      "meaning": "干燥",
+      "example": "The air is dry in winter."
+    },
+    {
+      "word": "wet",
+      "meaning": "潮湿",
+      "example": "The floor is wet—be careful."
+    },
+    {
+      "word": "spring",
+      "meaning": "春天",
+      "example": "Spring starts next month."
+    },
+    {
+      "word": "summer",
+      "meaning": "夏天",
+      "example": "Summer is my favorite season."
+    },
+    {
+      "word": "autumn",
+      "meaning": "秋天",
+      "example": "Autumn brings clear skies."
+    },
+    {
+      "word": "winter",
+      "meaning": "冬天",
+      "example": "Winter nights are long."
+    },
+    {
+      "word": "morning",
+      "meaning": "早上",
+      "example": "The meeting is in the morning."
+    },
+    {
+      "word": "noon",
+      "meaning": "中午",
+      "example": "Let’s have lunch at noon."
+    },
+    {
+      "word": "afternoon",
+      "meaning": "下午",
+      "example": "We’ll meet in the afternoon."
+    },
+    {
+      "word": "evening",
+      "meaning": "傍晚",
+      "example": "Go for a walk in the evening."
+    },
+    {
+      "word": "night",
+      "meaning": "夜晚",
+      "example": "He works at night."
+    },
+    {
+      "word": "today",
+      "meaning": "今天",
+      "example": "What’s your plan today?"
+    },
+    {
+      "word": "tomorrow",
+      "meaning": "明天",
+      "example": "See you tomorrow."
+    },
+    {
+      "word": "yesterday",
+      "meaning": "昨天",
+      "example": "Yesterday was hectic."
+    },
+    {
+      "word": "week",
+      "meaning": "星期",
+      "example": "Plan your week ahead."
+    },
+    {
+      "word": "month",
+      "meaning": "月份",
+      "example": "We pay rent every month."
+    },
+    {
+      "word": "year",
+      "meaning": "年份",
+      "example": "This year went by fast."
+    },
+    {
+      "word": "monday",
+      "meaning": "星期一",
+      "example": "Monday is busy for me."
+    },
+    {
+      "word": "tuesday",
+      "meaning": "星期二",
+      "example": "Tuesday feels lighter."
+    },
+    {
+      "word": "wednesday",
+      "meaning": "星期三",
+      "example": "We train on Wednesday."
+    },
+    {
+      "word": "thursday",
+      "meaning": "星期四",
+      "example": "Thursday is for reviews."
+    },
+    {
+      "word": "friday",
+      "meaning": "星期五",
+      "example": "Friday is movie night."
+    },
+    {
+      "word": "saturday",
+      "meaning": "星期六",
+      "example": "Saturday is for chores."
+    },
+    {
+      "word": "sunday",
+      "meaning": "星期日",
+      "example": "Sunday is rest day."
+    },
+    {
+      "word": "january",
+      "meaning": "一月",
+      "example": "January is usually cold."
+    },
+    {
+      "word": "february",
+      "meaning": "二月",
+      "example": "February has 28 days."
+    },
+    {
+      "word": "march",
+      "meaning": "三月",
+      "example": "March brings rain."
+    },
+    {
+      "word": "april",
+      "meaning": "四月",
+      "example": "April is full of blooms."
+    },
+    {
+      "word": "may",
+      "meaning": "五月",
+      "example": "May is great for trips."
+    },
+    {
+      "word": "june",
+      "meaning": "六月",
+      "example": "June starts the heat."
+    },
+    {
+      "word": "july",
+      "meaning": "七月",
+      "example": "July is the hottest month."
+    },
+    {
+      "word": "august",
+      "meaning": "八月",
+      "example": "August is vacation time."
+    },
+    {
+      "word": "september",
+      "meaning": "九月",
+      "example": "September feels fresh."
+    },
+    {
+      "word": "october",
+      "meaning": "十月",
+      "example": "October is comfortable."
+    },
+    {
+      "word": "november",
+      "meaning": "十一月",
+      "example": "November gets chilly."
+    },
+    {
+      "word": "december",
+      "meaning": "十二月",
+      "example": "December is festive."
+    },
+    {
+      "word": "family",
+      "meaning": "家庭",
+      "example": "Family dinner is at seven."
+    },
+    {
+      "word": "parent",
+      "meaning": "父母",
+      "example": "A parent picked up the child."
+    },
+    {
+      "word": "mother",
+      "meaning": "母亲",
+      "example": "Her mother called just now."
+    },
+    {
+      "word": "father",
+      "meaning": "父亲",
+      "example": "His father loves fishing."
+    },
+    {
+      "word": "son",
+      "meaning": "儿子",
+      "example": "Their son started school."
+    },
+    {
+      "word": "daughter",
+      "meaning": "女儿",
+      "example": "My daughter likes painting."
+    },
+    {
+      "word": "child",
+      "meaning": "孩子",
+      "example": "Every child needs rest."
+    },
+    {
+      "word": "children",
+      "meaning": "儿童",
+      "example": "Children play in the yard."
+    },
+    {
+      "word": "brother",
+      "meaning": "兄弟",
+      "example": "My brother lives nearby."
+    },
+    {
+      "word": "sister",
+      "meaning": "姐妹",
+      "example": "Her sister is a nurse."
+    },
+    {
+      "word": "friend",
+      "meaning": "朋友",
+      "example": "A friend sent a message."
+    },
+    {
+      "word": "neighbor",
+      "meaning": "邻居",
+      "example": "The neighbor keeps a dog."
+    },
+    {
+      "word": "teacher",
+      "meaning": "老师",
+      "example": "The teacher assigned homework."
+    },
+    {
+      "word": "student",
+      "meaning": "学生",
+      "example": "Each student has a locker."
+    },
+    {
+      "word": "doctor",
+      "meaning": "医生",
+      "example": "The doctor prescribed medicine."
+    },
+    {
+      "word": "nurse",
+      "meaning": "护士",
+      "example": "A nurse checked his temperature."
+    },
+    {
+      "word": "worker",
+      "meaning": "工人",
+      "example": "The worker fixed the fence."
+    },
+    {
+      "word": "boss",
+      "meaning": "老板",
+      "example": "My boss approved the leave."
+    },
+    {
+      "word": "client",
+      "meaning": "客户",
+      "example": "The client confirmed the order."
+    },
+    {
+      "word": "guest",
+      "meaning": "客人",
+      "example": "We welcomed a guest today."
+    },
+    {
+      "word": "bag",
+      "meaning": "包",
+      "example": "Pack your bag for the trip."
+    },
+    {
+      "word": "backpack",
+      "meaning": "背包",
+      "example": "Her backpack is very light."
+    },
+    {
+      "word": "umbrella",
+      "meaning": "雨伞",
+      "example": "Carry an umbrella if it rains."
+    },
+    {
+      "word": "bottle",
+      "meaning": "瓶子",
+      "example": "Refill your water bottle."
+    },
+    {
+      "word": "cup",
+      "meaning": "杯子",
+      "example": "Please wash your cup."
+    },
+    {
+      "word": "mug",
+      "meaning": "马克杯",
+      "example": "This mug keeps drinks warm."
+    },
+    {
+      "word": "plate",
+      "meaning": "盘子",
+      "example": "Put the cake on a plate."
+    },
+    {
+      "word": "bowl",
+      "meaning": "碗",
+      "example": "The bowl is on the shelf."
+    },
+    {
+      "word": "fork",
+      "meaning": "叉子",
+      "example": "Use a fork for the salad."
+    },
+    {
+      "word": "knife",
+      "meaning": "刀",
+      "example": "Be careful with the knife."
+    },
+    {
+      "word": "spoon",
+      "meaning": "勺子",
+      "example": "Stir with a spoon."
+    },
+    {
+      "word": "napkin",
+      "meaning": "餐巾",
+      "example": "Grab a napkin from the box."
+    },
+    {
+      "word": "trash",
+      "meaning": "垃圾",
+      "example": "Take out the trash tonight."
+    },
+    {
+      "word": "bin",
+      "meaning": "垃圾桶",
+      "example": "The bin is full—empty it."
+    },
+    {
+      "word": "basket",
+      "meaning": "篮子",
+      "example": "Put fruit in the basket."
+    },
+    {
+      "word": "box",
+      "meaning": "盒子",
+      "example": "The box is in the closet."
+    },
+    {
+      "word": "paper",
+      "meaning": "纸",
+      "example": "Recycle waste paper."
+    },
+    {
+      "word": "pen",
+      "meaning": "笔",
+      "example": "Bring a pen to the exam."
+    },
+    {
+      "word": "pencil",
+      "meaning": "铅笔",
+      "example": "Sharpen your pencil."
+    },
+    {
+      "word": "notebook",
+      "meaning": "笔记本",
+      "example": "Write notes in your notebook."
+    },
+    {
+      "word": "ruler",
+      "meaning": "尺子",
+      "example": "Measure with a ruler."
+    },
+    {
+      "word": "eraser",
+      "meaning": "橡皮",
+      "example": "Use an eraser to correct mistakes."
+    },
+    {
+      "word": "tape",
+      "meaning": "胶带",
+      "example": "Seal the package with tape."
+    },
+    {
+      "word": "glue",
+      "meaning": "胶水",
+      "example": "Stick the label with glue."
+    },
+    {
+      "word": "scissors",
+      "meaning": "剪刀",
+      "example": "Cut the paper with scissors."
+    },
+    {
+      "word": "clothes",
+      "meaning": "衣服",
+      "example": "We used clothes in a real-world sentence."
+    },
+    {
+      "word": "shirt",
+      "meaning": "衬衫",
+      "example": "We used shirt in a real-world sentence."
+    },
+    {
+      "word": "tshirt",
+      "meaning": "T恤",
+      "example": "We used tshirt in a real-world sentence."
+    },
+    {
+      "word": "pants",
+      "meaning": "裤子",
+      "example": "We used pants in a real-world sentence."
+    },
+    {
+      "word": "jeans",
+      "meaning": "牛仔裤",
+      "example": "We used jeans in a real-world sentence."
+    },
+    {
+      "word": "shorts",
+      "meaning": "短裤",
+      "example": "We used shorts in a real-world sentence."
+    },
+    {
+      "word": "skirt",
+      "meaning": "裙子",
+      "example": "We used skirt in a real-world sentence."
+    },
+    {
+      "word": "dress",
+      "meaning": "连衣裙",
+      "example": "We used dress in a real-world sentence."
+    },
+    {
+      "word": "coat",
+      "meaning": "外套",
+      "example": "We used coat in a real-world sentence."
+    },
+    {
+      "word": "jacket",
+      "meaning": "夹克",
+      "example": "We used jacket in a real-world sentence."
+    },
+    {
+      "word": "sweater",
+      "meaning": "毛衣",
+      "example": "We used sweater in a real-world sentence."
+    },
+    {
+      "word": "shoes",
+      "meaning": "鞋子",
+      "example": "We used shoes in a real-world sentence."
+    },
+    {
+      "word": "boots",
+      "meaning": "靴子",
+      "example": "We used boots in a real-world sentence."
+    },
+    {
+      "word": "socks",
+      "meaning": "袜子",
+      "example": "We used socks in a real-world sentence."
+    },
+    {
+      "word": "hat",
+      "meaning": "帽子",
+      "example": "We used hat in a real-world sentence."
+    },
+    {
+      "word": "cap",
+      "meaning": "帽子",
+      "example": "We used cap in a real-world sentence."
+    },
+    {
+      "word": "belt",
+      "meaning": "腰带",
+      "example": "We used belt in a real-world sentence."
+    },
+    {
+      "word": "gloves",
+      "meaning": "手套",
+      "example": "We used gloves in a real-world sentence."
+    },
+    {
+      "word": "scarf",
+      "meaning": "围巾",
+      "example": "We used scarf in a real-world sentence."
+    },
+    {
+      "word": "internet",
+      "meaning": "互联网",
+      "example": "The internet is down again."
+    },
+    {
+      "word": "wifi",
+      "meaning": "Wi‑Fi",
+      "example": "Connect to the Wi‑Fi."
+    },
+    {
+      "word": "password",
+      "meaning": "密码",
+      "example": "Reset your password regularly."
+    },
+    {
+      "word": "account",
+      "meaning": "账户",
+      "example": "Create an online account."
+    },
+    {
+      "word": "email",
+      "meaning": "邮件",
+      "example": "Check your email first."
+    },
+    {
+      "word": "message",
+      "meaning": "消息",
+      "example": "Send me a short message."
+    },
+    {
+      "word": "address",
+      "meaning": "地址",
+      "example": "Share your home address."
+    },
+    {
+      "word": "number",
+      "meaning": "号码",
+      "example": "What’s your phone number?"
+    },
+    {
+      "word": "postcode",
+      "meaning": "邮编",
+      "example": "Enter the postcode correctly."
+    },
+    {
+      "word": "delivery",
+      "meaning": "配送",
+      "example": "Delivery arrives tomorrow."
+    },
+    {
+      "word": "package",
+      "meaning": "包裹",
+      "example": "Track the package online."
+    },
+    {
+      "word": "parcel",
+      "meaning": "包裹",
+      "example": "The parcel came this morning."
+    },
+    {
+      "word": "mail",
+      "meaning": "邮件",
+      "example": "We received the mail today."
+    },
+    {
+      "word": "letter",
+      "meaning": "信",
+      "example": "Write a letter to say thanks."
+    },
+    {
+      "word": "callcenter",
+      "meaning": "呼叫中心",
+      "example": "The call center is very busy."
+    },
+    {
+      "word": "toilet",
+      "meaning": "厕所",
+      "example": "Clean the toilet with bleach."
+    },
+    {
+      "word": "shower",
+      "meaning": "淋浴",
+      "example": "Take a quick shower."
+    },
+    {
+      "word": "bath",
+      "meaning": "洗澡",
+      "example": "He takes a bath on weekends."
+    },
+    {
+      "word": "broom",
+      "meaning": "扫帚",
+      "example": "Use the broom to sweep."
+    },
+    {
+      "word": "mop",
+      "meaning": "拖把",
+      "example": "Mop the floor after sweeping."
+    },
+    {
+      "word": "detergent",
+      "meaning": "洗涤剂",
+      "example": "Add detergent to the wash."
+    },
+    {
+      "word": "bleach",
+      "meaning": "漂白剂",
+      "example": "Use bleach carefully."
+    },
+    {
+      "word": "bucket",
+      "meaning": "水桶",
+      "example": "Fill the bucket with water."
+    },
+    {
+      "word": "vacuum",
+      "meaning": "吸尘器",
+      "example": "Vacuum the carpet on Friday."
+    },
+    {
+      "word": "able",
+      "meaning": "能够",
+      "example": "I’m able to help tomorrow."
+    },
+    {
+      "word": "about",
+      "meaning": "关于",
+      "example": "Tell me about your plan."
+    },
+    {
+      "word": "above",
+      "meaning": "在……之上",
+      "example": "The lamp hangs above the table."
+    },
+    {
+      "word": "act",
+      "meaning": "行动",
+      "example": "We need to act quickly."
+    },
+    {
+      "word": "add",
+      "meaning": "添加",
+      "example": "Add salt to taste."
+    },
+    {
+      "word": "afraid",
+      "meaning": "害怕",
+      "example": "I’m afraid we’re late."
+    },
+    {
+      "word": "against",
+      "meaning": "反对",
+      "example": "I’m against raising the price."
+    },
+    {
+      "word": "age",
+      "meaning": "年龄",
+      "example": "What’s his age?"
+    },
+    {
+      "word": "ago",
+      "meaning": "以前",
+      "example": "We met two years ago."
+    },
+    {
+      "word": "agree",
+      "meaning": "同意",
+      "example": "I agree with your idea."
+    },
+    {
+      "word": "air",
+      "meaning": "空气",
+      "example": "Open the window for fresh air."
+    },
+    {
+      "word": "all",
+      "meaning": "全部",
+      "example": "All seats are taken."
+    },
+    {
+      "word": "allow",
+      "meaning": "允许",
+      "example": "We don’t allow smoking here."
+    },
+    {
+      "word": "always",
+      "meaning": "总是",
+      "example": "She always arrives early."
+    },
+    {
+      "word": "among",
+      "meaning": "在……之中",
+      "example": "Share the snacks among everyone."
+    },
+    {
+      "word": "anger",
+      "meaning": "愤怒",
+      "example": "He hid his anger well."
+    },
+    {
+      "word": "animal",
+      "meaning": "动物",
+      "example": "This animal is rare."
+    },
+    {
+      "word": "answer",
+      "meaning": "回答",
+      "example": "Please answer the question."
+    },
+    {
+      "word": "any",
+      "meaning": "任何",
+      "example": "Any time works for me."
+    },
+    {
+      "word": "appear",
+      "meaning": "出现",
+      "example": "A rainbow may appear after rain."
+    },
+    {
+      "word": "area",
+      "meaning": "区域",
+      "example": "This area is safe."
+    },
+    {
+      "word": "arm",
+      "meaning": "手臂",
+      "example": "Raise your right arm."
+    },
+    {
+      "word": "arrange",
+      "meaning": "安排",
+      "example": "Arrange the chairs in a circle."
+    },
+    {
+      "word": "arrive",
+      "meaning": "到达",
+      "example": "We arrive at ten."
+    },
+    {
+      "word": "art",
+      "meaning": "艺术",
+      "example": "Modern art is fascinating."
+    },
+    {
+      "word": "ask",
+      "meaning": "询问",
+      "example": "Ask for help if needed."
+    },
+    {
+      "word": "atom",
+      "meaning": "原子",
+      "example": "An atom is very small."
+    },
+    {
+      "word": "baby",
+      "meaning": "婴儿",
+      "example": "The baby is sleeping."
+    },
+    {
+      "word": "back",
+      "meaning": "背部/回来",
+      "example": "I’ll be back soon."
+    },
+    {
+      "word": "bad",
+      "meaning": "坏的",
+      "example": "This milk smells bad."
+    },
+    {
+      "word": "ball",
+      "meaning": "球",
+      "example": "Kick the ball gently."
+    },
+    {
+      "word": "band",
+      "meaning": "乐队/带子",
+      "example": "The band plays tonight."
+    },
+    {
+      "word": "bar",
+      "meaning": "酒吧/条",
+      "example": "We met at a small bar."
+    },
+    {
+      "word": "base",
+      "meaning": "基础",
+      "example": "The game starts at the first base."
+    },
+    {
+      "word": "basic",
+      "meaning": "基本的",
+      "example": "Learn the basic rules first."
+    },
+    {
+      "word": "bat",
+      "meaning": "蝙蝠/球棒",
+      "example": "He swings the bat well."
+    },
+    {
+      "word": "bear",
+      "meaning": "熊/承受",
+      "example": "I can’t bear the noise."
+    },
+    {
+      "word": "beat",
+      "meaning": "击打/打败",
+      "example": "We beat our best time."
+    },
+    {
+      "word": "beauty",
+      "meaning": "美",
+      "example": "This place has natural beauty."
+    },
+    {
+      "word": "been",
+      "meaning": "曾经",
+      "example": "I’ve been there once."
+    },
+    {
+      "word": "began",
+      "meaning": "开始(过去式)",
+      "example": "The show began at eight."
+    },
+    {
+      "word": "begin",
+      "meaning": "开始",
+      "example": "Begin when you’re ready."
+    },
+    {
+      "word": "behind",
+      "meaning": "在……后面",
+      "example": "Stand behind the line."
+    },
+    {
+      "word": "believe",
+      "meaning": "相信",
+      "example": "I believe we’ll succeed."
+    },
+    {
+      "word": "bell",
+      "meaning": "铃",
+      "example": "Ring the bell at the gate."
+    },
+    {
+      "word": "best",
+      "meaning": "最好",
+      "example": "Do your best in the exam."
+    },
+    {
+      "word": "better",
+      "meaning": "更好",
+      "example": "This version is better."
+    },
+    {
+      "word": "between",
+      "meaning": "在……之间",
+      "example": "Share it between two teams."
+    },
+    {
+      "word": "big",
+      "meaning": "大的",
+      "example": "This box is too big."
+    },
+    {
+      "word": "bird",
+      "meaning": "鸟",
+      "example": "A bird landed on the balcony."
+    },
+    {
+      "word": "bit",
+      "meaning": "一点/比特",
+      "example": "Wait a bit longer."
+    },
+    {
+      "word": "black",
+      "meaning": "黑色",
+      "example": "He wore a black jacket."
+    },
+    {
+      "word": "block",
+      "meaning": "块/阻塞",
+      "example": "A fallen tree blocked the road."
+    },
+    {
+      "word": "blood",
+      "meaning": "血液",
+      "example": "Blood tests came back normal."
+    },
+    {
+      "word": "blow",
+      "meaning": "吹",
+      "example": "Blow out the candles."
+    },
+    {
+      "word": "blue",
+      "meaning": "蓝色",
+      "example": "The sky turned deep blue."
+    },
+    {
+      "word": "board",
+      "meaning": "板/董事会",
+      "example": "The board meets on Friday."
+    },
+    {
+      "word": "boat",
+      "meaning": "船",
+      "example": "We rented a small boat."
+    },
+    {
+      "word": "body",
+      "meaning": "身体",
+      "example": "Your body needs rest."
+    },
+    {
+      "word": "bone",
+      "meaning": "骨头",
+      "example": "She broke a bone last year."
+    },
+    {
+      "word": "born",
+      "meaning": "出生",
+      "example": "He was born in April."
+    },
+    {
+      "word": "both",
+      "meaning": "两者",
+      "example": "Both options look good."
+    },
+    {
+      "word": "bottom",
+      "meaning": "底部",
+      "example": "Check the bottom shelf."
+    },
+    {
+      "word": "bought",
+      "meaning": "买(过去式)",
+      "example": "I bought tickets online."
+    },
+    {
+      "word": "boy",
+      "meaning": "男孩",
+      "example": "The boy waved hello."
+    },
+    {
+      "word": "branch",
+      "meaning": "分支/树枝",
+      "example": "A bird sat on the branch."
+    },
+    {
+      "word": "break",
+      "meaning": "打破/休息",
+      "example": "Let’s take a short break."
+    },
+    {
+      "word": "bright",
+      "meaning": "明亮的",
+      "example": "The room feels bright."
+    },
+    {
+      "word": "bring",
+      "meaning": "带来",
+      "example": "Bring your ID with you."
+    },
+    {
+      "word": "broad",
+      "meaning": "宽的",
+      "example": "We need a broad plan."
+    },
+    {
+      "word": "broke",
+      "meaning": "打破(过去式)",
+      "example": "The glass broke suddenly."
+    },
+    {
+      "word": "brought",
+      "meaning": "带来(过去式)",
+      "example": "She brought snacks for everyone."
+    },
+    {
+      "word": "brown",
+      "meaning": "棕色",
+      "example": "He wore brown shoes."
+    },
+    {
+      "word": "build",
+      "meaning": "建造",
+      "example": "We build trust over time."
+    },
+    {
+      "word": "burn",
+      "meaning": "燃烧",
+      "example": "The toast began to burn."
+    },
+    {
+      "word": "busy",
+      "meaning": "忙碌的",
+      "example": "I’m busy this afternoon."
+    },
+    {
+      "word": "came",
+      "meaning": "来(过去式)",
+      "example": "They came early."
+    },
+    {
+      "word": "camp",
+      "meaning": "露营",
+      "example": "We camp by the lake."
+    },
+    {
+      "word": "can",
+      "meaning": "可以/罐头",
+      "example": "We can finish today."
+    },
+    {
+      "word": "capital",
+      "meaning": "首都/资本",
+      "example": "The capital city is huge."
+    },
+    {
+      "word": "captain",
+      "meaning": "船长/队长",
+      "example": "The captain greeted passengers."
+    },
+    {
+      "word": "care",
+      "meaning": "关心",
+      "example": "Take care on the stairs."
+    },
+    {
+      "word": "carry",
+      "meaning": "携带",
+      "example": "Carry the box carefully."
+    },
+    {
+      "word": "case",
+      "meaning": "情况/箱子",
+      "example": "In any case, call me."
+    },
+    {
+      "word": "cat",
+      "meaning": "猫",
+      "example": "The cat sleeps on the sofa."
+    },
+    {
+      "word": "catch",
+      "meaning": "抓住",
+      "example": "Catch the bus at nine."
+    },
+    {
+      "word": "caught",
+      "meaning": "抓住(过去式)",
+      "example": "He caught the ball easily."
+    },
+    {
+      "word": "cause",
+      "meaning": "原因",
+      "example": "What’s the cause of the delay?"
+    },
+    {
+      "word": "cell",
+      "meaning": "细胞/小格",
+      "example": "Charge your cell phone."
+    },
+    {
+      "word": "cent",
+      "meaning": "分(货币)",
+      "example": "It costs fifty cents."
+    },
+    {
+      "word": "center",
+      "meaning": "中心",
+      "example": "Stand at the center of the circle."
+    },
+    {
+      "word": "centre",
+      "meaning": "中心(英式)",
+      "example": "The city centre is busy."
+    },
+    {
+      "word": "century",
+      "meaning": "世纪",
+      "example": "This painting is a century old."
+    },
+    {
+      "word": "certain",
+      "meaning": "确定的",
+      "example": "I’m certain we’ll finish."
+    },
+    {
+      "word": "chance",
+      "meaning": "机会",
+      "example": "Give me another chance."
+    },
+    {
+      "word": "character",
+      "meaning": "字符/性格",
+      "example": "He has a kind character."
+    },
+    {
+      "word": "chart",
+      "meaning": "图表",
+      "example": "The chart shows sales by month."
+    },
+    {
+      "word": "check",
+      "meaning": "检查/支票",
+      "example": "Double‑check the numbers."
+    },
+    {
+      "word": "chick",
+      "meaning": "小鸡",
+      "example": "The chick hatched today."
+    },
+    {
+      "word": "chief",
+      "meaning": "首领/主要的",
+      "example": "The chief made the final call."
+    },
+    {
+      "word": "choose",
+      "meaning": "选择",
+      "example": "Choose one of the options."
+    },
+    {
+      "word": "chord",
+      "meaning": "和弦",
+      "example": "Play a simple chord."
+    },
+    {
+      "word": "circle",
+      "meaning": "圆",
+      "example": "Draw a circle here."
+    },
+    {
+      "word": "city",
+      "meaning": "城市",
+      "example": "The city is growing fast."
+    },
+    {
+      "word": "claim",
+      "meaning": "声称/索赔",
+      "example": "File a claim with support."
+    },
+    {
+      "word": "class",
+      "meaning": "班级/类别",
+      "example": "Our class starts at nine."
+    },
+    {
+      "word": "clear",
+      "meaning": "清晰的/清除",
+      "example": "Your message is clear."
+    },
+    {
+      "word": "climb",
+      "meaning": "攀登",
+      "example": "Climb the stairs slowly."
+    },
+    {
+      "word": "clothe",
+      "meaning": "给…穿衣",
+      "example": "We clothe the kids warmly."
+    },
+    {
+      "word": "coast",
+      "meaning": "海岸",
+      "example": "We walked along the coast."
+    },
+    {
+      "word": "collect",
+      "meaning": "收集",
+      "example": "Collect all the forms."
+    },
+    {
+      "word": "colony",
+      "meaning": "殖民地",
+      "example": "Ants formed a small colony."
+    },
+    {
+      "word": "color",
+      "meaning": "颜色",
+      "example": "Pick a color you like."
+    },
+    {
+      "word": "column",
+      "meaning": "列/柱",
+      "example": "Add a notes column."
+    },
+    {
+      "word": "come",
+      "meaning": "来",
+      "example": "Come when you’re ready."
+    },
+    {
+      "word": "common",
+      "meaning": "常见的/共同的",
+      "example": "It’s a common mistake."
+    },
+    {
+      "word": "company",
+      "meaning": "公司",
+      "example": "The company moved last year."
+    },
+    {
+      "word": "compare",
+      "meaning": "比较",
+      "example": "Compare the two results."
+    },
+    {
+      "word": "complete",
+      "meaning": "完成",
+      "example": "Complete the form online."
+    },
+    {
+      "word": "condition",
+      "meaning": "条件/状况",
+      "example": "The bike is in good condition."
+    },
+    {
+      "word": "connect",
+      "meaning": "连接",
+      "example": "Connect the cable properly."
+    },
+    {
+      "word": "consider",
+      "meaning": "考虑",
+      "example": "We’ll consider your idea."
+    },
+    {
+      "word": "contain",
+      "meaning": "包含",
+      "example": "This box contains tools."
+    },
+    {
+      "word": "continue",
+      "meaning": "继续",
+      "example": "Continue after the break."
+    },
+    {
+      "word": "control",
+      "meaning": "控制",
+      "example": "Control the temperature carefully."
+    },
+    {
+      "word": "copy",
+      "meaning": "复制",
+      "example": "Copy the text and paste it."
+    },
+    {
+      "word": "corn",
+      "meaning": "玉米",
+      "example": "We grow corn in summer."
+    },
+    {
+      "word": "corner",
+      "meaning": "角/拐角",
+      "example": "Wait at the corner."
+    },
+    {
+      "word": "correct",
+      "meaning": "正确的",
+      "example": "Your answer is correct."
+    },
+    {
+      "word": "cotton",
+      "meaning": "棉花",
+      "example": "This shirt is cotton."
+    },
+    {
+      "word": "could",
+      "meaning": "可以(过去式/礼貌)",
+      "example": "Could you help me?"
+    },
+    {
+      "word": "count",
+      "meaning": "数/计数",
+      "example": "Count to ten."
+    },
+    {
+      "word": "country",
+      "meaning": "国家",
+      "example": "This country has many mountains."
+    },
+    {
+      "word": "course",
+      "meaning": "课程/路线",
+      "example": "The course starts next week."
+    },
+    {
+      "word": "cover",
+      "meaning": "覆盖",
+      "example": "Cover the pot with a lid."
+    },
+    {
+      "word": "cow",
+      "meaning": "奶牛",
+      "example": "The cow grazes in the field."
+    },
+    {
+      "word": "crease",
+      "meaning": "褶皱",
+      "example": "Iron the crease out."
+    },
+    {
+      "word": "create",
+      "meaning": "创造",
+      "example": "Create a new folder."
+    },
+    {
+      "word": "crop",
+      "meaning": "作物/裁剪",
+      "example": "Farmers harvest the crop."
+    },
+    {
+      "word": "cross",
+      "meaning": "交叉/穿过",
+      "example": "Cross the street carefully."
+    },
+    {
+      "word": "crowd",
+      "meaning": "人群",
+      "example": "A crowd gathered at the gate."
+    },
+    {
+      "word": "cry",
+      "meaning": "哭",
+      "example": "Don’t cry—it’s okay."
+    },
+    {
+      "word": "current",
+      "meaning": "当前/电流",
+      "example": "Check the current weather."
+    },
+    {
+      "word": "cut",
+      "meaning": "切/割",
+      "example": "Cut the paper straight."
+    },
+    {
+      "word": "dad",
+      "meaning": "爸爸",
+      "example": "Dad is cooking tonight."
+    },
+    {
+      "word": "dance",
+      "meaning": "跳舞",
+      "example": "Let’s dance after dinner."
+    },
+    {
+      "word": "danger",
+      "meaning": "危险",
+      "example": "There’s danger ahead—slow down."
+    },
+    {
+      "word": "dark",
+      "meaning": "黑暗的",
+      "example": "It’s dark outside."
+    },
+    {
+      "word": "day",
+      "meaning": "一天/白天",
+      "example": "It’s a good day."
+    },
+    {
+      "word": "dead",
+      "meaning": "死的",
+      "example": "The battery is dead."
+    },
+    {
+      "word": "deal",
+      "meaning": "处理/交易",
+      "example": "Let’s make a fair deal."
+    },
+    {
+      "word": "dear",
+      "meaning": "亲爱的",
+      "example": "Dear Anna, thank you."
+    },
+    {
+      "word": "death",
+      "meaning": "死亡",
+      "example": "The story mentions death."
+    },
+    {
+      "word": "decide",
+      "meaning": "决定",
+      "example": "Decide by tomorrow."
+    },
+    {
+      "word": "deep",
+      "meaning": "深的",
+      "example": "The pool is deep here."
+    },
+    {
+      "word": "degree",
+      "meaning": "度/学位",
+      "example": "He has a master’s degree."
+    },
+    {
+      "word": "depend",
+      "meaning": "依靠",
+      "example": "It may depend on the weather."
+    },
+    {
+      "word": "describe",
+      "meaning": "描述",
+      "example": "Describe what you saw."
+    },
+    {
+      "word": "desert",
+      "meaning": "沙漠/抛弃",
+      "example": "Camels cross the desert."
+    },
+    {
+      "word": "design",
+      "meaning": "设计",
+      "example": "Design a simple logo."
+    },
+    {
+      "word": "determine",
+      "meaning": "确定",
+      "example": "We can’t determine the cause yet."
+    },
+    {
+      "word": "develop",
+      "meaning": "开发/发展",
+      "example": "Develop the idea further."
+    },
+    {
+      "word": "dictionary",
+      "meaning": "词典",
+      "example": "Use a dictionary if unsure."
+    },
+    {
+      "word": "did",
+      "meaning": "做(过去式)",
+      "example": "We did our best."
+    },
+    {
+      "word": "die",
+      "meaning": "死亡",
+      "example": "Plants die without water."
+    },
+    {
+      "word": "differ",
+      "meaning": "不同",
+      "example": "Opinions differ on this."
+    },
+    {
+      "word": "difficult",
+      "meaning": "困难的",
+      "example": "The puzzle is difficult."
+    },
+    {
+      "word": "direct",
+      "meaning": "直接的/指导",
+      "example": "She gave a direct answer."
+    }
+  ]
+}

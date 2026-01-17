@@ -1,0 +1,5004 @@
+{
+  "words": [
+    {
+      "word": "a",
+      "meaning": "一个",
+      "example": "I bought a book online yesterday."
+    },
+    {
+      "word": "able",
+      "meaning": "能够",
+      "example": "She is able to finish it today."
+    },
+    {
+      "word": "about",
+      "meaning": "关于",
+      "example": "We talked about the schedule."
+    },
+    {
+      "word": "above",
+      "meaning": "在……之上",
+      "example": "The picture hangs above the fireplace."
+    },
+    {
+      "word": "act",
+      "meaning": "行动",
+      "example": "We need to act now."
+    },
+    {
+      "word": "add",
+      "meaning": "添加",
+      "example": "Please add me to the group."
+    },
+    {
+      "word": "afraid",
+      "meaning": "害怕",
+      "example": "I'm afraid of heights."
+    },
+    {
+      "word": "after",
+      "meaning": "在……之后",
+      "example": "We went for a walk after dinner."
+    },
+    {
+      "word": "again",
+      "meaning": "再次",
+      "example": "Let's try again."
+    },
+    {
+      "word": "against",
+      "meaning": "反对",
+      "example": "I'm against the idea of delaying again."
+    },
+    {
+      "word": "age",
+      "meaning": "年龄",
+      "example": "Please enter your age on the form."
+    },
+    {
+      "word": "ago",
+      "meaning": "以前",
+      "example": "I moved here three years ago."
+    },
+    {
+      "word": "agree",
+      "meaning": "同意",
+      "example": "I agree with you."
+    },
+    {
+      "word": "air",
+      "meaning": "空气",
+      "example": "The air felt fresh after the rain."
+    },
+    {
+      "word": "all",
+      "meaning": "全部",
+      "example": "All the tickets are sold out."
+    },
+    {
+      "word": "allow",
+      "meaning": "允许",
+      "example": "This app doesn't allow offline mode."
+    },
+    {
+      "word": "also",
+      "meaning": "也",
+      "example": "I'll also send a summary."
+    },
+    {
+      "word": "always",
+      "meaning": "总是",
+      "example": "She always double-checks her work."
+    },
+    {
+      "word": "am",
+      "meaning": "是",
+      "example": "I am ready to start."
+    },
+    {
+      "word": "among",
+      "meaning": "在……之中",
+      "example": "We divided the tasks among the team."
+    },
+    {
+      "word": "an",
+      "meaning": "一个",
+      "example": "He ate an apple after lunch."
+    },
+    {
+      "word": "and",
+      "meaning": "和",
+      "example": "Coffee and tea are on the table."
+    },
+    {
+      "word": "anger",
+      "meaning": "愤怒",
+      "example": "We discussed anger with the client yesterday."
+    },
+    {
+      "word": "animal",
+      "meaning": "动物",
+      "example": "My favorite animal is the panda."
+    },
+    {
+      "word": "answer",
+      "meaning": "回答",
+      "example": "Please answer it as soon as possible."
+    },
+    {
+      "word": "any",
+      "meaning": "任何",
+      "example": "Any time this week works for me."
+    },
+    {
+      "word": "appear",
+      "meaning": "出现",
+      "example": "A strange error may appear during installation."
+    },
+    {
+      "word": "apple",
+      "meaning": "苹果",
+      "example": "I cooked an apple for breakfast."
+    },
+    {
+      "word": "are",
+      "meaning": "是",
+      "example": "The results are accurate."
+    },
+    {
+      "word": "area",
+      "meaning": "区域",
+      "example": "This area is safe at night."
+    },
+    {
+      "word": "arm",
+      "meaning": "手臂",
+      "example": "He hurt his arm during the game."
+    },
+    {
+      "word": "arrange",
+      "meaning": "安排",
+      "example": "We need to arrange it now."
+    },
+    {
+      "word": "arrive",
+      "meaning": "到达",
+      "example": "Let's arrive now."
+    },
+    {
+      "word": "art",
+      "meaning": "艺术",
+      "example": "We discussed art with the client yesterday."
+    },
+    {
+      "word": "as",
+      "meaning": "如同",
+      "example": "As a rule, we test before release."
+    },
+    {
+      "word": "ask",
+      "meaning": "询问",
+      "example": "Can I ask a quick question?"
+    },
+    {
+      "word": "at",
+      "meaning": "在",
+      "example": "Let's meet at 3 p.m."
+    },
+    {
+      "word": "atom",
+      "meaning": "原子",
+      "example": "We discussed atom with the client yesterday."
+    },
+    {
+      "word": "baby",
+      "meaning": "常用词",
+      "example": "There is a quick tip on baby in our handbook."
+    },
+    {
+      "word": "back",
+      "meaning": "常用词",
+      "example": "I'll be back in five minutes."
+    },
+    {
+      "word": "bad",
+      "meaning": "常用词",
+      "example": "The room feels very bad today."
+    },
+    {
+      "word": "ball",
+      "meaning": "常用词",
+      "example": "There is a quick tip on ball in our handbook."
+    },
+    {
+      "word": "band",
+      "meaning": "常用词",
+      "example": "I read an article about band last night."
+    },
+    {
+      "word": "bank",
+      "meaning": "常用词",
+      "example": "I read an article about bank last night."
+    },
+    {
+      "word": "bar",
+      "meaning": "常用词",
+      "example": "We discussed bar with the client yesterday."
+    },
+    {
+      "word": "base",
+      "meaning": "常用词",
+      "example": "There is a quick tip on base in our handbook."
+    },
+    {
+      "word": "basic",
+      "meaning": "常用词",
+      "example": "This design looks basic and modern."
+    },
+    {
+      "word": "bat",
+      "meaning": "常用词",
+      "example": "I read an article about bat last night."
+    },
+    {
+      "word": "be",
+      "meaning": "常用词",
+      "example": "Be careful with the cables."
+    },
+    {
+      "word": "bear",
+      "meaning": "常用词",
+      "example": "I read an article about bear last night."
+    },
+    {
+      "word": "beat",
+      "meaning": "常用词",
+      "example": "I read an article about beat last night."
+    },
+    {
+      "word": "beauty",
+      "meaning": "常用词",
+      "example": "We discussed beauty with the client yesterday."
+    },
+    {
+      "word": "bed",
+      "meaning": "常用词",
+      "example": "There is a quick tip on bed in our handbook."
+    },
+    {
+      "word": "been",
+      "meaning": "常用词",
+      "example": "It's been a long day."
+    },
+    {
+      "word": "before",
+      "meaning": "常用词",
+      "example": "Save your work before you leave."
+    },
+    {
+      "word": "began",
+      "meaning": "常用词",
+      "example": "She began home early last night."
+    },
+    {
+      "word": "begin",
+      "meaning": "常用词",
+      "example": "Let's begin the meeting."
+    },
+    {
+      "word": "behind",
+      "meaning": "常用词",
+      "example": "There is a quick tip on behind in our handbook."
+    },
+    {
+      "word": "believe",
+      "meaning": "常用词",
+      "example": "We need to believe it now."
+    },
+    {
+      "word": "bell",
+      "meaning": "常用词",
+      "example": "He left his bell on the desk."
+    },
+    {
+      "word": "best",
+      "meaning": "常用词",
+      "example": "I read an article about best last night."
+    },
+    {
+      "word": "better",
+      "meaning": "常用词",
+      "example": "There is a quick tip on better in our handbook."
+    },
+    {
+      "word": "between",
+      "meaning": "常用词",
+      "example": "Choose between these two options."
+    },
+    {
+      "word": "big",
+      "meaning": "常用词",
+      "example": "A big choice will save us time."
+    },
+    {
+      "word": "bird",
+      "meaning": "常用词",
+      "example": "The bird ran across the road."
+    },
+    {
+      "word": "bit",
+      "meaning": "常用词",
+      "example": "We discussed bit with the client yesterday."
+    },
+    {
+      "word": "black",
+      "meaning": "常用词",
+      "example": "He bought a black jacket yesterday."
+    },
+    {
+      "word": "block",
+      "meaning": "常用词",
+      "example": "I read an article about block last night."
+    },
+    {
+      "word": "blood",
+      "meaning": "常用词",
+      "example": "I read an article about blood last night."
+    },
+    {
+      "word": "blow",
+      "meaning": "常用词",
+      "example": "There is a quick tip on blow in our handbook."
+    },
+    {
+      "word": "blue",
+      "meaning": "常用词",
+      "example": "He bought a blue jacket yesterday."
+    },
+    {
+      "word": "board",
+      "meaning": "常用词",
+      "example": "I read an article about board last night."
+    },
+    {
+      "word": "boat",
+      "meaning": "常用词",
+      "example": "He left his boat on the desk."
+    },
+    {
+      "word": "body",
+      "meaning": "常用词",
+      "example": "There is a quick tip on body in our handbook."
+    },
+    {
+      "word": "bone",
+      "meaning": "常用词",
+      "example": "He hurt his bone during the game."
+    },
+    {
+      "word": "book",
+      "meaning": "常用词",
+      "example": "He left his book on the desk."
+    },
+    {
+      "word": "born",
+      "meaning": "常用词",
+      "example": "He was born in 1990."
+    },
+    {
+      "word": "both",
+      "meaning": "常用词",
+      "example": "We discussed both with the client yesterday."
+    },
+    {
+      "word": "bottom",
+      "meaning": "常用词",
+      "example": "We discussed bottom with the client yesterday."
+    },
+    {
+      "word": "bought",
+      "meaning": "常用词",
+      "example": "She bought home early last night."
+    },
+    {
+      "word": "box",
+      "meaning": "常用词",
+      "example": "He left his box on the desk."
+    },
+    {
+      "word": "boy",
+      "meaning": "常用词",
+      "example": "My boy called me this morning."
+    },
+    {
+      "word": "branch",
+      "meaning": "常用词",
+      "example": "We discussed branch with the client yesterday."
+    },
+    {
+      "word": "bread",
+      "meaning": "常用词",
+      "example": "I bought some bread on my way home."
+    },
+    {
+      "word": "break",
+      "meaning": "常用词",
+      "example": "I read an article about break last night."
+    },
+    {
+      "word": "bright",
+      "meaning": "常用词",
+      "example": "The room feels very bright today."
+    },
+    {
+      "word": "bring",
+      "meaning": "常用词",
+      "example": "Bring your ID with you."
+    },
+    {
+      "word": "broad",
+      "meaning": "常用词",
+      "example": "The room feels very broad today."
+    },
+    {
+      "word": "broke",
+      "meaning": "常用词",
+      "example": "She broke home early last night."
+    },
+    {
+      "word": "brother",
+      "meaning": "常用词",
+      "example": "My brother called me this morning."
+    },
+    {
+      "word": "brought",
+      "meaning": "常用词",
+      "example": "She brought home early last night."
+    },
+    {
+      "word": "brown",
+      "meaning": "常用词",
+      "example": "He bought a brown jacket yesterday."
+    },
+    {
+      "word": "build",
+      "meaning": "常用词",
+      "example": "We plan to build a new lab."
+    },
+    {
+      "word": "burn",
+      "meaning": "常用词",
+      "example": "There is a quick tip on burn in our handbook."
+    },
+    {
+      "word": "busy",
+      "meaning": "常用词",
+      "example": "A busy choice will save us time."
+    },
+    {
+      "word": "but",
+      "meaning": "常用词",
+      "example": "I wanted to go, but it started raining."
+    },
+    {
+      "word": "buy",
+      "meaning": "常用词",
+      "example": "I want to buy a new laptop."
+    },
+    {
+      "word": "by",
+      "meaning": "常用词",
+      "example": "Please send the file by Friday."
+    },
+    {
+      "word": "call",
+      "meaning": "常用词",
+      "example": "Call me when you arrive."
+    },
+    {
+      "word": "came",
+      "meaning": "常用词",
+      "example": "She came home early last night."
+    },
+    {
+      "word": "camp",
+      "meaning": "常用词",
+      "example": "We discussed camp with the client yesterday."
+    },
+    {
+      "word": "can",
+      "meaning": "常用词",
+      "example": "Can you review this PR?"
+    },
+    {
+      "word": "capital",
+      "meaning": "常用词",
+      "example": "I read an article about capital last night."
+    },
+    {
+      "word": "captain",
+      "meaning": "常用词",
+      "example": "There is a quick tip on captain in our handbook."
+    },
+    {
+      "word": "car",
+      "meaning": "常用词",
+      "example": "He left his car on the desk."
+    },
+    {
+      "word": "card",
+      "meaning": "常用词",
+      "example": "He left his card on the desk."
+    },
+    {
+      "word": "care",
+      "meaning": "常用词",
+      "example": "We need to care it now."
+    },
+    {
+      "word": "carry",
+      "meaning": "常用词",
+      "example": "Please carry it as soon as possible."
+    },
+    {
+      "word": "case",
+      "meaning": "常用词",
+      "example": "We discussed case with the client yesterday."
+    },
+    {
+      "word": "cat",
+      "meaning": "常用词",
+      "example": "The cat ran across the road."
+    },
+    {
+      "word": "catch",
+      "meaning": "常用词",
+      "example": "Please catch it as soon as possible."
+    },
+    {
+      "word": "caught",
+      "meaning": "常用词",
+      "example": "She caught home early last night."
+    },
+    {
+      "word": "cause",
+      "meaning": "常用词",
+      "example": "Please cause it as soon as possible."
+    },
+    {
+      "word": "cell",
+      "meaning": "常用词",
+      "example": "There is a quick tip on cell in our handbook."
+    },
+    {
+      "word": "cent",
+      "meaning": "常用词",
+      "example": "We discussed cent with the client yesterday."
+    },
+    {
+      "word": "center",
+      "meaning": "常用词",
+      "example": "There is a quick tip on center in our handbook."
+    },
+    {
+      "word": "centre",
+      "meaning": "常用词",
+      "example": "There is a quick tip on centre in our handbook."
+    },
+    {
+      "word": "century",
+      "meaning": "常用词",
+      "example": "There is a quick tip on century in our handbook."
+    },
+    {
+      "word": "certain",
+      "meaning": "常用词",
+      "example": "There is a quick tip on certain in our handbook."
+    },
+    {
+      "word": "chair",
+      "meaning": "常用词",
+      "example": "He left his chair on the desk."
+    },
+    {
+      "word": "chance",
+      "meaning": "常用词",
+      "example": "I read an article about chance last night."
+    },
+    {
+      "word": "change",
+      "meaning": "常用词",
+      "example": "Change the password regularly."
+    },
+    {
+      "word": "character",
+      "meaning": "常用词",
+      "example": "I read an article about character last night."
+    },
+    {
+      "word": "charge",
+      "meaning": "常用词",
+      "example": "We discussed charge with the client yesterday."
+    },
+    {
+      "word": "chart",
+      "meaning": "常用词",
+      "example": "I read an article about chart last night."
+    },
+    {
+      "word": "check",
+      "meaning": "常用词",
+      "example": "Check your mailbox."
+    },
+    {
+      "word": "chick",
+      "meaning": "常用词",
+      "example": "There is a quick tip on chick in our handbook."
+    },
+    {
+      "word": "chief",
+      "meaning": "常用词",
+      "example": "I read an article about chief last night."
+    },
+    {
+      "word": "child",
+      "meaning": "常用词",
+      "example": "My child called me this morning."
+    },
+    {
+      "word": "children",
+      "meaning": "常用词",
+      "example": "Many children arrived early for the event."
+    },
+    {
+      "word": "choose",
+      "meaning": "常用词",
+      "example": "Choose a strong password."
+    },
+    {
+      "word": "chord",
+      "meaning": "常用词",
+      "example": "We discussed chord with the client yesterday."
+    },
+    {
+      "word": "circle",
+      "meaning": "常用词",
+      "example": "We discussed circle with the client yesterday."
+    },
+    {
+      "word": "city",
+      "meaning": "常用词",
+      "example": "We walked to the city after dinner."
+    },
+    {
+      "word": "claim",
+      "meaning": "常用词",
+      "example": "I read an article about claim last night."
+    },
+    {
+      "word": "class",
+      "meaning": "常用词",
+      "example": "We discussed class with the client yesterday."
+    },
+    {
+      "word": "clean",
+      "meaning": "常用词",
+      "example": "We need to clean it now."
+    },
+    {
+      "word": "clear",
+      "meaning": "常用词",
+      "example": "We need to clear it now."
+    },
+    {
+      "word": "climb",
+      "meaning": "常用词",
+      "example": "Please climb it as soon as possible."
+    },
+    {
+      "word": "clock",
+      "meaning": "常用词",
+      "example": "There is a quick tip on clock in our handbook."
+    },
+    {
+      "word": "close",
+      "meaning": "常用词",
+      "example": "Close the door gently."
+    },
+    {
+      "word": "clothe",
+      "meaning": "常用词",
+      "example": "We need to clothe it now."
+    },
+    {
+      "word": "cloud",
+      "meaning": "常用词",
+      "example": "We discussed cloud with the client yesterday."
+    },
+    {
+      "word": "coast",
+      "meaning": "常用词",
+      "example": "We walked to the coast after dinner."
+    },
+    {
+      "word": "coat",
+      "meaning": "常用词",
+      "example": "He left his coat on the desk."
+    },
+    {
+      "word": "cold",
+      "meaning": "常用词",
+      "example": "A cold choice will save us time."
+    },
+    {
+      "word": "collect",
+      "meaning": "常用词",
+      "example": "We discussed collect with the client yesterday."
+    },
+    {
+      "word": "colony",
+      "meaning": "常用词",
+      "example": "We discussed colony with the client yesterday."
+    },
+    {
+      "word": "color",
+      "meaning": "常用词",
+      "example": "We discussed color with the client yesterday."
+    },
+    {
+      "word": "column",
+      "meaning": "常用词",
+      "example": "I read an article about column last night."
+    },
+    {
+      "word": "come",
+      "meaning": "常用词",
+      "example": "Let's come now."
+    },
+    {
+      "word": "common",
+      "meaning": "常用词",
+      "example": "We discussed common with the client yesterday."
+    },
+    {
+      "word": "company",
+      "meaning": "常用词",
+      "example": "We discussed company with the client yesterday."
+    },
+    {
+      "word": "compare",
+      "meaning": "常用词",
+      "example": "Please compare it as soon as possible."
+    },
+    {
+      "word": "complete",
+      "meaning": "常用词",
+      "example": "We need to complete it now."
+    },
+    {
+      "word": "condition",
+      "meaning": "常用词",
+      "example": "We discussed condition with the client yesterday."
+    },
+    {
+      "word": "connect",
+      "meaning": "常用词",
+      "example": "Connect the cable to the port."
+    },
+    {
+      "word": "consider",
+      "meaning": "常用词",
+      "example": "We need to consider it now."
+    },
+    {
+      "word": "consonant",
+      "meaning": "常用词",
+      "example": "We discussed consonant with the client yesterday."
+    },
+    {
+      "word": "contain",
+      "meaning": "常用词",
+      "example": "We need to contain it now."
+    },
+    {
+      "word": "continent",
+      "meaning": "常用词",
+      "example": "There is a quick tip on continent in our handbook."
+    },
+    {
+      "word": "continue",
+      "meaning": "常用词",
+      "example": "We need to continue it now."
+    },
+    {
+      "word": "control",
+      "meaning": "常用词",
+      "example": "You can control the volume here."
+    },
+    {
+      "word": "cook",
+      "meaning": "常用词",
+      "example": "Please cook it as soon as possible."
+    },
+    {
+      "word": "cool",
+      "meaning": "常用词",
+      "example": "This design looks cool and modern."
+    },
+    {
+      "word": "copy",
+      "meaning": "常用词",
+      "example": "Please copy it as soon as possible."
+    },
+    {
+      "word": "corn",
+      "meaning": "常用词",
+      "example": "I bought some corn on my way home."
+    },
+    {
+      "word": "corner",
+      "meaning": "常用词",
+      "example": "We discussed corner with the client yesterday."
+    },
+    {
+      "word": "correct",
+      "meaning": "常用词",
+      "example": "There is a quick tip on correct in our handbook."
+    },
+    {
+      "word": "cost",
+      "meaning": "常用词",
+      "example": "I read an article about cost last night."
+    },
+    {
+      "word": "cotton",
+      "meaning": "常用词",
+      "example": "There is a quick tip on cotton in our handbook."
+    },
+    {
+      "word": "could",
+      "meaning": "常用词",
+      "example": "Could you send the link again?"
+    },
+    {
+      "word": "count",
+      "meaning": "常用词",
+      "example": "Count from one to ten."
+    },
+    {
+      "word": "country",
+      "meaning": "常用词",
+      "example": "I read an article about country last night."
+    },
+    {
+      "word": "course",
+      "meaning": "常用词",
+      "example": "I read an article about course last night."
+    },
+    {
+      "word": "cover",
+      "meaning": "常用词",
+      "example": "Cover the pot with a lid."
+    },
+    {
+      "word": "cow",
+      "meaning": "常用词",
+      "example": "The cow ran across the road."
+    },
+    {
+      "word": "crease",
+      "meaning": "常用词",
+      "example": "We discussed crease with the client yesterday."
+    },
+    {
+      "word": "create",
+      "meaning": "常用词",
+      "example": "Create a new folder."
+    },
+    {
+      "word": "crop",
+      "meaning": "常用词",
+      "example": "I read an article about crop last night."
+    },
+    {
+      "word": "cross",
+      "meaning": "常用词",
+      "example": "Please cross it as soon as possible."
+    },
+    {
+      "word": "crowd",
+      "meaning": "常用词",
+      "example": "We discussed crowd with the client yesterday."
+    },
+    {
+      "word": "cry",
+      "meaning": "常用词",
+      "example": "They will cry it soon."
+    },
+    {
+      "word": "current",
+      "meaning": "常用词",
+      "example": "We discussed current with the client yesterday."
+    },
+    {
+      "word": "cut",
+      "meaning": "常用词",
+      "example": "She cut home early last night."
+    },
+    {
+      "word": "dad",
+      "meaning": "常用词",
+      "example": "My dad called me this morning."
+    },
+    {
+      "word": "dance",
+      "meaning": "常用词",
+      "example": "Please dance it as soon as possible."
+    },
+    {
+      "word": "danger",
+      "meaning": "常用词",
+      "example": "There is a quick tip on danger in our handbook."
+    },
+    {
+      "word": "dark",
+      "meaning": "常用词",
+      "example": "This design looks dark and modern."
+    },
+    {
+      "word": "day",
+      "meaning": "常用词",
+      "example": "Have a nice day!"
+    },
+    {
+      "word": "dead",
+      "meaning": "常用词",
+      "example": "We discussed dead with the client yesterday."
+    },
+    {
+      "word": "deal",
+      "meaning": "常用词",
+      "example": "We discussed deal with the client yesterday."
+    },
+    {
+      "word": "dear",
+      "meaning": "常用词",
+      "example": "There is a quick tip on dear in our handbook."
+    },
+    {
+      "word": "death",
+      "meaning": "常用词",
+      "example": "There is a quick tip on death in our handbook."
+    },
+    {
+      "word": "decide",
+      "meaning": "常用词",
+      "example": "We need to decide today."
+    },
+    {
+      "word": "decimal",
+      "meaning": "常用词",
+      "example": "I read an article about decimal last night."
+    },
+    {
+      "word": "deep",
+      "meaning": "常用词",
+      "example": "The room feels very deep today."
+    },
+    {
+      "word": "degree",
+      "meaning": "常用词",
+      "example": "There is a quick tip on degree in our handbook."
+    },
+    {
+      "word": "depend",
+      "meaning": "常用词",
+      "example": "We need to depend it now."
+    },
+    {
+      "word": "describe",
+      "meaning": "常用词",
+      "example": "They will describe it soon."
+    },
+    {
+      "word": "desert",
+      "meaning": "常用词",
+      "example": "We walked to the desert after dinner."
+    },
+    {
+      "word": "design",
+      "meaning": "常用词",
+      "example": "She designed this logo."
+    },
+    {
+      "word": "determine",
+      "meaning": "常用词",
+      "example": "They will determine it soon."
+    },
+    {
+      "word": "develop",
+      "meaning": "常用词",
+      "example": "We develop embedded software."
+    },
+    {
+      "word": "dictionary",
+      "meaning": "常用词",
+      "example": "There is a quick tip on dictionary in our handbook."
+    },
+    {
+      "word": "did",
+      "meaning": "常用词",
+      "example": "Did you check the logs?"
+    },
+    {
+      "word": "die",
+      "meaning": "常用词",
+      "example": "Please die it as soon as possible."
+    },
+    {
+      "word": "differ",
+      "meaning": "常用词",
+      "example": "They will differ it soon."
+    },
+    {
+      "word": "difficult",
+      "meaning": "常用词",
+      "example": "This design looks difficult and modern."
+    },
+    {
+      "word": "direct",
+      "meaning": "常用词",
+      "example": "This design looks direct and modern."
+    },
+    {
+      "word": "discuss",
+      "meaning": "常用词",
+      "example": "Please discuss it as soon as possible."
+    },
+    {
+      "word": "distant",
+      "meaning": "常用词",
+      "example": "We discussed distant with the client yesterday."
+    },
+    {
+      "word": "divide",
+      "meaning": "常用词",
+      "example": "They will divide it soon."
+    },
+    {
+      "word": "division",
+      "meaning": "常用词",
+      "example": "I read an article about division last night."
+    },
+    {
+      "word": "do",
+      "meaning": "常用词",
+      "example": "Do you need anything else?"
+    },
+    {
+      "word": "doctor",
+      "meaning": "常用词",
+      "example": "There is a quick tip on doctor in our handbook."
+    },
+    {
+      "word": "does",
+      "meaning": "常用词",
+      "example": "Does this charger work with your phone?"
+    },
+    {
+      "word": "dog",
+      "meaning": "常用词",
+      "example": "The dog ran across the road."
+    },
+    {
+      "word": "dollar",
+      "meaning": "常用词",
+      "example": "There is a quick tip on dollar in our handbook."
+    },
+    {
+      "word": "don't",
+      "meaning": "常用词",
+      "example": "Don't forget to back up your files."
+    },
+    {
+      "word": "done",
+      "meaning": "常用词",
+      "example": "It's done—please review."
+    },
+    {
+      "word": "door",
+      "meaning": "常用词",
+      "example": "He left his door on the desk."
+    },
+    {
+      "word": "double",
+      "meaning": "常用词",
+      "example": "There is a quick tip on double in our handbook."
+    },
+    {
+      "word": "down",
+      "meaning": "常用词",
+      "example": "Calm down and breathe."
+    },
+    {
+      "word": "draw",
+      "meaning": "常用词",
+      "example": "Draw a simple diagram."
+    },
+    {
+      "word": "dream",
+      "meaning": "常用词",
+      "example": "We need to dream it now."
+    },
+    {
+      "word": "dress",
+      "meaning": "常用词",
+      "example": "He left his dress on the desk."
+    },
+    {
+      "word": "drink",
+      "meaning": "常用词",
+      "example": "Drink more water."
+    },
+    {
+      "word": "drive",
+      "meaning": "常用词",
+      "example": "He drives to work."
+    },
+    {
+      "word": "drop",
+      "meaning": "常用词",
+      "example": "Don't drop the glass."
+    },
+    {
+      "word": "dry",
+      "meaning": "常用词",
+      "example": "We discussed dry with the client yesterday."
+    },
+    {
+      "word": "duck",
+      "meaning": "常用词",
+      "example": "The duck ran across the road."
+    },
+    {
+      "word": "during",
+      "meaning": "常用词",
+      "example": "No phones during the exam."
+    },
+    {
+      "word": "each",
+      "meaning": "常用词",
+      "example": "I read an article about each last night."
+    },
+    {
+      "word": "ear",
+      "meaning": "常用词",
+      "example": "He hurt his ear during the game."
+    },
+    {
+      "word": "early",
+      "meaning": "常用词",
+      "example": "A early choice will save us time."
+    },
+    {
+      "word": "earth",
+      "meaning": "常用词",
+      "example": "I read an article about earth last night."
+    },
+    {
+      "word": "ease",
+      "meaning": "常用词",
+      "example": "I read an article about ease last night."
+    },
+    {
+      "word": "east",
+      "meaning": "常用词",
+      "example": "I read an article about east last night."
+    },
+    {
+      "word": "eat",
+      "meaning": "常用词",
+      "example": "We eat dinner at seven."
+    },
+    {
+      "word": "edge",
+      "meaning": "常用词",
+      "example": "I read an article about edge last night."
+    },
+    {
+      "word": "effect",
+      "meaning": "常用词",
+      "example": "We discussed effect with the client yesterday."
+    },
+    {
+      "word": "egg",
+      "meaning": "常用词",
+      "example": "I cooked an egg for breakfast."
+    },
+    {
+      "word": "eight",
+      "meaning": "常用词",
+      "example": "We have eight open tickets left."
+    },
+    {
+      "word": "either",
+      "meaning": "常用词",
+      "example": "There is a quick tip on either in our handbook."
+    },
+    {
+      "word": "electric",
+      "meaning": "常用词",
+      "example": "There is a quick tip on electric in our handbook."
+    },
+    {
+      "word": "element",
+      "meaning": "常用词",
+      "example": "I read an article about element last night."
+    },
+    {
+      "word": "else",
+      "meaning": "常用词",
+      "example": "We discussed else with the client yesterday."
+    },
+    {
+      "word": "end",
+      "meaning": "常用词",
+      "example": "There is a quick tip on end in our handbook."
+    },
+    {
+      "word": "enemy",
+      "meaning": "常用词",
+      "example": "I read an article about enemy last night."
+    },
+    {
+      "word": "energy",
+      "meaning": "常用词",
+      "example": "We discussed energy with the client yesterday."
+    },
+    {
+      "word": "engine",
+      "meaning": "常用词",
+      "example": "We discussed engine with the client yesterday."
+    },
+    {
+      "word": "enough",
+      "meaning": "常用词",
+      "example": "I read an article about enough last night."
+    },
+    {
+      "word": "enter",
+      "meaning": "常用词",
+      "example": "Enter your password to continue."
+    },
+    {
+      "word": "equal",
+      "meaning": "常用词",
+      "example": "There is a quick tip on equal in our handbook."
+    },
+    {
+      "word": "equate",
+      "meaning": "常用词",
+      "example": "We discussed equate with the client yesterday."
+    },
+    {
+      "word": "especially",
+      "meaning": "常用词",
+      "example": "I read an article about especially last night."
+    },
+    {
+      "word": "even",
+      "meaning": "常用词",
+      "example": "Even a small change can help."
+    },
+    {
+      "word": "evening",
+      "meaning": "常用词",
+      "example": "Let's have a call this evening."
+    },
+    {
+      "word": "event",
+      "meaning": "常用词",
+      "example": "There is a quick tip on event in our handbook."
+    },
+    {
+      "word": "ever",
+      "meaning": "常用词",
+      "example": "Have you ever tried this?"
+    },
+    {
+      "word": "every",
+      "meaning": "常用词",
+      "example": "There is a quick tip on every in our handbook."
+    },
+    {
+      "word": "exact",
+      "meaning": "常用词",
+      "example": "This design looks exact and modern."
+    },
+    {
+      "word": "example",
+      "meaning": "常用词",
+      "example": "I read an article about example last night."
+    },
+    {
+      "word": "except",
+      "meaning": "常用词",
+      "example": "We discussed except with the client yesterday."
+    },
+    {
+      "word": "excite",
+      "meaning": "常用词",
+      "example": "There is a quick tip on excite in our handbook."
+    },
+    {
+      "word": "exercise",
+      "meaning": "常用词",
+      "example": "There is a quick tip on exercise in our handbook."
+    },
+    {
+      "word": "expect",
+      "meaning": "常用词",
+      "example": "Please expect it as soon as possible."
+    },
+    {
+      "word": "experience",
+      "meaning": "常用词",
+      "example": "They will experience it soon."
+    },
+    {
+      "word": "experiment",
+      "meaning": "常用词",
+      "example": "Please experiment it as soon as possible."
+    },
+    {
+      "word": "eye",
+      "meaning": "常用词",
+      "example": "He hurt his eye during the game."
+    },
+    {
+      "word": "face",
+      "meaning": "常用词",
+      "example": "I read an article about face last night."
+    },
+    {
+      "word": "fact",
+      "meaning": "常用词",
+      "example": "I read an article about fact last night."
+    },
+    {
+      "word": "fair",
+      "meaning": "常用词",
+      "example": "A fair choice will save us time."
+    },
+    {
+      "word": "fall",
+      "meaning": "常用词",
+      "example": "Let's fall now."
+    },
+    {
+      "word": "family",
+      "meaning": "常用词",
+      "example": "We discussed family with the client yesterday."
+    },
+    {
+      "word": "famous",
+      "meaning": "常用词",
+      "example": "A famous choice will save us time."
+    },
+    {
+      "word": "far",
+      "meaning": "常用词",
+      "example": "The room feels very far today."
+    },
+    {
+      "word": "farm",
+      "meaning": "常用词",
+      "example": "We discussed farm with the client yesterday."
+    },
+    {
+      "word": "fast",
+      "meaning": "常用词",
+      "example": "A fast choice will save us time."
+    },
+    {
+      "word": "fat",
+      "meaning": "常用词",
+      "example": "This design looks fat and modern."
+    },
+    {
+      "word": "father",
+      "meaning": "常用词",
+      "example": "My father called me this morning."
+    },
+    {
+      "word": "favor",
+      "meaning": "常用词",
+      "example": "There is a quick tip on favor in our handbook."
+    },
+    {
+      "word": "fear",
+      "meaning": "常用词",
+      "example": "There is a quick tip on fear in our handbook."
+    },
+    {
+      "word": "feed",
+      "meaning": "常用词",
+      "example": "They will feed it soon."
+    },
+    {
+      "word": "feel",
+      "meaning": "常用词",
+      "example": "We need to feel it now."
+    },
+    {
+      "word": "feet",
+      "meaning": "常用词",
+      "example": "Many feet prefer online shopping."
+    },
+    {
+      "word": "fell",
+      "meaning": "常用词",
+      "example": "She fell home early last night."
+    },
+    {
+      "word": "felt",
+      "meaning": "常用词",
+      "example": "She felt home early last night."
+    },
+    {
+      "word": "few",
+      "meaning": "常用词",
+      "example": "A few choice will save us time."
+    },
+    {
+      "word": "field",
+      "meaning": "常用词",
+      "example": "There is a quick tip on field in our handbook."
+    },
+    {
+      "word": "fig",
+      "meaning": "常用词",
+      "example": "We discussed fig with the client yesterday."
+    },
+    {
+      "word": "fight",
+      "meaning": "常用词",
+      "example": "Please fight it as soon as possible."
+    },
+    {
+      "word": "figure",
+      "meaning": "常用词",
+      "example": "I read an article about figure last night."
+    },
+    {
+      "word": "fill",
+      "meaning": "常用词",
+      "example": "We need to fill it now."
+    },
+    {
+      "word": "final",
+      "meaning": "常用词",
+      "example": "There is a quick tip on final in our handbook."
+    },
+    {
+      "word": "find",
+      "meaning": "常用词",
+      "example": "Did you find your keys?"
+    },
+    {
+      "word": "fine",
+      "meaning": "常用词",
+      "example": "A fine choice will save us time."
+    },
+    {
+      "word": "finger",
+      "meaning": "常用词",
+      "example": "There is a quick tip on finger in our handbook."
+    },
+    {
+      "word": "finish",
+      "meaning": "常用词",
+      "example": "We need to finish by Friday."
+    },
+    {
+      "word": "fire",
+      "meaning": "常用词",
+      "example": "We discussed fire with the client yesterday."
+    },
+    {
+      "word": "first",
+      "meaning": "常用词",
+      "example": "This design looks first and modern."
+    },
+    {
+      "word": "fish",
+      "meaning": "常用词",
+      "example": "The fish ran across the road."
+    },
+    {
+      "word": "fit",
+      "meaning": "常用词",
+      "example": "There is a quick tip on fit in our handbook."
+    },
+    {
+      "word": "five",
+      "meaning": "常用词",
+      "example": "We have five open tickets left."
+    },
+    {
+      "word": "flat",
+      "meaning": "常用词",
+      "example": "We discussed flat with the client yesterday."
+    },
+    {
+      "word": "floor",
+      "meaning": "常用词",
+      "example": "There is a quick tip on floor in our handbook."
+    },
+    {
+      "word": "flow",
+      "meaning": "常用词",
+      "example": "I read an article about flow last night."
+    },
+    {
+      "word": "flower",
+      "meaning": "常用词",
+      "example": "He left his flower on the desk."
+    },
+    {
+      "word": "fly",
+      "meaning": "常用词",
+      "example": "They will fly it soon."
+    },
+    {
+      "word": "follow",
+      "meaning": "常用词",
+      "example": "Please follow it as soon as possible."
+    },
+    {
+      "word": "food",
+      "meaning": "常用词",
+      "example": "There is a quick tip on food in our handbook."
+    },
+    {
+      "word": "foot",
+      "meaning": "常用词",
+      "example": "I read an article about foot last night."
+    },
+    {
+      "word": "for",
+      "meaning": "常用词",
+      "example": "This update is for internal testing."
+    },
+    {
+      "word": "force",
+      "meaning": "常用词",
+      "example": "There is a quick tip on force in our handbook."
+    },
+    {
+      "word": "forest",
+      "meaning": "常用词",
+      "example": "We walked to the forest after dinner."
+    },
+    {
+      "word": "form",
+      "meaning": "常用词",
+      "example": "Please form it as soon as possible."
+    },
+    {
+      "word": "forward",
+      "meaning": "常用词",
+      "example": "I read an article about forward last night."
+    },
+    {
+      "word": "found",
+      "meaning": "常用词",
+      "example": "She found home early last night."
+    },
+    {
+      "word": "four",
+      "meaning": "常用词",
+      "example": "We have four open tickets left."
+    },
+    {
+      "word": "fraction",
+      "meaning": "常用词",
+      "example": "I read an article about fraction last night."
+    },
+    {
+      "word": "free",
+      "meaning": "常用词",
+      "example": "There is a quick tip on free in our handbook."
+    },
+    {
+      "word": "fresh",
+      "meaning": "常用词",
+      "example": "The room feels very fresh today."
+    },
+    {
+      "word": "friend",
+      "meaning": "常用词",
+      "example": "We discussed friend with the client yesterday."
+    },
+    {
+      "word": "from",
+      "meaning": "常用词",
+      "example": "We received feedback from the client."
+    },
+    {
+      "word": "front",
+      "meaning": "常用词",
+      "example": "There is a quick tip on front in our handbook."
+    },
+    {
+      "word": "fruit",
+      "meaning": "常用词",
+      "example": "I bought some fruit on my way home."
+    },
+    {
+      "word": "full",
+      "meaning": "常用词",
+      "example": "A full choice will save us time."
+    },
+    {
+      "word": "fun",
+      "meaning": "常用词",
+      "example": "I read an article about fun last night."
+    },
+    {
+      "word": "game",
+      "meaning": "常用词",
+      "example": "I read an article about game last night."
+    },
+    {
+      "word": "garden",
+      "meaning": "常用词",
+      "example": "We walked to the garden after dinner."
+    },
+    {
+      "word": "gas",
+      "meaning": "常用词",
+      "example": "I read an article about gas last night."
+    },
+    {
+      "word": "gather",
+      "meaning": "常用词",
+      "example": "They will gather it soon."
+    },
+    {
+      "word": "gave",
+      "meaning": "常用词",
+      "example": "She gave home early last night."
+    },
+    {
+      "word": "general",
+      "meaning": "常用词",
+      "example": "A general choice will save us time."
+    },
+    {
+      "word": "gentle",
+      "meaning": "常用词",
+      "example": "This design looks gentle and modern."
+    },
+    {
+      "word": "get",
+      "meaning": "常用词",
+      "example": "Did you get my message?"
+    },
+    {
+      "word": "girl",
+      "meaning": "常用词",
+      "example": "My girl called me this morning."
+    },
+    {
+      "word": "give",
+      "meaning": "常用词",
+      "example": "Please give me a minute."
+    },
+    {
+      "word": "glad",
+      "meaning": "常用词",
+      "example": "The room feels very glad today."
+    },
+    {
+      "word": "glass",
+      "meaning": "常用词",
+      "example": "He left his glass on the desk."
+    },
+    {
+      "word": "go",
+      "meaning": "常用词",
+      "example": "Let's go now."
+    },
+    {
+      "word": "gold",
+      "meaning": "常用词",
+      "example": "He bought a gold jacket yesterday."
+    },
+    {
+      "word": "gone",
+      "meaning": "常用词",
+      "example": "She's gone home for the day."
+    },
+    {
+      "word": "good",
+      "meaning": "常用词",
+      "example": "The room feels very good today."
+    },
+    {
+      "word": "got",
+      "meaning": "常用词",
+      "example": "She got home early last night."
+    },
+    {
+      "word": "govern",
+      "meaning": "常用词",
+      "example": "Please govern it as soon as possible."
+    },
+    {
+      "word": "grand",
+      "meaning": "常用词",
+      "example": "I read an article about grand last night."
+    },
+    {
+      "word": "grass",
+      "meaning": "常用词",
+      "example": "There is a quick tip on grass in our handbook."
+    },
+    {
+      "word": "gray",
+      "meaning": "常用词",
+      "example": "He bought a gray jacket yesterday."
+    },
+    {
+      "word": "great",
+      "meaning": "常用词",
+      "example": "A great choice will save us time."
+    },
+    {
+      "word": "green",
+      "meaning": "常用词",
+      "example": "He bought a green jacket yesterday."
+    },
+    {
+      "word": "grew",
+      "meaning": "常用词",
+      "example": "She grew home early last night."
+    },
+    {
+      "word": "ground",
+      "meaning": "常用词",
+      "example": "There is a quick tip on ground in our handbook."
+    },
+    {
+      "word": "group",
+      "meaning": "常用词",
+      "example": "I read an article about group last night."
+    },
+    {
+      "word": "grow",
+      "meaning": "常用词",
+      "example": "We need to grow now."
+    },
+    {
+      "word": "guess",
+      "meaning": "常用词",
+      "example": "Please guess it as soon as possible."
+    },
+    {
+      "word": "guide",
+      "meaning": "常用词",
+      "example": "They will guide it soon."
+    },
+    {
+      "word": "gun",
+      "meaning": "常用词",
+      "example": "There is a quick tip on gun in our handbook."
+    },
+    {
+      "word": "had",
+      "meaning": "常用词",
+      "example": "I read an article about had last night."
+    },
+    {
+      "word": "hair",
+      "meaning": "常用词",
+      "example": "He hurt his hair during the game."
+    },
+    {
+      "word": "half",
+      "meaning": "常用词",
+      "example": "There is a quick tip on half in our handbook."
+    },
+    {
+      "word": "hand",
+      "meaning": "常用词",
+      "example": "He hurt his hand during the game."
+    },
+    {
+      "word": "happen",
+      "meaning": "常用词",
+      "example": "We need to happen now."
+    },
+    {
+      "word": "happy",
+      "meaning": "常用词",
+      "example": "We discussed happy with the client yesterday."
+    },
+    {
+      "word": "hard",
+      "meaning": "常用词",
+      "example": "There is a quick tip on hard in our handbook."
+    },
+    {
+      "word": "has",
+      "meaning": "常用词",
+      "example": "We discussed has with the client yesterday."
+    },
+    {
+      "word": "hat",
+      "meaning": "常用词",
+      "example": "He left his hat on the desk."
+    },
+    {
+      "word": "have",
+      "meaning": "常用词",
+      "example": "They will have it soon."
+    },
+    {
+      "word": "he",
+      "meaning": "常用词",
+      "example": "He works from home on Fridays."
+    },
+    {
+      "word": "head",
+      "meaning": "常用词",
+      "example": "He hurt his head during the game."
+    },
+    {
+      "word": "hear",
+      "meaning": "常用词",
+      "example": "Please hear it as soon as possible."
+    },
+    {
+      "word": "heard",
+      "meaning": "常用词",
+      "example": "She heard home early last night."
+    },
+    {
+      "word": "heart",
+      "meaning": "常用词",
+      "example": "He hurt his heart during the game."
+    },
+    {
+      "word": "heat",
+      "meaning": "常用词",
+      "example": "There is a quick tip on heat in our handbook."
+    },
+    {
+      "word": "heavy",
+      "meaning": "常用词",
+      "example": "The room feels very heavy today."
+    },
+    {
+      "word": "held",
+      "meaning": "常用词",
+      "example": "She held home early last night."
+    },
+    {
+      "word": "help",
+      "meaning": "常用词",
+      "example": "Can you help me?"
+    },
+    {
+      "word": "her",
+      "meaning": "常用词",
+      "example": "Her idea saved us a lot of time."
+    },
+    {
+      "word": "here",
+      "meaning": "常用词",
+      "example": "Please wait here for a moment."
+    },
+    {
+      "word": "high",
+      "meaning": "常用词",
+      "example": "The room feels very high today."
+    },
+    {
+      "word": "hill",
+      "meaning": "常用词",
+      "example": "I read an article about hill last night."
+    },
+    {
+      "word": "him",
+      "meaning": "常用词",
+      "example": "I met him at the conference."
+    },
+    {
+      "word": "his",
+      "meaning": "常用词",
+      "example": "His phone died on the way home."
+    },
+    {
+      "word": "history",
+      "meaning": "常用词",
+      "example": "We discussed history with the client yesterday."
+    },
+    {
+      "word": "hit",
+      "meaning": "常用词",
+      "example": "Please hit it as soon as possible."
+    },
+    {
+      "word": "hold",
+      "meaning": "常用词",
+      "example": "They will hold it soon."
+    },
+    {
+      "word": "hole",
+      "meaning": "常用词",
+      "example": "I read an article about hole last night."
+    },
+    {
+      "word": "home",
+      "meaning": "常用词",
+      "example": "I read an article about home last night."
+    },
+    {
+      "word": "hope",
+      "meaning": "常用词",
+      "example": "I hope everything goes well."
+    },
+    {
+      "word": "horse",
+      "meaning": "常用词",
+      "example": "The horse ran across the road."
+    },
+    {
+      "word": "hot",
+      "meaning": "常用词",
+      "example": "We discussed hot with the client yesterday."
+    },
+    {
+      "word": "hour",
+      "meaning": "常用词",
+      "example": "It took an hour to fix."
+    },
+    {
+      "word": "house",
+      "meaning": "常用词",
+      "example": "There is a quick tip on house in our handbook."
+    },
+    {
+      "word": "how",
+      "meaning": "常用词",
+      "example": "How does this feature work?"
+    },
+    {
+      "word": "huge",
+      "meaning": "常用词",
+      "example": "The room feels very huge today."
+    },
+    {
+      "word": "human",
+      "meaning": "常用词",
+      "example": "The room feels very human today."
+    },
+    {
+      "word": "hundred",
+      "meaning": "常用词",
+      "example": "Over a hundred people joined the webinar."
+    },
+    {
+      "word": "hunt",
+      "meaning": "常用词",
+      "example": "Please hunt it as soon as possible."
+    },
+    {
+      "word": "hurry",
+      "meaning": "常用词",
+      "example": "We need to hurry it now."
+    },
+    {
+      "word": "i",
+      "meaning": "常用词",
+      "example": "I just got back from lunch."
+    },
+    {
+      "word": "ice",
+      "meaning": "常用词",
+      "example": "There is a quick tip on ice in our handbook."
+    },
+    {
+      "word": "idea",
+      "meaning": "常用词",
+      "example": "I read an article about idea last night."
+    },
+    {
+      "word": "if",
+      "meaning": "常用词",
+      "example": "If you need help, just ask."
+    },
+    {
+      "word": "imagine",
+      "meaning": "常用词",
+      "example": "Please imagine it as soon as possible."
+    },
+    {
+      "word": "in",
+      "meaning": "常用词",
+      "example": "The keys are in your backpack."
+    },
+    {
+      "word": "inch",
+      "meaning": "常用词",
+      "example": "There is a quick tip on inch in our handbook."
+    },
+    {
+      "word": "include",
+      "meaning": "常用词",
+      "example": "Please include it as soon as possible."
+    },
+    {
+      "word": "indicate",
+      "meaning": "常用词",
+      "example": "They will indicate it soon."
+    },
+    {
+      "word": "industry",
+      "meaning": "常用词",
+      "example": "There is a quick tip on industry in our handbook."
+    },
+    {
+      "word": "insect",
+      "meaning": "常用词",
+      "example": "I read an article about insect last night."
+    },
+    {
+      "word": "instant",
+      "meaning": "常用词",
+      "example": "There is a quick tip on instant in our handbook."
+    },
+    {
+      "word": "instrument",
+      "meaning": "常用词",
+      "example": "I read an article about instrument last night."
+    },
+    {
+      "word": "interest",
+      "meaning": "常用词",
+      "example": "There is a quick tip on interest in our handbook."
+    },
+    {
+      "word": "invent",
+      "meaning": "常用词",
+      "example": "We need to invent it now."
+    },
+    {
+      "word": "iron",
+      "meaning": "常用词",
+      "example": "I read an article about iron last night."
+    },
+    {
+      "word": "is",
+      "meaning": "常用词",
+      "example": "The server is back online."
+    },
+    {
+      "word": "island",
+      "meaning": "常用词",
+      "example": "We walked to the island after dinner."
+    },
+    {
+      "word": "it",
+      "meaning": "常用词",
+      "example": "It looks brand new."
+    },
+    {
+      "word": "job",
+      "meaning": "常用词",
+      "example": "We discussed job with the client yesterday."
+    },
+    {
+      "word": "join",
+      "meaning": "常用词",
+      "example": "Please join it as soon as possible."
+    },
+    {
+      "word": "joy",
+      "meaning": "常用词",
+      "example": "I read an article about joy last night."
+    },
+    {
+      "word": "jump",
+      "meaning": "常用词",
+      "example": "He jumped over the puddle."
+    },
+    {
+      "word": "just",
+      "meaning": "常用词",
+      "example": "I just sent the email."
+    },
+    {
+      "word": "keep",
+      "meaning": "常用词",
+      "example": "Please keep the door closed."
+    },
+    {
+      "word": "kept",
+      "meaning": "常用词",
+      "example": "She kept home early last night."
+    },
+    {
+      "word": "key",
+      "meaning": "常用词",
+      "example": "He left his key on the desk."
+    },
+    {
+      "word": "kill",
+      "meaning": "常用词",
+      "example": "Please kill it as soon as possible."
+    },
+    {
+      "word": "kind",
+      "meaning": "常用词",
+      "example": "We discussed kind with the client yesterday."
+    },
+    {
+      "word": "king",
+      "meaning": "常用词",
+      "example": "My king called me this morning."
+    },
+    {
+      "word": "kings",
+      "meaning": "常用词",
+      "example": "Many kings arrived early for the event."
+    },
+    {
+      "word": "knew",
+      "meaning": "常用词",
+      "example": "She knew home early last night."
+    },
+    {
+      "word": "know",
+      "meaning": "常用词",
+      "example": "Do you know his name?"
+    },
+    {
+      "word": "lady",
+      "meaning": "常用词",
+      "example": "There is a quick tip on lady in our handbook."
+    },
+    {
+      "word": "lake",
+      "meaning": "常用词",
+      "example": "We walked to the lake after dinner."
+    },
+    {
+      "word": "land",
+      "meaning": "常用词",
+      "example": "I read an article about land last night."
+    },
+    {
+      "word": "language",
+      "meaning": "常用词",
+      "example": "There is a quick tip on language in our handbook."
+    },
+    {
+      "word": "large",
+      "meaning": "常用词",
+      "example": "The room feels very large today."
+    },
+    {
+      "word": "last",
+      "meaning": "常用词",
+      "example": "The room feels very last today."
+    },
+    {
+      "word": "late",
+      "meaning": "常用词",
+      "example": "A late choice will save us time."
+    },
+    {
+      "word": "laugh",
+      "meaning": "常用词",
+      "example": "They will laugh soon."
+    },
+    {
+      "word": "law",
+      "meaning": "常用词",
+      "example": "I read an article about law last night."
+    },
+    {
+      "word": "lay",
+      "meaning": "常用词",
+      "example": "There is a quick tip on lay in our handbook."
+    },
+    {
+      "word": "lead",
+      "meaning": "常用词",
+      "example": "There is a quick tip on lead in our handbook."
+    },
+    {
+      "word": "learn",
+      "meaning": "常用词",
+      "example": "I'm trying to learn Spanish."
+    },
+    {
+      "word": "least",
+      "meaning": "常用词",
+      "example": "A least choice will save us time."
+    },
+    {
+      "word": "leave",
+      "meaning": "常用词",
+      "example": "Let's leave early."
+    },
+    {
+      "word": "led",
+      "meaning": "常用词",
+      "example": "There is a quick tip on led in our handbook."
+    },
+    {
+      "word": "left",
+      "meaning": "常用词",
+      "example": "A left choice will save us time."
+    },
+    {
+      "word": "leg",
+      "meaning": "常用词",
+      "example": "He hurt his leg during the game."
+    },
+    {
+      "word": "length",
+      "meaning": "常用词",
+      "example": "I read an article about length last night."
+    },
+    {
+      "word": "less",
+      "meaning": "常用词",
+      "example": "We discussed less with the client yesterday."
+    },
+    {
+      "word": "let",
+      "meaning": "常用词",
+      "example": "Let me know if you need help."
+    },
+    {
+      "word": "letter",
+      "meaning": "常用词",
+      "example": "We discussed letter with the client yesterday."
+    },
+    {
+      "word": "level",
+      "meaning": "常用词",
+      "example": "There is a quick tip on level in our handbook."
+    },
+    {
+      "word": "lie",
+      "meaning": "常用词",
+      "example": "They will lie it soon."
+    },
+    {
+      "word": "life",
+      "meaning": "常用词",
+      "example": "We discussed life with the client yesterday."
+    },
+    {
+      "word": "lift",
+      "meaning": "常用词",
+      "example": "They will lift it soon."
+    },
+    {
+      "word": "light",
+      "meaning": "常用词",
+      "example": "The room feels very light today."
+    },
+    {
+      "word": "like",
+      "meaning": "常用词",
+      "example": "I really like this idea."
+    },
+    {
+      "word": "line",
+      "meaning": "常用词",
+      "example": "I read an article about line last night."
+    },
+    {
+      "word": "liquid",
+      "meaning": "常用词",
+      "example": "We discussed liquid with the client yesterday."
+    },
+    {
+      "word": "list",
+      "meaning": "常用词",
+      "example": "There is a quick tip on list in our handbook."
+    },
+    {
+      "word": "listen",
+      "meaning": "常用词",
+      "example": "Listen carefully to the instructions."
+    },
+    {
+      "word": "little",
+      "meaning": "常用词",
+      "example": "This design looks little and modern."
+    },
+    {
+      "word": "live",
+      "meaning": "常用词",
+      "example": "They will live soon."
+    },
+    {
+      "word": "locate",
+      "meaning": "常用词",
+      "example": "I read an article about locate last night."
+    },
+    {
+      "word": "log",
+      "meaning": "常用词",
+      "example": "I read an article about log last night."
+    },
+    {
+      "word": "lone",
+      "meaning": "常用词",
+      "example": "I read an article about lone last night."
+    },
+    {
+      "word": "long",
+      "meaning": "常用词",
+      "example": "The room feels very long today."
+    },
+    {
+      "word": "look",
+      "meaning": "常用词",
+      "example": "Look at the screen."
+    },
+    {
+      "word": "lost",
+      "meaning": "常用词",
+      "example": "I think I've lost my keys."
+    },
+    {
+      "word": "lot",
+      "meaning": "常用词",
+      "example": "We discussed lot with the client yesterday."
+    },
+    {
+      "word": "loud",
+      "meaning": "常用词",
+      "example": "The room feels very loud today."
+    },
+    {
+      "word": "love",
+      "meaning": "常用词",
+      "example": "I love your design."
+    },
+    {
+      "word": "low",
+      "meaning": "常用词",
+      "example": "The room feels very low today."
+    },
+    {
+      "word": "machine",
+      "meaning": "常用词",
+      "example": "I read an article about machine last night."
+    },
+    {
+      "word": "made",
+      "meaning": "常用词",
+      "example": "This was made by hand."
+    },
+    {
+      "word": "magnet",
+      "meaning": "常用词",
+      "example": "There is a quick tip on magnet in our handbook."
+    },
+    {
+      "word": "main",
+      "meaning": "常用词",
+      "example": "This design looks main and modern."
+    },
+    {
+      "word": "major",
+      "meaning": "常用词",
+      "example": "A major choice will save us time."
+    },
+    {
+      "word": "make",
+      "meaning": "常用词",
+      "example": "This makes our work easier."
+    },
+    {
+      "word": "man",
+      "meaning": "常用词",
+      "example": "My man called me this morning."
+    },
+    {
+      "word": "many",
+      "meaning": "常用词",
+      "example": "There is a quick tip on many in our handbook."
+    },
+    {
+      "word": "map",
+      "meaning": "常用词",
+      "example": "He left his map on the desk."
+    },
+    {
+      "word": "mark",
+      "meaning": "常用词",
+      "example": "I read an article about mark last night."
+    },
+    {
+      "word": "market",
+      "meaning": "常用词",
+      "example": "I read an article about market last night."
+    },
+    {
+      "word": "mass",
+      "meaning": "常用词",
+      "example": "I read an article about mass last night."
+    },
+    {
+      "word": "master",
+      "meaning": "常用词",
+      "example": "We discussed master with the client yesterday."
+    },
+    {
+      "word": "match",
+      "meaning": "常用词",
+      "example": "I read an article about match last night."
+    },
+    {
+      "word": "material",
+      "meaning": "常用词",
+      "example": "We discussed material with the client yesterday."
+    },
+    {
+      "word": "matter",
+      "meaning": "常用词",
+      "example": "We discussed matter with the client yesterday."
+    },
+    {
+      "word": "may",
+      "meaning": "常用词",
+      "example": "You may leave early today."
+    },
+    {
+      "word": "me",
+      "meaning": "常用词",
+      "example": "Please send it to me directly."
+    },
+    {
+      "word": "mean",
+      "meaning": "常用词",
+      "example": "We need to mean it now."
+    },
+    {
+      "word": "meant",
+      "meaning": "常用词",
+      "example": "There is a quick tip on meant in our handbook."
+    },
+    {
+      "word": "measure",
+      "meaning": "常用词",
+      "example": "Measure the voltage carefully."
+    },
+    {
+      "word": "meat",
+      "meaning": "常用词",
+      "example": "I bought some meat on my way home."
+    },
+    {
+      "word": "meet",
+      "meaning": "常用词",
+      "example": "Let's meet at 10 a.m."
+    },
+    {
+      "word": "melody",
+      "meaning": "常用词",
+      "example": "There is a quick tip on melody in our handbook."
+    },
+    {
+      "word": "men",
+      "meaning": "常用词",
+      "example": "Many men arrived early for the event."
+    },
+    {
+      "word": "metal",
+      "meaning": "常用词",
+      "example": "I read an article about metal last night."
+    },
+    {
+      "word": "method",
+      "meaning": "常用词",
+      "example": "There is a quick tip on method in our handbook."
+    },
+    {
+      "word": "middle",
+      "meaning": "常用词",
+      "example": "We discussed middle with the client yesterday."
+    },
+    {
+      "word": "might",
+      "meaning": "常用词",
+      "example": "It might rain later."
+    },
+    {
+      "word": "mile",
+      "meaning": "常用词",
+      "example": "We discussed mile with the client yesterday."
+    },
+    {
+      "word": "milk",
+      "meaning": "常用词",
+      "example": "I bought some milk on my way home."
+    },
+    {
+      "word": "million",
+      "meaning": "常用词",
+      "example": "We discussed million with the client yesterday."
+    },
+    {
+      "word": "mind",
+      "meaning": "常用词",
+      "example": "I read an article about mind last night."
+    },
+    {
+      "word": "mine",
+      "meaning": "常用词",
+      "example": "There is a quick tip on mine in our handbook."
+    },
+    {
+      "word": "minute",
+      "meaning": "常用词",
+      "example": "Give me a minute."
+    },
+    {
+      "word": "miss",
+      "meaning": "常用词",
+      "example": "I read an article about miss last night."
+    },
+    {
+      "word": "mix",
+      "meaning": "常用词",
+      "example": "We need to mix it now."
+    },
+    {
+      "word": "modern",
+      "meaning": "常用词",
+      "example": "This design looks modern and modern."
+    },
+    {
+      "word": "molecule",
+      "meaning": "常用词",
+      "example": "We discussed molecule with the client yesterday."
+    },
+    {
+      "word": "moment",
+      "meaning": "常用词",
+      "example": "I read an article about moment last night."
+    },
+    {
+      "word": "money",
+      "meaning": "常用词",
+      "example": "I read an article about money last night."
+    },
+    {
+      "word": "month",
+      "meaning": "常用词",
+      "example": "The release is next month."
+    },
+    {
+      "word": "moon",
+      "meaning": "常用词",
+      "example": "There is a quick tip on moon in our handbook."
+    },
+    {
+      "word": "more",
+      "meaning": "常用词",
+      "example": "We discussed more with the client yesterday."
+    },
+    {
+      "word": "morning",
+      "meaning": "常用词",
+      "example": "I usually run in the morning."
+    },
+    {
+      "word": "most",
+      "meaning": "常用词",
+      "example": "I read an article about most last night."
+    },
+    {
+      "word": "mother",
+      "meaning": "常用词",
+      "example": "My mother called me this morning."
+    },
+    {
+      "word": "motion",
+      "meaning": "常用词",
+      "example": "We discussed motion with the client yesterday."
+    },
+    {
+      "word": "mount",
+      "meaning": "常用词",
+      "example": "I read an article about mount last night."
+    },
+    {
+      "word": "mountain",
+      "meaning": "常用词",
+      "example": "We walked to the mountain after dinner."
+    },
+    {
+      "word": "mouth",
+      "meaning": "常用词",
+      "example": "He hurt his mouth during the game."
+    },
+    {
+      "word": "move",
+      "meaning": "常用词",
+      "example": "Move the chair closer."
+    },
+    {
+      "word": "much",
+      "meaning": "常用词",
+      "example": "We discussed much with the client yesterday."
+    },
+    {
+      "word": "multiply",
+      "meaning": "常用词",
+      "example": "We need to multiply it now."
+    },
+    {
+      "word": "music",
+      "meaning": "常用词",
+      "example": "There is a quick tip on music in our handbook."
+    },
+    {
+      "word": "must",
+      "meaning": "常用词",
+      "example": "You must wear a badge inside."
+    },
+    {
+      "word": "my",
+      "meaning": "常用词",
+      "example": "My laptop needs charging."
+    },
+    {
+      "word": "name",
+      "meaning": "常用词",
+      "example": "There is a quick tip on name in our handbook."
+    },
+    {
+      "word": "nation",
+      "meaning": "常用词",
+      "example": "There is a quick tip on nation in our handbook."
+    },
+    {
+      "word": "natural",
+      "meaning": "常用词",
+      "example": "A natural choice will save us time."
+    },
+    {
+      "word": "nature",
+      "meaning": "常用词",
+      "example": "We discussed nature with the client yesterday."
+    },
+    {
+      "word": "near",
+      "meaning": "常用词",
+      "example": "There is a café near the office."
+    },
+    {
+      "word": "necessary",
+      "meaning": "常用词",
+      "example": "I read an article about necessary last night."
+    },
+    {
+      "word": "neck",
+      "meaning": "常用词",
+      "example": "He hurt his neck during the game."
+    },
+    {
+      "word": "need",
+      "meaning": "常用词",
+      "example": "We need more time."
+    },
+    {
+      "word": "neighbor",
+      "meaning": "常用词",
+      "example": "We discussed neighbor with the client yesterday."
+    },
+    {
+      "word": "never",
+      "meaning": "常用词",
+      "example": "I never skip breakfast."
+    },
+    {
+      "word": "new",
+      "meaning": "常用词",
+      "example": "This design looks new and modern."
+    },
+    {
+      "word": "next",
+      "meaning": "常用词",
+      "example": "The room feels very next today."
+    },
+    {
+      "word": "night",
+      "meaning": "常用词",
+      "example": "He works late at night."
+    },
+    {
+      "word": "nine",
+      "meaning": "常用词",
+      "example": "We have nine open tickets left."
+    },
+    {
+      "word": "no",
+      "meaning": "常用词",
+      "example": "No, thanks—I'm good."
+    },
+    {
+      "word": "noise",
+      "meaning": "常用词",
+      "example": "There is a quick tip on noise in our handbook."
+    },
+    {
+      "word": "noon",
+      "meaning": "常用词",
+      "example": "I'll be there by noon."
+    },
+    {
+      "word": "nor",
+      "meaning": "常用词",
+      "example": "We discussed nor with the client yesterday."
+    },
+    {
+      "word": "north",
+      "meaning": "常用词",
+      "example": "We discussed north with the client yesterday."
+    },
+    {
+      "word": "nose",
+      "meaning": "常用词",
+      "example": "He hurt his nose during the game."
+    },
+    {
+      "word": "note",
+      "meaning": "常用词",
+      "example": "We discussed note with the client yesterday."
+    },
+    {
+      "word": "nothing",
+      "meaning": "常用词",
+      "example": "There is a quick tip on nothing in our handbook."
+    },
+    {
+      "word": "notice",
+      "meaning": "常用词",
+      "example": "We need to notice it now."
+    },
+    {
+      "word": "noun",
+      "meaning": "常用词",
+      "example": "We discussed noun with the client yesterday."
+    },
+    {
+      "word": "now",
+      "meaning": "常用词",
+      "example": "Let's start now."
+    },
+    {
+      "word": "number",
+      "meaning": "常用词",
+      "example": "I read an article about number last night."
+    },
+    {
+      "word": "numeral",
+      "meaning": "常用词",
+      "example": "There is a quick tip on numeral in our handbook."
+    },
+    {
+      "word": "object",
+      "meaning": "常用词",
+      "example": "There is a quick tip on object in our handbook."
+    },
+    {
+      "word": "observe",
+      "meaning": "常用词",
+      "example": "There is a quick tip on observe in our handbook."
+    },
+    {
+      "word": "occur",
+      "meaning": "常用词",
+      "example": "There is a quick tip on occur in our handbook."
+    },
+    {
+      "word": "ocean",
+      "meaning": "常用词",
+      "example": "We walked to the ocean after dinner."
+    },
+    {
+      "word": "of",
+      "meaning": "常用词",
+      "example": "That’s a friend of mine."
+    },
+    {
+      "word": "off",
+      "meaning": "常用词",
+      "example": "There is a quick tip on off in our handbook."
+    },
+    {
+      "word": "offer",
+      "meaning": "常用词",
+      "example": "We discussed offer with the client yesterday."
+    },
+    {
+      "word": "office",
+      "meaning": "常用词",
+      "example": "We walked to the office after dinner."
+    },
+    {
+      "word": "often",
+      "meaning": "常用词",
+      "example": "We often order lunch together."
+    },
+    {
+      "word": "oh",
+      "meaning": "常用词",
+      "example": "Oh, I forgot my keys."
+    },
+    {
+      "word": "oil",
+      "meaning": "常用词",
+      "example": "There is a quick tip on oil in our handbook."
+    },
+    {
+      "word": "old",
+      "meaning": "常用词",
+      "example": "There is a quick tip on old in our handbook."
+    },
+    {
+      "word": "on",
+      "meaning": "常用词",
+      "example": "The report is on my desk."
+    },
+    {
+      "word": "once",
+      "meaning": "常用词",
+      "example": "Once you sign in, the page will load."
+    },
+    {
+      "word": "one",
+      "meaning": "常用词",
+      "example": "We have one open tickets left."
+    },
+    {
+      "word": "only",
+      "meaning": "常用词",
+      "example": "We only have ten minutes."
+    },
+    {
+      "word": "open",
+      "meaning": "常用词",
+      "example": "Open the window, please."
+    },
+    {
+      "word": "operate",
+      "meaning": "常用词",
+      "example": "Operate the machine with care."
+    },
+    {
+      "word": "opposite",
+      "meaning": "常用词",
+      "example": "There is a quick tip on opposite in our handbook."
+    },
+    {
+      "word": "or",
+      "meaning": "常用词",
+      "example": "You can call me or send a message."
+    },
+    {
+      "word": "order",
+      "meaning": "常用词",
+      "example": "I read an article about order last night."
+    },
+    {
+      "word": "organ",
+      "meaning": "常用词",
+      "example": "There is a quick tip on organ in our handbook."
+    },
+    {
+      "word": "original",
+      "meaning": "常用词",
+      "example": "There is a quick tip on original in our handbook."
+    },
+    {
+      "word": "other",
+      "meaning": "常用词",
+      "example": "There is a quick tip on other in our handbook."
+    },
+    {
+      "word": "our",
+      "meaning": "常用词",
+      "example": "Our team won the match."
+    },
+    {
+      "word": "out",
+      "meaning": "常用词",
+      "example": "The printer is out of paper."
+    },
+    {
+      "word": "over",
+      "meaning": "常用词",
+      "example": "The meeting ran over time."
+    },
+    {
+      "word": "own",
+      "meaning": "常用词",
+      "example": "We discussed own with the client yesterday."
+    },
+    {
+      "word": "oxygen",
+      "meaning": "常用词",
+      "example": "There is a quick tip on oxygen in our handbook."
+    },
+    {
+      "word": "page",
+      "meaning": "常用词",
+      "example": "There is a quick tip on page in our handbook."
+    },
+    {
+      "word": "paint",
+      "meaning": "常用词",
+      "example": "I read an article about paint last night."
+    },
+    {
+      "word": "pair",
+      "meaning": "常用词",
+      "example": "There is a quick tip on pair in our handbook."
+    },
+    {
+      "word": "paper",
+      "meaning": "常用词",
+      "example": "He left his paper on the desk."
+    },
+    {
+      "word": "paragraph",
+      "meaning": "常用词",
+      "example": "We discussed paragraph with the client yesterday."
+    },
+    {
+      "word": "parent",
+      "meaning": "常用词",
+      "example": "There is a quick tip on parent in our handbook."
+    },
+    {
+      "word": "part",
+      "meaning": "常用词",
+      "example": "There is a quick tip on part in our handbook."
+    },
+    {
+      "word": "particular",
+      "meaning": "常用词",
+      "example": "We discussed particular with the client yesterday."
+    },
+    {
+      "word": "party",
+      "meaning": "常用词",
+      "example": "I read an article about party last night."
+    },
+    {
+      "word": "pass",
+      "meaning": "常用词",
+      "example": "We need to pass it now."
+    },
+    {
+      "word": "past",
+      "meaning": "常用词",
+      "example": "There is a quick tip on past in our handbook."
+    },
+    {
+      "word": "path",
+      "meaning": "常用词",
+      "example": "There is a quick tip on path in our handbook."
+    },
+    {
+      "word": "pattern",
+      "meaning": "常用词",
+      "example": "I read an article about pattern last night."
+    },
+    {
+      "word": "pay",
+      "meaning": "常用词",
+      "example": "I'll pay the bill."
+    },
+    {
+      "word": "people",
+      "meaning": "常用词",
+      "example": "Many people prefer online shopping."
+    },
+    {
+      "word": "perhaps",
+      "meaning": "常用词",
+      "example": "There is a quick tip on perhaps in our handbook."
+    },
+    {
+      "word": "period",
+      "meaning": "常用词",
+      "example": "I read an article about period last night."
+    },
+    {
+      "word": "person",
+      "meaning": "常用词",
+      "example": "We discussed person with the client yesterday."
+    },
+    {
+      "word": "phrase",
+      "meaning": "常用词",
+      "example": "I read an article about phrase last night."
+    },
+    {
+      "word": "pick",
+      "meaning": "常用词",
+      "example": "Pick a seat near the window."
+    },
+    {
+      "word": "picture",
+      "meaning": "常用词",
+      "example": "I read an article about picture last night."
+    },
+    {
+      "word": "piece",
+      "meaning": "常用词",
+      "example": "We discussed piece with the client yesterday."
+    },
+    {
+      "word": "pitch",
+      "meaning": "常用词",
+      "example": "There is a quick tip on pitch in our handbook."
+    },
+    {
+      "word": "place",
+      "meaning": "常用词",
+      "example": "We discussed place with the client yesterday."
+    },
+    {
+      "word": "plain",
+      "meaning": "常用词",
+      "example": "We discussed plain with the client yesterday."
+    },
+    {
+      "word": "plan",
+      "meaning": "常用词",
+      "example": "We plan to visit next month."
+    },
+    {
+      "word": "plane",
+      "meaning": "常用词",
+      "example": "We discussed plane with the client yesterday."
+    },
+    {
+      "word": "planet",
+      "meaning": "常用词",
+      "example": "I read an article about planet last night."
+    },
+    {
+      "word": "plant",
+      "meaning": "常用词",
+      "example": "I read an article about plant last night."
+    },
+    {
+      "word": "play",
+      "meaning": "常用词",
+      "example": "They play basketball after school."
+    },
+    {
+      "word": "please",
+      "meaning": "常用词",
+      "example": "We need to please it now."
+    },
+    {
+      "word": "plural",
+      "meaning": "常用词",
+      "example": "We discussed plural with the client yesterday."
+    },
+    {
+      "word": "poem",
+      "meaning": "常用词",
+      "example": "I read an article about poem last night."
+    },
+    {
+      "word": "point",
+      "meaning": "常用词",
+      "example": "Point the camera at the target."
+    },
+    {
+      "word": "poor",
+      "meaning": "常用词",
+      "example": "A poor choice will save us time."
+    },
+    {
+      "word": "populate",
+      "meaning": "常用词",
+      "example": "We need to populate it now."
+    },
+    {
+      "word": "port",
+      "meaning": "常用词",
+      "example": "I read an article about port last night."
+    },
+    {
+      "word": "pose",
+      "meaning": "常用词",
+      "example": "Please pose it as soon as possible."
+    },
+    {
+      "word": "position",
+      "meaning": "常用词",
+      "example": "We discussed position with the client yesterday."
+    },
+    {
+      "word": "possible",
+      "meaning": "常用词",
+      "example": "We discussed possible with the client yesterday."
+    },
+    {
+      "word": "post",
+      "meaning": "常用词",
+      "example": "We need to post it now."
+    },
+    {
+      "word": "pound",
+      "meaning": "常用词",
+      "example": "I read an article about pound last night."
+    },
+    {
+      "word": "power",
+      "meaning": "常用词",
+      "example": "We discussed power with the client yesterday."
+    },
+    {
+      "word": "practice",
+      "meaning": "常用词",
+      "example": "We need to practice it now."
+    },
+    {
+      "word": "prepare",
+      "meaning": "常用词",
+      "example": "Prepare a short summary."
+    },
+    {
+      "word": "present",
+      "meaning": "常用词",
+      "example": "They will present it soon."
+    },
+    {
+      "word": "press",
+      "meaning": "常用词",
+      "example": "Press the power button."
+    },
+    {
+      "word": "pretty",
+      "meaning": "常用词",
+      "example": "A pretty choice will save us time."
+    },
+    {
+      "word": "print",
+      "meaning": "常用词",
+      "example": "Print two copies, please."
+    },
+    {
+      "word": "probable",
+      "meaning": "常用词",
+      "example": "The room feels very probable today."
+    },
+    {
+      "word": "problem",
+      "meaning": "常用词",
+      "example": "We discussed problem with the client yesterday."
+    },
+    {
+      "word": "process",
+      "meaning": "常用词",
+      "example": "We discussed process with the client yesterday."
+    },
+    {
+      "word": "produce",
+      "meaning": "常用词",
+      "example": "They will produce it soon."
+    },
+    {
+      "word": "product",
+      "meaning": "常用词",
+      "example": "We discussed product with the client yesterday."
+    },
+    {
+      "word": "proper",
+      "meaning": "常用词",
+      "example": "A proper choice will save us time."
+    },
+    {
+      "word": "property",
+      "meaning": "常用词",
+      "example": "We discussed property with the client yesterday."
+    },
+    {
+      "word": "protect",
+      "meaning": "常用词",
+      "example": "I read an article about protect last night."
+    },
+    {
+      "word": "prove",
+      "meaning": "常用词",
+      "example": "We need to prove it now."
+    },
+    {
+      "word": "provide",
+      "meaning": "常用词",
+      "example": "We provide 24/7 support."
+    },
+    {
+      "word": "pull",
+      "meaning": "常用词",
+      "example": "Pull the handle to open it."
+    },
+    {
+      "word": "push",
+      "meaning": "常用词",
+      "example": "Push the door to enter."
+    },
+    {
+      "word": "put",
+      "meaning": "常用词",
+      "example": "Put it on the desk."
+    },
+    {
+      "word": "quart",
+      "meaning": "常用词",
+      "example": "There is a quick tip on quart in our handbook."
+    },
+    {
+      "word": "question",
+      "meaning": "常用词",
+      "example": "I read an article about question last night."
+    },
+    {
+      "word": "quick",
+      "meaning": "常用词",
+      "example": "This design looks quick and modern."
+    },
+    {
+      "word": "quiet",
+      "meaning": "常用词",
+      "example": "This design looks quiet and modern."
+    },
+    {
+      "word": "quite",
+      "meaning": "常用词",
+      "example": "It's quite easy once you know how."
+    },
+    {
+      "word": "quotient",
+      "meaning": "常用词",
+      "example": "We discussed quotient with the client yesterday."
+    },
+    {
+      "word": "race",
+      "meaning": "常用词",
+      "example": "There is a quick tip on race in our handbook."
+    },
+    {
+      "word": "radio",
+      "meaning": "常用词",
+      "example": "We discussed radio with the client yesterday."
+    },
+    {
+      "word": "rail",
+      "meaning": "常用词",
+      "example": "We discussed rail with the client yesterday."
+    },
+    {
+      "word": "rain",
+      "meaning": "常用词",
+      "example": "I read an article about rain last night."
+    },
+    {
+      "word": "raise",
+      "meaning": "常用词",
+      "example": "They will raise it soon."
+    },
+    {
+      "word": "ran",
+      "meaning": "常用词",
+      "example": "She ran home early last night."
+    },
+    {
+      "word": "range",
+      "meaning": "常用词",
+      "example": "I read an article about range last night."
+    },
+    {
+      "word": "rather",
+      "meaning": "常用词",
+      "example": "I read an article about rather last night."
+    },
+    {
+      "word": "reach",
+      "meaning": "常用词",
+      "example": "Please reach it as soon as possible."
+    },
+    {
+      "word": "read",
+      "meaning": "常用词",
+      "example": "I read the report this morning."
+    },
+    {
+      "word": "ready",
+      "meaning": "常用词",
+      "example": "The room feels very ready today."
+    },
+    {
+      "word": "real",
+      "meaning": "常用词",
+      "example": "This design looks real and modern."
+    },
+    {
+      "word": "reason",
+      "meaning": "常用词",
+      "example": "There is a quick tip on reason in our handbook."
+    },
+    {
+      "word": "receive",
+      "meaning": "常用词",
+      "example": "We discussed receive with the client yesterday."
+    },
+    {
+      "word": "record",
+      "meaning": "常用词",
+      "example": "Record the meeting, please."
+    },
+    {
+      "word": "red",
+      "meaning": "常用词",
+      "example": "He bought a red jacket yesterday."
+    },
+    {
+      "word": "region",
+      "meaning": "常用词",
+      "example": "There is a quick tip on region in our handbook."
+    },
+    {
+      "word": "remember",
+      "meaning": "常用词",
+      "example": "Remember to save your work."
+    },
+    {
+      "word": "repeat",
+      "meaning": "常用词",
+      "example": "They will repeat it soon."
+    },
+    {
+      "word": "reply",
+      "meaning": "常用词",
+      "example": "I will reply later today."
+    },
+    {
+      "word": "represent",
+      "meaning": "常用词",
+      "example": "Please represent it as soon as possible."
+    },
+    {
+      "word": "require",
+      "meaning": "常用词",
+      "example": "They will require it soon."
+    },
+    {
+      "word": "rest",
+      "meaning": "常用词",
+      "example": "You should rest for a while."
+    },
+    {
+      "word": "result",
+      "meaning": "常用词",
+      "example": "There is a quick tip on result in our handbook."
+    },
+    {
+      "word": "rich",
+      "meaning": "常用词",
+      "example": "The room feels very rich today."
+    },
+    {
+      "word": "ride",
+      "meaning": "常用词",
+      "example": "I read an article about ride last night."
+    },
+    {
+      "word": "right",
+      "meaning": "常用词",
+      "example": "A right choice will save us time."
+    },
+    {
+      "word": "ring",
+      "meaning": "常用词",
+      "example": "He left his ring on the desk."
+    },
+    {
+      "word": "rise",
+      "meaning": "常用词",
+      "example": "They will rise soon."
+    },
+    {
+      "word": "river",
+      "meaning": "常用词",
+      "example": "We walked to the river after dinner."
+    },
+    {
+      "word": "road",
+      "meaning": "常用词",
+      "example": "There is a quick tip on road in our handbook."
+    },
+    {
+      "word": "rock",
+      "meaning": "常用词",
+      "example": "I read an article about rock last night."
+    },
+    {
+      "word": "roll",
+      "meaning": "常用词",
+      "example": "There is a quick tip on roll in our handbook."
+    },
+    {
+      "word": "room",
+      "meaning": "常用词",
+      "example": "I read an article about room last night."
+    },
+    {
+      "word": "root",
+      "meaning": "常用词",
+      "example": "There is a quick tip on root in our handbook."
+    },
+    {
+      "word": "rope",
+      "meaning": "常用词",
+      "example": "He left his rope on the desk."
+    },
+    {
+      "word": "rose",
+      "meaning": "常用词",
+      "example": "I read an article about rose last night."
+    },
+    {
+      "word": "round",
+      "meaning": "常用词",
+      "example": "A round choice will save us time."
+    },
+    {
+      "word": "row",
+      "meaning": "常用词",
+      "example": "There is a quick tip on row in our handbook."
+    },
+    {
+      "word": "rub",
+      "meaning": "常用词",
+      "example": "I read an article about rub last night."
+    },
+    {
+      "word": "rule",
+      "meaning": "常用词",
+      "example": "We discussed rule with the client yesterday."
+    },
+    {
+      "word": "run",
+      "meaning": "常用词",
+      "example": "Run as fast as you can."
+    },
+    {
+      "word": "safe",
+      "meaning": "常用词",
+      "example": "I read an article about safe last night."
+    },
+    {
+      "word": "said",
+      "meaning": "常用词",
+      "example": "She said home early last night."
+    },
+    {
+      "word": "sail",
+      "meaning": "常用词",
+      "example": "They will sail soon."
+    },
+    {
+      "word": "salt",
+      "meaning": "常用词",
+      "example": "I bought some salt on my way home."
+    },
+    {
+      "word": "same",
+      "meaning": "常用词",
+      "example": "There is a quick tip on same in our handbook."
+    },
+    {
+      "word": "sand",
+      "meaning": "常用词",
+      "example": "We discussed sand with the client yesterday."
+    },
+    {
+      "word": "sat",
+      "meaning": "常用词",
+      "example": "She sat home early last night."
+    },
+    {
+      "word": "save",
+      "meaning": "常用词",
+      "example": "Save the changes."
+    },
+    {
+      "word": "saw",
+      "meaning": "常用词",
+      "example": "She saw home early last night."
+    },
+    {
+      "word": "say",
+      "meaning": "常用词",
+      "example": "He didn't say a word."
+    },
+    {
+      "word": "scale",
+      "meaning": "常用词",
+      "example": "We discussed scale with the client yesterday."
+    },
+    {
+      "word": "school",
+      "meaning": "常用词",
+      "example": "We walked to the school after dinner."
+    },
+    {
+      "word": "science",
+      "meaning": "常用词",
+      "example": "We discussed science with the client yesterday."
+    },
+    {
+      "word": "score",
+      "meaning": "常用词",
+      "example": "There is a quick tip on score in our handbook."
+    },
+    {
+      "word": "sea",
+      "meaning": "常用词",
+      "example": "I read an article about sea last night."
+    },
+    {
+      "word": "search",
+      "meaning": "常用词",
+      "example": "Please search it as soon as possible."
+    },
+    {
+      "word": "season",
+      "meaning": "常用词",
+      "example": "We discussed season with the client yesterday."
+    },
+    {
+      "word": "seat",
+      "meaning": "常用词",
+      "example": "There is a quick tip on seat in our handbook."
+    },
+    {
+      "word": "second",
+      "meaning": "常用词",
+      "example": "We discussed second with the client yesterday."
+    },
+    {
+      "word": "section",
+      "meaning": "常用词",
+      "example": "We discussed section with the client yesterday."
+    },
+    {
+      "word": "see",
+      "meaning": "常用词",
+      "example": "I see your point."
+    },
+    {
+      "word": "seed",
+      "meaning": "常用词",
+      "example": "I read an article about seed last night."
+    },
+    {
+      "word": "seem",
+      "meaning": "常用词",
+      "example": "I read an article about seem last night."
+    },
+    {
+      "word": "segment",
+      "meaning": "常用词",
+      "example": "There is a quick tip on segment in our handbook."
+    },
+    {
+      "word": "select",
+      "meaning": "常用词",
+      "example": "Select all the files."
+    },
+    {
+      "word": "self",
+      "meaning": "常用词",
+      "example": "There is a quick tip on self in our handbook."
+    },
+    {
+      "word": "sell",
+      "meaning": "常用词",
+      "example": "Please sell it as soon as possible."
+    },
+    {
+      "word": "send",
+      "meaning": "常用词",
+      "example": "Send me the link."
+    },
+    {
+      "word": "sense",
+      "meaning": "常用词",
+      "example": "I read an article about sense last night."
+    },
+    {
+      "word": "sent",
+      "meaning": "常用词",
+      "example": "She sent home early last night."
+    },
+    {
+      "word": "sentence",
+      "meaning": "常用词",
+      "example": "There is a quick tip on sentence in our handbook."
+    },
+    {
+      "word": "separate",
+      "meaning": "常用词",
+      "example": "We discussed separate with the client yesterday."
+    },
+    {
+      "word": "serve",
+      "meaning": "常用词",
+      "example": "They will serve it soon."
+    },
+    {
+      "word": "set",
+      "meaning": "常用词",
+      "example": "Set a reminder for tomorrow."
+    },
+    {
+      "word": "settle",
+      "meaning": "常用词",
+      "example": "Please settle it as soon as possible."
+    },
+    {
+      "word": "seven",
+      "meaning": "常用词",
+      "example": "We have seven open tickets left."
+    },
+    {
+      "word": "several",
+      "meaning": "常用词",
+      "example": "There is a quick tip on several in our handbook."
+    },
+    {
+      "word": "shall",
+      "meaning": "常用词",
+      "example": "Shall we start the call?"
+    },
+    {
+      "word": "shape",
+      "meaning": "常用词",
+      "example": "There is a quick tip on shape in our handbook."
+    },
+    {
+      "word": "share",
+      "meaning": "常用词",
+      "example": "Share the file with me."
+    },
+    {
+      "word": "sharp",
+      "meaning": "常用词",
+      "example": "This design looks sharp and modern."
+    },
+    {
+      "word": "she",
+      "meaning": "常用词",
+      "example": "She loves hiking on weekends."
+    },
+    {
+      "word": "sheet",
+      "meaning": "常用词",
+      "example": "There is a quick tip on sheet in our handbook."
+    },
+    {
+      "word": "shell",
+      "meaning": "常用词",
+      "example": "We discussed shell with the client yesterday."
+    },
+    {
+      "word": "shine",
+      "meaning": "常用词",
+      "example": "Let's shine now."
+    },
+    {
+      "word": "ship",
+      "meaning": "常用词",
+      "example": "There is a quick tip on ship in our handbook."
+    },
+    {
+      "word": "shoe",
+      "meaning": "常用词",
+      "example": "He left his shoe on the desk."
+    },
+    {
+      "word": "shop",
+      "meaning": "常用词",
+      "example": "There is a quick tip on shop in our handbook."
+    },
+    {
+      "word": "shore",
+      "meaning": "常用词",
+      "example": "We walked to the shore after dinner."
+    },
+    {
+      "word": "short",
+      "meaning": "常用词",
+      "example": "The room feels very short today."
+    },
+    {
+      "word": "should",
+      "meaning": "常用词",
+      "example": "You should get some rest."
+    },
+    {
+      "word": "shoulder",
+      "meaning": "常用词",
+      "example": "He hurt his shoulder during the game."
+    },
+    {
+      "word": "shout",
+      "meaning": "常用词",
+      "example": "They will shout soon."
+    },
+    {
+      "word": "show",
+      "meaning": "常用词",
+      "example": "I'll show you how it works."
+    },
+    {
+      "word": "side",
+      "meaning": "常用词",
+      "example": "There is a quick tip on side in our handbook."
+    },
+    {
+      "word": "sight",
+      "meaning": "常用词",
+      "example": "There is a quick tip on sight in our handbook."
+    },
+    {
+      "word": "sign",
+      "meaning": "常用词",
+      "example": "I read an article about sign last night."
+    },
+    {
+      "word": "silent",
+      "meaning": "常用词",
+      "example": "There is a quick tip on silent in our handbook."
+    },
+    {
+      "word": "silver",
+      "meaning": "常用词",
+      "example": "He bought a silver jacket yesterday."
+    },
+    {
+      "word": "similar",
+      "meaning": "常用词",
+      "example": "This design looks similar and modern."
+    },
+    {
+      "word": "simple",
+      "meaning": "常用词",
+      "example": "The room feels very simple today."
+    },
+    {
+      "word": "since",
+      "meaning": "常用词",
+      "example": "I haven't seen him since May."
+    },
+    {
+      "word": "sing",
+      "meaning": "常用词",
+      "example": "We need to sing it now."
+    },
+    {
+      "word": "single",
+      "meaning": "常用词",
+      "example": "This design looks single and modern."
+    },
+    {
+      "word": "sister",
+      "meaning": "常用词",
+      "example": "My sister called me this morning."
+    },
+    {
+      "word": "sit",
+      "meaning": "常用词",
+      "example": "Please sit here."
+    },
+    {
+      "word": "six",
+      "meaning": "常用词",
+      "example": "We have six open tickets left."
+    },
+    {
+      "word": "size",
+      "meaning": "常用词",
+      "example": "We discussed size with the client yesterday."
+    },
+    {
+      "word": "skill",
+      "meaning": "常用词",
+      "example": "There is a quick tip on skill in our handbook."
+    },
+    {
+      "word": "skin",
+      "meaning": "常用词",
+      "example": "There is a quick tip on skin in our handbook."
+    },
+    {
+      "word": "sky",
+      "meaning": "常用词",
+      "example": "I read an article about sky last night."
+    },
+    {
+      "word": "slave",
+      "meaning": "常用词",
+      "example": "I read an article about slave last night."
+    },
+    {
+      "word": "sleep",
+      "meaning": "常用词",
+      "example": "I usually sleep before midnight."
+    },
+    {
+      "word": "slip",
+      "meaning": "常用词",
+      "example": "I read an article about slip last night."
+    },
+    {
+      "word": "slow",
+      "meaning": "常用词",
+      "example": "This design looks slow and modern."
+    },
+    {
+      "word": "small",
+      "meaning": "常用词",
+      "example": "A small choice will save us time."
+    },
+    {
+      "word": "smell",
+      "meaning": "常用词",
+      "example": "They will smell it soon."
+    },
+    {
+      "word": "smile",
+      "meaning": "常用词",
+      "example": "Let's smile now."
+    },
+    {
+      "word": "snow",
+      "meaning": "常用词",
+      "example": "I read an article about snow last night."
+    },
+    {
+      "word": "so",
+      "meaning": "常用词",
+      "example": "It was getting late, so we took a taxi."
+    },
+    {
+      "word": "soft",
+      "meaning": "常用词",
+      "example": "This design looks soft and modern."
+    },
+    {
+      "word": "soil",
+      "meaning": "常用词",
+      "example": "We discussed soil with the client yesterday."
+    },
+    {
+      "word": "soldier",
+      "meaning": "常用词",
+      "example": "We discussed soldier with the client yesterday."
+    },
+    {
+      "word": "solution",
+      "meaning": "常用词",
+      "example": "There is a quick tip on solution in our handbook."
+    },
+    {
+      "word": "solve",
+      "meaning": "常用词",
+      "example": "They will solve it soon."
+    },
+    {
+      "word": "some",
+      "meaning": "常用词",
+      "example": "There is a quick tip on some in our handbook."
+    },
+    {
+      "word": "son",
+      "meaning": "常用词",
+      "example": "My son called me this morning."
+    },
+    {
+      "word": "song",
+      "meaning": "常用词",
+      "example": "I read an article about song last night."
+    },
+    {
+      "word": "soon",
+      "meaning": "常用词",
+      "example": "See you soon."
+    },
+    {
+      "word": "sound",
+      "meaning": "常用词",
+      "example": "There is a quick tip on sound in our handbook."
+    },
+    {
+      "word": "south",
+      "meaning": "常用词",
+      "example": "I read an article about south last night."
+    },
+    {
+      "word": "space",
+      "meaning": "常用词",
+      "example": "There is a quick tip on space in our handbook."
+    },
+    {
+      "word": "speak",
+      "meaning": "常用词",
+      "example": "She speaks very clearly."
+    },
+    {
+      "word": "special",
+      "meaning": "常用词",
+      "example": "This design looks special and modern."
+    },
+    {
+      "word": "speech",
+      "meaning": "常用词",
+      "example": "There is a quick tip on speech in our handbook."
+    },
+    {
+      "word": "speed",
+      "meaning": "常用词",
+      "example": "We discussed speed with the client yesterday."
+    },
+    {
+      "word": "spell",
+      "meaning": "常用词",
+      "example": "I read an article about spell last night."
+    },
+    {
+      "word": "spend",
+      "meaning": "常用词",
+      "example": "Try not to spend too much."
+    },
+    {
+      "word": "spoke",
+      "meaning": "常用词",
+      "example": "We discussed spoke with the client yesterday."
+    },
+    {
+      "word": "spot",
+      "meaning": "常用词",
+      "example": "We discussed spot with the client yesterday."
+    },
+    {
+      "word": "spread",
+      "meaning": "常用词",
+      "example": "We discussed spread with the client yesterday."
+    },
+    {
+      "word": "spring",
+      "meaning": "常用词",
+      "example": "I read an article about spring last night."
+    },
+    {
+      "word": "square",
+      "meaning": "常用词",
+      "example": "This design looks square and modern."
+    },
+    {
+      "word": "stand",
+      "meaning": "常用词",
+      "example": "Stand in line, please."
+    },
+    {
+      "word": "star",
+      "meaning": "常用词",
+      "example": "I read an article about star last night."
+    },
+    {
+      "word": "start",
+      "meaning": "常用词",
+      "example": "Start the engine."
+    },
+    {
+      "word": "state",
+      "meaning": "常用词",
+      "example": "I read an article about state last night."
+    },
+    {
+      "word": "station",
+      "meaning": "常用词",
+      "example": "We walked to the station after dinner."
+    },
+    {
+      "word": "stay",
+      "meaning": "常用词",
+      "example": "We need to stay now."
+    },
+    {
+      "word": "stead",
+      "meaning": "常用词",
+      "example": "We discussed stead with the client yesterday."
+    },
+    {
+      "word": "steam",
+      "meaning": "常用词",
+      "example": "I read an article about steam last night."
+    },
+    {
+      "word": "steel",
+      "meaning": "常用词",
+      "example": "There is a quick tip on steel in our handbook."
+    },
+    {
+      "word": "step",
+      "meaning": "常用词",
+      "example": "There is a quick tip on step in our handbook."
+    },
+    {
+      "word": "stick",
+      "meaning": "常用词",
+      "example": "There is a quick tip on stick in our handbook."
+    },
+    {
+      "word": "still",
+      "meaning": "常用词",
+      "example": "I'm still working on it."
+    },
+    {
+      "word": "stone",
+      "meaning": "常用词",
+      "example": "There is a quick tip on stone in our handbook."
+    },
+    {
+      "word": "stood",
+      "meaning": "常用词",
+      "example": "She stood home early last night."
+    },
+    {
+      "word": "stop",
+      "meaning": "常用词",
+      "example": "Stop complaining."
+    },
+    {
+      "word": "store",
+      "meaning": "常用词",
+      "example": "I read an article about store last night."
+    },
+    {
+      "word": "story",
+      "meaning": "常用词",
+      "example": "I read an article about story last night."
+    },
+    {
+      "word": "straight",
+      "meaning": "常用词",
+      "example": "A straight choice will save us time."
+    },
+    {
+      "word": "strange",
+      "meaning": "常用词",
+      "example": "A strange choice will save us time."
+    },
+    {
+      "word": "stream",
+      "meaning": "常用词",
+      "example": "I read an article about stream last night."
+    },
+    {
+      "word": "street",
+      "meaning": "常用词",
+      "example": "We discussed street with the client yesterday."
+    },
+    {
+      "word": "stretch",
+      "meaning": "常用词",
+      "example": "I read an article about stretch last night."
+    },
+    {
+      "word": "string",
+      "meaning": "常用词",
+      "example": "We discussed string with the client yesterday."
+    },
+    {
+      "word": "strong",
+      "meaning": "常用词",
+      "example": "The room feels very strong today."
+    },
+    {
+      "word": "student",
+      "meaning": "常用词",
+      "example": "There is a quick tip on student in our handbook."
+    },
+    {
+      "word": "study",
+      "meaning": "常用词",
+      "example": "He studies late at night."
+    },
+    {
+      "word": "subject",
+      "meaning": "常用词",
+      "example": "I read an article about subject last night."
+    },
+    {
+      "word": "substance",
+      "meaning": "常用词",
+      "example": "There is a quick tip on substance in our handbook."
+    },
+    {
+      "word": "subtract",
+      "meaning": "常用词",
+      "example": "Please subtract it as soon as possible."
+    },
+    {
+      "word": "success",
+      "meaning": "常用词",
+      "example": "There is a quick tip on success in our handbook."
+    },
+    {
+      "word": "such",
+      "meaning": "常用词",
+      "example": "I read an article about such last night."
+    },
+    {
+      "word": "sudden",
+      "meaning": "常用词",
+      "example": "There is a quick tip on sudden in our handbook."
+    },
+    {
+      "word": "suffix",
+      "meaning": "常用词",
+      "example": "There is a quick tip on suffix in our handbook."
+    },
+    {
+      "word": "sugar",
+      "meaning": "常用词",
+      "example": "I bought some sugar on my way home."
+    },
+    {
+      "word": "suggest",
+      "meaning": "常用词",
+      "example": "I suggest we take a break."
+    },
+    {
+      "word": "suit",
+      "meaning": "常用词",
+      "example": "There is a quick tip on suit in our handbook."
+    },
+    {
+      "word": "summer",
+      "meaning": "常用词",
+      "example": "I read an article about summer last night."
+    },
+    {
+      "word": "sun",
+      "meaning": "常用词",
+      "example": "I read an article about sun last night."
+    },
+    {
+      "word": "supply",
+      "meaning": "常用词",
+      "example": "We discussed supply with the client yesterday."
+    },
+    {
+      "word": "support",
+      "meaning": "常用词",
+      "example": "We fully support your decision."
+    },
+    {
+      "word": "sure",
+      "meaning": "常用词",
+      "example": "A sure choice will save us time."
+    },
+    {
+      "word": "surface",
+      "meaning": "常用词",
+      "example": "There is a quick tip on surface in our handbook."
+    },
+    {
+      "word": "surprise",
+      "meaning": "常用词",
+      "example": "There is a quick tip on surprise in our handbook."
+    },
+    {
+      "word": "swim",
+      "meaning": "常用词",
+      "example": "They swim every weekend."
+    },
+    {
+      "word": "syllable",
+      "meaning": "常用词",
+      "example": "There is a quick tip on syllable in our handbook."
+    },
+    {
+      "word": "symbol",
+      "meaning": "常用词",
+      "example": "We discussed symbol with the client yesterday."
+    },
+    {
+      "word": "system",
+      "meaning": "常用词",
+      "example": "There is a quick tip on system in our handbook."
+    },
+    {
+      "word": "table",
+      "meaning": "常用词",
+      "example": "He left his table on the desk."
+    },
+    {
+      "word": "tail",
+      "meaning": "常用词",
+      "example": "We discussed tail with the client yesterday."
+    },
+    {
+      "word": "take",
+      "meaning": "常用词",
+      "example": "Take a deep breath."
+    },
+    {
+      "word": "talk",
+      "meaning": "常用词",
+      "example": "Let's talk after the meeting."
+    },
+    {
+      "word": "tall",
+      "meaning": "常用词",
+      "example": "The room feels very tall today."
+    },
+    {
+      "word": "teach",
+      "meaning": "常用词",
+      "example": "She teaches math at a local school."
+    },
+    {
+      "word": "team",
+      "meaning": "常用词",
+      "example": "There is a quick tip on team in our handbook."
+    },
+    {
+      "word": "teeth",
+      "meaning": "常用词",
+      "example": "Many teeth prefer online shopping."
+    },
+    {
+      "word": "tell",
+      "meaning": "常用词",
+      "example": "Please tell me the truth."
+    },
+    {
+      "word": "temperature",
+      "meaning": "常用词",
+      "example": "There is a quick tip on temperature in our handbook."
+    },
+    {
+      "word": "ten",
+      "meaning": "常用词",
+      "example": "We have ten open tickets left."
+    },
+    {
+      "word": "term",
+      "meaning": "常用词",
+      "example": "I read an article about term last night."
+    },
+    {
+      "word": "test",
+      "meaning": "常用词",
+      "example": "There is a quick tip on test in our handbook."
+    },
+    {
+      "word": "than",
+      "meaning": "常用词",
+      "example": "This version is faster than the last one."
+    },
+    {
+      "word": "thank",
+      "meaning": "常用词",
+      "example": "Thank you for your help."
+    },
+    {
+      "word": "that",
+      "meaning": "常用词",
+      "example": "I heard that the meeting moved online."
+    },
+    {
+      "word": "the",
+      "meaning": "常用词",
+      "example": "Please close the door."
+    },
+    {
+      "word": "their",
+      "meaning": "常用词",
+      "example": "Their office is across the street."
+    },
+    {
+      "word": "them",
+      "meaning": "常用词",
+      "example": "I saw them at the station."
+    },
+    {
+      "word": "then",
+      "meaning": "常用词",
+      "example": "Finish the build, then deploy."
+    },
+    {
+      "word": "there",
+      "meaning": "常用词",
+      "example": "The charger is over there."
+    },
+    {
+      "word": "these",
+      "meaning": "常用词",
+      "example": "These files need review."
+    },
+    {
+      "word": "they",
+      "meaning": "常用词",
+      "example": "They agreed to the new terms."
+    },
+    {
+      "word": "thick",
+      "meaning": "常用词",
+      "example": "There is a quick tip on thick in our handbook."
+    },
+    {
+      "word": "thin",
+      "meaning": "常用词",
+      "example": "I read an article about thin last night."
+    },
+    {
+      "word": "thing",
+      "meaning": "常用词",
+      "example": "We discussed thing with the client yesterday."
+    },
+    {
+      "word": "think",
+      "meaning": "常用词",
+      "example": "I think this will work."
+    },
+    {
+      "word": "third",
+      "meaning": "常用词",
+      "example": "I read an article about third last night."
+    },
+    {
+      "word": "this",
+      "meaning": "常用词",
+      "example": "This looks good to me."
+    },
+    {
+      "word": "those",
+      "meaning": "常用词",
+      "example": "Those seats are already taken."
+    },
+    {
+      "word": "though",
+      "meaning": "常用词",
+      "example": "It looked hard, though we managed it."
+    },
+    {
+      "word": "thought",
+      "meaning": "常用词",
+      "example": "She thought home early last night."
+    },
+    {
+      "word": "thousand",
+      "meaning": "常用词",
+      "example": "We shipped more than a thousand units last year."
+    },
+    {
+      "word": "three",
+      "meaning": "常用词",
+      "example": "We have three open tickets left."
+    },
+    {
+      "word": "through",
+      "meaning": "常用词",
+      "example": "We drove through heavy traffic."
+    },
+    {
+      "word": "throw",
+      "meaning": "常用词",
+      "example": "Throw the ball to me."
+    },
+    {
+      "word": "thus",
+      "meaning": "常用词",
+      "example": "There is a quick tip on thus in our handbook."
+    },
+    {
+      "word": "tie",
+      "meaning": "常用词",
+      "example": "I read an article about tie last night."
+    },
+    {
+      "word": "time",
+      "meaning": "常用词",
+      "example": "I read an article about time last night."
+    },
+    {
+      "word": "tiny",
+      "meaning": "常用词",
+      "example": "The room feels very tiny today."
+    },
+    {
+      "word": "tire",
+      "meaning": "常用词",
+      "example": "We discussed tire with the client yesterday."
+    },
+    {
+      "word": "to",
+      "meaning": "常用词",
+      "example": "I need to finish this by noon."
+    },
+    {
+      "word": "together",
+      "meaning": "常用词",
+      "example": "Let's work on this together."
+    },
+    {
+      "word": "told",
+      "meaning": "常用词",
+      "example": "She told home early last night."
+    },
+    {
+      "word": "tone",
+      "meaning": "常用词",
+      "example": "We discussed tone with the client yesterday."
+    },
+    {
+      "word": "too",
+      "meaning": "常用词",
+      "example": "It's too late to call."
+    },
+    {
+      "word": "took",
+      "meaning": "常用词",
+      "example": "She took home early last night."
+    },
+    {
+      "word": "tool",
+      "meaning": "常用词",
+      "example": "He left his tool on the desk."
+    },
+    {
+      "word": "top",
+      "meaning": "常用词",
+      "example": "There is a quick tip on top in our handbook."
+    },
+    {
+      "word": "touch",
+      "meaning": "常用词",
+      "example": "Don't touch the screen."
+    },
+    {
+      "word": "toward",
+      "meaning": "常用词",
+      "example": "There is a quick tip on toward in our handbook."
+    },
+    {
+      "word": "town",
+      "meaning": "常用词",
+      "example": "We walked to the town after dinner."
+    },
+    {
+      "word": "track",
+      "meaning": "常用词",
+      "example": "We discussed track with the client yesterday."
+    },
+    {
+      "word": "trade",
+      "meaning": "常用词",
+      "example": "There is a quick tip on trade in our handbook."
+    },
+    {
+      "word": "train",
+      "meaning": "常用词",
+      "example": "We train new staff every quarter."
+    },
+    {
+      "word": "travel",
+      "meaning": "常用词",
+      "example": "I love to travel by train."
+    },
+    {
+      "word": "tree",
+      "meaning": "常用词",
+      "example": "We discussed tree with the client yesterday."
+    },
+    {
+      "word": "triangle",
+      "meaning": "常用词",
+      "example": "We discussed triangle with the client yesterday."
+    },
+    {
+      "word": "trip",
+      "meaning": "常用词",
+      "example": "There is a quick tip on trip in our handbook."
+    },
+    {
+      "word": "trouble",
+      "meaning": "常用词",
+      "example": "We discussed trouble with the client yesterday."
+    },
+    {
+      "word": "truck",
+      "meaning": "常用词",
+      "example": "He left his truck on the desk."
+    },
+    {
+      "word": "true",
+      "meaning": "常用词",
+      "example": "I read an article about true last night."
+    },
+    {
+      "word": "try",
+      "meaning": "常用词",
+      "example": "Try restarting the app."
+    },
+    {
+      "word": "tube",
+      "meaning": "常用词",
+      "example": "There is a quick tip on tube in our handbook."
+    },
+    {
+      "word": "turn",
+      "meaning": "常用词",
+      "example": "Turn off the lights."
+    },
+    {
+      "word": "twenty",
+      "meaning": "常用词",
+      "example": "We have twenty open tickets left."
+    },
+    {
+      "word": "two",
+      "meaning": "常用词",
+      "example": "We have two open tickets left."
+    },
+    {
+      "word": "type",
+      "meaning": "常用词",
+      "example": "There is a quick tip on type in our handbook."
+    },
+    {
+      "word": "under",
+      "meaning": "常用词",
+      "example": "The router is under the TV."
+    },
+    {
+      "word": "unit",
+      "meaning": "常用词",
+      "example": "I read an article about unit last night."
+    },
+    {
+      "word": "until",
+      "meaning": "常用词",
+      "example": "I'll stay here until you come back."
+    },
+    {
+      "word": "up",
+      "meaning": "常用词",
+      "example": "Stand up, please."
+    },
+    {
+      "word": "us",
+      "meaning": "常用词",
+      "example": "Join us for dinner."
+    },
+    {
+      "word": "use",
+      "meaning": "常用词",
+      "example": "You can use my laptop."
+    },
+    {
+      "word": "usual",
+      "meaning": "常用词",
+      "example": "We discussed usual with the client yesterday."
+    },
+    {
+      "word": "valley",
+      "meaning": "常用词",
+      "example": "We discussed valley with the client yesterday."
+    },
+    {
+      "word": "value",
+      "meaning": "常用词",
+      "example": "We discussed value with the client yesterday."
+    },
+    {
+      "word": "vary",
+      "meaning": "常用词",
+      "example": "I read an article about vary last night."
+    },
+    {
+      "word": "verb",
+      "meaning": "常用词",
+      "example": "We discussed verb with the client yesterday."
+    },
+    {
+      "word": "very",
+      "meaning": "常用词",
+      "example": "This is very helpful."
+    },
+    {
+      "word": "view",
+      "meaning": "常用词",
+      "example": "There is a quick tip on view in our handbook."
+    },
+    {
+      "word": "village",
+      "meaning": "常用词",
+      "example": "We walked to the village after dinner."
+    },
+    {
+      "word": "visit",
+      "meaning": "常用词",
+      "example": "We discussed visit with the client yesterday."
+    },
+    {
+      "word": "voice",
+      "meaning": "常用词",
+      "example": "I read an article about voice last night."
+    },
+    {
+      "word": "vowel",
+      "meaning": "常用词",
+      "example": "I read an article about vowel last night."
+    },
+    {
+      "word": "wait",
+      "meaning": "常用词",
+      "example": "Please wait here."
+    },
+    {
+      "word": "walk",
+      "meaning": "常用词",
+      "example": "We walk to work every day."
+    },
+    {
+      "word": "wall",
+      "meaning": "常用词",
+      "example": "I read an article about wall last night."
+    },
+    {
+      "word": "want",
+      "meaning": "常用词",
+      "example": "We discussed want with the client yesterday."
+    },
+    {
+      "word": "war",
+      "meaning": "常用词",
+      "example": "There is a quick tip on war in our handbook."
+    },
+    {
+      "word": "warm",
+      "meaning": "常用词",
+      "example": "The room feels very warm today."
+    },
+    {
+      "word": "was",
+      "meaning": "常用词",
+      "example": "The app was updated last night."
+    },
+    {
+      "word": "wash",
+      "meaning": "常用词",
+      "example": "Wash your hands before eating."
+    },
+    {
+      "word": "watch",
+      "meaning": "常用词",
+      "example": "Let's watch a movie tonight."
+    },
+    {
+      "word": "water",
+      "meaning": "常用词",
+      "example": "There is a quick tip on water in our handbook."
+    },
+    {
+      "word": "wave",
+      "meaning": "常用词",
+      "example": "There is a quick tip on wave in our handbook."
+    },
+    {
+      "word": "way",
+      "meaning": "常用词",
+      "example": "There is a quick tip on way in our handbook."
+    },
+    {
+      "word": "we",
+      "meaning": "常用词",
+      "example": "We need a bigger meeting room."
+    },
+    {
+      "word": "wear",
+      "meaning": "常用词",
+      "example": "Wear a helmet when you ride."
+    },
+    {
+      "word": "weather",
+      "meaning": "常用词",
+      "example": "There is a quick tip on weather in our handbook."
+    },
+    {
+      "word": "week",
+      "meaning": "常用词",
+      "example": "I'm off next week."
+    },
+    {
+      "word": "weight",
+      "meaning": "常用词",
+      "example": "I read an article about weight last night."
+    },
+    {
+      "word": "well",
+      "meaning": "常用词",
+      "example": "There is a quick tip on well in our handbook."
+    },
+    {
+      "word": "went",
+      "meaning": "常用词",
+      "example": "She went home early last night."
+    },
+    {
+      "word": "were",
+      "meaning": "常用词",
+      "example": "We were stuck in traffic."
+    },
+    {
+      "word": "west",
+      "meaning": "常用词",
+      "example": "We discussed west with the client yesterday."
+    },
+    {
+      "word": "what",
+      "meaning": "常用词",
+      "example": "What time is the interview?"
+    },
+    {
+      "word": "wheel",
+      "meaning": "常用词",
+      "example": "He left his wheel on the desk."
+    },
+    {
+      "word": "when",
+      "meaning": "常用词",
+      "example": "Call me when you arrive."
+    },
+    {
+      "word": "where",
+      "meaning": "常用词",
+      "example": "This is where we keep the tools."
+    },
+    {
+      "word": "whether",
+      "meaning": "常用词",
+      "example": "I read an article about whether last night."
+    },
+    {
+      "word": "which",
+      "meaning": "常用词",
+      "example": "Which one do you prefer?"
+    },
+    {
+      "word": "while",
+      "meaning": "常用词",
+      "example": "He listened while I explained."
+    },
+    {
+      "word": "white",
+      "meaning": "常用词",
+      "example": "He bought a white jacket yesterday."
+    },
+    {
+      "word": "who",
+      "meaning": "常用词",
+      "example": "Who left the lights on?"
+    },
+    {
+      "word": "whole",
+      "meaning": "常用词",
+      "example": "I read an article about whole last night."
+    },
+    {
+      "word": "whose",
+      "meaning": "常用词",
+      "example": "There is a quick tip on whose in our handbook."
+    },
+    {
+      "word": "why",
+      "meaning": "常用词",
+      "example": "Why are we waiting?"
+    },
+    {
+      "word": "wide",
+      "meaning": "常用词",
+      "example": "A wide choice will save us time."
+    },
+    {
+      "word": "wife",
+      "meaning": "常用词",
+      "example": "My wife called me this morning."
+    },
+    {
+      "word": "wild",
+      "meaning": "常用词",
+      "example": "The room feels very wild today."
+    },
+    {
+      "word": "will",
+      "meaning": "常用词",
+      "example": "I will share the notes later."
+    },
+    {
+      "word": "win",
+      "meaning": "常用词",
+      "example": "We hope to win the final."
+    },
+    {
+      "word": "wind",
+      "meaning": "常用词",
+      "example": "There is a quick tip on wind in our handbook."
+    },
+    {
+      "word": "window",
+      "meaning": "常用词",
+      "example": "He left his window on the desk."
+    },
+    {
+      "word": "wing",
+      "meaning": "常用词",
+      "example": "I read an article about wing last night."
+    },
+    {
+      "word": "winter",
+      "meaning": "常用词",
+      "example": "There is a quick tip on winter in our handbook."
+    },
+    {
+      "word": "wire",
+      "meaning": "常用词",
+      "example": "There is a quick tip on wire in our handbook."
+    },
+    {
+      "word": "wish",
+      "meaning": "常用词",
+      "example": "We discussed wish with the client yesterday."
+    },
+    {
+      "word": "with",
+      "meaning": "常用词",
+      "example": "He fixed the bug with a simple patch."
+    },
+    {
+      "word": "woman",
+      "meaning": "常用词",
+      "example": "My woman called me this morning."
+    },
+    {
+      "word": "women",
+      "meaning": "常用词",
+      "example": "Many women arrived early for the event."
+    },
+    {
+      "word": "won't",
+      "meaning": "常用词",
+      "example": "It won't take long."
+    },
+    {
+      "word": "wonder",
+      "meaning": "常用词",
+      "example": "There is a quick tip on wonder in our handbook."
+    },
+    {
+      "word": "wood",
+      "meaning": "常用词",
+      "example": "We discussed wood with the client yesterday."
+    },
+    {
+      "word": "word",
+      "meaning": "常用词",
+      "example": "We discussed word with the client yesterday."
+    },
+    {
+      "word": "work",
+      "meaning": "常用词",
+      "example": "I work from home on Fridays."
+    },
+    {
+      "word": "world",
+      "meaning": "常用词",
+      "example": "I read an article about world last night."
+    },
+    {
+      "word": "would",
+      "meaning": "常用词",
+      "example": "I would appreciate your feedback."
+    },
+    {
+      "word": "write",
+      "meaning": "常用词",
+      "example": "Please write your name here."
+    },
+    {
+      "word": "written",
+      "meaning": "常用词",
+      "example": "The rules are written clearly."
+    },
+    {
+      "word": "wrong",
+      "meaning": "常用词",
+      "example": "The room feels very wrong today."
+    },
+    {
+      "word": "wrote",
+      "meaning": "常用词",
+      "example": "She wrote home early last night."
+    },
+    {
+      "word": "yard",
+      "meaning": "常用词",
+      "example": "We discussed yard with the client yesterday."
+    },
+    {
+      "word": "year",
+      "meaning": "常用词",
+      "example": "She graduated last year."
+    },
+    {
+      "word": "yellow",
+      "meaning": "常用词",
+      "example": "He bought a yellow jacket yesterday."
+    },
+    {
+      "word": "yes",
+      "meaning": "常用词",
+      "example": "Yes, that makes sense."
+    },
+    {
+      "word": "yet",
+      "meaning": "常用词",
+      "example": "I read an article about yet last night."
+    },
+    {
+      "word": "you",
+      "meaning": "常用词",
+      "example": "You can sit here."
+    },
+    {
+      "word": "young",
+      "meaning": "常用词",
+      "example": "The room feels very young today."
+    },
+    {
+      "word": "your",
+      "meaning": "常用词",
+      "example": "Your package arrived this morning."
+    }
+  ]
+}

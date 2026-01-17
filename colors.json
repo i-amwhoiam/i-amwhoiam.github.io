@@ -1,0 +1,69 @@
+{
+  "words": [
+    {
+      "word": "red",
+      "meaning": "红色",
+      "example": "The cable is red."
+    },
+    {
+      "word": "blue",
+      "meaning": "蓝色",
+      "example": "The cable is blue."
+    },
+    {
+      "word": "green",
+      "meaning": "绿色",
+      "example": "The cable is green."
+    },
+    {
+      "word": "yellow",
+      "meaning": "黄色",
+      "example": "The cable is yellow."
+    },
+    {
+      "word": "black",
+      "meaning": "黑色",
+      "example": "The cable is black."
+    },
+    {
+      "word": "white",
+      "meaning": "白色",
+      "example": "The cable is white."
+    },
+    {
+      "word": "orange",
+      "meaning": "橙色",
+      "example": "The cable is orange."
+    },
+    {
+      "word": "purple",
+      "meaning": "紫色",
+      "example": "The cable is purple."
+    },
+    {
+      "word": "pink",
+      "meaning": "粉色",
+      "example": "The cable is pink."
+    },
+    {
+      "word": "brown",
+      "meaning": "棕色",
+      "example": "The cable is brown."
+    },
+    {
+      "word": "gray",
+      "meaning": "灰色",
+      "example": "The cable is gray."
+    },
+    {
+      "word": "silver",
+      "meaning": "银色",
+      "example": "The cable is silver."
+    },
+    {
+      "word": "gold",
+      "meaning": "金色",
+      "example": "The cable is gold."
+    }
+  ]
+}

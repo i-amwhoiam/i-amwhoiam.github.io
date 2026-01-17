@@ -1,0 +1,99 @@
+{
+  "words": [
+    {
+      "word": "agenda",
+      "meaning": "议程",
+      "example": "Please share the meeting agenda."
+    },
+    {
+      "word": "timeslot",
+      "meaning": "时间段",
+      "example": "Pick any available timeslot on the calendar."
+    },
+    {
+      "word": "availability",
+      "meaning": "可用性",
+      "example": "What’s your availability this week?"
+    },
+    {
+      "word": "overtime",
+      "meaning": "加班",
+      "example": "No overtime is expected for this release."
+    },
+    {
+      "word": "shift",
+      "meaning": "班次",
+      "example": "The night shift handles the soak test."
+    },
+    {
+      "word": "handover",
+      "meaning": "交接",
+      "example": "Prepare a handover note for the next shift."
+    },
+    {
+      "word": "milestone",
+      "meaning": "里程碑",
+      "example": "The milestone is planned for March 10th."
+    },
+    {
+      "word": "timeline",
+      "meaning": "时间线",
+      "example": "The project timeline has been updated."
+    },
+    {
+      "word": "roadmap",
+      "meaning": "路线图",
+      "example": "Our product roadmap covers OBC and DCDC."
+    },
+    {
+      "word": "slot booking",
+      "meaning": "预约时间段",
+      "example": "QA opened slot booking for tomorrow."
+    },
+    {
+      "word": "reminder",
+      "meaning": "提醒",
+      "example": "Set a reminder 10 minutes before the test."
+    },
+    {
+      "word": "timezone",
+      "meaning": "时区",
+      "example": "All times are in GMT+8."
+    },
+    {
+      "word": "due",
+      "meaning": "到期；应交",
+      "example": "Bug fix is due by EOD Wednesday."
+    },
+    {
+      "word": "EOD",
+      "meaning": "工作日结束",
+      "example": "I’ll send the report by EOD."
+    },
+    {
+      "word": "ETA",
+      "meaning": "预计到达时间",
+      "example": "ETA for the patch is 16:30."
+    },
+    {
+      "word": "TBD",
+      "meaning": "待定",
+      "example": "The training date is TBD."
+    },
+    {
+      "word": "TBC",
+      "meaning": "待确认",
+      "example": "Time is TBC after vendor reply."
+    },
+    {
+      "word": "RSVP",
+      "meaning": "请回复是否参加",
+      "example": "Please RSVP to the invite."
+    },
+    {
+      "word": "calendar invite",
+      "meaning": "日历邀请",
+      "example": "I’ll send a calendar invite right away."
+    }
+  ]
+}

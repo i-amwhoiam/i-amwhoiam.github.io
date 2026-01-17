@@ -1,0 +1,2504 @@
+{
+    "words": [
+        {
+            "word": "employee",
+            "meaning": "员工",
+            "example": "The company hired a new employee to support the development team."
+        },
+        {
+            "word": "manager",
+            "meaning": "经理",
+            "example": "My manager approved the budget after a quick review."
+        },
+        {
+            "word": "supervisor",
+            "meaning": "主管",
+            "example": "Please check with your supervisor before changing the process."
+        },
+        {
+            "word": "executive",
+            "meaning": "高管",
+            "example": "The executive team set new revenue targets for Q3."
+        },
+        {
+            "word": "director",
+            "meaning": "董事",
+            "example": "Our director will present the roadmap to the board."
+        },
+        {
+            "word": "founder",
+            "meaning": "创始人",
+            "example": "The founder still mentors new hires personally."
+        },
+        {
+            "word": "partner",
+            "meaning": "合伙人",
+            "example": "We signed a strategic agreement with a local partner."
+        },
+        {
+            "word": "stakeholder",
+            "meaning": "利益相关者",
+            "example": "We gathered stakeholder feedback before finalizing the design."
+        },
+        {
+            "word": "client",
+            "meaning": "客户",
+            "example": "The client requested a minor change to the interface."
+        },
+        {
+            "word": "customer",
+            "meaning": "客户",
+            "example": "Each customer can track orders in the app."
+        },
+        {
+            "word": "vendor",
+            "meaning": "供应商",
+            "example": "The vendor offered a discount for annual billing."
+        },
+        {
+            "word": "contractor",
+            "meaning": "承包商",
+            "example": "We brought in a contractor to speed up the migration."
+        },
+        {
+            "word": "consultant",
+            "meaning": "顾问",
+            "example": "A security consultant reviewed our firewall rules."
+        },
+        {
+            "word": "intern",
+            "meaning": "实习生",
+            "example": "Our intern automated the weekly report with a script."
+        },
+        {
+            "word": "colleague",
+            "meaning": "同事",
+            "example": "A colleague shared a useful testing checklist."
+        },
+        {
+            "word": "teammate",
+            "meaning": "队友",
+            "example": "My teammate handled the API integration."
+        },
+        {
+            "word": "auditor",
+            "meaning": "审计员",
+            "example": "The auditor asked for access to the change logs."
+        },
+        {
+            "word": "analyst",
+            "meaning": "分析师",
+            "example": "The data analyst identified a drop in conversion."
+        },
+        {
+            "word": "architect",
+            "meaning": "架构师",
+            "example": "The solution architect recommended a microservice approach."
+        },
+        {
+            "word": "engineer",
+            "meaning": "工程师",
+            "example": "The engineer fixed the CAN communication issue."
+        },
+        {
+            "word": "designer",
+            "meaning": "设计师",
+            "example": "Our designer updated the component library."
+        },
+        {
+            "word": "developer",
+            "meaning": "开发人员",
+            "example": "The developer opened a pull request for code review."
+        },
+        {
+            "word": "tester",
+            "meaning": "测试人员",
+            "example": "The tester logged three critical defects."
+        },
+        {
+            "word": "researcher",
+            "meaning": "研究员",
+            "example": "The researcher summarized the latest findings in a brief."
+        },
+        {
+            "word": "accountant",
+            "meaning": "会计",
+            "example": "The accountant reconciled last month's expenses."
+        },
+        {
+            "word": "recruiter",
+            "meaning": "招聘专员",
+            "example": "The recruiter scheduled three interviews for Thursday."
+        },
+        {
+            "word": "hr",
+            "meaning": "人力资源",
+            "example": "HR published the updated leave policy."
+        },
+        {
+            "word": "lawyer",
+            "meaning": "律师",
+            "example": "Our lawyer reviewed the licensing terms."
+        },
+        {
+            "word": "operator",
+            "meaning": "操作员",
+            "example": "The operator restarted the line after the safety check."
+        },
+        {
+            "word": "technician",
+            "meaning": "技术员",
+            "example": "A technician replaced the faulty sensor."
+        },
+        {
+            "word": "support",
+            "meaning": "支持",
+            "example": "Support resolved the ticket within an hour."
+        },
+        {
+            "word": "assistant",
+            "meaning": "助理",
+            "example": "The assistant booked the meeting room."
+        },
+        {
+            "word": "secretary",
+            "meaning": "秘书",
+            "example": "The secretary sent out the meeting minutes."
+        },
+        {
+            "word": "trainer",
+            "meaning": "培训师",
+            "example": "The trainer ran a workshop on Git workflows."
+        },
+        {
+            "word": "mentor",
+            "meaning": "导师",
+            "example": "My mentor suggested a smaller MVP scope."
+        },
+        {
+            "word": "lead",
+            "meaning": "负责人",
+            "example": "The tech lead prioritized the backlog items."
+        },
+        {
+            "word": "productowner",
+            "meaning": "产品负责人",
+            "example": "The product owner clarified the acceptance criteria."
+        },
+        {
+            "word": "scrummaster",
+            "meaning": "Scrum主管",
+            "example": "The Scrum Master removed a blocker for the team."
+        },
+        {
+            "word": "department",
+            "meaning": "部门",
+            "example": "Our department is moving to a new floor next month."
+        },
+        {
+            "word": "division",
+            "meaning": "事业部",
+            "example": "The new division focuses on electric vehicles."
+        },
+        {
+            "word": "unit",
+            "meaning": "单元",
+            "example": "The assembly unit will add a weekend shift."
+        },
+        {
+            "word": "committee",
+            "meaning": "委员会",
+            "example": "The safety committee meets every quarter."
+        },
+        {
+            "word": "board",
+            "meaning": "董事会",
+            "example": "The board approved the acquisition."
+        },
+        {
+            "word": "headquarters",
+            "meaning": "总部",
+            "example": "We will visit headquarters for training."
+        },
+        {
+            "word": "branch",
+            "meaning": "分支机构",
+            "example": "The Shanghai branch handles local sales."
+        },
+        {
+            "word": "office",
+            "meaning": "办公室",
+            "example": "The office will be closed on Friday for maintenance."
+        },
+        {
+            "word": "workshop",
+            "meaning": "车间",
+            "example": "The welding workshop upgraded its PPE."
+        },
+        {
+            "word": "warehouse",
+            "meaning": "仓库",
+            "example": "Inventory is stored in the east warehouse."
+        },
+        {
+            "word": "factory",
+            "meaning": "工厂",
+            "example": "The factory runs three shifts during peak season."
+        },
+        {
+            "word": "plant",
+            "meaning": "工厂",
+            "example": "The plant will shut down for inspection next week."
+        },
+        {
+            "word": "lab",
+            "meaning": "实验室",
+            "example": "The lab needs new oscilloscopes."
+        },
+        {
+            "word": "studio",
+            "meaning": "工作室",
+            "example": "The design studio tested new layouts."
+        },
+        {
+            "word": "meetingroom",
+            "meaning": "会议室",
+            "example": "The meeting room fits twelve people."
+        },
+        {
+            "word": "lobby",
+            "meaning": "大厅",
+            "example": "Visitors should wait in the lobby."
+        },
+        {
+            "word": "reception",
+            "meaning": "前台",
+            "example": "Please leave the parcel at reception."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "proposal",
+            "meaning": "提案",
+            "example": "We submitted a proposal for the pilot project."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "agreement",
+            "meaning": "协议",
+            "example": "We reached an agreement after two rounds of talks."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "receipt",
+            "meaning": "收据",
+            "example": "Keep the receipt for reimbursement."
+        },
+        {
+            "word": "purchaseorder",
+            "meaning": "采购订单",
+            "example": "Procurement issued a purchase order yesterday."
+        },
+        {
+            "word": "quotation",
+            "meaning": "报价单",
+            "example": "The quotation includes installation and support."
+        },
+        {
+            "word": "memo",
+            "meaning": "备忘录",
+            "example": "The memo explains the new approval flow."
+        },
+        {
+            "word": "minutes",
+            "meaning": "会议纪要",
+            "example": "Meeting minutes are available on SharePoint."
+        },
+        {
+            "word": "record",
+            "meaning": "记录",
+            "example": "We keep a record of all API changes."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "guideline",
+            "meaning": "指南",
+            "example": "Follow this guideline when naming branches."
+        },
+        {
+            "word": "manual",
+            "meaning": "手册",
+            "example": "The user manual covers common errors."
+        },
+        {
+            "word": "specification",
+            "meaning": "规范",
+            "example": "The specification defines the API contracts."
+        },
+        {
+            "word": "architecture",
+            "meaning": "架构",
+            "example": "The architecture diagram shows all interfaces."
+        },
+        {
+            "word": "diagram",
+            "meaning": "图表",
+            "example": "This diagram clarifies the signal flow."
+        },
+        {
+            "word": "blueprint",
+            "meaning": "蓝图",
+            "example": "The blueprint outlines the facility layout."
+        },
+        {
+            "word": "roadmap",
+            "meaning": "路线图",
+            "example": "Our roadmap highlights the next three releases."
+        },
+        {
+            "word": "timeline",
+            "meaning": "时间线",
+            "example": "The timeline adds a buffer for testing."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "brief",
+            "meaning": "简报",
+            "example": "Here's a one-page brief for stakeholders."
+        },
+        {
+            "word": "deck",
+            "meaning": "演示文稿",
+            "example": "I attached the slide deck for tomorrow’s demo."
+        },
+        {
+            "word": "slide",
+            "meaning": "幻灯片",
+            "example": "Each slide has a clear takeaway."
+        },
+        {
+            "word": "presentation",
+            "meaning": "演示",
+            "example": "The presentation focused on quality metrics."
+        },
+        {
+            "word": "document",
+            "meaning": "文档",
+            "example": "This document summarizes the API."
+        },
+        {
+            "word": "worksheet",
+            "meaning": "工作表",
+            "example": "Fill in the worksheet with actual costs."
+        },
+        {
+            "word": "spreadsheet",
+            "meaning": "电子表格",
+            "example": "The spreadsheet calculates burn rate."
+        },
+        {
+            "word": "form",
+            "meaning": "表单",
+            "example": "Please complete the access request form."
+        },
+        {
+            "word": "template",
+            "meaning": "模板",
+            "example": "Use this template for feature specs."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "backlog",
+            "meaning": "待办列表",
+            "example": "Move low-priority items to the next backlog."
+        },
+        {
+            "word": "milestone",
+            "meaning": "里程碑",
+            "example": "We reached the first milestone on time."
+        },
+        {
+            "word": "deliverable",
+            "meaning": "交付物",
+            "example": "Each deliverable needs an owner and a due date."
+        },
+        {
+            "word": "scope",
+            "meaning": "范围",
+            "example": "We agreed to reduce the initial scope."
+        },
+        {
+            "word": "requirement",
+            "meaning": "需求",
+            "example": "Each requirement has a unique ID."
+        },
+        {
+            "word": "estimate",
+            "meaning": "估算",
+            "example": "Double‑check the estimate for testing effort."
+        },
+        {
+            "word": "priority",
+            "meaning": "优先级",
+            "example": "Customer issues take the highest priority."
+        },
+        {
+            "word": "risk",
+            "meaning": "风险",
+            "example": "Schedule risk increases if we slip again."
+        },
+        {
+            "word": "issue",
+            "meaning": "问题",
+            "example": "This issue affects all CAN nodes."
+        },
+        {
+            "word": "change",
+            "meaning": "变更",
+            "example": "Submit a change request for that update."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "approval",
+            "meaning": "批准",
+            "example": "The change is pending approval from QA."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "compliance",
+            "meaning": "合规",
+            "example": "The build must meet ASPICE compliance."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "standup",
+            "meaning": "站会",
+            "example": "Keep the standup focused and short."
+        },
+        {
+            "word": "training",
+            "meaning": "培训",
+            "example": "The team completed safety training."
+        },
+        {
+            "word": "interview",
+            "meaning": "面试",
+            "example": "Your interview is scheduled for 10 a.m."
+        },
+        {
+            "word": "onboarding",
+            "meaning": "入职",
+            "example": "Onboarding takes about one week."
+        },
+        {
+            "word": "handover",
+            "meaning": "交接",
+            "example": "Document the handover before you leave."
+        },
+        {
+            "word": "deployment",
+            "meaning": "部署",
+            "example": "We scheduled the deployment for midnight."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "maintenance",
+            "meaning": "维护",
+            "example": "We plan a maintenance window on Sunday."
+        },
+        {
+            "word": "upgrade",
+            "meaning": "升级",
+            "example": "The database upgrade requires downtime."
+        },
+        {
+            "word": "migration",
+            "meaning": "迁移",
+            "example": "Data migration finished without errors."
+        },
+        {
+            "word": "integration",
+            "meaning": "集成",
+            "example": "Hardware integration starts next sprint."
+        },
+        {
+            "word": "testing",
+            "meaning": "测试",
+            "example": "Testing covers unit, integration, and HIL."
+        },
+        {
+            "word": "debugging",
+            "meaning": "调试",
+            "example": "We spent the afternoon debugging a timing bug."
+        },
+        {
+            "word": "code",
+            "meaning": "代码",
+            "example": "Please format your code before committing."
+        },
+        {
+            "word": "commit",
+            "meaning": "提交",
+            "example": "Write a clear message for each commit."
+        },
+        {
+            "word": "merge",
+            "meaning": "合并",
+            "example": "Resolve conflicts before you merge."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "artifact",
+            "meaning": "制品",
+            "example": "Publish the build artifact to the repository."
+        },
+        {
+            "word": "pipeline",
+            "meaning": "流水线",
+            "example": "The CI pipeline runs on every pull request."
+        },
+        {
+            "word": "automation",
+            "meaning": "自动化",
+            "example": "We added automation for regression tests."
+        },
+        {
+            "word": "monitoring",
+            "meaning": "监控",
+            "example": "Enable monitoring to track CPU usage."
+        },
+        {
+            "word": "alert",
+            "meaning": "告警",
+            "example": "Set an alert when latency spikes."
+        },
+        {
+            "word": "incident",
+            "meaning": "故障",
+            "example": "We opened an incident after the outage."
+        },
+        {
+            "word": "rootcause",
+            "meaning": "根因",
+            "example": "The root cause was a misconfigured proxy."
+        },
+        {
+            "word": "postmortem",
+            "meaning": "复盘",
+            "example": "The postmortem lists five action items."
+        },
+        {
+            "word": "retrospective",
+            "meaning": "回顾",
+            "example": "In the retrospective, we agreed to slice stories smaller."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "iteration",
+            "meaning": "迭代",
+            "example": "Each iteration should deliver a usable feature."
+        },
+        {
+            "word": "kanban",
+            "meaning": "看板",
+            "example": "Our kanban board shows current WIP."
+        },
+        {
+            "word": "email",
+            "meaning": "邮件",
+            "example": "I’ll send a follow-up email after the call."
+        },
+        {
+            "word": "chat",
+            "meaning": "聊天",
+            "example": "Ping me on chat if anything blocks you."
+        },
+        {
+            "word": "messaging",
+            "meaning": "消息",
+            "example": "We use a messaging channel for on-call alerts."
+        },
+        {
+            "word": "phone",
+            "meaning": "电话",
+            "example": "You can reach me by phone after 6 p.m."
+        },
+        {
+            "word": "videocall",
+            "meaning": "视频通话",
+            "example": "Let’s switch to a video call to debug together."
+        },
+        {
+            "word": "conference",
+            "meaning": "会议",
+            "example": "The annual conference starts next week."
+        },
+        {
+            "word": "whiteboard",
+            "meaning": "白板",
+            "example": "Sketch it on the whiteboard first."
+        },
+        {
+            "word": "printer",
+            "meaning": "打印机",
+            "example": "The printer is out of toner again."
+        },
+        {
+            "word": "scanner",
+            "meaning": "扫描仪",
+            "example": "Use the scanner to upload signed pages."
+        },
+        {
+            "word": "copier",
+            "meaning": "复印机",
+            "example": "The copier jams if the tray is full."
+        },
+        {
+            "word": "server",
+            "meaning": "服务器",
+            "example": "The server rebooted after the patch."
+        },
+        {
+            "word": "database",
+            "meaning": "数据库",
+            "example": "The database stores audit logs for 90 days."
+        },
+        {
+            "word": "cloud",
+            "meaning": "云",
+            "example": "We moved most workloads to the cloud."
+        },
+        {
+            "word": "storage",
+            "meaning": "存储",
+            "example": "Cold storage is cheaper for backups."
+        },
+        {
+            "word": "backup",
+            "meaning": "备份",
+            "example": "Run a backup before the upgrade."
+        },
+        {
+            "word": "repository",
+            "meaning": "代码库",
+            "example": "Push the code to the central repository."
+        },
+        {
+            "word": "versioncontrol",
+            "meaning": "版本控制",
+            "example": "Version control helps us track changes."
+        },
+        {
+            "word": "git",
+            "meaning": "Git",
+            "example": "Create a Git branch for each feature."
+        },
+        {
+            "word": "svn",
+            "meaning": "SVN",
+            "example": "The legacy app still uses SVN."
+        },
+        {
+            "word": "jira",
+            "meaning": "Jira",
+            "example": "Please create a JIRA ticket for the bug."
+        },
+        {
+            "word": "confluence",
+            "meaning": "Confluence",
+            "example": "The setup guide is on Confluence."
+        },
+        {
+            "word": "sharepoint",
+            "meaning": "SharePoint",
+            "example": "Policies are stored on SharePoint."
+        },
+        {
+            "word": "excel",
+            "meaning": "Excel",
+            "example": "Export the data to Excel for review."
+        },
+        {
+            "word": "word",
+            "meaning": "Word",
+            "example": "Draft the report in Word first."
+        },
+        {
+            "word": "powerpoint",
+            "meaning": "PowerPoint",
+            "example": "Keep PowerPoint slides simple and clear."
+        },
+        {
+            "word": "docs",
+            "meaning": "Google 文档",
+            "example": "We co-edit specs in Google Docs."
+        },
+        {
+            "word": "sheets",
+            "meaning": "Google 表格",
+            "example": "Budget tracking lives in Google Sheets."
+        },
+        {
+            "word": "slides",
+            "meaning": "Google 幻灯片",
+            "example": "The Google Slides deck is up to date."
+        },
+        {
+            "word": "browser",
+            "meaning": "浏览器",
+            "example": "Try clearing the browser cache."
+        },
+        {
+            "word": "vpn",
+            "meaning": "VPN",
+            "example": "Connect to the VPN to reach internal tools."
+        },
+        {
+            "word": "proxy",
+            "meaning": "代理",
+            "example": "Update the proxy settings for the new host."
+        },
+        {
+            "word": "wifi",
+            "meaning": "Wi‑Fi",
+            "example": "The Wi‑Fi password changed this morning."
+        },
+        {
+            "word": "network",
+            "meaning": "网络",
+            "example": "Network latency increased after the change."
+        },
+        {
+            "word": "firewall",
+            "meaning": "防火墙",
+            "example": "Open the port on the firewall for SSH."
+        },
+        {
+            "word": "endpoint",
+            "meaning": "终端",
+            "example": "Each endpoint requires token-based auth."
+        },
+        {
+            "word": "laptop",
+            "meaning": "笔记本电脑",
+            "example": "Shut down your laptop during the flight."
+        },
+        {
+            "word": "desktop",
+            "meaning": "台式机",
+            "example": "The desktop has dual monitors."
+        },
+        {
+            "word": "keyboard",
+            "meaning": "键盘",
+            "example": "This keyboard is much quieter."
+        },
+        {
+            "word": "mouse",
+            "meaning": "鼠标",
+            "example": "Replace the mouse if it lags."
+        },
+        {
+            "word": "monitor",
+            "meaning": "显示器",
+            "example": "Calibrate the monitor for accurate color."
+        },
+        {
+            "word": "revenue",
+            "meaning": "收入",
+            "example": "Revenue grew 12% year over year."
+        },
+        {
+            "word": "profit",
+            "meaning": "利润",
+            "example": "We aim to increase profit without raising prices."
+        },
+        {
+            "word": "loss",
+            "meaning": "亏损",
+            "example": "Last quarter showed a small loss."
+        },
+        {
+            "word": "cost",
+            "meaning": "成本",
+            "example": "Shipping cost doubled this month."
+        },
+        {
+            "word": "expense",
+            "meaning": "费用",
+            "example": "Log each expense with a receipt."
+        },
+        {
+            "word": "cashflow",
+            "meaning": "现金流",
+            "example": "Cash flow improved after faster invoicing."
+        },
+        {
+            "word": "balance",
+            "meaning": "余额/平衡",
+            "example": "The account balance updates nightly."
+        },
+        {
+            "word": "ledger",
+            "meaning": "总账",
+            "example": "Record the entry in the general ledger."
+        },
+        {
+            "word": "asset",
+            "meaning": "资产",
+            "example": "The new servers are capital assets."
+        },
+        {
+            "word": "liability",
+            "meaning": "负债",
+            "example": "Deferred revenue is a liability."
+        },
+        {
+            "word": "equity",
+            "meaning": "权益",
+            "example": "Employee equity vests over four years."
+        },
+        {
+            "word": "tax",
+            "meaning": "税",
+            "example": "Set aside funds for quarterly tax."
+        },
+        {
+            "word": "billing",
+            "meaning": "计费",
+            "example": "Our billing cycles run monthly."
+        },
+        {
+            "word": "pricing",
+            "meaning": "定价",
+            "example": "We’re testing a new pricing model."
+        },
+        {
+            "word": "quote",
+            "meaning": "报价",
+            "example": "Send the customer a quote by noon."
+        },
+        {
+            "word": "purchase",
+            "meaning": "采购",
+            "example": "We’ll purchase licenses after approval."
+        },
+        {
+            "word": "procurement",
+            "meaning": "采购",
+            "example": "Procurement handles vendor onboarding."
+        },
+        {
+            "word": "tender",
+            "meaning": "招标",
+            "example": "The city opened a tender for charging stations."
+        },
+        {
+            "word": "bid",
+            "meaning": "投标",
+            "example": "We plan to bid on the maintenance contract."
+        },
+        {
+            "word": "licensing",
+            "meaning": "许可",
+            "example": "Licensing terms limit redistribution."
+        },
+        {
+            "word": "copyright",
+            "meaning": "版权",
+            "example": "Respect copyright when using images."
+        },
+        {
+            "word": "patent",
+            "meaning": "专利",
+            "example": "The patent is still pending review."
+        },
+        {
+            "word": "trademark",
+            "meaning": "商标",
+            "example": "Use the correct trademark symbol."
+        },
+        {
+            "word": "nda",
+            "meaning": "保密协议",
+            "example": "Please sign the NDA before the demo."
+        },
+        {
+            "word": "regulation",
+            "meaning": "法规",
+            "example": "This feature must follow GDPR regulation."
+        },
+        {
+            "word": "salary",
+            "meaning": "薪资",
+            "example": "Her salary includes a performance bonus."
+        },
+        {
+            "word": "payroll",
+            "meaning": "薪酬",
+            "example": "Payroll closes on the 25th."
+        },
+        {
+            "word": "bonus",
+            "meaning": "奖金",
+            "example": "The team received a year-end bonus."
+        },
+        {
+            "word": "benefit",
+            "meaning": "福利",
+            "example": "One benefit is flexible working hours."
+        },
+        {
+            "word": "attendance",
+            "meaning": "出勤",
+            "example": "Submit attendance by Friday."
+        },
+        {
+            "word": "shift",
+            "meaning": "班次",
+            "example": "Your shift starts at 8 a.m."
+        },
+        {
+            "word": "overtime",
+            "meaning": "加班",
+            "example": "Overtime requires prior approval."
+        },
+        {
+            "word": "leave",
+            "meaning": "请假",
+            "example": "I’m requesting two days of leave."
+        },
+        {
+            "word": "vacation",
+            "meaning": "假期",
+            "example": "He’s on vacation next week."
+        },
+        {
+            "word": "holiday",
+            "meaning": "节假日",
+            "example": "We’re closed for the public holiday."
+        },
+        {
+            "word": "sickleave",
+            "meaning": "病假",
+            "example": "She took a day of sick leave."
+        },
+        {
+            "word": "performance",
+            "meaning": "绩效",
+            "example": "Performance improved after refactoring."
+        },
+        {
+            "word": "evaluation",
+            "meaning": "评估",
+            "example": "Your evaluation is scheduled for March."
+        },
+        {
+            "word": "promotion",
+            "meaning": "晋升",
+            "example": "She earned a promotion to team lead."
+        },
+        {
+            "word": "demotion",
+            "meaning": "降职",
+            "example": "A demotion should follow clear policy."
+        },
+        {
+            "word": "discipline",
+            "meaning": "纪律",
+            "example": "Discipline issues must be documented."
+        },
+        {
+            "word": "resignation",
+            "meaning": "辞职",
+            "example": "He submitted his resignation this morning."
+        },
+        {
+            "word": "termination",
+            "meaning": "解雇",
+            "example": "Termination is the last resort."
+        },
+        {
+            "word": "retirement",
+            "meaning": "退休",
+            "example": "Her retirement party is on Friday."
+        },
+        {
+            "word": "recruitment",
+            "meaning": "招聘",
+            "example": "Recruitment will open two new roles."
+        },
+        {
+            "word": "jobposting",
+            "meaning": "招聘公告",
+            "example": "The job posting goes live tomorrow."
+        },
+        {
+            "word": "offer",
+            "meaning": "录用通知",
+            "example": "We extended an offer to the finalist."
+        },
+        {
+            "word": "acceptance",
+            "meaning": "接受",
+            "example": "Offer acceptance is due by Monday."
+        },
+        {
+            "word": "orientation",
+            "meaning": "入职培训",
+            "example": "New hires attend orientation on Day 1."
+        },
+        {
+            "word": "deadline",
+            "meaning": "截止日期",
+            "example": "The deadline is 6 p.m. today."
+        },
+        {
+            "word": "due",
+            "meaning": "到期",
+            "example": "Payment is due within 30 days."
+        },
+        {
+            "word": "timesheet",
+            "meaning": "工时表",
+            "example": "Submit your timesheet every Friday."
+        },
+        {
+            "word": "workload",
+            "meaning": "工作量",
+            "example": "We’ll rebalance workload across teams."
+        },
+        {
+            "word": "capacity",
+            "meaning": "产能/能力",
+            "example": "Current capacity allows two more features."
+        },
+        {
+            "word": "forecast",
+            "meaning": "预测",
+            "example": "The forecast shows steady growth."
+        },
+        {
+            "word": "target",
+            "meaning": "目标",
+            "example": "This quarter’s target is customer retention."
+        },
+        {
+            "word": "objective",
+            "meaning": "目标",
+            "example": "Our objective is faster release cycles."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "tactic",
+            "meaning": "战术",
+            "example": "One tactic is to prioritize high-impact bugs."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "facility",
+            "meaning": "设施",
+            "example": "The new facility opens in April."
+        },
+        {
+            "word": "cafeteria",
+            "meaning": "自助餐厅",
+            "example": "The cafeteria now offers vegetarian options."
+        },
+        {
+            "word": "canteen",
+            "meaning": "食堂",
+            "example": "Lunch is available in the canteen from 11:30."
+        },
+        {
+            "word": "pantry",
+            "meaning": "茶水间",
+            "example": "The pantry has fresh coffee and tea."
+        },
+        {
+            "word": "restroom",
+            "meaning": "洗手间",
+            "example": "The nearest restroom is past the lobby."
+        },
+        {
+            "word": "parking",
+            "meaning": "停车场",
+            "example": "Visitor parking is on the first level."
+        },
+        {
+            "word": "elevator",
+            "meaning": "电梯",
+            "example": "Please take the elevator to the 8th floor."
+        },
+        {
+            "word": "staircase",
+            "meaning": "楼梯",
+            "example": "Use the staircase during fire drills."
+        },
+        {
+            "word": "security",
+            "meaning": "安保/安全",
+            "example": "Security will check your badge at the gate."
+        },
+        {
+            "word": "badge",
+            "meaning": "工牌",
+            "example": "Don’t forget your badge when you leave."
+        },
+        {
+            "word": "access",
+            "meaning": "访问/权限",
+            "example": "You need access to the staging environment."
+        },
+        {
+            "word": "safety",
+            "meaning": "安全",
+            "example": "Safety training is mandatory for new staff."
+        },
+        {
+            "word": "equipment",
+            "meaning": "设备",
+            "example": "Store equipment after use."
+        },
+        {
+            "word": "ppe",
+            "meaning": "个体防护用品",
+            "example": "Wear PPE in the production area."
+        },
+        {
+            "word": "firstaid",
+            "meaning": "急救",
+            "example": "The first aid kit is by the door."
+        },
+        {
+            "word": "evacuation",
+            "meaning": "疏散",
+            "example": "Follow the evacuation map during an alarm."
+        },
+        {
+            "word": "drill",
+            "meaning": "演练",
+            "example": "We’ll run a fire drill next Tuesday."
+        },
+        {
+            "word": "briefing",
+            "meaning": "简报",
+            "example": "Join the morning briefing at 9 a.m."
+        },
+        {
+            "word": "update",
+            "meaning": "更新",
+            "example": "Post an update in the channel when done."
+        },
+        {
+            "word": "status",
+            "meaning": "状态",
+            "example": "What’s the current status of the fix?"
+        },
+        {
+            "word": "feedback",
+            "meaning": "反馈",
+            "example": "Thanks for the feedback—it helps a lot."
+        },
+        {
+            "word": "comment",
+            "meaning": "评论",
+            "example": "Leave a comment if anything is unclear."
+        },
+        {
+            "word": "note",
+            "meaning": "备注",
+            "example": "Note the test setup for future runs."
+        },
+        {
+            "word": "summary",
+            "meaning": "摘要",
+            "example": "Send a short summary after the call."
+        },
+        {
+            "word": "escalation",
+            "meaning": "升级处理",
+            "example": "Start an escalation if production is blocked."
+        },
+        {
+            "word": "negotiation",
+            "meaning": "谈判",
+            "example": "The negotiation ended with a fair price."
+        },
+        {
+            "word": "compromise",
+            "meaning": "妥协",
+            "example": "We reached a compromise on scope."
+        },
+        {
+            "word": "dispute",
+            "meaning": "纠纷",
+            "example": "Legal is handling the contract dispute."
+        },
+        {
+            "word": "resolution",
+            "meaning": "解决方案",
+            "example": "The resolution is to roll back the change."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "procedure",
+            "meaning": "程序/流程",
+            "example": "Follow the procedure for code reviews."
+        },
+        {
+            "word": "standard",
+            "meaning": "标准",
+            "example": "This standard applies to all sites."
+        },
+        {
+            "word": "bestpractice",
+            "meaning": "最佳实践",
+            "example": "Code reviews are a best practice."
+        },
+        {
+            "word": "benchmark",
+            "meaning": "基准",
+            "example": "Use last release as a benchmark."
+        },
+        {
+            "word": "quality",
+            "meaning": "质量",
+            "example": "Quality checks run before each release."
+        },
+        {
+            "word": "assurance",
+            "meaning": "保障",
+            "example": "Quality assurance signs off on readiness."
+        },
+        {
+            "word": "control",
+            "meaning": "控制",
+            "example": "Access control is role-based."
+        },
+        {
+            "word": "inspection",
+            "meaning": "检验",
+            "example": "The inspection found no safety issues."
+        },
+        {
+            "word": "certificate",
+            "meaning": "证书",
+            "example": "Upload your training certificate."
+        },
+        {
+            "word": "warranty",
+            "meaning": "质保",
+            "example": "The equipment is still under warranty."
+        },
+        {
+            "word": "service",
+            "meaning": "服务",
+            "example": "Schedule a service visit for the printer."
+        },
+        {
+            "word": "ticketing",
+            "meaning": "工单系统",
+            "example": "Our ticketing system integrates with email."
+        },
+        {
+            "word": "helpdesk",
+            "meaning": "服务台",
+            "example": "Contact the help desk for password resets."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy12 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test15 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy37 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test40 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy62 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test65 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy87 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test90 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy112 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test115 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy137 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test140 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy162 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test165 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy187 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test190 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        },
+        {
+            "word": "goal",
+            "meaning": "目标",
+            "example": "A key goal is zero critical defects."
+        },
+        {
+            "word": "kpi",
+            "meaning": "关键指标",
+            "example": "Define a clear KPI for uptime."
+        },
+        {
+            "word": "okr",
+            "meaning": "目标与关键结果",
+            "example": "Our OKR focuses on quality and speed."
+        },
+        {
+            "word": "ticket",
+            "meaning": "工单",
+            "example": "Create a ticket so support can track it."
+        },
+        {
+            "word": "sprint",
+            "meaning": "迭代",
+            "example": "This sprint focuses on stability fixes."
+        },
+        {
+            "word": "project",
+            "meaning": "项目",
+            "example": "This project integrates the new OBC and DCDC modules."
+        },
+        {
+            "word": "task",
+            "meaning": "任务",
+            "example": "I’ll finish this task before standup."
+        },
+        {
+            "word": "meeting",
+            "meaning": "会议",
+            "example": "Let’s keep the meeting to thirty minutes."
+        },
+        {
+            "word": "report",
+            "meaning": "报告",
+            "example": "I sent the monthly report to the whole team."
+        },
+        {
+            "word": "budget",
+            "meaning": "预算",
+            "example": "Our budget doesn’t cover additional licenses."
+        },
+        {
+            "word": "contract",
+            "meaning": "合同",
+            "example": "The contract expires at the end of the year."
+        },
+        {
+            "word": "invoice",
+            "meaning": "发票",
+            "example": "Please upload the invoice to the portal."
+        },
+        {
+            "word": "policy",
+            "meaning": "政策",
+            "example": "The new policy limits admin access."
+        },
+        {
+            "word": "process",
+            "meaning": "流程",
+            "example": "Document the process step by step."
+        },
+        {
+            "word": "workflow",
+            "meaning": "工作流",
+            "example": "This workflow automates approvals."
+        },
+        {
+            "word": "schedule",
+            "meaning": "日程",
+            "example": "The schedule was updated after the delay."
+        },
+        {
+            "word": "calendar",
+            "meaning": "日历",
+            "example": "Check the team calendar before booking."
+        },
+        {
+            "word": "deploy",
+            "meaning": "待翻译",
+            "example": "We used deploy212 in the project to improve productivity."
+        },
+        {
+            "word": "release",
+            "meaning": "发布",
+            "example": "The release notes list known issues."
+        },
+        {
+            "word": "build",
+            "meaning": "构建",
+            "example": "The nightly build passed all checks."
+        },
+        {
+            "word": "test",
+            "meaning": "待翻译",
+            "example": "We used test215 in the project to improve productivity."
+        },
+        {
+            "word": "audit",
+            "meaning": "审计",
+            "example": "QA will run an internal audit next month."
+        },
+        {
+            "word": "review",
+            "meaning": "评审",
+            "example": "We’ll do a design review on Thursday."
+        },
+        {
+            "word": "plan",
+            "meaning": "计划",
+            "example": "Let’s finalize the test plan by tomorrow."
+        },
+        {
+            "word": "strategy",
+            "meaning": "战略",
+            "example": "Our strategy is to deliver in small increments."
+        }
+    ]
+}
