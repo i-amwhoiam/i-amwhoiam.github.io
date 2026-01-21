@@ -45,6 +45,8 @@
     {file:'daily-500.json',                      title:'Daily 500（日常）', group:'Existing · Core', path:'./'},
     {file:'core-1000.json',                      title:'Core 1000（核心）', group:'Existing · Core', path:'./'},
     {file:'work-500.json',                       title:'Work 500（办公）', group:'Existing · Core', path:'./'},
+    {file:'oxford-3000.json',                       title:'Oxford 3000', group:'Oxford · Core', path:'./'},
+    {file:'oxford-5000.json',                       title:'Oxford 5000', group:'Oxford · Core', path:'./'},
     // 可选：把你的短语库先加进回退列表，便于从下拉选择
     {file:'phrases-700.json',                    title:'Phrases 700（短语）', group:'Existing · Phrases', path:'./'}
   ];
