@@ -1,0 +1,29 @@
+{
+  "words": [
+    {
+      "word": "spring",
+      "meaning": "春天",
+      "example": "The test campaign runs in spring."
+    },
+    {
+      "word": "summer",
+      "meaning": "夏天",
+      "example": "The test campaign runs in summer."
+    },
+    {
+      "word": "autumn",
+      "meaning": "秋天",
+      "example": "The test campaign runs in autumn."
+    },
+    {
+      "word": "fall",
+      "meaning": "秋天(美式)",
+      "example": "The test campaign runs in fall."
+    },
+    {
+      "word": "winter",
+      "meaning": "冬天",
+      "example": "The test campaign runs in winter."
+    }
+  ]
+}

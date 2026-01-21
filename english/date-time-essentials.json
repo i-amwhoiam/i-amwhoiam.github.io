@@ -1,0 +1,184 @@
+{
+  "words": [
+    {
+      "word": "second",
+      "meaning": "秒",
+      "example": "It takes only a few seconds to start the test."
+    },
+    {
+      "word": "minute",
+      "meaning": "分钟",
+      "example": "The meeting will begin in five minutes."
+    },
+    {
+      "word": "hour",
+      "meaning": "小时",
+      "example": "We scheduled a one-hour code review."
+    },
+    {
+      "word": "day",
+      "meaning": "天；白天",
+      "example": "The lab is open during the day."
+    },
+    {
+      "word": "night",
+      "meaning": "夜晚",
+      "example": "The overnight build finished last night."
+    },
+    {
+      "word": "morning",
+      "meaning": "早晨",
+      "example": "Standup starts every morning at 9:00."
+    },
+    {
+      "word": "noon",
+      "meaning": "中午",
+      "example": "Let’s have lunch at noon."
+    },
+    {
+      "word": "afternoon",
+      "meaning": "下午",
+      "example": "The test slot is in the afternoon."
+    },
+    {
+      "word": "evening",
+      "meaning": "傍晚；晚上",
+      "example": "We’ll push the release this evening."
+    },
+    {
+      "word": "today",
+      "meaning": "今天",
+      "example": "Today we focus on regression tests."
+    },
+    {
+      "word": "tomorrow",
+      "meaning": "明天",
+      "example": "The patch will be deployed tomorrow."
+    },
+    {
+      "word": "yesterday",
+      "meaning": "昨天",
+      "example": "Yesterday’s run found two defects."
+    },
+    {
+      "word": "week",
+      "meaning": "周；星期",
+      "example": "Next week we start the OBC module."
+    },
+    {
+      "word": "weekday",
+      "meaning": "工作日",
+      "example": "Support is available on weekdays only."
+    },
+    {
+      "word": "weekend",
+      "meaning": "周末",
+      "example": "The system will be offline this weekend."
+    },
+    {
+      "word": "month",
+      "meaning": "月；月份",
+      "example": "We’ll publish the monthly report on the 5th."
+    },
+    {
+      "word": "quarter",
+      "meaning": "季度",
+      "example": "Q1 targets include DCDC performance."
+    },
+    {
+      "word": "year",
+      "meaning": "年",
+      "example": "This year we upgrade the firmware pipeline."
+    },
+    {
+      "word": "date",
+      "meaning": "日期",
+      "example": "Please confirm the release date."
+    },
+    {
+      "word": "time",
+      "meaning": "时间",
+      "example": "What time does the validation start?"
+    },
+    {
+      "word": "deadline",
+      "meaning": "截止日期",
+      "example": "The documentation deadline is Friday."
+    },
+    {
+      "word": "schedule",
+      "meaning": "日程；安排",
+      "example": "I’ll add it to the test schedule."
+    },
+    {
+      "word": "calendar",
+      "meaning": "日历",
+      "example": "Check the team calendar for slots."
+    },
+    {
+      "word": "appointment",
+      "meaning": "预约；会议",
+      "example": "I have an appointment at 3:30 pm."
+    },
+    {
+      "word": "meeting",
+      "meaning": "会议",
+      "example": "The design meeting is at 10:00."
+    },
+    {
+      "word": "start",
+      "meaning": "开始",
+      "example": "The experiment will start at 08:45."
+    },
+    {
+      "word": "finish",
+      "meaning": "结束",
+      "example": "We aim to finish before 18:00."
+    },
+    {
+      "word": "duration",
+      "meaning": "持续时间",
+      "example": "The test duration is two hours."
+    },
+    {
+      "word": "delay",
+      "meaning": "延迟",
+      "example": "There’s a 10-minute delay due to setup."
+    },
+    {
+      "word": "early",
+      "meaning": "提前；早",
+      "example": "Can we start a bit early?"
+    },
+    {
+      "word": "late",
+      "meaning": "晚；迟",
+      "example": "Sorry, I will be five minutes late."
+    },
+    {
+      "word": "reschedule",
+      "meaning": "改期",
+      "example": "Let’s reschedule for tomorrow morning."
+    },
+    {
+      "word": "postpone",
+      "meaning": "推迟",
+      "example": "We postponed the audit to next week."
+    },
+    {
+      "word": "cancel",
+      "meaning": "取消",
+      "example": "The 2pm session was cancelled."
+    },
+    {
+      "word": "slot",
+      "meaning": "时间段",
+      "example": "I booked a slot from 14:00 to 15:00."
+    },
+    {
+      "word": "duration",
+      "meaning": "时长",
+      "example": "The duration is around 30 minutes."
+    }
+  ]
+}

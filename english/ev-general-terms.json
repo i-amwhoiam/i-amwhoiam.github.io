@@ -1,0 +1,344 @@
+{
+  "words": [
+    {
+      "word": "traction inverter",
+      "meaning": "牵引逆变器；将直流变为驱动电机交流",
+      "example": "On Monday this morning, we integrated 'traction inverter' on the test track with the BMS."
+    },
+    {
+      "word": "PMSM",
+      "meaning": "永磁同步电机；主流驱动电机类型",
+      "example": "On Tuesday this afternoon, we commissioned 'PMSM' during road test via UDS."
+    },
+    {
+      "word": "BLDC",
+      "meaning": "无刷直流电机；电子换向",
+      "example": "On Wednesday yesterday, we diagnosed 'BLDC' in the dyno cell over DoIP."
+    },
+    {
+      "word": "induction motor",
+      "meaning": "感应电机；异步驱动方案",
+      "example": "On Thursday today, we logged 'induction motor' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "IPM motor",
+      "meaning": "内置永磁电机；高功率密度",
+      "example": "On Friday after charging, we updated 'IPM motor' at the charging station using CCS."
+    },
+    {
+      "word": "traction motor",
+      "meaning": "牵引电机；提供车辆驱动力",
+      "example": "On Saturday before delivery, we tuned 'traction motor' in the HIL rig on GB/T."
+    },
+    {
+      "word": "inverter",
+      "meaning": "逆变器；直流-交流电能变换",
+      "example": "On Sunday after firmware flash, we verified 'inverter' on the CAN network with the inverter."
+    },
+    {
+      "word": "DC link capacitor",
+      "meaning": "直流母线电容；平滑母线电压",
+      "example": "On Monday during homologation, we benchmarked 'DC link capacitor' during OTA update through the gateway."
+    },
+    {
+      "word": "BMS",
+      "meaning": "电池管理系统；监测与均衡电芯",
+      "example": "On Tuesday this morning, we calibrated 'BMS' on the test track with the BMS."
+    },
+    {
+      "word": "SOC",
+      "meaning": "荷电状态；剩余电量估计",
+      "example": "On Wednesday this afternoon, we validated 'SOC' during road test via UDS."
+    },
+    {
+      "word": "SOH",
+      "meaning": "健康状态；容量与内阻退化评估",
+      "example": "On Thursday yesterday, we integrated 'SOH' in the dyno cell over DoIP."
+    },
+    {
+      "word": "cell balancing",
+      "meaning": "均衡；主动/被动平衡电芯差异",
+      "example": "On Friday today, we commissioned 'cell balancing' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "thermal management",
+      "meaning": "热管理；冷却/加热维持温度窗口",
+      "example": "On Saturday after charging, we diagnosed 'thermal management' at the charging station using CCS."
+    },
+    {
+      "word": "cooling plate",
+      "meaning": "冷却板；电驱/电池换热部件",
+      "example": "On Sunday before delivery, we logged 'cooling plate' in the HIL rig on GB/T."
+    },
+    {
+      "word": "chiller",
+      "meaning": "冷却器；液冷回路换热",
+      "example": "On Monday after firmware flash, we updated 'chiller' on the CAN network with the inverter."
+    },
+    {
+      "word": "heat pump",
+      "meaning": "热泵；整车冷热耦合系统",
+      "example": "On Tuesday during homologation, we tuned 'heat pump' during OTA update through the gateway."
+    },
+    {
+      "word": "HV harness",
+      "meaning": "高压线束；连接高压部件",
+      "example": "On Wednesday this morning, we verified 'HV harness' on the test track with the BMS."
+    },
+    {
+      "word": "EVSE",
+      "meaning": "充电设施；交流/直流充电桩",
+      "example": "On Thursday this afternoon, we benchmarked 'EVSE' during road test via UDS."
+    },
+    {
+      "word": "AC charging",
+      "meaning": "交流充电；OBC实现",
+      "example": "On Friday yesterday, we calibrated 'AC charging' in the dyno cell over DoIP."
+    },
+    {
+      "word": "DC fast charging",
+      "meaning": "直流快充；外部直流直充电池",
+      "example": "On Saturday today, we validated 'DC fast charging' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "V2G",
+      "meaning": "车网互联；车辆向电网回馈",
+      "example": "On Sunday after charging, we integrated 'V2G' at the charging station using CCS."
+    },
+    {
+      "word": "V2L",
+      "meaning": "车到负载；作为移动电源输出",
+      "example": "On Monday before delivery, we commissioned 'V2L' in the HIL rig on GB/T."
+    },
+    {
+      "word": "V2H",
+      "meaning": "车到家庭；为家用供电",
+      "example": "On Tuesday after firmware flash, we diagnosed 'V2H' on the CAN network with the inverter."
+    },
+    {
+      "word": "CCS",
+      "meaning": "组合充电系统；欧美主流直流快充",
+      "example": "On Wednesday during homologation, we logged 'CCS' during OTA update through the gateway."
+    },
+    {
+      "word": "CHAdeMO",
+      "meaning": "日本直流快充标准",
+      "example": "On Thursday this morning, we updated 'CHAdeMO' on the test track with the BMS."
+    },
+    {
+      "word": "GB/T",
+      "meaning": "中国充电接口与通信标准族",
+      "example": "On Friday this afternoon, we tuned 'GB/T' during road test via UDS."
+    },
+    {
+      "word": "OCPP",
+      "meaning": "开放充电点协议；桩云后台通信",
+      "example": "On Saturday yesterday, we verified 'OCPP' in the dyno cell over DoIP."
+    },
+    {
+      "word": "OBD-II",
+      "meaning": "车载诊断；通用故障读取接口",
+      "example": "On Sunday today, we benchmarked 'OBD-II' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "CAN",
+      "meaning": "控制器局域网；主流车载总线",
+      "example": "On Monday after charging, we calibrated 'CAN' at the charging station using CCS."
+    },
+    {
+      "word": "CAN FD",
+      "meaning": "CAN的增强版本；更高吞吐",
+      "example": "On Tuesday before delivery, we validated 'CAN FD' in the HIL rig on GB/T."
+    },
+    {
+      "word": "LIN",
+      "meaning": "本地互连网络；低速从属网络",
+      "example": "On Wednesday after firmware flash, we integrated 'LIN' on the CAN network with the inverter."
+    },
+    {
+      "word": "FlexRay",
+      "meaning": "确定性高速总线；底盘/安全",
+      "example": "On Thursday during homologation, we commissioned 'FlexRay' during OTA update through the gateway."
+    },
+    {
+      "word": "Automotive Ethernet",
+      "meaning": "车载以太网；高带宽网络",
+      "example": "On Friday this morning, we diagnosed 'Automotive Ethernet' on the test track with the BMS."
+    },
+    {
+      "word": "AUTOSAR Classic",
+      "meaning": "经典平台；静态配置式AUTOSAR",
+      "example": "On Saturday this afternoon, we logged 'AUTOSAR Classic' during road test via UDS."
+    },
+    {
+      "word": "AUTOSAR Adaptive",
+      "meaning": "自适应平台；面向高算力应用",
+      "example": "On Sunday yesterday, we updated 'AUTOSAR Adaptive' in the dyno cell over DoIP."
+    },
+    {
+      "word": "UDS",
+      "meaning": "统一诊断服务；ECU诊断协议",
+      "example": "On Monday today, we tuned 'UDS' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "DoIP",
+      "meaning": "诊断以太网；基于以太网的UDS",
+      "example": "On Tuesday after charging, we verified 'DoIP' at the charging station using CCS."
+    },
+    {
+      "word": "DTC",
+      "meaning": "诊断故障码；记录与定位故障",
+      "example": "On Wednesday before delivery, we benchmarked 'DTC' in the HIL rig on GB/T."
+    },
+    {
+      "word": "gateway",
+      "meaning": "网关；跨总线与域的路由",
+      "example": "On Thursday after firmware flash, we calibrated 'gateway' on the CAN network with the inverter."
+    },
+    {
+      "word": "ECU",
+      "meaning": "电子控制单元；车辆电子系统节点",
+      "example": "On Friday during homologation, we validated 'ECU' during OTA update through the gateway."
+    },
+    {
+      "word": "MCU",
+      "meaning": "微控制器；ECU处理器",
+      "example": "On Saturday this morning, we integrated 'MCU' on the test track with the BMS."
+    },
+    {
+      "word": "TCU",
+      "meaning": "远程通信控制器；车联网单元",
+      "example": "On Sunday this afternoon, we commissioned 'TCU' during road test via UDS."
+    },
+    {
+      "word": "OTA",
+      "meaning": "空中升级；远程软件更新",
+      "example": "On Monday yesterday, we diagnosed 'OTA' in the dyno cell over DoIP."
+    },
+    {
+      "word": "cybersecurity",
+      "meaning": "汽车网络安全；防护与检测",
+      "example": "On Tuesday today, we logged 'cybersecurity' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "ISO 21434",
+      "meaning": "汽车网络安全工程标准",
+      "example": "On Wednesday after charging, we updated 'ISO 21434' at the charging station using CCS."
+    },
+    {
+      "word": "HSM",
+      "meaning": "硬件安全模块；密钥与加密",
+      "example": "On Thursday before delivery, we tuned 'HSM' in the HIL rig on GB/T."
+    },
+    {
+      "word": "secure boot",
+      "meaning": "安全启动；防止固件被篡改",
+      "example": "On Friday after firmware flash, we verified 'secure boot' on the CAN network with the inverter."
+    },
+    {
+      "word": "PKI",
+      "meaning": "公钥基础设施；证书与身份",
+      "example": "On Saturday during homologation, we benchmarked 'PKI' during OTA update through the gateway."
+    },
+    {
+      "word": "homologation",
+      "meaning": "法规认证；市场准入合规",
+      "example": "On Sunday this morning, we calibrated 'homologation' on the test track with the BMS."
+    },
+    {
+      "word": "E-mark",
+      "meaning": "欧盟E标；车辆与部件认证",
+      "example": "On Monday this afternoon, we validated 'E-mark' during road test via UDS."
+    },
+    {
+      "word": "EMC",
+      "meaning": "电磁兼容；发射与抗扰",
+      "example": "On Tuesday yesterday, we integrated 'EMC' in the dyno cell over DoIP."
+    },
+    {
+      "word": "CISPR 25",
+      "meaning": "车载EMI测量标准",
+      "example": "On Wednesday today, we commissioned 'CISPR 25' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "ISO 11452",
+      "meaning": "车载EMS抗扰度试验",
+      "example": "On Thursday after charging, we diagnosed 'ISO 11452' at the charging station using CCS."
+    },
+    {
+      "word": "UN R10",
+      "meaning": "联合国法规R10；电磁兼容",
+      "example": "On Friday before delivery, we logged 'UN R10' in the HIL rig on GB/T."
+    },
+    {
+      "word": "vehicle dynamics",
+      "meaning": "车辆动力学；制动/转向/稳定性",
+      "example": "On Saturday after firmware flash, we updated 'vehicle dynamics' on the CAN network with the inverter."
+    },
+    {
+      "word": "regenerative braking",
+      "meaning": "再生制动；能量回收",
+      "example": "On Sunday during homologation, we tuned 'regenerative braking' during OTA update through the gateway."
+    },
+    {
+      "word": "torque vectoring",
+      "meaning": "扭矩矢量；提升操控与稳定",
+      "example": "On Monday this morning, we verified 'torque vectoring' on the test track with the BMS."
+    },
+    {
+      "word": "range",
+      "meaning": "续航里程；单次充电可行驶距离",
+      "example": "On Tuesday this afternoon, we benchmarked 'range' during road test via UDS."
+    },
+    {
+      "word": "WLTP",
+      "meaning": "全球统一轻型车测试程序；续航工况",
+      "example": "On Wednesday yesterday, we calibrated 'WLTP' in the dyno cell over DoIP."
+    },
+    {
+      "word": "CLTC",
+      "meaning": "中国轻型车测试循环；续航工况",
+      "example": "On Thursday today, we validated 'CLTC' in the climate chamber with AUTOSAR."
+    },
+    {
+      "word": "EPA range",
+      "meaning": "美国EPA续航里程",
+      "example": "On Friday after charging, we integrated 'EPA range' at the charging station using CCS."
+    },
+    {
+      "word": "NVH",
+      "meaning": "噪声振动与声振粗糙度",
+      "example": "On Saturday before delivery, we commissioned 'NVH' in the HIL rig on GB/T."
+    },
+    {
+      "word": "ADAS",
+      "meaning": "高级驾驶辅助系统",
+      "example": "On Sunday after firmware flash, we diagnosed 'ADAS' on the CAN network with the inverter."
+    },
+    {
+      "word": "sensor fusion",
+      "meaning": "传感器融合；多源感知整合",
+      "example": "On Monday during homologation, we logged 'sensor fusion' during OTA update through the gateway."
+    },
+    {
+      "word": "camera",
+      "meaning": "摄像头；视觉传感器",
+      "example": "On Tuesday this morning, we updated 'camera' on the test track with the BMS."
+    },
+    {
+      "word": "radar",
+      "meaning": "毫米波雷达；测距测速",
+      "example": "On Wednesday this afternoon, we tuned 'radar' during road test via UDS."
+    },
+    {
+      "word": "lidar",
+      "meaning": "激光雷达；高精度测距成像",
+      "example": "On Thursday yesterday, we verified 'lidar' in the dyno cell over DoIP."
+    },
+    {
+      "word": "ultrasonic",
+      "meaning": "超声波传感器；近距离感知",
+      "example": "On Friday today, we benchmarked 'ultrasonic' in the climate chamber with AUTOSAR."
+    }
+  ]
+}

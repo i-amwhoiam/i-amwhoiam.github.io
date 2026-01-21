@@ -1,0 +1,249 @@
+{
+  "words": [
+    {
+      "word": "idempotency",
+      "meaning": "幂等性；同一请求重复执行不产生额外副作用",
+      "example": "Ensure requests are idempotent to avoid duplicate side effects."
+    },
+    {
+      "word": "rate limiting",
+      "meaning": "限流；控制调用速率",
+      "example": "Apply rate limiting to protect downstream services."
+    },
+    {
+      "word": "throttling",
+      "meaning": "节流；在高负载时主动降速",
+      "example": "Throttling prevents resource exhaustion during spikes."
+    },
+    {
+      "word": "pagination",
+      "meaning": "分页；按页返回数据",
+      "example": "Use cursor-based pagination for large result sets."
+    },
+    {
+      "word": "cursor",
+      "meaning": "游标；分页位置标识",
+      "example": "Store the cursor to resume pagination later."
+    },
+    {
+      "word": "OAuth 2.0",
+      "meaning": "开放授权协议；第三方授权登录",
+      "example": "Obtain an access token via OAuth 2.0 authorization code flow."
+    },
+    {
+      "word": "OpenID Connect",
+      "meaning": "在 OAuth 2.0 之上的身份层",
+      "example": "Verify the ID token claims from OpenID Connect."
+    },
+    {
+      "word": "JWT",
+      "meaning": "JSON Web Token；无状态令牌",
+      "example": "Validate the JWT signature and expiration."
+    },
+    {
+      "word": "API key",
+      "meaning": "API 密钥；简单鉴权方式",
+      "example": "Rotate API keys regularly and store them securely."
+    },
+    {
+      "word": "HMAC",
+      "meaning": "基于密钥的消息认证码",
+      "example": "Sign requests with HMAC to prevent tampering."
+    },
+    {
+      "word": "nonce",
+      "meaning": "随机数；防重放攻击",
+      "example": "Include a nonce and timestamp to mitigate replay attacks."
+    },
+    {
+      "word": "REST",
+      "meaning": "表述性状态传递；基于 HTTP 的风格",
+      "example": "Design RESTful endpoints with clear resource naming."
+    },
+    {
+      "word": "gRPC",
+      "meaning": "高性能 RPC 框架；使用 Protobuf",
+      "example": "Use gRPC streaming for real-time data exchange."
+    },
+    {
+      "word": "GraphQL",
+      "meaning": "查询语言；客户端按需取数",
+      "example": "Expose a GraphQL schema for flexible client queries."
+    },
+    {
+      "word": "WebSocket",
+      "meaning": "全双工长连接",
+      "example": "Push realtime updates via WebSocket."
+    },
+    {
+      "word": "webhook",
+      "meaning": "回调钩子；事件通知",
+      "example": "Register a webhook to receive status changes."
+    },
+    {
+      "word": "API gateway",
+      "meaning": "API 网关；统一入口与治理",
+      "example": "Route traffic through the API gateway for auth and throttling."
+    },
+    {
+      "word": "reverse proxy",
+      "meaning": "反向代理；转发与缓存",
+      "example": "Place a reverse proxy in front of services for caching and TLS termination."
+    },
+    {
+      "word": "CORS",
+      "meaning": "跨域资源共享；浏览器跨域策略",
+      "example": "Configure CORS to allow specific origins and headers."
+    },
+    {
+      "word": "content negotiation",
+      "meaning": "内容协商；选择响应格式",
+      "example": "Support content negotiation for JSON and XML."
+    },
+    {
+      "word": "endpoint",
+      "meaning": "端点；API 的具体路径",
+      "example": "Document each endpoint with request/response examples."
+    },
+    {
+      "word": "path parameter",
+      "meaning": "路径参数；资源标识",
+      "example": "Use path parameters for resource IDs."
+    },
+    {
+      "word": "query parameter",
+      "meaning": "查询参数；过滤与排序",
+      "example": "Accept query parameters for pagination and filtering."
+    },
+    {
+      "word": "header",
+      "meaning": "请求/响应头；元数据",
+      "example": "Set custom headers for correlation IDs and versioning."
+    },
+    {
+      "word": "payload",
+      "meaning": "载荷；请求或响应主体",
+      "example": "Compress the payload to reduce bandwidth."
+    },
+    {
+      "word": "ETag",
+      "meaning": "实体标签；条件请求标识",
+      "example": "Use ETag to support conditional GETs and caching."
+    },
+    {
+      "word": "cache control",
+      "meaning": "缓存控制；HTTP 缓存策略",
+      "example": "Add Cache-Control headers for public resources."
+    },
+    {
+      "word": "conditional request",
+      "meaning": "条件请求；避免不必要传输",
+      "example": "Return 304 Not Modified for conditional requests."
+    },
+    {
+      "word": "HTTP 429",
+      "meaning": "HTTP 429；请求过多",
+      "example": "Return 429 Too Many Requests when rate limits are exceeded."
+    },
+    {
+      "word": "HTTP 503",
+      "meaning": "HTTP 503；服务不可用",
+      "example": "Return 503 during maintenance windows."
+    },
+    {
+      "word": "retry with backoff",
+      "meaning": "指数回退重试；逐步延长等待",
+      "example": "Use exponential backoff to retry transient failures."
+    },
+    {
+      "word": "circuit breaker",
+      "meaning": "熔断器；在故障时快速失败",
+      "example": "Trip the circuit breaker to prevent cascading failures."
+    },
+    {
+      "word": "bulkhead",
+      "meaning": "舱壁隔离；限制影响范围",
+      "example": "Apply bulkhead isolation to contain failures."
+    },
+    {
+      "word": "timeout",
+      "meaning": "超时；请求等待上限",
+      "example": "Set reasonable timeouts for all external calls."
+    },
+    {
+      "word": "connection pool",
+      "meaning": "连接池；复用连接",
+      "example": "Tune the connection pool size for throughput."
+    },
+    {
+      "word": "keep-alive",
+      "meaning": "长连接保持；减少握手",
+      "example": "Enable HTTP keep-alive to reduce latency."
+    },
+    {
+      "word": "HATEOAS",
+      "meaning": "超媒体作为应用状态的引擎",
+      "example": "Provide links in responses to guide clients (HATEOAS)."
+    },
+    {
+      "word": "JSON Schema",
+      "meaning": "JSON 模式；数据结构定义",
+      "example": "Validate request bodies against a JSON Schema."
+    },
+    {
+      "word": "Protocol Buffers",
+      "meaning": "Protobuf；紧凑的序列化格式",
+      "example": "Define service contracts using Protocol Buffers."
+    },
+    {
+      "word": "Avro",
+      "meaning": "Avro；带模式的序列化格式",
+      "example": "Use Avro for schema evolution in data pipelines."
+    },
+    {
+      "word": "versioning",
+      "meaning": "版本化；接口演进管理",
+      "example": "Adopt semantic versioning for APIs and clients."
+    },
+    {
+      "word": "backward compatibility",
+      "meaning": "向后兼容；旧客户端继续可用",
+      "example": "Maintain backward compatibility during API changes."
+    },
+    {
+      "word": "forward compatibility",
+      "meaning": "向前兼容；为未来扩展留余地",
+      "example": "Design payloads for forward compatibility (ignore unknown fields)."
+    },
+    {
+      "word": "deprecation",
+      "meaning": "弃用；逐步下线旧功能",
+      "example": "Announce deprecations and provide migration paths."
+    },
+    {
+      "word": "client certificate",
+      "meaning": "客户端证书；双向 TLS",
+      "example": "Use client certificates for mTLS authentication."
+    },
+    {
+      "word": "mTLS",
+      "meaning": "双向 TLS；相互认证",
+      "example": "Enable mTLS for sensitive integrations."
+    },
+    {
+      "word": "signature",
+      "meaning": "签名；完整性校验",
+      "example": "Validate request signatures to ensure integrity."
+    },
+    {
+      "word": "replay attack",
+      "meaning": "重放攻击；重复旧请求的攻击",
+      "example": "Prevent replay attacks with nonce and short-lived tokens."
+    },
+    {
+      "word": "correlation ID",
+      "meaning": "关联 ID；跨服务跟踪标识",
+      "example": "Propagate the correlation ID across all services."
+    }
+  ]
+}

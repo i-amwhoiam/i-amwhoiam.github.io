@@ -1,0 +1,64 @@
+{
+  "words": [
+    {
+      "word": "January",
+      "meaning": "一月",
+      "example": "The workshop is in January."
+    },
+    {
+      "word": "February",
+      "meaning": "二月",
+      "example": "The workshop is in February."
+    },
+    {
+      "word": "March",
+      "meaning": "三月",
+      "example": "The workshop is in March."
+    },
+    {
+      "word": "April",
+      "meaning": "四月",
+      "example": "The workshop is in April."
+    },
+    {
+      "word": "May",
+      "meaning": "五月",
+      "example": "The workshop is in May."
+    },
+    {
+      "word": "June",
+      "meaning": "六月",
+      "example": "The workshop is in June."
+    },
+    {
+      "word": "July",
+      "meaning": "七月",
+      "example": "The workshop is in July."
+    },
+    {
+      "word": "August",
+      "meaning": "八月",
+      "example": "The workshop is in August."
+    },
+    {
+      "word": "September",
+      "meaning": "九月",
+      "example": "The workshop is in September."
+    },
+    {
+      "word": "October",
+      "meaning": "十月",
+      "example": "The workshop is in October."
+    },
+    {
+      "word": "November",
+      "meaning": "十一月",
+      "example": "The workshop is in November."
+    },
+    {
+      "word": "December",
+      "meaning": "十二月",
+      "example": "The workshop is in December."
+    }
+  ]
+}
