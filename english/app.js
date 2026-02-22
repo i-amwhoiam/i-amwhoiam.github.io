@@ -52,30 +52,33 @@
   let packs = [];
   let currentData = [];
 
-  // 将不同结构统一到渲染层数据结构：{ word, meaning, example, pronunciation, example_pronunciation }
+  // 将不同结构统一到渲染层数据结构：{ word, meaning, example, example_translation, pronunciation, example_pronunciation }
   function normalizeData(json){
-    if (Array.isArray(json.words)) {
-      // 词库结构，直接映射
-      return json.words.map(x => ({
-        word: (x.word ?? ''),
-        meaning: (x.meaning ?? ''),
-        example: (x.example ?? ''),
-        pronunciation: (x.pronunciation ?? ''),
-        example_pronunciation: (x.example_pronunciation ?? '')
-      }));
+      if (Array.isArray(json.words)) {
+        // 词库结构，直接映射
+        return json.words.map(x => ({
+          word: (x.word ?? ''),
+          meaning: (x.meaning ?? ''),
+          example: (x.example ?? ''),
+          example_translation: (x.example_translation ?? ''),
+          pronunciation: (x.pronunciation ?? ''),
+          example_pronunciation: (x.example_pronunciation ?? '')
+        }));
+      }
+      if (Array.isArray(json.phrases)) {
+        // 短语结构：将 phrase 映射为 word；把 category 临时放到"句子 IPA/类别"列显示
+        return json.phrases.map(x => ({
+          word: (x.phrase ?? ''),
+          meaning: (x.meaning ?? ''),
+          example: (x.example ?? ''),
+          example_translation: (x.example_translation ?? ''),
+          pronunciation: '', // 短语一般无单词 IPA
+          example_pronunciation: (x.category ?? '') // 在第 5 列展示类别
+        }));
+      }
+      return [];
     }
-    if (Array.isArray(json.phrases)) {
-      // 短语结构：将 phrase 映射为 word；把 category 临时放到“句子 IPA/类别”列显示
-      return json.phrases.map(x => ({
-        word: (x.phrase ?? ''),
-        meaning: (x.meaning ?? ''),
-        example: (x.example ?? ''),
-        pronunciation: '', // 短语一般无单词 IPA
-        example_pronunciation: (x.category ?? '') // 在第 5 列展示类别
-      }));
-    }
-    return [];
-  }
+
 
   async function loadManifest(){
     try {
@@ -151,6 +154,7 @@
       const tdPW= document.createElement('td');
       const tdM = document.createElement('td');
       const tdE = document.createElement('td');
+      const tdET= document.createElement('td');
       const tdPS= document.createElement('td');
       const tdA = document.createElement('td');
 
@@ -159,11 +163,16 @@
       tdPW.className   = 'pron';
       tdM.textContent  = item.meaning || '';
       tdE.textContent  = item.example || '';
+      tdET.textContent = item.example_translation || '';
+      tdET.className   = 'translation';
       tdPS.textContent = item.example_pronunciation || '（朗读可用）';
       tdPS.className   = 'pron';
 
       if (!showPronWord.checked) tdPW.style.display = 'none';
-      if (!showExamples.checked) tdE.style.display   = 'none';
+      if (!showExamples.checked) {
+        tdE.style.display  = 'none';
+        tdET.style.display = 'none';
+      }
       if (!showPronSent.checked) tdPS.style.display  = 'none';
 
       const btnWord = document.createElement('button');
@@ -181,7 +190,7 @@
       tdA.appendChild(btnSent);
 
       tr.appendChild(tdW); tr.appendChild(tdPW); tr.appendChild(tdM);
-      tr.appendChild(tdE); tr.appendChild(tdPS); tr.appendChild(tdA);
+      tr.appendChild(tdE); tr.appendChild(tdET); tr.appendChild(tdPS); tr.appendChild(tdA);
       tableBody.appendChild(tr);
     }
 
