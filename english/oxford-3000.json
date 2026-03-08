@@ -2215,16 +2215,22 @@
       "example_translation": "校园很美丽。"
     },
     {
-      "word": "can1",
-      "meaning": "可以1",
-      "example": "Can you help me?",
-      "example_translation": "你能帮助我吗？"
+      "word": "can",
+      "meaning": "表示“能力” (Ability)",
+      "example": "I can speak three languages fluently.",
+      "example_translation": "我能流利地说三种语言"
     },
     {
-      "word": "can2",
-      "meaning": "可以2",
-      "example": "You can sit here.",
-      "example_translation": "你可以坐在这里。"
+      "word": "can",
+      "meaning": "表示“可能性”或“理论上的可能” (Possibility)",
+      "example": "It can get very cold here in winter.",
+      "example_translation": "这里冬天可能会变得很冷"
+    },
+    {
+      "word": "can",
+      "meaning": "表示“请求许可”或“给予许可” (Permission)",
+      "example": "Can I borrow your pen for a moment?",
+      "example_translation": "我可以借你的钢笔用一下吗？"
     },
     {
       "word": "cancel",
@@ -2803,16 +2809,22 @@
       "example_translation": "钟上现在几点了？"
     },
     {
-      "word": "close 1",
-      "meaning": "关闭 1",
-      "example": "Please close the window.",
-      "example_translation": "请关上窗户。"
+      "word": "close",
+      "meaning": "关、关闭、结束、终止",
+      "example": "They decided to close the deal after weeks of negotiation.",
+      "example_translation": "经过数周的谈判，他们决定达成这笔交易/结束谈判。"
     },
     {
-      "word": "close 2",
-      "meaning": "关闭 2",
-      "example": "The shop is close to my home.",
-      "example_translation": "这家店离我家很近。"
+      "word": "close",
+      "meaning": "靠近的、接近的 (指空间或时间距离短)。",
+      "example": "We are close to finishing the project.",
+      "example_translation": "我们快要完成这个项目了"
+    },
+    {
+      "word": "close",
+      "meaning": "严密的、仔细的、不透气的",
+      "example": "It was a close match; the team won by only one point.",
+      "example_translation": "那是一场势均力敌的比赛，球队仅以一分获胜。"
     },
     {
       "word": "closed",
@@ -3379,10 +3391,16 @@
       "example_translation": "我喜欢当代艺术。"
     },
     {
-      "word": "content 1",
-      "meaning": "内容1",
-      "example": "We talked about content 1 during the meeting.",
-      "example_translation": "我们在会议中讨论了内容1。"
+      "word": "content",
+      "meaning": "指书、文章、演讲、网站等里面包含的信息、题材或实质部分；也指容器里的东西",
+      "example": "Social media platforms rely on user-generated content.",
+      "example_translation": "社交媒体平台依赖用户生成的内容。"
+    },
+    {
+      "word": "content",
+      "meaning": "表示对现状感到满意，不想要更多或改变",
+      "example": "Are you content to let others make decisions for you?",
+      "example_translation": "你甘心让别人替你做决定吗？"
     },
     {
       "word": "contest",
@@ -4615,11 +4633,29 @@
       "example_translation": "他们离婚了。"
     },
     {
-      "word": "do1",
-      "meaning": "做1",
-      "example": "What do you want to do today?",
-      "example_translation": "今天你想做什么？"
+      "word": "do",
+      "meaning": "做、干、执行 (Action)",
+      "example": "I need to do my laundry before I go out.",
+      "example_translation": "我出门前得洗衣服"
     },
+    {
+      "word": "do",
+      "meaning": "帮助主要动词构成语法结构。",
+      "example": "Where does he live?",
+      "example_translation": "他住在哪里？"
+    },    
+    {
+      "word": "do",
+      "meaning": "表示强调 (Emphasis)",
+      "example": "You did tell me yesterday! I remember clearly.",
+      "example_translation": "你昨天确实告诉过我了！我记得很清楚。"
+    },
+    {
+      "word": "do",
+      "meaning": "代替前面提到的动词 (Substitute)",
+      "example": "If you don't want to go, I won't do either. ",
+      "example_translation": "If you don't want to go, I won't do either. "
+    },    
     {
       "word": "doctor",
       "meaning": "医生",
@@ -8749,17 +8785,17 @@
       "example_translation": "这在很大程度上是正确的。"
     },
     {
-      "word": "last1 (final)",
-      "meaning": "最后1（最终）",
-      "example": "This last1 is important for the project.",
-      "example_translation": "最后一个对于该项目很重要。"
+      "word": "last (final)",
+      "meaning": "最后的；最终的 (形容词/名词)",
+      "example": "This is the last chapter of the book.",
+      "example_translation": "这是这本书的最后一章。"
     },
     {
-      "word": "last1 (taking time)",
-      "meaning": "最后1（需要时间）",
-      "example": "This last1 is important for the project.",
-      "example_translation": "最后一个对于该项目很重要。"
-    },
+      "word": "last (duration)",
+      "meaning": "持续；维持 (动词)",
+      "example": "The meeting will last for two hours.",
+      "example_translation": "会议将持续两个小时。"
+    },    
     {
       "word": "late",
       "meaning": "晚的",
@@ -8827,11 +8863,53 @@
       "example_translation": "不要偷懒。"
     },
     {
-      "word": "lead 1",
-      "meaning": "导联 1",
-      "example": "We talked about lead 1 during the meeting.",
-      "example_translation": "我们在会议期间讨论了线索 1。"
+      "word": "lead (verb - guide)",
+      "meaning": "带领；引导；领导 (动词)",
+      "example": "She will lead the team to victory in the championship.",
+      "example_translation": "她将带领团队在锦标赛中走向胜利。"
     },
+    {
+      "word": "lead (verb - result)",
+      "meaning": "导致；通向 (动词，常与 to 连用)",
+      "example": "Poor communication can lead to serious misunderstandings.",
+      "example_translation": "沟通不畅会导致严重的误解。"
+    },
+    {
+      "word": "lead (noun - position)",
+      "meaning": "领先；首位 (名词)",
+      "example": "Our company has taken the lead in the global market.",
+      "example_translation": "我们公司在全球市场上取得了领先地位。"
+    },
+    {
+      "word": "lead (noun - clue)",
+      "meaning": "线索；提示 (名词，常用于调查)",
+      "example": "The police are following up on a new lead in the case.",
+      "example_translation": "警方正在跟进案件中的一条新线索。"
+    },
+    {
+      "word": "lead (noun - role)",
+      "meaning": "主角；主要角色 (名词)",
+      "example": "He played the lead role in the new blockbuster movie.",
+      "example_translation": "他在那部新大片中扮演了主角。"
+    },
+    {
+      "word": "lead (noun - metal)",
+      "meaning": "铅 (金属元素 Pb) (名词，发音 /lɛd/)",
+      "example": "Old houses often have pipes made of lead.",
+      "example_translation": "老房子通常有铅制的管道。"
+    },
+    {
+      "word": "lead (noun - graphite)",
+      "meaning": "铅笔芯 (名词，虽叫铅实为石墨)",
+      "example": "My pencil broke, so I need to sharpen the lead.",
+      "example_translation": "我的铅笔断了，所以我需要削一下笔芯。"
+    },
+    {
+      "word": "lead (noun - cable)",
+      "meaning": "导线；电缆；引线 (名词)",
+      "example": "Please connect the red lead to the positive terminal.",
+      "example_translation": "请将红色导线连接到正极端子。"
+    },    
     {
       "word": "leader",
       "meaning": "领导者",
@@ -8983,16 +9061,28 @@
       "example_translation": "我有驾驶执照。"
     },
     {
-      "word": "lie1",
-      "meaning": "谎言1",
-      "example": "Please lie down and rest.",
-      "example_translation": "请躺下休息。"
+      "word": "lie (recline)",
+      "meaning": "躺；平卧；位于 (动词)",
+      "example": "Please lie down on the sofa and rest for a while.",
+      "example_translation": "请在沙发上躺下休息一会儿。"
     },
     {
-      "word": "lie2 (tell a lie)",
-      "meaning": "谎言2（说谎）",
-      "example": "Don’t lie to me.",
-      "example_translation": "别对我撒谎。"
+      "word": "lie (falsehood)",
+      "meaning": "说谎 (动词)；谎言 (名词)",
+      "example": "It is wrong to lie to your friends about where you went.",
+      "example_translation": "对朋友撒谎说你去哪里了是不对的。"
+    },
+    {
+      "word": "lie (noun)",
+      "meaning": "谎言 (名词)",
+      "example": "He told a big lie to cover up his mistake.",
+      "example_translation": "他撒了一个大谎来掩盖他的错误。"
+    },
+    {
+      "word": "lie (location)",
+      "meaning": "位于；坐落于 (动词，常指地点)",
+      "example": "The beautiful village lies at the foot of the mountain.",
+      "example_translation": "这个美丽的村庄坐落在山脚下。"
     },
     {
       "word": "life",
@@ -9115,16 +9205,28 @@
       "example_translation": "我有一点时间。"
     },
     {
-      "word": "live1",
-      "meaning": "直播1",
-      "example": "I have a live1.",
-      "example_translation": "我有一个live1。"
+      "word": "live (reside)",
+      "meaning": "居住；生活；活着 (动词，发音 /lɪv/)",
+      "example": "I live in Shanghai with my family.",
+      "example_translation": "我和家人住在上海。"
     },
     {
-      "word": "live2",
-      "meaning": "直播2",
-      "example": "This live2 is good.",
-      "example_translation": "这个live2不错啊"
+      "word": "live (broadcast)",
+      "meaning": "直播的；现场的 (形容词/副词，发音 /laɪv/)",
+      "example": "We are watching a live broadcast of the concert.",
+      "example_translation": "我们正在观看这场音乐会的现场直播。"
+    },
+    {
+      "word": "live (alive)",
+      "meaning": "活的；有生命的 (形容词，发音 /laɪv/)",
+      "example": "They caught the fish while it was still live.",
+      "example_translation": "他们抓到这条鱼时，它还是活的。"
+    },
+    {
+      "word": "live (performance)",
+      "meaning": "现场表演 (形容词，常指音乐会等，发音 /laɪv/)",
+      "example": "The band is going on a live tour next month.",
+      "example_translation": "这支乐队下个月将进行巡回现场演出。"
     },
     {
       "word": "lively",
@@ -9193,10 +9295,28 @@
       "example_translation": "我感到孤独。"
     },
     {
-      "word": "long 1",
-      "meaning": "长 1",
-      "example": "We talked about long 1 during the meeting.",
-      "example_translation": "我们在会议期间谈到了长1。"
+      "word": "long (distance/time)",
+      "meaning": "长的；长久的 (形容词)",
+      "example": "The bridge is very long, spanning across the entire river.",
+      "example_translation": "这座桥很长，横跨了整个河流。"
+    },
+    {
+      "word": "long (desire)",
+      "meaning": "渴望；极想 (动词，常与 for 连用)",
+      "example": "After years abroad, she began to long for her hometown.",
+      "example_translation": "在国外多年后，她开始渴望回到家乡。"
+    },
+    {
+      "word": "long (duration)",
+      "meaning": "长久地 (副词，常用于疑问句或否定句)",
+      "example": "How long have you been waiting for the bus?",
+      "example_translation": "你等公交车多久了？"
+    },
+    {
+      "word": "long (finance)",
+      "meaning": "做多；看涨 (金融术语，形容词/名词)",
+      "example": "Investors are taking a long position on this stock.",
+      "example_translation": "投资者正在对这支股票采取做多（看涨）立场。"
     },
     {
       "word": "long-term",
@@ -9799,10 +9919,28 @@
       "example_translation": "少数人不同意。"
     },
     {
-      "word": "minute 1",
-      "meaning": "分钟 1",
-      "example": "Wait a minute, please.",
-      "example_translation": "请稍等。"
+      "word": "minute (time)",
+      "meaning": "分钟；片刻 (名词，发音 /ˈmɪnɪt/)",
+      "example": "Please wait a minute; I will be right there.",
+      "example_translation": "请等一分钟，我马上就到。"
+    },
+    {
+      "word": "minute (tiny)",
+      "meaning": "微小的；极小的 (形容词，发音 /maɪˈnjuːt/)",
+      "example": "The details were so minute that we needed a microscope to see them.",
+      "example_translation": "这些细节非常微小，我们需要显微镜才能看清。"
+    },
+    {
+      "word": "minute (detailed)",
+      "meaning": "详细的；详尽的 (形容词，发音 /maɪˈnjuːt/)",
+      "example": "The police conducted a minute examination of the crime scene.",
+      "example_translation": "警方对犯罪现场进行了详尽的检查。"
+    },
+    {
+      "word": "minute (record)",
+      "meaning": "会议记录；备忘录 (名词，常用复数 minutes，发音 /ˈmɪnɪts/)",
+      "example": "Who is responsible for taking the minutes at today's meeting?",
+      "example_translation": "谁负责做今天会议的记录？"
     },
     {
       "word": "mirror",
@@ -11239,10 +11377,28 @@
       "example_translation": "我发现了一分钱。"
     },
     {
-      "word": "pension 1",
-      "meaning": "养老金 1",
-      "example": "We talked about pension 1 during the meeting.",
-      "example_translation": "我们在会议期间讨论了养老金1。"
+      "word": "pension (retirement fund)",
+      "meaning": "养老金；退休金 (名词)",
+      "example": "The company increased its contribution to our pension plan this year.",
+      "example_translation": "公司今年增加了向我们养老金计划的缴款。"
+    },
+    {
+      "word": "pension (verb)",
+      "meaning": "发给...养老金；因年老/残疾而辞退 (动词，常与 off 连用)",
+      "example": "After 40 years of service, he was pensioned off early due to health issues.",
+      "example_translation": "在服务了40年后，他因健康问题被提前安排退休（发给养老金辞退）。"
+    },
+    {
+      "word": "state pension",
+      "meaning": "国家养老金 (专有名词短语)",
+      "example": "Many retirees rely on the state pension as their primary source of income.",
+      "example_translation": "许多退休人员依靠国家养老金作为主要收入来源。"
+    },
+    {
+      "word": "private pension",
+      "meaning": "私人养老金 (专有名词短语)",
+      "example": "It is wise to start a private pension scheme in your thirties.",
+      "example_translation": "在三十多岁时开始建立私人养老金计划是明智的。"
     },
     {
       "word": "people",
@@ -11611,10 +11767,28 @@
       "example_translation": "情节很有趣。"
     },
     {
-      "word": "plus 1",
-      "meaning": "加 1",
-      "example": "We talked about plus 1 during the meeting.",
-      "example_translation": "我们在会议中谈到了+1。"
+      "word": "plus (math)",
+      "meaning": "加；加上 (介词/连词，数学运算)",
+      "example": "Two plus two equals four.",
+      "example_translation": "二加二等于四。"
+    },
+    {
+      "word": "plus-one (guest)",
+      "meaning": "携带的同伴；额外嘉宾 (名词，常用于活动邀请)",
+      "example": "Your invitation includes a plus-one, so you can bring a friend to the party.",
+      "example_translation": "你的邀请函包含一位同伴名额，所以你可以带个朋友来参加派对。"
+    },
+    {
+      "word": "plus (advantage)",
+      "meaning": "优势；有利因素 (名词)",
+      "example": "Her fluency in French is a big plus for this job.",
+      "example_translation": "她流利的法语是这份工作的一个巨大优势。"
+    },
+    {
+      "word": "plus (grade)",
+      "meaning": "稍高于...的等级 (形容词，用于成绩或评级)",
+      "example": "He received a B plus on his final exam.",
+      "example_translation": "他期末考试得了 B+。"
     },
     {
       "word": "pocket",
@@ -12805,10 +12979,22 @@
       "example_translation": "这反映很好。"
     },
     {
-      "word": "refuse 1",
-      "meaning": "拒绝 1",
-      "example": "We talked about refuse 1 during the meeting.",
-      "example_translation": "我们在会议中谈到了垃圾1。"
+      "word": "refuse (verb)",
+      "meaning": "拒绝；回绝 (动词，发音 /rɪˈfjuːz/)",
+      "example": "He refused to sign the contract because the terms were unfair.",
+      "example_translation": "他拒绝签署合同，因为条款不公平。"
+    },
+    {
+      "word": "refuse (noun)",
+      "meaning": "垃圾；废物 (名词，发音 /ˈrefjuːs/，正式用语)",
+      "example": "The city workers collected the household refuse early this morning.",
+      "example_translation": "市政工人今天一大早收集了生活垃圾。"
+    },
+    {
+      "word": "refuse disposal",
+      "meaning": "垃圾处理 (名词短语)",
+      "example": "Proper refuse disposal is essential for protecting the environment.",
+      "example_translation": "适当的垃圾处理对于保护环境至关重要。"
     },
     {
       "word": "regard",
@@ -13279,10 +13465,28 @@
       "example_translation": "你是对的。"
     },
     {
-      "word": "ring 1",
-      "meaning": "环1",
-      "example": "I heard the phone ring.",
-      "example_translation": "我听到电话响了。"
+      "word": "ring (object)",
+      "meaning": "戒指；环；圆圈 (名词)",
+      "example": "She wore a beautiful diamond ring on her finger.",
+      "example_translation": "她手指上戴着一枚漂亮的钻石戒指。"
+    },
+    {
+      "word": "ring (sound/action)",
+      "meaning": "(铃/电话) 响；打电话 (动词/名词)",
+      "example": "I heard the phone ring, but I was too busy to answer it.",
+      "example_translation": "我听到电话响了，但我太忙了没去接。"
+    },
+    {
+      "word": "give someone a ring",
+      "meaning": "给某人打电话 (口语短语)",
+      "example": "I'll give you a ring later this evening to discuss the plan.",
+      "example_translation": "今晚晚些时候我会给你打个电话讨论计划。"
+    },
+    {
+      "word": "boxing ring",
+      "meaning": "拳击台 (专有名词短语)",
+      "example": "The two fighters stepped into the boxing ring.",
+      "example_translation": "两名拳手走上了拳击台。"
     },
     {
       "word": "ring 2",
@@ -13399,10 +13603,22 @@
       "example_translation": "这是我的日常。"
     },
     {
-      "word": "row 1",
-      "meaning": "第 1 行",
-      "example": "They had a row about the bill.",
-      "example_translation": "他们因该法案发生争执。"
+      "word": "row (line)",
+      "meaning": "行；排 (名词，发音 /roʊ/，如 go)",
+      "example": "Please take your seats in the front row of the theater.",
+      "example_translation": "请坐在剧院的前排。"
+    },
+    {
+      "word": "row (argument)",
+      "meaning": "争吵；吵架 (名词/动词，发音 /raʊ/，如 cow，多用于英式英语)",
+      "example": "They had a loud row about money last night.",
+      "example_translation": "昨晚他们因为钱大吵了一架。"
+    },
+    {
+      "word": "row (boat)",
+      "meaning": "划船 (动词，发音 /roʊ/，如 go)",
+      "example": "We decided to row across the lake before sunset.",
+      "example_translation": "我们决定在日落前划船穿过湖泊。"
     },
     {
       "word": "royal",
@@ -13729,16 +13945,22 @@
       "example_translation": "请坐。"
     },
     {
-      "word": "second 1 (next after the first)",
-      "meaning": "第二个 1（第一个之后的下一个）",
-      "example": "This second 1 is important for the project.",
-      "example_translation": "第二个 1 对于该项目很重要。"
+      "word": "second (order)",
+      "meaning": "第二；第二个 (序数词/名词，指顺序)",
+      "example": "She finished in second place in the race.",
+      "example_translation": "她在比赛中获得了第二名。"
     },
     {
-      "word": "second 1 (unit of time)",
-      "meaning": "秒 1（时间单位）",
-      "example": "This second 1 is important for the project.",
-      "example_translation": "第二个 1 对于该项目很重要。"
+      "word": "second (time)",
+      "meaning": "秒 (名词，时间单位，1/60 分钟)",
+      "example": "Please wait a second; I'll be right there.",
+      "example_translation": "请等一下（稍等一秒）；我马上就到。"
+    },
+    {
+      "word": "second (verb)",
+      "meaning": "支持；附议 (动词，常用于会议正式场合)",
+      "example": "I second the motion proposed by Mr. Smith.",
+      "example_translation": "我附议史密斯先生提出的动议。"
     },
     {
       "word": "secondary",
@@ -15661,16 +15883,22 @@
       "example_translation": "加入我们的团队。"
     },
     {
-      "word": "tear 1",
-      "meaning": "撕裂 1",
-      "example": "Be careful not to tear the paper.",
-      "example_translation": "小心不要撕破纸张。"
+      "word": "tear (verb)",
+      "meaning": "撕；撕破；扯裂 (动词，发音 /teər/，韵母同 'air')",
+      "example": "Be careful not to tear the paper when you open the envelope.",
+      "example_translation": "打开信封时小心不要撕破纸张。"
     },
     {
-      "word": "tear 2",
-      "meaning": "撕裂2",
-      "example": "A tear rolled down his cheek.",
-      "example_translation": "一滴泪水从他的脸颊滚落。"
+      "word": "tear (noun)",
+      "meaning": "眼泪；泪珠 (名词，发音 /tɪər/，韵母同 'ear')",
+      "example": "A single tear rolled down his cheek as he said goodbye.",
+      "example_translation": "告别时，一滴泪水从他的脸颊滚落。"
+    },
+    {
+      "word": "in tears",
+      "meaning": "泪流满面；哭着 (常用短语)",
+      "example": "She was in tears after hearing the sad news.",
+      "example_translation": "听到这个悲伤的消息后，她泪流满面。"
     },
     {
       "word": "technical",
@@ -16783,16 +17011,22 @@
       "example_translation": "用这个。"
     },
     {
-      "word": "used 1",
-      "meaning": "使用过 1",
-      "example": "We talked about used 1 during the meeting.",
-      "example_translation": "我们在会议期间讨论了二手1。"
+      "word": "be used to (accustomed)",
+      "meaning": "习惯于 (表示对某事已经适应，后接名词或动名词-ing)",
+      "example": "She is used to waking up early for work.",
+      "example_translation": "她已经习惯了早起去上班。"
     },
     {
-      "word": "used 2",
-      "meaning": "使用过 2",
-      "example": "We talked about used 2 during the meeting.",
-      "example_translation": "我们在会议期间讨论了used 2。"
+      "word": "used (adjective)",
+      "meaning": "二手的；用过的 (形容词，修饰名词)",
+      "example": "He bought a used car to save money.",
+      "example_translation": "为了省钱，他买了一辆二手车。"
+    },
+    {
+      "word": "used (verb - past tense)",
+      "meaning": "使用了 (use 的过去式和过去分词)",
+      "example": "They used all the flour to bake the cake.",
+      "example_translation": "他们用光了所有的面粉来烤蛋糕。"
     },
     {
       "word": "used to",
@@ -17419,10 +17653,22 @@
       "example_translation": "我们会赢！"
     },
     {
-      "word": "wind 1",
-      "meaning": "风1",
-      "example": "We talked about wind 1 during the meeting.",
-      "example_translation": "我们在会议期间讨论了风1。"
+      "word": "wind (noun)",
+      "meaning": "风 (名词，发音 /wɪnd/，韵母同 'pin')",
+      "example": "The wind was so strong that it blew the hat off his head.",
+      "example_translation": "风太大了，把他的帽子都吹掉了。"
+    },
+    {
+      "word": "wind (verb)",
+      "meaning": "缠绕；上发条；蜿蜒 (动词，发音 /waɪnd/，韵母同 'find')",
+      "example": "You need to wind the clock every day to keep it running.",
+      "example_translation": "你需要每天给钟上发条，它才能走。"
+    },
+    {
+      "word": "wind (verb - path)",
+      "meaning": "(道路、河流等) 蜿蜒曲折 (动词，发音 /waɪnd/)",
+      "example": "The road winds up the mountain through the forest.",
+      "example_translation": "这条路穿过森林蜿蜒上山。"
     },
     {
       "word": "window",
@@ -17743,4 +17989,5 @@
       "example_translation": "这是禁止停车区。"
     }
   ]
+
 }
