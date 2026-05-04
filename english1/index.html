@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>56天英语发音练习</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f5ef;
+      --panel: #ffffff;
+      --ink: #202124;
+      --muted: #69707a;
+      --line: #dedbd2;
+      --accent: #0f766e;
+      --accent-ink: #ffffff;
+      --soft: #e9f5f3;
+      --warn: #8a5a00;
+      --shadow: 0 10px 28px rgba(30, 35, 40, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      line-height: 1.55;
+    }
+
+    body.dark {
+      color-scheme: dark;
+      --bg: #141516;
+      --panel: #202225;
+      --ink: #f1f3f4;
+      --muted: #a9afb7;
+      --line: #33373d;
+      --accent: #2dd4bf;
+      --accent-ink: #082f2c;
+      --soft: #173c39;
+      --warn: #f5c451;
+      --shadow: none;
+    }
+
+    .app {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      padding: 14px 14px 96px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      margin: 0 -14px 12px;
+      padding: max(12px, env(safe-area-inset-top)) 14px 12px;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1 {
+      flex: 1;
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .sub {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    button, select, input {
+      font: inherit;
+    }
+
+    button, .select, .search {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: 8px;
+    }
+
+    button {
+      min-height: 42px;
+      padding: 0 13px;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    button.primary {
+      background: var(--accent);
+      color: var(--accent-ink);
+      border-color: transparent;
+      font-weight: 700;
+    }
+
+    button.icon {
+      width: 42px;
+      padding: 0;
+      display: inline-grid;
+      place-items: center;
+      font-size: 18px;
+    }
+
+    button:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr 112px;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    select, input {
+      width: 100%;
+      min-height: 44px;
+      padding: 0 12px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      outline: none;
+    }
+
+    .select, .search { overflow: hidden; }
+
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tools button {
+      min-width: 0;
+      padding: 0 8px;
+      font-size: 14px;
+    }
+
+    .status {
+      margin: 12px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .notice {
+      display: none;
+      margin: 12px 0;
+      padding: 12px;
+      border: 1px solid color-mix(in srgb, var(--warn) 35%, var(--line));
+      border-radius: 8px;
+      color: var(--warn);
+      background: color-mix(in srgb, var(--warn) 8%, transparent);
+      font-size: 14px;
+    }
+
+    .sentence-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .sentence {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .sentence.active {
+      border-color: var(--accent);
+      background: var(--soft);
+    }
+
+    .play-one {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      border: 0;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    .line {
+      margin: 0;
+      font-size: var(--sentence-size, 20px);
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+
+    .meta {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+      padding: 10px 14px max(10px, env(safe-area-inset-bottom));
+      border-top: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(14px);
+    }
+
+    .bottom-inner {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 48px 1fr 48px;
+      gap: 10px;
+    }
+
+    .empty {
+      padding: 28px 14px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 430px) {
+      .app { padding-left: 12px; padding-right: 12px; }
+      header { margin-left: -12px; margin-right: -12px; padding-left: 12px; padding-right: 12px; }
+      .controls { grid-template-columns: 1fr; }
+      .tools { grid-template-columns: repeat(2, 1fr); }
+      .line { font-size: var(--sentence-size, 19px); }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="topline">
+        <h1>56天英语发音练习</h1>
+        <button class="icon" id="themeBtn" type="button" aria-label="切换夜间模式">◐</button>
+      </div>
+      <p class="sub">选择一天，点英文句子就能播放。适合手机跟读。</p>
+      <div class="controls">
+        <label class="select">
+          <select id="daySelect" aria-label="选择天数"></select>
+        </label>
+        <label class="search">
+          <input id="searchInput" type="search" placeholder="搜索句子">
+        </label>
+      </div>
+      <div class="tools">
+        <button id="slowBtn" type="button">慢速</button>
+        <button id="normalBtn" class="primary" type="button">正常</button>
+        <button id="repeatBtn" type="button">跟读3遍</button>
+        <button id="autoBtn" type="button">自动连读</button>
+      </div>
+    </header>
+
+    <div id="notice" class="notice"></div>
+    <div id="status" class="status"></div>
+    <section id="sentenceList" class="sentence-list" aria-live="polite"></section>
+  </main>
+
+  <nav class="bottom-bar" aria-label="播放控制">
+    <div class="bottom-inner">
+      <button id="prevBtn" class="icon" type="button" aria-label="上一句">‹</button>
+      <button id="playAllBtn" class="primary" type="button">播放本页</button>
+      <button id="nextBtn" class="icon" type="button" aria-label="下一句">›</button>
+    </div>
+  </nav>
+
+  <script>
+    const files = Array.from({ length: 56 }, (_, index) => {
+      const day = String(index + 1).padStart(2, "0");
+      return `Day${day}`;
+    });
+
+    const knownNames = {
+      Day01: "我是谁",
+      Day02: "我做什么",
+      Day03: "我喜欢什么",
+      Day04: "我为什么学英语",
+      Day05: "完整自我介绍",
+      Day06: "复习和替换",
+      Day07: "轻复盘",
+      Day08: "早晨",
+      Day09: "工作日",
+      Day10: "晚上",
+      Day11: "周末",
+      Day12: "频率表达",
+      Day13: "完整描述一天",
+      Day14: "复习和复盘",
+      Day15: "点餐开口",
+      Day16: "问菜单和推荐",
+      Day17: "饮料和付款",
+      Day18: "购物问价格",
+      Day19: "找东西",
+      Day20: "点餐购物综合",
+      Day21: "复习和复盘",
+      Day22: "问路",
+      Day23: "听懂方向",
+      Day24: "打车",
+      Day25: "公共交通",
+      Day26: "酒店入住",
+      Day27: "出行综合",
+      Day28: "复习和复盘",
+      Day29: "打招呼",
+      Day30: "聊天气",
+      Day31: "聊工作",
+      Day32: "聊兴趣",
+      Day33: "聊周末",
+      Day34: "接话能力",
+      Day35: "复习和复盘",
+      Day36: "请对方重复",
+      Day37: "请对方说慢点",
+      Day38: "确认意思",
+      Day39: "不会说时怎么办",
+      Day40: "表达没听懂",
+      Day41: "补救综合",
+      Day42: "复习和复盘",
+      Day43: "我觉得",
+      Day44: "喜欢和不喜欢",
+      Day45: "给原因",
+      Day46: "同意和不同意",
+      Day47: "表达感受",
+      Day48: "观点综合",
+      Day49: "复习和复盘",
+      Day50: "自我介绍 + 聊工作",
+      Day51: "点餐完整模拟",
+      Day52: "问路 + 打车模拟",
+      Day53: "购物完整模拟",
+      Day54: "聊天完整模拟",
+      Day55: "听不懂补救模拟",
+      Day56: "最终测试"
+    };
+
+    const state = {
+      days: [],
+      currentDay: 0,
+      currentSentence: 0,
+      rate: Number(localStorage.getItem("voice-rate") || 0.9),
+      repeat: Number(localStorage.getItem("voice-repeat") || 1),
+      auto: false,
+      playingAll: false,
+      voice: null
+    };
+
+    const el = {
+      daySelect: document.querySelector("#daySelect"),
+      searchInput: document.querySelector("#searchInput"),
+      sentenceList: document.querySelector("#sentenceList"),
+      status: document.querySelector("#status"),
+      notice: document.querySelector("#notice"),
+      slowBtn: document.querySelector("#slowBtn"),
+      normalBtn: document.querySelector("#normalBtn"),
+      repeatBtn: document.querySelector("#repeatBtn"),
+      autoBtn: document.querySelector("#autoBtn"),
+      prevBtn: document.querySelector("#prevBtn"),
+      nextBtn: document.querySelector("#nextBtn"),
+      playAllBtn: document.querySelector("#playAllBtn"),
+      themeBtn: document.querySelector("#themeBtn")
+    };
+
+    boot();
+
+    async function boot() {
+      setupTheme();
+      setupSpeech();
+      await loadDays();
+      renderDayOptions();
+      bindEvents();
+      const savedDay = Number(localStorage.getItem("current-day") || 0);
+      state.currentDay = Math.min(Math.max(savedDay, 0), state.days.length - 1);
+      el.daySelect.value = String(state.currentDay);
+      renderSentences();
+      setRateButtons();
+      setRepeatButton();
+      showNoticeIfNeeded();
+    }
+
+    async function loadDays() {
+      try {
+        const response = await fetch("./pronunciation-data.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const days = await response.json();
+        if (!Array.isArray(days) || !days.length) throw new Error("empty data");
+        state.days = days;
+        return;
+      } catch (error) {
+        state.days = files.map(prefix => ({
+          file: `${prefix}-${knownNames[prefix] || ""}.md`,
+          title: `${prefix} ${knownNames[prefix] || ""}`.trim(),
+          sentences: []
+        }));
+        state.loadError = error.message;
+      }
+    }
+
+    function renderDayOptions() {
+      el.daySelect.innerHTML = state.days.map((day, index) => {
+        const count = day.sentences.length;
+        return `<option value="${index}">${escapeHtml(day.title)} · ${count}句</option>`;
+      }).join("");
+    }
+
+    function renderSentences() {
+      const day = state.days[state.currentDay];
+      const query = el.searchInput.value.trim().toLowerCase();
+      const visible = day.sentences
+        .map((text, index) => ({ text, index }))
+        .filter(item => !query || item.text.toLowerCase().includes(query));
+
+      el.status.textContent = `${day.title}：${visible.length} 个可发音句子`;
+      if (!visible.length) {
+        el.sentenceList.innerHTML = `<div class="empty">没有找到可播放的英文句子。</div>`;
+        return;
+      }
+
+      el.sentenceList.innerHTML = visible.map(item => `
+        <article class="sentence ${item.index === state.currentSentence ? "active" : ""}" data-index="${item.index}">
+          <button class="play-one" type="button" aria-label="播放第 ${item.index + 1} 句">▶</button>
+          <div>
+            <p class="line">${escapeHtml(item.text)}</p>
+            <div class="meta">第 ${item.index + 1} 句 · 点左侧播放</div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function bindEvents() {
+      el.daySelect.addEventListener("change", () => {
+        speechSynthesis.cancel();
+        state.currentDay = Number(el.daySelect.value);
+        state.currentSentence = 0;
+        localStorage.setItem("current-day", String(state.currentDay));
+        renderSentences();
+      });
+
+      el.searchInput.addEventListener("input", renderSentences);
+      el.slowBtn.addEventListener("click", () => setRate(0.65));
+      el.normalBtn.addEventListener("click", () => setRate(0.9));
+      el.repeatBtn.addEventListener("click", toggleRepeat);
+      el.autoBtn.addEventListener("click", toggleAuto);
+      el.prevBtn.addEventListener("click", previousSentence);
+      el.nextBtn.addEventListener("click", nextSentence);
+      el.playAllBtn.addEventListener("click", playAll);
+      el.themeBtn.addEventListener("click", toggleTheme);
+
+      el.sentenceList.addEventListener("click", event => {
+        const card = event.target.closest(".sentence");
+        if (!card) return;
+        state.currentSentence = Number(card.dataset.index);
+        renderSentences();
+        speakCurrent();
+      });
+    }
+
+    function setupSpeech() {
+      if (!("speechSynthesis" in window)) return;
+      const chooseVoice = () => {
+        const voices = speechSynthesis.getVoices();
+        state.voice = voices.find(voice => /^en[-_]/i.test(voice.lang) && /female|samantha|zira|jenny|aria/i.test(voice.name))
+          || voices.find(voice => /^en[-_]/i.test(voice.lang))
+          || null;
+      };
+      chooseVoice();
+      speechSynthesis.addEventListener("voiceschanged", chooseVoice);
+    }
+
+    function speakCurrent(onDone) {
+      const day = state.days[state.currentDay];
+      const text = day.sentences[state.currentSentence];
+      if (!text || !("speechSynthesis" in window)) return;
+      speechSynthesis.cancel();
+      speakRepeated(text, state.repeat, onDone);
+    }
+
+    function speakRepeated(text, times, onDone) {
+      let left = times;
+      const run = () => {
+        if (left <= 0) {
+          if (onDone) onDone();
+          return;
+        }
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "en-US";
+        utterance.rate = state.rate;
+        utterance.pitch = 1;
+        if (state.voice) utterance.voice = state.voice;
+        utterance.onend = () => {
+          left -= 1;
+          window.setTimeout(run, state.repeat > 1 ? 900 : 220);
+        };
+        speechSynthesis.speak(utterance);
+      };
+      run();
+    }
+
+    function playAll() {
+      if (state.playingAll) {
+        state.playingAll = false;
+        speechSynthesis.cancel();
+        el.playAllBtn.textContent = "播放本页";
+        return;
+      }
+      state.playingAll = true;
+      el.playAllBtn.textContent = "停止";
+      playSequence();
+    }
+
+    function playSequence() {
+      if (!state.playingAll) return;
+      renderSentences();
+      speakCurrent(() => {
+        if (!state.playingAll) return;
+        const day = state.days[state.currentDay];
+        if (state.currentSentence >= day.sentences.length - 1) {
+          state.playingAll = false;
+          el.playAllBtn.textContent = "播放本页";
+          return;
+        }
+        state.currentSentence += 1;
+        window.setTimeout(playSequence, 600);
+      });
+    }
+
+    function previousSentence() {
+      speechSynthesis.cancel();
+      state.currentSentence = Math.max(0, state.currentSentence - 1);
+      renderSentences();
+      speakCurrent();
+    }
+
+    function nextSentence() {
+      speechSynthesis.cancel();
+      const max = state.days[state.currentDay].sentences.length - 1;
+      state.currentSentence = Math.min(max, state.currentSentence + 1);
+      renderSentences();
+      speakCurrent();
+    }
+
+    function setRate(rate) {
+      state.rate = rate;
+      localStorage.setItem("voice-rate", String(rate));
+      setRateButtons();
+    }
+
+    function setRateButtons() {
+      el.slowBtn.classList.toggle("primary", state.rate < 0.8);
+      el.normalBtn.classList.toggle("primary", state.rate >= 0.8);
+    }
+
+    function toggleRepeat() {
+      state.repeat = state.repeat === 1 ? 3 : 1;
+      localStorage.setItem("voice-repeat", String(state.repeat));
+      setRepeatButton();
+    }
+
+    function setRepeatButton() {
+      el.repeatBtn.classList.toggle("primary", state.repeat === 3);
+      el.repeatBtn.textContent = state.repeat === 3 ? "跟读3遍开" : "跟读3遍";
+    }
+
+    function toggleAuto() {
+      state.auto = !state.auto;
+      el.autoBtn.classList.toggle("primary", state.auto);
+      if (state.auto) playAll();
+    }
+
+    function setupTheme() {
+      if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark");
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    }
+
+    function showNoticeIfNeeded() {
+      const isFile = location.protocol === "file:";
+      const noSpeech = !("speechSynthesis" in window);
+      const noData = state.days.every(day => !day.sentences.length);
+      if (!isFile && !noSpeech && !noData) return;
+      const parts = [];
+      if (isFile && noData) parts.push("当前是直接双击打开，浏览器会阻止读取 pronunciation-data.json。请用启动发音工具.bat 打开本地服务。");
+      if (noSpeech) parts.push("当前浏览器不支持朗读，请换 Chrome、Edge 或 Safari。");
+      if (noData) parts.push(`现在没有读到句子数据，所以会显示 0 句。${state.loadError ? "错误：" + state.loadError : ""}`);
+      el.notice.textContent = parts.join(" ");
+      el.notice.style.display = "block";
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+  </script>
+</body>
+</html>

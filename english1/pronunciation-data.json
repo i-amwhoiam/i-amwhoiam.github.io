@@ -1,0 +1,633 @@
+[
+  {
+    "title": "Day 1：我是谁",
+    "file": "Day01-我是谁.md",
+    "sentences": [
+      "My name is Xue Yusheng.",
+      "I am from China.",
+      "I live in China.",
+      "I am learning English.",
+      "My English is not very good yet.",
+      "Hello. My name is Xue Yusheng. I am from China. I live in China. I am learning English. My English is not very good yet."
+    ]
+  },
+  {
+    "title": "Day 2：我做什么",
+    "file": "Day02-我做什么.md",
+    "sentences": [
+      "I work in embedded software.",
+      "I am an embedded software engineer.",
+      "I work as an embedded software engineer.",
+      "My job is to develop firmware and automation tools.",
+      "I am busy at work.",
+      "My name is Xue Yusheng. I am from China. I live in China. I work as an embedded software engineer. My job is to develop firmware and automation tools. I am busy at work."
+    ]
+  },
+  {
+    "title": "Day 3：我喜欢什么",
+    "file": "Day03-我喜欢什么.md",
+    "sentences": [
+      "I like embedded software.",
+      "I really like learning new tools.",
+      "I don't like repeating manual work.",
+      "In my free time, I usually read technical articles.",
+      "I like it because it is useful and relaxing.",
+      "I like embedded software. I really like learning new tools. In my free time, I usually read technical articles. I like it because it is useful and relaxing."
+    ]
+  },
+  {
+    "title": "Day 4：我为什么学英语",
+    "file": "Day04-我为什么学英语.md",
+    "sentences": [
+      "I want to improve my English.",
+      "I want to speak English better.",
+      "I need English for reading technical documents.",
+      "I want to talk with engineers from other countries.",
+      "I know it is hard, but I will try.",
+      "I am learning English because I need it for reading technical documents and talking about my work. I want to improve my English. I want to speak English better. I know it is hard, but I will try."
+    ]
+  },
+  {
+    "title": "Day 5：完整自我介绍",
+    "file": "Day05-完整自我介绍.md",
+    "sentences": [
+      "Let me introduce myself.",
+      "I am from China.",
+      "I work as an embedded software engineer.",
+      "In my free time, I like reading technical articles.",
+      "Nice to meet you.",
+      "Let me introduce myself. My name is Xue Yusheng. I am from China. I work as an embedded software engineer. My job is to develop firmware and automation tools. I have worked on smart fitness equipment, OTA upgrades, and device security. In my free time, I like reading technical articles and learning new tools. I am learning English because I need it for technical documents and work communication. Nice to meet you."
+    ]
+  },
+  {
+    "title": "Day 6：复习和替换",
+    "file": "Day06-复习和替换.md",
+    "sentences": [
+      "I am from China.",
+      "I live in China.",
+      "I work as an embedded software engineer.",
+      "I like embedded software and smart hardware.",
+      "I want to improve my English for my work."
+    ]
+  },
+  {
+    "title": "Day 7：轻复盘",
+    "file": "Day07-轻复盘.md",
+    "sentences": [
+      "I like ... / I want to ...",
+      "What is your name?",
+      "Where are you from?",
+      "Why are you learning English?",
+      "My name is Xue Yusheng.",
+      "I am from China.",
+      "I am learning English because I need it for technical documents and work communication."
+    ]
+  },
+  {
+    "title": "Day 8：早晨",
+    "file": "Day08-早晨.md",
+    "sentences": [
+      "I usually get up at ...",
+      "I brush my teeth.",
+      "I have breakfast.",
+      "I go to work at ...",
+      "My morning is usually busy.",
+      "I usually get up at seven. I brush my teeth. I have breakfast. I go to work at eight. My morning is usually busy."
+    ]
+  },
+  {
+    "title": "Day 9：工作日",
+    "file": "Day09-工作日.md",
+    "sentences": [
+      "I start work at ...",
+      "I finish work at ...",
+      "I have lunch at ...",
+      "I work with ...",
+      "I often feel tired after work."
+    ]
+  },
+  {
+    "title": "Day 10：晚上",
+    "file": "Day10-晚上.md",
+    "sentences": [
+      "After work, I usually ...",
+      "I have dinner at ...",
+      "I take a shower.",
+      "I watch videos.",
+      "I go to bed at ..."
+    ]
+  },
+  {
+    "title": "Day 11：周末",
+    "file": "Day11-周末.md",
+    "sentences": [
+      "On weekends, I usually ...",
+      "Sometimes I ...",
+      "I like staying at home.",
+      "I go out with my friends.",
+      "I want to relax."
+    ]
+  },
+  {
+    "title": "Day 12：频率表达",
+    "file": "Day12-频率表达.md",
+    "sentences": [
+      "I always ...",
+      "I usually ...",
+      "I often ...",
+      "I sometimes ...",
+      "I rarely ..."
+    ]
+  },
+  {
+    "title": "Day 13：完整描述一天",
+    "file": "Day13-完整描述一天.md",
+    "sentences": [
+      "In the morning, I ...",
+      "At noon, I ...",
+      "In the afternoon, I ...",
+      "In the evening, I ...",
+      "That's my day."
+    ]
+  },
+  {
+    "title": "Day 14：复习和复盘",
+    "file": "Day14-复习和复盘.md",
+    "sentences": [
+      "What time do you get up?",
+      "What do you usually do in the morning?",
+      "What do you do after work?",
+      "What do you usually do on weekends?",
+      "Do you often feel tired?"
+    ]
+  },
+  {
+    "title": "Day 15：点餐开口",
+    "file": "Day15-点餐开口.md",
+    "sentences": [
+      "I would like ...",
+      "Can I have ...?",
+      "I want ...",
+      "This one, please.",
+      "That's all, thank you."
+    ]
+  },
+  {
+    "title": "Day 16：问菜单和推荐",
+    "file": "Day16-问菜单和推荐.md",
+    "sentences": [
+      "Do you have a menu?",
+      "What do you recommend?",
+      "Is this spicy?",
+      "Is this sweet?",
+      "I don't eat spicy food."
+    ]
+  },
+  {
+    "title": "Day 17：饮料和付款",
+    "file": "Day17-饮料和付款.md",
+    "sentences": [
+      "Can I have a cup of water?",
+      "I would like some tea.",
+      "Can I pay by card?",
+      "Can I pay in cash?",
+      "Can I have the bill, please?"
+    ]
+  },
+  {
+    "title": "Day 18：购物问价格",
+    "file": "Day18-购物问价格.md",
+    "sentences": [
+      "How much is this?",
+      "How much are these?",
+      "It is too expensive.",
+      "Do you have a cheaper one?",
+      "I will take it."
+    ]
+  },
+  {
+    "title": "Day 19：找东西",
+    "file": "Day19-找东西.md",
+    "sentences": [
+      "I am looking for ...",
+      "Do you have ...?",
+      "Where can I find ...?",
+      "I need ...",
+      "Can you help me?"
+    ]
+  },
+  {
+    "title": "Day 20：点餐购物综合",
+    "file": "Day20-点餐购物综合.md",
+    "sentences": [
+      "I would like ...",
+      "How much is this?",
+      "Do you have ...?",
+      "Can I pay by card?",
+      "Thank you."
+    ]
+  },
+  {
+    "title": "Day 21：复习和复盘",
+    "file": "Day21-复习和复盘.md",
+    "sentences": [
+      "Hello. I would like ___.",
+      "Seller: Anything else?",
+      "Can I have ___?",
+      "Seller: Sure.",
+      "How much is it?",
+      "Seller: Ten dollars.",
+      "Can I pay by card?"
+    ]
+  },
+  {
+    "title": "Day 22：问路",
+    "file": "Day22-问路.md",
+    "sentences": [
+      "Where is ...?",
+      "How can I get to ...?",
+      "Is it far from here?",
+      "Which way should I go?",
+      "Thank you for your help."
+    ]
+  },
+  {
+    "title": "Day 23：听懂方向",
+    "file": "Day23-听懂方向.md",
+    "sentences": [
+      "Go straight.",
+      "Turn left.",
+      "Turn right.",
+      "It is on your left.",
+      "It is near the ..."
+    ]
+  },
+  {
+    "title": "Day 24：打车",
+    "file": "Day24-打车.md",
+    "sentences": [
+      "I want to go to ...",
+      "Please take me to ...",
+      "Can you stop here?",
+      "How long does it take?",
+      "How much is it?"
+    ]
+  },
+  {
+    "title": "Day 25：公共交通",
+    "file": "Day25-公共交通.md",
+    "sentences": [
+      "Which bus should I take?",
+      "Which train should I take?",
+      "Where is the subway station?",
+      "Do I need to transfer?",
+      "How many stops?"
+    ]
+  },
+  {
+    "title": "Day 26：酒店入住",
+    "file": "Day26-酒店入住.md",
+    "sentences": [
+      "I have a reservation.",
+      "My name is Xue Yusheng.",
+      "Can I check in?",
+      "What time is check-out?",
+      "Can I have the Wi-Fi password?"
+    ]
+  },
+  {
+    "title": "Day 27：出行综合",
+    "file": "Day27-出行综合.md",
+    "sentences": [
+      "I want to go to ...",
+      "How can I get there?",
+      "Is it far?",
+      "How long does it take?",
+      "Thank you."
+    ]
+  },
+  {
+    "title": "Day 28：复习和复盘",
+    "file": "Day28-复习和复盘.md",
+    "sentences": [
+      "Where do you want to go?",
+      "How can I get to the hotel?",
+      "Is it far from here?",
+      "How long does it take?",
+      "Can you stop here?"
+    ]
+  },
+  {
+    "title": "Day 29：打招呼",
+    "file": "Day29-打招呼.md",
+    "sentences": [
+      "Hi, how are you?",
+      "I am good, thank you.",
+      "How about you?",
+      "Nice to meet you.",
+      "Nice to meet you too."
+    ]
+  },
+  {
+    "title": "Day 30：聊天气",
+    "file": "Day30-聊天气.md",
+    "sentences": [
+      "The weather is nice today.",
+      "It is hot today.",
+      "It is cold today.",
+      "It is raining.",
+      "I like sunny days."
+    ]
+  },
+  {
+    "title": "Day 31：聊工作",
+    "file": "Day31-聊工作.md",
+    "sentences": [
+      "What do you do?",
+      "I work as an embedded software engineer.",
+      "How is your work?",
+      "My work is busy, but interesting.",
+      "I develop firmware and automation tools.",
+      "My work is busy, but interesting. I develop firmware and automation tools. I also work on OTA upgrades and device security."
+    ]
+  },
+  {
+    "title": "Day 32：聊兴趣",
+    "file": "Day32-聊兴趣.md",
+    "sentences": [
+      "What do you like to do?",
+      "I like ...",
+      "I enjoy ...",
+      "Do you like ...?",
+      "That sounds interesting."
+    ]
+  },
+  {
+    "title": "Day 33：聊周末",
+    "file": "Day33-聊周末.md",
+    "sentences": [
+      "What do you usually do on weekends?",
+      "I usually ...",
+      "I sometimes ...",
+      "This weekend, I want to ...",
+      "That sounds good."
+    ]
+  },
+  {
+    "title": "Day 34：接话能力",
+    "file": "Day34-接话能力.md",
+    "sentences": [
+      "Really?",
+      "I see.",
+      "Me too.",
+      "That's nice.",
+      "Tell me more."
+    ]
+  },
+  {
+    "title": "Day 35：复习和复盘",
+    "file": "Day35-复习和复盘.md",
+    "sentences": [
+      "Hi, how are you?",
+      "I am good, thank you. How about you?",
+      "I am good too. What do you do?",
+      "I work as an embedded software engineer.",
+      "What do you like to do on weekends?",
+      "I usually read technical articles and learn new tools.",
+      "That sounds good."
+    ]
+  },
+  {
+    "title": "Day 36：请对方重复",
+    "file": "Day36-请对方重复.md",
+    "sentences": [
+      "Sorry, could you say that again?",
+      "Could you repeat that?",
+      "One more time, please.",
+      "I didn't catch that.",
+      "Sorry, I missed that."
+    ]
+  },
+  {
+    "title": "Day 37：请对方说慢点",
+    "file": "Day37-请对方说慢点.md",
+    "sentences": [
+      "Could you speak more slowly?",
+      "Please speak slowly.",
+      "My English is not very good.",
+      "I am still learning.",
+      "Thank you for your patience."
+    ]
+  },
+  {
+    "title": "Day 38：确认意思",
+    "file": "Day38-确认意思.md",
+    "sentences": [
+      "Do you mean ...?",
+      "Are you saying ...?",
+      "So, you mean ...",
+      "Is that right?",
+      "I understand."
+    ]
+  },
+  {
+    "title": "Day 39：不会说时怎么办",
+    "file": "Day39-不会说时怎么办.md",
+    "sentences": [
+      "I don't know how to say it in English.",
+      "How do you say this in English?",
+      "I want to say ...",
+      "Let me think.",
+      "Can I use simple English?"
+    ]
+  },
+  {
+    "title": "Day 40：表达没听懂",
+    "file": "Day40-表达没听懂.md",
+    "sentences": [
+      "I don't understand.",
+      "I only understand a little.",
+      "Can you explain it?",
+      "Can you use simple words?",
+      "Can you show me?"
+    ]
+  },
+  {
+    "title": "Day 41：补救综合",
+    "file": "Day41-补救综合.md",
+    "sentences": [
+      "Could you say that again?",
+      "Could you speak more slowly?",
+      "I don't understand.",
+      "Do you mean ...?",
+      "Let me think."
+    ]
+  },
+  {
+    "title": "Day 42：复习和复盘",
+    "file": "Day42-复习和复盘.md",
+    "sentences": [
+      "You need to transfer at Central Station.",
+      "Sorry, could you say that again?",
+      "Transfer at Central Station.",
+      "Could you speak more slowly?",
+      "Sure.",
+      "Do you mean I should change trains there?"
+    ]
+  },
+  {
+    "title": "Day 43：我觉得",
+    "file": "Day43-我觉得.md",
+    "sentences": [
+      "I think English is useful for engineers.",
+      "I feel happy when I solve a technical problem.",
+      "I believe good tools can improve work efficiency.",
+      "In my opinion, device security is very important.",
+      "For me, learning English takes time, but it is worth it."
+    ]
+  },
+  {
+    "title": "Day 44：喜欢和不喜欢",
+    "file": "Day44-喜欢和不喜欢.md",
+    "sentences": [
+      "I like it.",
+      "I don't like it very much.",
+      "I really enjoy it.",
+      "It is interesting.",
+      "It is boring for me."
+    ]
+  },
+  {
+    "title": "Day 45：给原因",
+    "file": "Day45-给原因.md",
+    "sentences": [
+      "Because it is ...",
+      "Because I can ...",
+      "The reason is ...",
+      "It makes me feel ...",
+      "That's why I like it."
+    ]
+  },
+  {
+    "title": "Day 46：同意和不同意",
+    "file": "Day46-同意和不同意.md",
+    "sentences": [
+      "I agree.",
+      "I don't really agree.",
+      "Maybe.",
+      "I am not sure.",
+      "That makes sense."
+    ]
+  },
+  {
+    "title": "Day 47：表达感受",
+    "file": "Day47-表达感受.md",
+    "sentences": [
+      "I am happy.",
+      "I am tired.",
+      "I feel nervous.",
+      "I feel relaxed.",
+      "I feel more confident now."
+    ]
+  },
+  {
+    "title": "Day 48：观点综合",
+    "file": "Day48-观点综合.md",
+    "sentences": [
+      "I think English is useful for engineers.",
+      "I like embedded software because it is practical.",
+      "I don't like repeated manual work because it is easy to make mistakes.",
+      "I agree.",
+      "I am not sure."
+    ]
+  },
+  {
+    "title": "Day 49：复习和复盘",
+    "file": "Day49-复习和复盘.md",
+    "sentences": [
+      "What do you think about learning English?",
+      "What food do you like?",
+      "Why do you like it?",
+      "Do you like your work?",
+      "How do you feel today?"
+    ]
+  },
+  {
+    "title": "Day 50：自我介绍 + 聊工作",
+    "file": "Day50-自我介绍 + 聊工作.md",
+    "sentences": [
+      "Let me introduce myself.",
+      "I work as an embedded software engineer.",
+      "My work is busy, but interesting.",
+      "I am learning English because I need it for technical documents and work communication.",
+      "Nice to meet you.",
+      "Let me introduce myself. My name is Xue Yusheng. I work as an embedded software engineer. My work is busy, but interesting. I develop firmware and automation tools. I have experience with MCU firmware, Bootloader, Secure Boot, OTA upgrades, BLE, NB-IoT, and 4G. I am learning English because I need it for technical documents and work communication. Nice to meet you."
+    ]
+  },
+  {
+    "title": "Day 51：点餐完整模拟",
+    "file": "Day51-点餐完整模拟.md",
+    "sentences": [
+      "I would like ...",
+      "What do you recommend?",
+      "Is this spicy?",
+      "Can I have the bill, please?",
+      "Can I pay by card?"
+    ]
+  },
+  {
+    "title": "Day 52：问路 + 打车模拟",
+    "file": "Day52-问路 + 打车模拟.md",
+    "sentences": [
+      "How can I get to ...?",
+      "Is it far from here?",
+      "How long does it take?",
+      "Please take me to ...",
+      "Can you stop here?"
+    ]
+  },
+  {
+    "title": "Day 53：购物完整模拟",
+    "file": "Day53-购物完整模拟.md",
+    "sentences": [
+      "I am looking for ...",
+      "Do you have ...?",
+      "How much is this?",
+      "It is too expensive.",
+      "I will take it."
+    ]
+  },
+  {
+    "title": "Day 54：聊天完整模拟",
+    "file": "Day54-聊天完整模拟.md",
+    "sentences": [
+      "How are you?",
+      "What do you do?",
+      "What do you usually do on weekends?",
+      "I like ...",
+      "That sounds good."
+    ]
+  },
+  {
+    "title": "Day 55：听不懂补救模拟",
+    "file": "Day55-听不懂补救模拟.md",
+    "sentences": [
+      "Could you say that again?",
+      "Could you speak more slowly?",
+      "I don't understand.",
+      "Do you mean ...?",
+      "Let me think."
+    ]
+  },
+  {
+    "title": "Day 56：最终测试",
+    "file": "Day56-最终测试.md",
+    "sentences": [
+      "Hello, my name is Xue Yusheng. I am from China. I work as an embedded software engineer. My job is to develop firmware and automation tools. I have worked on smart fitness equipment, OTA upgrades, device security, and communication modules. I am learning English because I need it for technical documents and work communication.",
+      "My work is busy, but interesting.",
+      "I develop firmware for smart hardware.",
+      "I use C, C++, and Python at work.",
+      "I have experience with Bootloader, Secure Boot, and OTA upgrades."
+    ]
+  }
+]
