@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>职场英语发音练习</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --panel-2: #eef3f9;
+      --border: #d7e0ea;
+      --text: #15202b;
+      --muted: #5c6b7a;
+      --accent: #2457ff;
+      --accent-2: #173fb8;
+      --good: #188038;
+      --warn: #c56a00;
+      --shadow: 0 12px 32px rgba(21, 32, 43, 0.08);
+      --radius: 10px;
+      --radius-sm: 8px;
+      --gap: 16px;
+      --focus: 0 0 0 3px rgba(36, 87, 255, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: none;
+      box-shadow: var(--focus);
+    }
+
+    .app {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      gap: var(--gap);
+    }
+
+    .topbar,
+    .toolbar,
+    .settings,
+    .categories,
+    .layout {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 68ch;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(92px, auto));
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .stat {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      min-width: 120px;
+    }
+
+    .stat-value {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .toolbar {
+      padding: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search-wrap {
+      flex: 1 1 360px;
+      min-width: 260px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+    }
+
+    .search-wrap svg {
+      width: 18px;
+      height: 18px;
+      color: var(--muted);
+      flex: 0 0 auto;
+    }
+
+    .search-wrap input {
+      border: 0;
+      background: transparent;
+      width: 100%;
+      min-width: 0;
+      color: var(--text);
+    }
+
+    .search-wrap input::placeholder {
+      color: #8091a2;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .btn,
+    .icon-btn,
+    .chip,
+    .toggle,
+    .action-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      border-radius: 8px;
+      transition: 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn:hover,
+    .icon-btn:hover,
+    .chip:hover,
+    .toggle:hover,
+    .action-btn:hover {
+      border-color: #bac7d6;
+      transform: translateY(-1px);
+    }
+
+    .btn,
+    .toggle,
+    .action-btn {
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .btn.primary,
+    .toggle.active,
+    .action-btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn.primary:hover,
+    .toggle.active:hover,
+    .action-btn.primary:hover {
+      background: var(--accent-2);
+      border-color: var(--accent-2);
+    }
+
+    .btn svg,
+    .btn-icon svg,
+    .icon-btn svg,
+    .action-btn svg {
+      width: 16px;
+      height: 16px;
+      flex: 0 0 auto;
+    }
+
+    .btn-icon {
+      width: 16px;
+      height: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .settings {
+      padding: 14px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      align-items: center;
+    }
+
+    .setting {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .setting label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .setting select,
+    .setting input[type="range"] {
+      width: 100%;
+    }
+
+    .setting select {
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 8px;
+      padding: 9px 10px;
+      color: var(--text);
+      min-width: 0;
+    }
+
+    .range-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .range-value {
+      min-width: 46px;
+      text-align: right;
+      color: var(--muted);
+      font-size: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .settings-actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .categories {
+      padding: 12px;
+      overflow: hidden;
+    }
+
+    .category-scroll {
+      display: flex;
+      gap: 8px;
+      overflow: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--panel-2);
+      border-color: var(--border);
+    }
+
+    .chip.active {
+      background: #eaf0ff;
+      border-color: #c8d6ff;
+      color: var(--accent-2);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.85fr);
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .list-panel {
+      border-right: 1px solid var(--border);
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message-bar {
+      padding: 12px 16px;
+      background: #f7faff;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+    }
+
+    .sentence-list {
+      padding: 14px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+      transition: 0.15s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: #bfcde0;
+      transform: translateY(-1px);
+    }
+
+    .card.active {
+      border-color: #8aa8ff;
+      box-shadow: 0 0 0 3px rgba(36, 87, 255, 0.08);
+      background: #fbfcff;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .card-index {
+      font-size: 12px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mini-btn {
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      border-radius: 8px;
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      flex: 0 0 auto;
+      transition: 0.15s ease;
+    }
+
+    .mini-btn:hover {
+      background: #dde8ff;
+      border-color: #bfd0ff;
+    }
+
+    .mini-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .card-en {
+      font-size: 18px;
+      line-height: 1.45;
+      font-weight: 700;
+      letter-spacing: 0;
+      word-break: break-word;
+    }
+
+    .card-cn {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .detail-panel {
+      padding: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
+    .detail-box {
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 16px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .detail-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .detail-kicker {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .detail-category {
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef3ff;
+      color: var(--accent-2);
+      border: 1px solid #c8d6ff;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .detail-en {
+      font-size: 24px;
+      line-height: 1.4;
+      font-weight: 800;
+      word-break: break-word;
+    }
+
+    .detail-cn {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .detail-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .detail-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .notes {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      border-top: 1px dashed var(--border);
+      padding-top: 12px;
+    }
+
+    .empty {
+      padding: 32px 16px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .loading {
+      padding: 18px 16px;
+      color: var(--muted);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-sm);
+      background: #fff;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 1180px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .list-panel {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .detail-panel {
+        border-top: 1px solid var(--border);
+      }
+    }
+
+    @media (max-width: 860px) {
+      body {
+        padding: 12px;
+      }
+
+      .topbar {
+        flex-direction: column;
+      }
+
+      .stats {
+        width: 100%;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .settings {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .controls {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .settings {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-en {
+        font-size: 20px;
+      }
+
+      .card-en {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="eyebrow">Workplace English</div>
+        <h1>职场英语发音练习</h1>
+        <div class="subtitle">嵌入式开发、车载测试、软件协作和日常会议高频表达。</div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value" id="totalCount">0</div>
+          <div class="stat-label">总句子</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="visibleCount">0</div>
+          <div class="stat-label">当前显示</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" id="playerState">待机</div>
+          <div class="stat-label">播放状态</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="search-wrap" role="search">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2" />
+          <path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <input id="searchInput" type="search" placeholder="搜索英文、中文、标签，例如 CAN、log、blocker" autocomplete="off" />
+      </div>
+      <div class="controls">
+        <button class="icon-btn" id="prevBtn" title="上一句" aria-label="上一句">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M18 6L9 12l9 6V6Z" fill="currentColor" />
+          </svg>
+        </button>
+        <button class="btn primary" id="playBtn" title="播放或暂停英文" aria-label="播放或暂停英文">
+          <span class="btn-icon" id="playBtnIcon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7Z" fill="currentColor" /></svg>
+          </span>
+          <span id="playBtnText">播放</span>
+        </button>
+        <button class="icon-btn" id="nextBtn" title="下一句" aria-label="下一句">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M6 6l9 6-9 6V6Z" fill="currentColor" />
+          </svg>
+        </button>
+        <button class="toggle" id="autoBtn" title="自动连播">自动播放</button>
+        <button class="toggle" id="loopBtn" title="循环播放">循环</button>
+      </div>
+    </section>
+
+    <section class="settings">
+      <div class="setting">
+        <label for="voiceSelect">英文语音</label>
+        <select id="voiceSelect"></select>
+      </div>
+      <div class="setting">
+        <label for="rateRange">语速</label>
+        <div class="range-row">
+          <input id="rateRange" type="range" min="0.6" max="1.25" step="0.05" value="0.92" />
+          <span class="range-value" id="rateValue">0.92</span>
+        </div>
+      </div>
+      <div class="setting">
+        <label for="volumeRange">音量</label>
+        <div class="range-row">
+          <input id="volumeRange" type="range" min="0.2" max="1" step="0.05" value="1" />
+          <span class="range-value" id="volumeValue">1.00</span>
+        </div>
+      </div>
+      <div class="setting">
+        <label>数据源</label>
+        <div class="settings-actions">
+          <button class="action-btn" id="reloadBtn" title="重新加载 JSON">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 12a8 8 0 1 1-2.3-5.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>重新加载</span>
+          </button>
+          <button class="action-btn" id="loadJsonBtn" title="手动导入 JSON 文件">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M8 9l4 4 4-4" fill="currentColor" />
+              <path d="M5 14v4h14v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>导入 JSON</span>
+          </button>
+          <input id="jsonFileInput" type="file" accept=".json,application/json" class="hidden" />
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div id="categoryBar" class="category-scroll"></div>
+    </section>
+
+    <main class="layout">
+      <section class="list-panel">
+        <div id="messageBar" class="message-bar">正在加载数据...</div>
+        <div id="sentenceList" class="sentence-list">
+          <div class="loading">加载中...</div>
+        </div>
+      </section>
+      <aside class="detail-panel">
+        <div class="detail-box">
+          <div class="detail-top">
+            <div class="detail-kicker">当前句子</div>
+          <div id="detailCategory" class="detail-category">未选择</div>
+          </div>
+          <div id="detailEn" class="detail-en">请选择一句话开始练习。</div>
+          <div id="detailCn" class="detail-cn">英文表达和中文释义会显示在这里。</div>
+          <div id="detailTags" class="detail-tags"></div>
+          <div class="detail-actions">
+            <button class="action-btn primary" id="detailPlayEnBtn" title="朗读英文">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M8 5v14l11-7-11-7Z" fill="currentColor" />
+              </svg>
+              <span>播放英文</span>
+            </button>
+            <button class="action-btn" id="detailPlayCnBtn" title="朗读中文">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 6h10M7 12h10M7 18h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span>播放中文</span>
+            </button>
+            <button class="action-btn" id="detailCopyBtn" title="复制内容">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 9h10v12H9z" stroke="currentColor" stroke-width="2" />
+                <path d="M5 5h10v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M5 5h3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span>复制</span>
+            </button>
+          </div>
+          <div class="notes" id="detailNotes">
+            练习重点：先熟悉高频句型，再替换模块名、问题现象、测试环境和下一步动作。
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="application/json" id="embeddedData">
+{
+  "meta": {
+    "title": "职场英语发音练习",
+    "subtitle": "嵌入式开发 / 车载测试 / 软件协作",
+    "source": "workplace_english_embedded_automotive.md",
+    "version": "1.0",
+    "defaultVoiceLang": "en-US"
+  },
+  "categories": [
+    { "id": "core", "name": "核心句型" },
+    { "id": "meeting", "name": "会议汇报" },
+    { "id": "daily", "name": "日常协作" },
+    { "id": "embedded", "name": "嵌入式开发" },
+    { "id": "automotive", "name": "车载测试" },
+    { "id": "testing", "name": "测试与缺陷" },
+    { "id": "debug", "name": "调试定位" },
+    { "id": "communication", "name": "邮件消息" }
+  ],
+  "items": [
+    { "id": "core-01", "category": "core", "en": "I have finished this task.", "cn": "我已经完成这个任务。", "tags": ["basic", "speaking"] },
+    { "id": "core-02", "category": "core", "en": "I am working on the CAN test.", "cn": "我正在做 CAN 测试。", "tags": ["status", "progress"] },
+    { "id": "core-03", "category": "core", "en": "I found an issue with the signal value.", "cn": "我发现信号值有一个问题。", "tags": ["issue", "report"] },
+    { "id": "core-04", "category": "core", "en": "Let me confirm my understanding.", "cn": "我确认一下我的理解。", "tags": ["clarify", "meeting"] },
+    { "id": "core-05", "category": "core", "en": "Could you help check this issue?", "cn": "你能帮忙检查这个问题吗？", "tags": ["help", "issue"] },
+    { "id": "core-06", "category": "core", "en": "I am not fully sure yet.", "cn": "我还不是完全确定。", "tags": ["uncertain", "clarify"] },
+    { "id": "core-07", "category": "core", "en": "Next, I will collect the log.", "cn": "下一步我会收集日志。", "tags": ["next-step", "debug"] },
+    { "id": "core-08", "category": "core", "en": "The issue is still open.", "cn": "问题还没关闭。", "tags": ["status", "issue"] },
+    { "id": "core-09", "category": "core", "en": "The actual result is different from the expected result.", "cn": "实际结果和预期结果不同。", "tags": ["test", "result"] },
+    { "id": "core-10", "category": "core", "en": "I will keep you updated.", "cn": "我会持续更新你。", "tags": ["update", "communication"] },
+    { "id": "meeting-01", "category": "meeting", "en": "What is the current status?", "cn": "当前状态是什么？", "tags": ["meeting", "status"] },
+    { "id": "meeting-02", "category": "meeting", "en": "Are we on track?", "cn": "我们进度正常吗？", "tags": ["schedule", "risk"] },
+    { "id": "meeting-03", "category": "meeting", "en": "Any blockers?", "cn": "有阻塞点吗？", "tags": ["blocker", "meeting"] },
+    { "id": "meeting-04", "category": "meeting", "en": "Could you give a quick update?", "cn": "你能快速更新一下进展吗？", "tags": ["update", "meeting"] },
+    { "id": "meeting-05", "category": "meeting", "en": "This item is still open.", "cn": "这个事项还没关闭。", "tags": ["status", "task"] },
+    { "id": "meeting-06", "category": "meeting", "en": "We need more time to analyze the root cause.", "cn": "我们需要更多时间分析根因。", "tags": ["debug", "risk"] },
+    { "id": "meeting-07", "category": "meeting", "en": "The main risk is the unstable test environment.", "cn": "主要风险是测试环境不稳定。", "tags": ["risk", "test"] },
+    { "id": "meeting-08", "category": "meeting", "en": "I will update it by EOD.", "cn": "我会在今天下班前更新。", "tags": ["deadline", "status"] },
+    { "id": "meeting-09", "category": "meeting", "en": "Let's take this offline.", "cn": "我们会后单独讨论这个。", "tags": ["follow-up", "meeting"] },
+    { "id": "meeting-10", "category": "meeting", "en": "What is the next step?", "cn": "下一步是什么？", "tags": ["next-step", "meeting"] },
+    { "id": "daily-01", "category": "daily", "en": "Hi, do you have a few minutes?", "cn": "你好，你现在有几分钟吗？", "tags": ["chat", "daily"] },
+    { "id": "daily-02", "category": "daily", "en": "I need your input on this requirement.", "cn": "这个需求我需要你的意见。", "tags": ["requirement", "help"] },
+    { "id": "daily-03", "category": "daily", "en": "Could you repeat that?", "cn": "你能重复一下吗？", "tags": ["hearing", "clarify"] },
+    { "id": "daily-04", "category": "daily", "en": "Could you say that more slowly?", "cn": "你能说慢一点吗？", "tags": ["hearing", "clarify"] },
+    { "id": "daily-05", "category": "daily", "en": "Could you type it in the chat?", "cn": "你能把它打在聊天里吗？", "tags": ["chat", "help"] },
+    { "id": "daily-06", "category": "daily", "en": "I will check and get back to you.", "cn": "我检查后回复你。", "tags": ["response", "follow-up"] },
+    { "id": "daily-07", "category": "daily", "en": "Please use the latest build.", "cn": "请使用最新版本。", "tags": ["build", "test"] },
+    { "id": "daily-08", "category": "daily", "en": "I need more information.", "cn": "我需要更多信息。", "tags": ["clarify", "help"] },
+    { "id": "daily-09", "category": "daily", "en": "Let's align on the next steps.", "cn": "我们对齐一下下一步。", "tags": ["alignment", "meeting"] },
+    { "id": "daily-10", "category": "daily", "en": "I will follow up later.", "cn": "我稍后继续跟进。", "tags": ["follow-up", "status"] },
+    { "id": "embedded-01", "category": "embedded", "en": "The board does not boot.", "cn": "板子无法启动。", "tags": ["board", "boot"] },
+    { "id": "embedded-02", "category": "embedded", "en": "The firmware update failed.", "cn": "固件更新失败。", "tags": ["firmware", "update"] },
+    { "id": "embedded-03", "category": "embedded", "en": "The interrupt is not triggered.", "cn": "中断没有触发。", "tags": ["interrupt", "driver"] },
+    { "id": "embedded-04", "category": "embedded", "en": "The callback is not called.", "cn": "回调函数没有被调用。", "tags": ["callback", "driver"] },
+    { "id": "embedded-05", "category": "embedded", "en": "The task stops running.", "cn": "任务停止运行。", "tags": ["task", "rtos"] },
+    { "id": "embedded-06", "category": "embedded", "en": "The CPU load is too high.", "cn": "CPU 负载太高。", "tags": ["performance", "cpu"] },
+    { "id": "embedded-07", "category": "embedded", "en": "The memory usage is too high.", "cn": "内存使用太高。", "tags": ["memory", "performance"] },
+    { "id": "embedded-08", "category": "embedded", "en": "The initialization order is wrong.", "cn": "初始化顺序错误。", "tags": ["init", "sequence"] },
+    { "id": "embedded-09", "category": "embedded", "en": "The buffer may overflow.", "cn": "缓冲区可能溢出。", "tags": ["buffer", "safety"] },
+    { "id": "embedded-10", "category": "embedded", "en": "The clock configuration is incorrect.", "cn": "时钟配置不正确。", "tags": ["clock", "configuration"] },
+    { "id": "automotive-01", "category": "automotive", "en": "The ECU does not respond.", "cn": "ECU 没有响应。", "tags": ["ecu", "diagnostic"] },
+    { "id": "automotive-02", "category": "automotive", "en": "The CAN message is missing.", "cn": "CAN 报文丢失。", "tags": ["can", "message"] },
+    { "id": "automotive-03", "category": "automotive", "en": "The signal value is incorrect.", "cn": "信号值不正确。", "tags": ["signal", "dbc"] },
+    { "id": "automotive-04", "category": "automotive", "en": "The message cycle time is unstable.", "cn": "报文周期不稳定。", "tags": ["cycle-time", "can"] },
+    { "id": "automotive-05", "category": "automotive", "en": "The diagnostic request timed out.", "cn": "诊断请求超时。", "tags": ["uds", "timeout"] },
+    { "id": "automotive-06", "category": "automotive", "en": "The DTC is not stored.", "cn": "DTC 没有存储。", "tags": ["dtc", "fault"] },
+    { "id": "automotive-07", "category": "automotive", "en": "The flashing process failed.", "cn": "刷写过程失败。", "tags": ["flashing", "reprogramming"] },
+    { "id": "automotive-08", "category": "automotive", "en": "The ECU enters sleep mode too late.", "cn": "ECU 进入休眠太晚。", "tags": ["sleep", "power"] },
+    { "id": "automotive-09", "category": "automotive", "en": "The wake-up behavior is incorrect.", "cn": "唤醒行为不正确。", "tags": ["wake-up", "power"] },
+    { "id": "automotive-10", "category": "automotive", "en": "The gateway does not forward the message.", "cn": "网关没有转发报文。", "tags": ["gateway", "network"] },
+    { "id": "testing-01", "category": "testing", "en": "The test passed.", "cn": "测试通过。", "tags": ["test", "result"] },
+    { "id": "testing-02", "category": "testing", "en": "The test failed.", "cn": "测试失败。", "tags": ["test", "result"] },
+    { "id": "testing-03", "category": "testing", "en": "I can reproduce it on my side.", "cn": "我这边可以复现它。", "tags": ["reproduce", "bug"] },
+    { "id": "testing-04", "category": "testing", "en": "I cannot reproduce it on my side.", "cn": "我这边无法复现它。", "tags": ["reproduce", "bug"] },
+    { "id": "testing-05", "category": "testing", "en": "The issue happens every time.", "cn": "这个问题每次都会发生。", "tags": ["frequency", "bug"] },
+    { "id": "testing-06", "category": "testing", "en": "The issue happens sometimes.", "cn": "这个问题有时会发生。", "tags": ["frequency", "bug"] },
+    { "id": "testing-07", "category": "testing", "en": "We need more logs.", "cn": "我们需要更多日志。", "tags": ["log", "debug"] },
+    { "id": "testing-08", "category": "testing", "en": "The root cause is not clear yet.", "cn": "根因还不清楚。", "tags": ["rca", "debug"] },
+    { "id": "testing-09", "category": "testing", "en": "This looks like a regression issue.", "cn": "这看起来像回归问题。", "tags": ["regression", "bug"] },
+    { "id": "testing-10", "category": "testing", "en": "The workaround is to reset the device.", "cn": "临时方案是复位设备。", "tags": ["workaround", "device"] },
+    { "id": "debug-01", "category": "debug", "en": "The log shows that the device reset at 10:32.", "cn": "日志显示设备在 10:32 复位。", "tags": ["log", "reset"] },
+    { "id": "debug-02", "category": "debug", "en": "The trace shows that the message was not sent.", "cn": "跟踪记录显示报文没有发送。", "tags": ["trace", "can"] },
+    { "id": "debug-03", "category": "debug", "en": "The issue seems related to timing.", "cn": "这个问题看起来和时序有关。", "tags": ["timing", "analysis"] },
+    { "id": "debug-04", "category": "debug", "en": "The issue seems related to memory corruption.", "cn": "这个问题看起来和内存破坏有关。", "tags": ["memory", "analysis"] },
+    { "id": "debug-05", "category": "debug", "en": "The timestamp does not match.", "cn": "时间戳对不上。", "tags": ["timestamp", "trace"] },
+    { "id": "debug-06", "category": "debug", "en": "The issue only happens after a power cycle.", "cn": "这个问题只在重新上电后发生。", "tags": ["power", "reproduce"] },
+    { "id": "debug-07", "category": "debug", "en": "I found an error code in the log.", "cn": "我在日志里发现了一个错误码。", "tags": ["error", "log"] },
+    { "id": "debug-08", "category": "debug", "en": "We need more detailed logs.", "cn": "我们需要更详细的日志。", "tags": ["log", "detail"] },
+    { "id": "debug-09", "category": "debug", "en": "The root cause is an incorrect initialization order.", "cn": "根因是初始化顺序错误。", "tags": ["rca", "init"] },
+    { "id": "debug-10", "category": "debug", "en": "The permanent fix is to update the state machine logic.", "cn": "永久修复方案是更新状态机逻辑。", "tags": ["fix", "state-machine"] },
+    { "id": "communication-01", "category": "communication", "en": "Hi team, I found an issue during the regression test.", "cn": "团队好，我在回归测试中发现了一个问题。", "tags": ["email", "bug"] },
+    { "id": "communication-02", "category": "communication", "en": "Please find the log attached.", "cn": "请查看附件中的日志。", "tags": ["email", "log"] },
+    { "id": "communication-03", "category": "communication", "en": "Could you help check the log?", "cn": "你能帮忙看一下日志吗？", "tags": ["help", "log"] },
+    { "id": "communication-04", "category": "communication", "en": "I will update the ticket.", "cn": "我会更新问题单。", "tags": ["ticket", "update"] },
+    { "id": "communication-05", "category": "communication", "en": "Thanks for your support.", "cn": "感谢你的支持。", "tags": ["polite", "email"] },
+    { "id": "communication-06", "category": "communication", "en": "I need confirmation from the system team.", "cn": "我需要系统团队确认。", "tags": ["confirm", "requirement"] },
+    { "id": "communication-07", "category": "communication", "en": "I will rerun the test after the new build is available.", "cn": "新版本可用后我会重新执行测试。", "tags": ["test", "build"] },
+    { "id": "communication-08", "category": "communication", "en": "Please review my merge request.", "cn": "请评审我的合并请求。", "tags": ["review", "code"] },
+    { "id": "communication-09", "category": "communication", "en": "I will get back to you later.", "cn": "我稍后回复你。", "tags": ["follow-up", "chat"] },
+    { "id": "communication-10", "category": "communication", "en": "Please let me know your feedback.", "cn": "请告诉我你的反馈。", "tags": ["feedback", "email"] }
+  ]
+}
+  </script>
+
+  <script>
+    const DATA_URL = './workplace_english_embedded_automotive_pronounce.json';
+
+    const state = {
+      data: null,
+      categories: [],
+      items: [],
+      filtered: [],
+      selectedId: null,
+      activeCategory: 'all',
+      search: '',
+      autoPlay: false,
+      loop: false,
+      speaking: false,
+      paused: false,
+      voices: [],
+      voiceName: '',
+      rate: 0.92,
+      volume: 1
+    };
+
+    const els = {};
+
+    function cacheElements() {
+      [
+        'totalCount', 'visibleCount', 'playerState', 'searchInput', 'prevBtn', 'playBtn', 'playBtnIcon',
+        'playBtnText', 'nextBtn', 'autoBtn', 'loopBtn', 'voiceSelect', 'rateRange', 'rateValue',
+        'volumeRange', 'volumeValue', 'reloadBtn', 'loadJsonBtn', 'jsonFileInput', 'categoryBar',
+        'messageBar', 'sentenceList', 'detailCategory', 'detailEn', 'detailCn', 'detailTags',
+        'detailPlayEnBtn', 'detailPlayCnBtn', 'detailCopyBtn'
+      ].forEach((id) => {
+        els[id] = document.getElementById(id);
+      });
+    }
+
+    function iconPlay() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7-11-7Z" fill="currentColor"/></svg>';
+    }
+
+    function iconPause() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>';
+    }
+
+    function iconSpeaker() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 10v4h4l5 4V6l-5 4H5Z" fill="currentColor"/><path d="M16 9c1 .8 1.5 1.8 1.5 3s-.5 2.2-1.5 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    }
+
+    function iconCopy() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 9h10v12H9z" stroke="currentColor" stroke-width="2"/><path d="M5 5h10v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 5h3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    }
+
+    function iconPrev() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 6L9 12l9 6V6Z" fill="currentColor"/></svg>';
+    }
+
+    function iconNext() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 6l9 6-9 6V6Z" fill="currentColor"/></svg>';
+    }
+
+    function iconSearch() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="2"/><path d="M16 16l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    }
+
+    function iconReload() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    }
+
+    function iconFile() {
+      return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 9l4 4 4-4" fill="currentColor"/><path d="M5 14v4h14v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    function normalize(value) {
+      return String(value || '').toLowerCase();
+    }
+
+    function readEmbeddedData() {
+      const node = document.getElementById('embeddedData');
+      if (!node) return null;
+      try {
+        return JSON.parse(node.textContent);
+      } catch (error) {
+        console.warn('Failed to parse embedded data', error);
+        return null;
+      }
+    }
+
+    function categoryName(id) {
+      const item = state.categories.find((c) => c.id === id);
+      return item ? item.name : id;
+    }
+
+    function updateCounters() {
+      els.totalCount.textContent = state.items.length;
+      els.visibleCount.textContent = state.filtered.length;
+      els.playerState.textContent = state.speaking ? (state.paused ? '已暂停' : '朗读中') : '待机';
+    }
+
+    function setMessage(text, tone = 'info') {
+      const colorMap = {
+        info: '#5c6b7a',
+        success: '#188038',
+        warn: '#c56a00',
+        error: '#b42318'
+      };
+      els.messageBar.style.color = colorMap[tone] || colorMap.info;
+      els.messageBar.textContent = text;
+    }
+
+    function populateCategoryBar() {
+      const frag = document.createDocumentFragment();
+      const all = document.createElement('button');
+      all.className = 'chip active';
+      all.dataset.category = 'all';
+      all.textContent = '全部';
+      frag.appendChild(all);
+
+      state.categories.forEach((cat) => {
+        const btn = document.createElement('button');
+        btn.className = 'chip';
+        btn.dataset.category = cat.id;
+        btn.textContent = cat.name;
+        frag.appendChild(btn);
+      });
+
+      els.categoryBar.innerHTML = '';
+      els.categoryBar.appendChild(frag);
+    }
+
+    function renderVoiceOptions() {
+      const voices = speechSynthesis.getVoices();
+      state.voices = voices.slice();
+
+      const preferred = voices.filter((voice) => /^en/i.test(voice.lang));
+      const selectedBefore = els.voiceSelect.value || state.voiceName;
+
+      els.voiceSelect.innerHTML = '';
+
+      const defaultOption = document.createElement('option');
+      defaultOption.value = '';
+      defaultOption.textContent = '系统默认';
+      els.voiceSelect.appendChild(defaultOption);
+
+      const voicesToRender = preferred.length ? preferred : voices;
+      voicesToRender.forEach((voice) => {
+        const option = document.createElement('option');
+        option.value = voice.name;
+        option.textContent = `${voice.name} (${voice.lang})`;
+        els.voiceSelect.appendChild(option);
+      });
+
+      if (selectedBefore) {
+        els.voiceSelect.value = selectedBefore;
+      } else if (preferred.length) {
+        els.voiceSelect.value = preferred[0].name;
+      }
+
+      state.voiceName = els.voiceSelect.value || '';
+    }
+
+    function getSelectedVoice(lang) {
+      const voices = state.voices.length ? state.voices : speechSynthesis.getVoices();
+      if (!voices.length) return null;
+
+      if (lang === 'zh') {
+        return voices.find((voice) => /^zh/i.test(voice.lang)) || voices.find((voice) => /Chinese/i.test(voice.name)) || null;
+      }
+
+      const preferredByName = state.voiceName ? voices.find((voice) => voice.name === state.voiceName) : null;
+      if (preferredByName) return preferredByName;
+
+      return voices.find((voice) => /^en/i.test(voice.lang)) || voices[0] || null;
+    }
+
+    function speakText(text, lang = 'en', after = null) {
+      if (!text) return;
+      speechSynthesis.cancel();
+
+      const utter = new SpeechSynthesisUtterance(text);
+      const voice = getSelectedVoice(lang);
+      if (voice) utter.voice = voice;
+      utter.lang = voice ? voice.lang : (lang === 'zh' ? 'zh-CN' : 'en-US');
+      utter.rate = state.rate;
+      utter.volume = state.volume;
+      utter.pitch = 1;
+
+      utter.onstart = () => {
+        state.speaking = true;
+        state.paused = false;
+        updatePlayButton();
+        updateCounters();
+      };
+
+      utter.onend = () => {
+        state.speaking = false;
+        state.paused = false;
+        updatePlayButton();
+        updateCounters();
+        if (typeof after === 'function') {
+          after();
+        }
+      };
+
+      utter.onerror = () => {
+        state.speaking = false;
+        state.paused = false;
+        updatePlayButton();
+        updateCounters();
+        setMessage('朗读失败，可能是浏览器语音不可用。', 'warn');
+      };
+
+      speechSynthesis.speak(utter);
+    }
+
+    function updatePlayButton() {
+      if (state.speaking && !state.paused) {
+        els.playBtnIcon.innerHTML = iconPause();
+        els.playBtnText.textContent = '暂停';
+      } else {
+        els.playBtnIcon.innerHTML = iconPlay();
+        els.playBtnText.textContent = '播放';
+      }
+
+      els.autoBtn.classList.toggle('active', state.autoPlay);
+      els.loopBtn.classList.toggle('active', state.loop);
+    }
+
+    function getFilteredIndexById(id) {
+      return state.filtered.findIndex((item) => item.id === id);
+    }
+
+    function selectItemById(id, options = {}) {
+      const item = state.filtered.find((entry) => entry.id === id);
+      if (!item) return;
+
+      state.selectedId = id;
+      renderList();
+      renderDetail(item);
+      if (options.speak) {
+        playItem(item, 'en');
+      }
+    }
+
+    function selectItemByIndex(index, options = {}) {
+      if (!state.filtered.length) return;
+      let normalizedIndex = index;
+
+      if (normalizedIndex < 0) {
+        normalizedIndex = state.loop ? state.filtered.length - 1 : 0;
+      }
+      if (normalizedIndex >= state.filtered.length) {
+        normalizedIndex = state.loop ? 0 : state.filtered.length - 1;
+      }
+
+      const item = state.filtered[normalizedIndex];
+      if (!item) return;
+      state.selectedId = item.id;
+      renderList();
+      renderDetail(item);
+      if (options.speak !== false) {
+        playItem(item, 'en');
+      }
+    }
+
+    function playItem(item, lang = 'en') {
+      if (!item) return;
+      state.selectedId = item.id;
+      renderList();
+      renderDetail(item);
+
+      const index = getFilteredIndexById(item.id);
+      speakText(lang === 'zh' ? item.cn : item.en, lang, () => {
+        if (lang === 'en' && state.autoPlay) {
+          const nextIndex = index + 1;
+          if (nextIndex < state.filtered.length) {
+            window.setTimeout(() => selectItemByIndex(nextIndex, { speak: true }), 180);
+          } else if (state.loop && state.filtered.length) {
+            window.setTimeout(() => selectItemByIndex(0, { speak: true }), 180);
+          }
+        }
+      });
+    }
+
+    function updateDetail(item) {
+      if (!item) {
+        els.detailCategory.textContent = '未选择';
+        els.detailEn.textContent = '请选择一句话开始练习。';
+        els.detailCn.textContent = '点击左侧句子即可朗读英文，也可以用上方按钮连续播放。';
+        els.detailTags.innerHTML = '';
+        return;
+      }
+
+      els.detailCategory.textContent = categoryName(item.category);
+      els.detailEn.textContent = item.en;
+      els.detailCn.textContent = item.cn;
+      els.detailTags.innerHTML = '';
+
+      const cat = document.createElement('span');
+      cat.className = 'badge';
+      cat.textContent = categoryName(item.category);
+      els.detailTags.appendChild(cat);
+
+      item.tags.forEach((tag) => {
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.textContent = tag;
+        els.detailTags.appendChild(span);
+      });
+    }
+
+    function renderDetail(item) {
+      updateDetail(item);
+    }
+
+    function renderList() {
+      const frag = document.createDocumentFragment();
+
+      if (!state.filtered.length) {
+        const empty = document.createElement('div');
+        empty.className = 'empty';
+        empty.innerHTML = '没有匹配结果。<br>换一个关键词，或者切到其他分类。';
+        frag.appendChild(empty);
+      } else {
+        state.filtered.forEach((item, index) => {
+          const card = document.createElement('article');
+          card.className = 'card';
+          card.dataset.id = item.id;
+          if (item.id === state.selectedId) card.classList.add('active');
+
+          const tagHtml = item.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+
+          card.innerHTML = `
+            <div class="card-head">
+              <div class="card-index">${String(index + 1).padStart(2, '0')} / ${state.filtered.length}</div>
+              <div class="card-actions">
+                <button class="mini-btn" data-action="play" title="朗读英文" aria-label="朗读英文">${iconPlay()}</button>
+                <button class="mini-btn" data-action="copy" title="复制内容" aria-label="复制内容">${iconCopy()}</button>
+              </div>
+            </div>
+            <div class="card-en">${escapeHtml(item.en)}</div>
+            <div class="card-cn">${escapeHtml(item.cn)}</div>
+            <div class="card-meta">
+              <span class="badge">${escapeHtml(categoryName(item.category))}</span>
+              ${tagHtml}
+            </div>
+          `;
+          frag.appendChild(card);
+        });
+      }
+
+      els.sentenceList.innerHTML = '';
+      els.sentenceList.appendChild(frag);
+      updateCounters();
+    }
+
+    function applyFilters(preserveSelection = true) {
+      const query = normalize(state.search);
+
+      state.filtered = state.items.filter((item) => {
+        const inCategory = state.activeCategory === 'all' || item.category === state.activeCategory;
+        if (!inCategory) return false;
+        if (!query) return true;
+        const haystack = [
+          item.en,
+          item.cn,
+          item.category,
+          categoryName(item.category),
+          ...(item.tags || [])
+        ].map(normalize).join(' ');
+        return haystack.includes(query);
+      });
+
+      if (!state.filtered.length) {
+        state.selectedId = null;
+      } else if (!preserveSelection || !state.filtered.some((item) => item.id === state.selectedId)) {
+        state.selectedId = state.filtered[0].id;
+      }
+
+      renderList();
+      renderDetail(state.filtered.find((item) => item.id === state.selectedId) || null);
+
+      if (state.filtered.length) {
+        setMessage(`已筛选出 ${state.filtered.length} 条句子。点击句子即可朗读。`, 'success');
+      } else {
+        setMessage('没有找到匹配结果。可以尝试清空搜索或切换分类。', 'warn');
+      }
+    }
+
+    function syncCategoryActive() {
+      [...els.categoryBar.querySelectorAll('.chip')].forEach((chip) => {
+        chip.classList.toggle('active', chip.dataset.category === state.activeCategory);
+      });
+    }
+
+    function updateToggleLabels() {
+      els.autoBtn.textContent = state.autoPlay ? '自动播放中' : '自动播放';
+      els.loopBtn.textContent = state.loop ? '循环中' : '循环';
+      updatePlayButton();
+    }
+
+    function stopSpeech() {
+      speechSynthesis.cancel();
+      state.speaking = false;
+      state.paused = false;
+      updatePlayButton();
+      updateCounters();
+    }
+
+    function copyItem(item) {
+      if (!item) return;
+      const text = `${item.en}\n${item.cn}\n[${categoryName(item.category)}] ${item.tags.join(', ')}`;
+      navigator.clipboard.writeText(text).then(() => {
+        setMessage('已复制到剪贴板。', 'success');
+      }).catch(() => {
+        setMessage('复制失败，浏览器可能限制了剪贴板访问。', 'warn');
+      });
+    }
+
+    function bindEvents() {
+      els.searchInput.addEventListener('input', (event) => {
+        state.search = event.target.value.trim();
+        applyFilters(true);
+      });
+
+      els.categoryBar.addEventListener('click', (event) => {
+        const btn = event.target.closest('[data-category]');
+        if (!btn) return;
+        state.activeCategory = btn.dataset.category;
+        syncCategoryActive();
+        applyFilters(true);
+      });
+
+      els.sentenceList.addEventListener('click', (event) => {
+        const card = event.target.closest('.card');
+        if (!card) return;
+        const item = state.filtered.find((entry) => entry.id === card.dataset.id);
+        if (!item) return;
+
+        const action = event.target.closest('[data-action]');
+        if (action) {
+          if (action.dataset.action === 'play') {
+            playItem(item, 'en');
+            return;
+          }
+          if (action.dataset.action === 'copy') {
+            copyItem(item);
+            return;
+          }
+        }
+
+        playItem(item, 'en');
+      });
+
+      els.prevBtn.addEventListener('click', () => {
+        if (!state.filtered.length) return;
+        const index = getFilteredIndexById(state.selectedId);
+        selectItemByIndex(index - 1, { speak: true });
+      });
+
+      els.nextBtn.addEventListener('click', () => {
+        if (!state.filtered.length) return;
+        const index = getFilteredIndexById(state.selectedId);
+        selectItemByIndex(index + 1, { speak: true });
+      });
+
+      els.playBtn.addEventListener('click', () => {
+        if (!state.filtered.length) return;
+
+        if (state.speaking && !state.paused) {
+          speechSynthesis.pause();
+          state.paused = true;
+          updatePlayButton();
+          updateCounters();
+          return;
+        }
+
+        if (state.paused) {
+          speechSynthesis.resume();
+          state.paused = false;
+          updatePlayButton();
+          updateCounters();
+          return;
+        }
+
+        const current = state.filtered.find((item) => item.id === state.selectedId) || state.filtered[0];
+        playItem(current, 'en');
+      });
+
+      els.autoBtn.addEventListener('click', () => {
+        state.autoPlay = !state.autoPlay;
+        updateToggleLabels();
+        setMessage(state.autoPlay ? '已开启自动播放。' : '已关闭自动播放。', 'success');
+      });
+
+      els.loopBtn.addEventListener('click', () => {
+        state.loop = !state.loop;
+        updateToggleLabels();
+        setMessage(state.loop ? '已开启循环。' : '已关闭循环。', 'success');
+      });
+
+      els.voiceSelect.addEventListener('change', (event) => {
+        state.voiceName = event.target.value;
+        setMessage(state.voiceName ? `已切换语音：${state.voiceName}` : '已切换为系统默认语音。', 'success');
+      });
+
+      els.rateRange.addEventListener('input', (event) => {
+        state.rate = Number(event.target.value);
+        els.rateValue.textContent = state.rate.toFixed(2);
+      });
+
+      els.volumeRange.addEventListener('input', (event) => {
+        state.volume = Number(event.target.value);
+        els.volumeValue.textContent = state.volume.toFixed(2);
+      });
+
+      els.reloadBtn.addEventListener('click', () => {
+        loadDataFromUrl();
+      });
+
+      els.loadJsonBtn.addEventListener('click', () => {
+        els.jsonFileInput.click();
+      });
+
+      els.jsonFileInput.addEventListener('change', async (event) => {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+        try {
+          const text = await file.text();
+          const parsed = JSON.parse(text);
+          ingestData(parsed);
+          setMessage(`已从 ${file.name} 导入数据。`, 'success');
+        } catch (error) {
+          console.error(error);
+          setMessage('导入失败，JSON 格式可能有问题。', 'error');
+        } finally {
+          event.target.value = '';
+        }
+      });
+
+      els.detailPlayEnBtn.addEventListener('click', () => {
+        const item = state.filtered.find((entry) => entry.id === state.selectedId);
+        if (item) playItem(item, 'en');
+      });
+
+      els.detailPlayCnBtn.addEventListener('click', () => {
+        const item = state.filtered.find((entry) => entry.id === state.selectedId);
+        if (item) playItem(item, 'zh');
+      });
+
+      els.detailCopyBtn.addEventListener('click', () => {
+        const item = state.filtered.find((entry) => entry.id === state.selectedId);
+        if (item) copyItem(item);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === '/' && document.activeElement !== els.searchInput) {
+          event.preventDefault();
+          els.searchInput.focus();
+          return;
+        }
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          els.prevBtn.click();
+          return;
+        }
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          els.nextBtn.click();
+          return;
+        }
+        if (event.key === ' ' && document.activeElement !== els.searchInput) {
+          event.preventDefault();
+          els.playBtn.click();
+        }
+      });
+
+      speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', renderVoiceOptions);
+    }
+
+    function ingestData(data) {
+      if (!data || !Array.isArray(data.items)) {
+        throw new Error('Invalid JSON data');
+      }
+
+      state.data = data;
+      state.categories = Array.isArray(data.categories) ? data.categories : [];
+      state.items = data.items.slice();
+      state.filtered = state.items.slice();
+
+      populateCategoryBar();
+      syncCategoryActive();
+      updateCounters();
+      renderVoiceOptions();
+      applyFilters(false);
+
+      if (data.meta && data.meta.title) {
+        document.title = data.meta.title;
+      }
+    }
+
+    async function loadDataFromUrl() {
+      const embedded = readEmbeddedData();
+      if (embedded) {
+        ingestData(embedded);
+        setMessage('已加载内嵌数据。', 'success');
+      } else {
+        setMessage('正在从 JSON 加载数据...', 'info');
+      }
+      try {
+        const response = await fetch(DATA_URL, { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const data = await response.json();
+        ingestData(data);
+        setMessage('数据加载完成。点击句子即可朗读。', 'success');
+      } catch (error) {
+        console.error(error);
+        if (!embedded) {
+          setMessage('无法直接读取 JSON。可以点“导入 JSON”手动加载，或通过本地服务器打开页面。', 'warn');
+          if (!state.data) {
+            els.sentenceList.innerHTML = '<div class="empty">页面还没有载入数据。请点“导入 JSON”，或者通过本地服务器打开此 HTML。</div>';
+          }
+        }
+      }
+    }
+
+    function init() {
+      cacheElements();
+      bindEvents();
+      updatePlayButton();
+      els.rateValue.textContent = Number(els.rateRange.value).toFixed(2);
+      els.volumeValue.textContent = Number(els.volumeRange.value).toFixed(2);
+      state.rate = Number(els.rateRange.value);
+      state.volume = Number(els.volumeRange.value);
+      renderVoiceOptions();
+      loadDataFromUrl();
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
