@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>英语语块发音库</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">TXT -> JSON -> Speech</p>
+          <h1>英语语块发音库</h1>
+          <p class="hero-text">
+            数据来自当前目录下的 `txt` 文件。点击任意词条即可用浏览器原生语音朗读。
+          </p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-label">文件数</span>
+            <strong id="source-count">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">词条数</span>
+            <strong id="item-count">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <section class="panel">
+            <h2>文件目录</h2>
+            <div id="source-list" class="source-list"></div>
+          </section>
+        </aside>
+
+        <section class="content">
+          <section class="panel controls">
+            <div class="control-row">
+              <label class="field">
+                <span>搜索词条</span>
+                <input id="search-input" type="search" placeholder="输入英文或中文备注" />
+              </label>
+              <label class="field">
+                <span>发音音色</span>
+                <select id="voice-select"></select>
+              </label>
+            </div>
+            <div class="control-row compact">
+              <label class="field">
+                <span>语速</span>
+                <input id="rate-input" type="range" min="0.7" max="1.2" step="0.05" value="0.95" />
+              </label>
+              <button id="stop-button" class="ghost-button" type="button">停止朗读</button>
+            </div>
+            <p id="status-text" class="status-text">准备就绪</p>
+          </section>
+
+          <section id="section-container" class="section-container"></section>
+        </section>
+      </main>
+    </div>
+
+    <script src="./phrases.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>
