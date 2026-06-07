@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英语表达库</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-kicker">TXT → JSON → Web</div>
+        <h1>英语表达库</h1>
+        <p>把本地词块、句型和搭配整理成可搜索的网页。</p>
+      </div>
+
+      <div class="search-panel">
+        <label for="search">搜索</label>
+        <input id="search" type="search" placeholder="输入英文、中文、主题都可以">
+        <button id="clearSearch" type="button">清空</button>
+      </div>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="category-header">
+        <span>分类</span>
+        <button id="showAll" type="button" class="ghost">全部</button>
+      </div>
+      <nav id="categories" class="categories"></nav>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">本地静态页面</p>
+          <h2 id="pageTitle">浏览全部内容</h2>
+          <p id="pageSubtitle">点击左侧分类，或者直接搜索短语。</p>
+        </div>
+        <div class="hero-card" id="heroCard"></div>
+      </section>
+
+      <section class="toolbar">
+        <div id="activeFilter" class="active-filter"></div>
+        <div id="matchInfo" class="match-info"></div>
+      </section>
+
+      <section id="mainView" class="main-view"></section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
