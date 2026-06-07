@@ -9,6 +9,11 @@ const state = {
   file: 'all',
 };
 
+const speech = {
+  enabled: typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window,
+  voice: null,
+};
+
 const els = {
   stats: document.getElementById('stats'),
   categories: document.getElementById('categories'),
@@ -49,6 +54,28 @@ function escapeHtml(value) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
+}
+
+function getSpeechRate(text) {
+  if (!text) return 0.95;
+  const hasPunctuation = /[,.!?;:]/.test(text);
+  return hasPunctuation ? 0.92 : 0.98;
+}
+
+function speak(text) {
+  if (!speech.enabled || !text) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = getSpeechRate(text);
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  const voices = window.speechSynthesis.getVoices();
+  const preferred = voices.find((voice) => /en[-_]?US/i.test(voice.lang) || /English/i.test(voice.name));
+  if (preferred) utterance.voice = preferred;
+
+  window.speechSynthesis.speak(utterance);
 }
 
 function renderStats() {
@@ -149,8 +176,13 @@ function renderHero() {
       <div class="big">${escapeHtml(sample.term)}</div>
       <div>${escapeHtml(sample.translation || '无释义')}</div>
       <div class="muted">${escapeHtml(hasQuery ? '匹配样例' : '示例短语')}</div>
+      <button class="speak-btn" type="button" data-speak="${escapeHtml(sample.term)}">点击朗读</button>
     `
     : `<div class="muted">没有可展示的内容。</div>`;
+
+  els.heroCard.querySelectorAll('[data-speak]').forEach((button) => {
+    button.addEventListener('click', () => speak(button.dataset.speak));
+  });
 }
 
 function renderToolbar() {
@@ -216,14 +248,15 @@ function renderSections(items) {
                 <div class="item-grid">
                   ${sectionItems
                     .map((item) => `
-                      <div class="item" title="点击可复制">
+                      <button class="item" type="button" data-speak="${escapeHtml(item.term)}" title="点击朗读英文">
                         <div class="term">${escapeHtml(item.term)}</div>
                         <div class="translation">${escapeHtml(item.translation || '—')}</div>
                         <div class="meta">
                           <span class="pill">${escapeHtml(fileMeta.label)}</span>
                           <span class="pill">${escapeHtml(item.sectionLabel)}</span>
+                          <span class="pill">${speech.enabled ? '点击朗读' : '浏览器不支持语音'}</span>
                         </div>
-                      </div>
+                      </button>
                     `)
                     .join('')}
                 </div>
@@ -236,6 +269,9 @@ function renderSections(items) {
     .join('');
 
   els.mainView.innerHTML = html || '<div class="empty">没有找到匹配内容。</div>';
+  els.mainView.querySelectorAll('[data-speak]').forEach((button) => {
+    button.addEventListener('click', () => speak(button.dataset.speak));
+  });
 }
 
 function renderEmpty() {
@@ -276,5 +312,12 @@ els.showAll.addEventListener('click', () => {
   state.file = 'all';
   render();
 });
+
+if (speech.enabled && typeof window.speechSynthesis !== 'undefined') {
+  window.speechSynthesis.onvoiceschanged = () => {
+    const voices = window.speechSynthesis.getVoices();
+    speech.voice = voices.find((voice) => /en[-_]?US/i.test(voice.lang) || /English/i.test(voice.name)) || null;
+  };
+}
 
 render();
