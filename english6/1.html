@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中英文句子提取朗读翻译工具</title>
+<style>
+  body {
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    padding: 20px;
+    background: #f7f8fa;
+    color: #222;
+  }
+
+  h2 { margin-bottom: 10px; }
+
+  textarea {
+    width: 100%;
+    height: 180px;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+  }
+
+  .toolbar { margin: 12px 0; }
+
+  button {
+    margin: 5px 5px 5px 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  button:hover { background: #1d4ed8; }
+  button.secondary { background: #64748b; }
+  button.secondary:hover { background: #475569; }
+  button.green { background: #16a34a; }
+  button.green:hover { background: #15803d; }
+  button.orange { background: #f59e0b; }
+  button.orange:hover { background: #d97706; }
+  button.small {
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 6px;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 10px 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  input[type="checkbox"] { transform: scale(1.1); }
+
+  .summary {
+    margin: 10px 0;
+    color: #555;
+    font-size: 14px;
+  }
+
+  .sentence {
+    background: white;
+    margin: 10px 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    line-height: 1.7;
+    white-space: pre-wrap;
+  }
+
+  .sentence:hover { background: #eef4ff; }
+  .sentence.zh { border-left-color: #16a34a; }
+  .sentence.mixed { border-left-color: #f59e0b; }
+  .sentence.other { border-left-color: #94a3b8; }
+
+  .sentence-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .sentence-text {
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+    vertical-align: middle;
+  }
+
+  .tag.en { background: #2563eb; }
+  .tag.zh { background: #16a34a; }
+  .tag.mixed { background: #f59e0b; }
+  .tag.other { background: #94a3b8; }
+
+  .translation {
+    margin-top: 8px;
+    padding: 9px 10px;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    color: #334155;
+    font-size: 15px;
+  }
+
+  .translation.loading { color: #ca8a04; }
+  .translation.error { color: #dc2626; }
+
+  .hint {
+    margin-top: 8px;
+    color: #666;
+    font-size: 13px;
+  }
+
+  .api-box {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .api-box input {
+    width: min(620px, 100%);
+    padding: 7px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+
+<h2>中英文句子提取 + 筛选 + 朗读 + 翻译工具</h2>
+
+<textarea id="inputText" placeholder="请粘贴一段文字，例如：\nI think that software testing is important. 软件测试可以提高质量。This module supports OBC and DCDC testing."></textarea>
+
+<div class="toolbar">
+  <button onclick="extractSentences()">提取句子</button>
+  <button class="secondary" onclick="filterSentences('all')">全部句子</button>
+  <button class="secondary" onclick="filterSentences('en')">只显示英文句子</button>
+  <button class="secondary" onclick="filterSentences('zh')">只显示中文句子</button>
+  <button class="secondary" onclick="filterSentences('mixed')">只显示中英混合句子</button>
+  <button class="green" onclick="translateVisibleSentences()">翻译当前显示</button>
+  <button class="orange" onclick="copyVisibleText()">复制当前显示</button>
+  <button class="secondary" onclick="clearAll()">清空</button>
+</div>
+
+<div class="toolbar">
+  <label><input type="checkbox" id="autoTranslate" /> 提取后自动翻译</label>
+  <label><input type="checkbox" id="showTranslation" checked onchange="renderCurrentFilter()" /> 显示翻译</label>
+</div>
+
+<div class="api-box">
+  <div class="hint">
+    翻译说明：默认使用 MyMemory 免费在线翻译接口。若网络、CORS 或接口限流导致失败，可点击每句的“打开在线翻译”。
+  </div>
+  <div style="margin-top:8px;">
+    <span style="font-size:13px;color:#555;">翻译接口：</span>
+    <input id="apiBase" value="https://api.mymemory.translated.net/get" />
+  </div>
+</div>
+
+<div class="hint">
+  说明：现在按句子保留，不再拆成单词。点击英文/中文/中英混合句子可以朗读；英文句子默认翻译成中文，中文句子默认翻译成英文，中英混合句子默认翻译成中文。
+</div>
+
+<div id="summary" class="summary"></div>
+<div id="output"></div>
+
+<script>
+let allSentences = [];
+let currentFilter = 'all';
+let translationCache = new Map();
+
+function extractSentences() {
+  const text = document.getElementById("inputText").value.trim();
+
+  if (!text) {
+    allSentences = [];
+    renderSentences([]);
+    document.getElementById("summary").innerText = "请先粘贴文本。";
+    return;
+  }
+
+  const normalized = text
+    .replace(/\r\n/g, "\n")
+    .replace(/[ \t]+/g, " ")
+    .trim();
+
+  // 按句子切分：支持中文句号、问号、感叹号；英文句号、问号、感叹号；分号；换行
+  // 注意：这里会尽量保留标点在句子末尾。
+  const sentenceRegex = /[^。！？!?\.；;\n]+[。！？!?\.；;]?/g;
+  const matches = normalized.match(sentenceRegex) || [];
+
+  allSentences = matches
+    .map(s => s.trim())
+    .filter(s => s.length > 0)
+    .map((s, idx) => ({
+      id: Date.now() + "_" + idx,
+      text: s,
+      type: detectSentenceType(s),
+      translation: "",
+      translationStatus: "idle"
+    }));
+
+  filterSentences(currentFilter);
+
+  if (document.getElementById("autoTranslate").checked) {
+    translateVisibleSentences();
+  }
+}
+
+function detectSentenceType(sentence) {
+  const hasEnglish = /[a-zA-Z]/.test(sentence);
+  const hasChinese = /[\u4e00-\u9fa5]/.test(sentence);
+
+  if (hasEnglish && hasChinese) return "mixed";
+  if (hasEnglish) return "en";
+  if (hasChinese) return "zh";
+  return "other";
+}
+
+function getTargetLang(type) {
+  if (type === "zh") return "en";
+  if (type === "en") return "zh-CN";
+  if (type === "mixed") return "zh-CN";
+  return "zh-CN";
+}
+
+function getSourceLang(type) {
+  if (type === "zh") return "zh-CN";
+  if (type === "en") return "en";
+  if (type === "mixed") return "auto";
+  return "auto";
+}
+
+function getLangPair(type) {
+  const source = getSourceLang(type);
+  const target = getTargetLang(type);
+  // MyMemory 对 auto 支持不总是稳定，混合句这里用 en|zh-CN 更适合英语学习场景。
+  if (source === "auto" && target === "zh-CN") return "en|zh-CN";
+  return `${source}|${target}`;
+}
+
+function filterSentences(type) {
+  currentFilter = type;
+  renderCurrentFilter();
+}
+
+function getCurrentList() {
+  if (currentFilter === "all") return allSentences;
+  return allSentences.filter(item => item.type === currentFilter);
+}
+
+function renderCurrentFilter() {
+  renderSentences(getCurrentList());
+}
+
+function renderSentences(list) {
+  const output = document.getElementById("output");
+  const summary = document.getElementById("summary");
+  const showTranslation = document.getElementById("showTranslation").checked;
+  output.innerHTML = "";
+
+  const enCount = allSentences.filter(i => i.type === "en").length;
+  const zhCount = allSentences.filter(i => i.type === "zh").length;
+  const mixedCount = allSentences.filter(i => i.type === "mixed").length;
+
+  summary.innerText = `共提取 ${allSentences.length} 个句子；英文 ${enCount} 个，中文 ${zhCount} 个，中英混合 ${mixedCount} 个；当前显示 ${list.length} 个。`;
+
+  list.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.className = `sentence ${item.type}`;
+
+    const header = document.createElement("div");
+    header.className = "sentence-header";
+
+    const tag = document.createElement("span");
+    tag.className = `tag ${item.type}`;
+    tag.innerText = getTypeName(item.type);
+
+    const textSpan = document.createElement("span");
+    textSpan.className = "sentence-text";
+    textSpan.innerText = `${index + 1}. ${item.text}`;
+    textSpan.title = "点击朗读";
+    textSpan.onclick = () => speak(item.text, item.type);
+
+    const translateBtn = document.createElement("button");
+    translateBtn.className = "small green";
+    translateBtn.innerText = "翻译";
+    translateBtn.onclick = () => translateOneSentence(item.id);
+
+    const openBtn = document.createElement("button");
+    openBtn.className = "small secondary";
+    openBtn.innerText = "打开在线翻译";
+    openBtn.onclick = () => openOnlineTranslator(item.text, item.type);
+
+    header.appendChild(tag);
+    header.appendChild(textSpan);
+    header.appendChild(translateBtn);
+    header.appendChild(openBtn);
+    div.appendChild(header);
+
+    if (showTranslation) {
+      const translationDiv = document.createElement("div");
+      translationDiv.className = "translation";
+
+      if (item.translationStatus === "loading") {
+        translationDiv.classList.add("loading");
+        translationDiv.innerText = "正在翻译...";
+      } else if (item.translationStatus === "error") {
+        translationDiv.classList.add("error");
+        translationDiv.innerText = item.translation || "翻译失败，请检查网络，或点击“打开在线翻译”。";
+      } else if (item.translation) {
+        translationDiv.innerText = "译文：" + item.translation;
+      } else {
+        translationDiv.innerText = "译文：未翻译";
+      }
+
+      div.appendChild(translationDiv);
+    }
+
+    output.appendChild(div);
+  });
+}
+
+function getTypeName(type) {
+  if (type === "en") return "英文";
+  if (type === "zh") return "中文";
+  if (type === "mixed") return "中英混合";
+  return "其他";
+}
+
+function speak(text, type) {
+  window.speechSynthesis.cancel();
+
+  const msg = new SpeechSynthesisUtterance(text);
+  msg.lang = type === "zh" ? "zh-CN" : "en-US";
+  msg.rate = 0.9;
+  msg.pitch = 1;
+
+  window.speechSynthesis.speak(msg);
+}
+
+async function translateVisibleSentences() {
+  const list = getCurrentList();
+  for (const item of list) {
+    await translateItem(item);
+  }
+  renderCurrentFilter();
+}
+
+async function translateOneSentence(id) {
+  const item = allSentences.find(i => i.id === id);
+  if (!item) return;
+  await translateItem(item);
+  renderCurrentFilter();
+}
+
+async function translateItem(item) {
+  if (!item.text || item.type === "other") return;
+
+  const langpair = getLangPair(item.type);
+  const cacheKey = `${langpair}::${item.text}`;
+
+  if (translationCache.has(cacheKey)) {
+    item.translation = translationCache.get(cacheKey);
+    item.translationStatus = "done";
+    return;
+  }
+
+  item.translationStatus = "loading";
+  renderCurrentFilter();
+
+  try {
+    const apiBase = document.getElementById("apiBase").value.trim() || "https://api.mymemory.translated.net/get";
+    const url = `${apiBase}?q=${encodeURIComponent(item.text)}&langpair=${encodeURIComponent(langpair)}`;
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("HTTP " + response.status);
+
+    const data = await response.json();
+    const translated = data && data.responseData && data.responseData.translatedText
+      ? data.responseData.translatedText
+      : "";
+
+    if (!translated) throw new Error("接口未返回译文");
+
+    item.translation = decodeHtml(translated);
+    item.translationStatus = "done";
+    translationCache.set(cacheKey, item.translation);
+  } catch (err) {
+    item.translationStatus = "error";
+    item.translation = "翻译失败：" + err.message + "。可点击“打开在线翻译”。";
+  }
+}
+
+function decodeHtml(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
+
+function openOnlineTranslator(text, type) {
+  const target = getTargetLang(type);
+  const source = type === "zh" ? "zh-Hans" : "en";
+  const to = target === "en" ? "en" : "zh-Hans";
+  const url = `https://www.bing.com/translator?from=${source}&to=${to}&text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+}
+
+async function copyVisibleText() {
+  const list = getCurrentList();
+  const showTranslation = document.getElementById("showTranslation").checked;
+
+  const text = list.map((item, idx) => {
+    let line = `${idx + 1}. ${item.text}`;
+    if (showTranslation && item.translation) {
+      line += `\n译文：${item.translation}`;
+    }
+    return line;
+  }).join("\n\n");
+
+  try {
+    await navigator.clipboard.writeText(text);
+    alert("已复制当前显示内容。");
+  } catch (e) {
+    alert("复制失败，请手动选择复制。" + e.message);
+  }
+}
+
+function clearAll() {
+  document.getElementById("inputText").value = "";
+  allSentences = [];
+  translationCache.clear();
+  renderSentences([]);
+  document.getElementById("summary").innerText = "已清空。";
+}
+</script>
+
+</body>
+</html>
