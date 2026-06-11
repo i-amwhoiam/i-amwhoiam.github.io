@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中英文句子提取朗读工具</title>
+<style>
+  body {
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    padding: 20px;
+    background: #f7f8fa;
+    color: #222;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 180px;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+  }
+
+  .toolbar {
+    margin: 12px 0;
+  }
+
+  button {
+    margin: 5px 5px 5px 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  button:hover {
+    background: #1d4ed8;
+  }
+
+  button.secondary {
+    background: #64748b;
+  }
+
+  button.secondary:hover {
+    background: #475569;
+  }
+
+  .summary {
+    margin: 10px 0;
+    color: #555;
+    font-size: 14px;
+  }
+
+  .sentence {
+    background: white;
+    margin: 10px 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    line-height: 1.7;
+    cursor: pointer;
+    white-space: pre-wrap;
+  }
+
+  .sentence:hover {
+    background: #eef4ff;
+  }
+
+  .sentence.zh {
+    border-left-color: #16a34a;
+  }
+
+  .sentence.mixed {
+    border-left-color: #f59e0b;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+    vertical-align: middle;
+  }
+
+  .tag.en { background: #2563eb; }
+  .tag.zh { background: #16a34a; }
+  .tag.mixed { background: #f59e0b; }
+
+  .hint {
+    margin-top: 8px;
+    color: #666;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<h2>中英文句子提取 + 筛选 + 朗读工具</h2>
+
+<textarea id="inputText" placeholder="请粘贴一段文字，例如：\nI think that software testing is important. 软件测试可以提高质量。This module supports OBC and DCDC testing."></textarea>
+
+<div class="toolbar">
+  <button onclick="extractSentences()">提取句子</button>
+  <button class="secondary" onclick="filterSentences('all')">全部句子</button>
+  <button class="secondary" onclick="filterSentences('en')">只显示英文句子</button>
+  <button class="secondary" onclick="filterSentences('zh')">只显示中文句子</button>
+  <button class="secondary" onclick="filterSentences('mixed')">只显示中英混合句子</button>
+  <button class="secondary" onclick="clearAll()">清空</button>
+</div>
+
+<div class="hint">
+  说明：现在不再拆成单词，而是尽量按句子保留。点击英文或中英混合句子可以朗读。
+</div>
+
+<div id="summary" class="summary"></div>
+<div id="output"></div>
+
+<script>
+let allSentences = [];
+let currentFilter = 'all';
+
+function extractSentences() {
+  const text = document.getElementById("inputText").value.trim();
+
+  if (!text) {
+    allSentences = [];
+    renderSentences([]);
+    document.getElementById("summary").innerText = "请先粘贴文本。";
+    return;
+  }
+
+  // 统一换行和空格
+  const normalized = text
+    .replace(/\r\n/g, "\n")
+    .replace(/[ \t]+/g, " ")
+    .trim();
+
+  // 按句子切分：支持中文句号、问号、感叹号；英文句号、问号、感叹号；分号；换行
+  // 保留标点在句子末尾
+  const sentenceRegex = /[^。！？!?\.；;\n]+[。！？!?\.；;]?/g;
+  const matches = normalized.match(sentenceRegex) || [];
+
+  allSentences = matches
+    .map(s => s.trim())
+    .filter(s => s.length > 0)
+    .map(s => ({
+      text: s,
+      type: detectSentenceType(s)
+    }));
+
+  filterSentences(currentFilter);
+}
+
+function detectSentenceType(sentence) {
+  const hasEnglish = /[a-zA-Z]/.test(sentence);
+  const hasChinese = /[\u4e00-\u9fa5]/.test(sentence);
+
+  if (hasEnglish && hasChinese) return "mixed";
+  if (hasEnglish) return "en";
+  if (hasChinese) return "zh";
+  return "other";
+}
+
+function filterSentences(type) {
+  currentFilter = type;
+
+  let list = allSentences;
+
+  if (type !== "all") {
+    list = allSentences.filter(item => item.type === type);
+  }
+
+  renderSentences(list);
+}
+
+function renderSentences(list) {
+  const output = document.getElementById("output");
+  const summary = document.getElementById("summary");
+  output.innerHTML = "";
+
+  const enCount = allSentences.filter(i => i.type === "en").length;
+  const zhCount = allSentences.filter(i => i.type === "zh").length;
+  const mixedCount = allSentences.filter(i => i.type === "mixed").length;
+
+  summary.innerText = `共提取 ${allSentences.length} 个句子；英文 ${enCount} 个，中文 ${zhCount} 个，中英混合 ${mixedCount} 个；当前显示 ${list.length} 个。`;
+
+  list.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.className = `sentence ${item.type}`;
+
+    const tag = document.createElement("span");
+    tag.className = `tag ${item.type}`;
+    tag.innerText = getTypeName(item.type);
+
+    const textSpan = document.createElement("span");
+    textSpan.innerText = `${index + 1}. ${item.text}`;
+
+    div.appendChild(tag);
+    div.appendChild(textSpan);
+
+    // 英文和中英混合句子支持朗读
+    if (item.type === "en" || item.type === "mixed") {
+      div.title = "点击朗读";
+      div.onclick = () => speak(item.text, item.type);
+    } else {
+      div.title = "中文句子暂不朗读";
+    }
+
+    output.appendChild(div);
+  });
+}
+
+function getTypeName(type) {
+  if (type === "en") return "英文";
+  if (type === "zh") return "中文";
+  if (type === "mixed") return "中英混合";
+  return "其他";
+}
+
+function speak(text, type) {
+  window.speechSynthesis.cancel();
+
+  const msg = new SpeechSynthesisUtterance(text);
+
+  // 混合句默认按英文朗读，英文部分效果更好
+  msg.lang = type === "zh" ? "zh-CN" : "en-US";
+  msg.rate = 0.9;
+  msg.pitch = 1;
+
+  window.speechSynthesis.speak(msg);
+}
+
+function clearAll() {
+  document.getElementById("inputText").value = "";
+  allSentences = [];
+  renderSentences([]);
+  document.getElementById("summary").innerText = "已清空。";
+}
+</script>
+
+</body>
+</html>
