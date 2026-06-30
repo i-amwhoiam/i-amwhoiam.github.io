@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中英句子提取朗读翻译工具</title>
+<style>
+  body {
+    font-family: Arial, "Microsoft YaHei", sans-serif;
+    padding: 20px;
+    background: #f7f8fa;
+    color: #222;
+  }
+
+  h2, h3 {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 180px;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+  }
+
+  .toolbar {
+    margin: 12px 0;
+  }
+
+  button {
+    margin: 5px 5px 5px 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  button:hover { background: #1d4ed8; }
+  button.secondary { background: #64748b; }
+  button.secondary:hover { background: #475569; }
+  button.green { background: #16a34a; }
+  button.green:hover { background: #15803d; }
+  button.orange { background: #f59e0b; }
+  button.orange:hover { background: #d97706; }
+  button.small {
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 6px;
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 10px 5px 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  input[type="checkbox"] { transform: scale(1.1); }
+
+  .summary {
+    margin: 10px 0;
+    color: #555;
+    font-size: 14px;
+    white-space: pre-wrap;
+  }
+
+  .sentence {
+    background: white;
+    margin: 10px 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    line-height: 1.7;
+    white-space: pre-wrap;
+  }
+
+  .sentence:hover { background: #eef4ff; }
+  .sentence.zh { border-left-color: #16a34a; }
+  .sentence.mixed { border-left-color: #f59e0b; }
+  .sentence.other { border-left-color: #94a3b8; }
+
+  .sentence-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .sentence-text {
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+    vertical-align: middle;
+  }
+
+  .tag.en { background: #2563eb; }
+  .tag.zh { background: #16a34a; }
+  .tag.mixed { background: #f59e0b; }
+  .tag.other { background: #94a3b8; }
+
+  .translation {
+    margin-top: 8px;
+    padding: 9px 10px;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    color: #334155;
+    font-size: 15px;
+  }
+
+  .translation.loading { color: #ca8a04; }
+  .translation.error { color: #dc2626; }
+
+  .hint {
+    margin-top: 8px;
+    color: #666;
+    font-size: 13px;
+  }
+
+  .api-box,
+  .test-panel {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .api-box input {
+    width: min(620px, 100%);
+    padding: 7px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+  }
+
+  .test-card,
+  .result-panel {
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+  }
+
+  .test-question {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .test-meta {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .choice-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .choice-btn {
+    width: 100%;
+    text-align: left;
+    background: #e2e8f0;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+  }
+
+  .choice-btn:hover { background: #cbd5e1; }
+  .choice-btn.correct {
+    background: #16a34a;
+    color: white;
+    border-color: #16a34a;
+  }
+  .choice-btn.wrong {
+    background: #dc2626;
+    color: white;
+    border-color: #dc2626;
+  }
+
+  .answer-box {
+    width: 100%;
+    min-height: 88px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .test-result {
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #eef4ff;
+    color: #1e3a8a;
+    white-space: pre-wrap;
+  }
+
+  .result-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .result-item {
+    background: white;
+    border: 1px solid #dbeafe;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    white-space: pre-wrap;
+  }
+
+  .result-item.correct {
+    border-left-color: #16a34a;
+  }
+
+  .result-item.wrong {
+    border-left-color: #dc2626;
+  }
+
+  .muted {
+    color: #64748b;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<h2>中英文句子提取 + 筛选 + 朗读 + 翻译 + 听力测试</h2>
+
+<textarea id="inputText" placeholder="请粘贴一段文本，例如：
+I think that software testing is important. 软件测试可以提高质量。
+This module supports OBC and DCDC testing."></textarea>
+
+<div class="toolbar">
+  <button onclick="extractSentences()">提取句子</button>
+  <button class="secondary" onclick="filterSentences('all')">全部句子</button>
+  <button class="secondary" onclick="filterSentences('en')">只显示英文句子</button>
+  <button class="secondary" onclick="filterSentences('zh')">只显示中文句子</button>
+  <button class="secondary" onclick="filterSentences('mixed')">只显示中英混合句子</button>
+  <button class="green" onclick="translateVisibleSentences()">翻译当前显示</button>
+  <button class="orange" onclick="copyVisibleText()">复制当前显示</button>
+  <button class="secondary" onclick="clearAll()">清空</button>
+</div>
+
+<div class="toolbar">
+  <label><input type="checkbox" id="autoTranslate" /> 提取后自动翻译</label>
+  <label><input type="checkbox" id="showTranslation" checked onchange="renderCurrentFilter()" /> 显示翻译</label>
+</div>
+
+<div class="api-box">
+  <div class="hint">默认使用 MyMemory 免费在线翻译接口。若失败，可点每句的“打开在线翻译”。</div>
+  <div style="margin-top:8px;">
+    <span style="font-size:13px;color:#555;">翻译接口：</span>
+    <input id="apiBase" value="https://api.mymemory.translated.net/get" />
+  </div>
+</div>
+
+<div class="hint">说明：按句子保留，不再拆成单词。点击句子可朗读；英文默认翻译成中文，中文默认翻译成英文，中英混合默认翻译成中文。</div>
+
+<div id="summary" class="summary"></div>
+<div id="output"></div>
+
+<div class="test-panel">
+  <h3 style="margin:0 0 8px;">听力测试</h3>
+  <div class="toolbar" style="margin-top:0;">
+    <button class="secondary" onclick="startListeningTest('choice')">开始选择题</button>
+    <button class="secondary" onclick="startListeningTest('dictation')">开始默写</button>
+    <button class="secondary" onclick="prevTestQuestion()">上一题</button>
+    <button class="secondary" onclick="nextTestQuestion()">下一题</button>
+    <button class="green" onclick="finishCurrentTest()">完成测试</button>
+    <button class="secondary" onclick="resetListeningTest()">退出测试</button>
+    <button class="orange" onclick="exportChoiceResults('txt')">导出选择题 TXT</button>
+    <button class="orange" onclick="exportChoiceResults('json')">导出选择题 JSON</button>
+    <button class="orange" onclick="exportDictationResults('txt')">导出默写对照 TXT</button>
+    <button class="orange" onclick="exportDictationResults('json')">导出默写对照 JSON</button>
+  </div>
+  <div class="toolbar" style="margin-top:0;">
+    <label><input type="checkbox" id="shuffleTest" checked /> 随机打乱题目</label>
+    <label><input type="checkbox" id="autoSpeakTest" checked /> 自动朗读题目</label>
+    <label><input type="checkbox" id="hideAnswerInDictation" checked /> 默写时隐藏原文</label>
+  </div>
+  <div id="testSummary" class="summary"></div>
+  <div id="testArea" class="test-card" style="display:none;"></div>
+  <div id="resultPanel" class="result-panel">
+    <div class="muted">这里会显示每题测试结果，并支持导出。</div>
+    <div id="resultStats" class="summary"></div>
+    <div id="resultList" class="result-list"></div>
+  </div>
+</div>
+
+<script>
+let allSentences = [];
+let currentFilter = "all";
+let translationCache = new Map();
+let savedResults = {
+  choice: [],
+  dictation: []
+};
+let listeningTest = {
+  mode: "",
+  questions: [],
+  index: 0,
+  score: 0,
+  answered: false,
+  results: [],
+  drafts: {},
+  startedAt: "",
+  finishedAt: ""
+};
+
+function extractSentences() {
+  const text = document.getElementById("inputText").value.trim();
+  if (!text) {
+    allSentences = [];
+    renderSentences([]);
+    document.getElementById("summary").innerText = "请先粘贴文本。";
+    resetListeningTest();
+    return;
+  }
+
+  const normalized = text.replace(/\r\n/g, "\n").replace(/[ \t]+/g, " ").trim();
+  const sentenceRegex = /[^。！？!?.\n]+[。！？!?]?/g;
+  const matches = normalized.match(sentenceRegex) || [];
+
+  allSentences = matches.map((s, idx) => ({
+    id: Date.now() + "_" + idx,
+    text: s.trim(),
+    type: detectSentenceType(s),
+    translation: "",
+    translationStatus: "idle"
+  })).filter(item => item.text);
+
+  filterSentences(currentFilter);
+  if (document.getElementById("autoTranslate").checked) {
+    translateVisibleSentences();
+  }
+}
+
+function detectSentenceType(sentence) {
+  const hasEnglish = /[a-zA-Z]/.test(sentence);
+  const hasChinese = /[\u4e00-\u9fa5]/.test(sentence);
+  if (hasEnglish && hasChinese) return "mixed";
+  if (hasEnglish) return "en";
+  if (hasChinese) return "zh";
+  return "other";
+}
+
+function getTargetLang(type) {
+  if (type === "zh") return "en";
+  return "zh-CN";
+}
+
+function getSourceLang(type) {
+  if (type === "zh") return "zh-CN";
+  if (type === "en") return "en";
+  return "auto";
+}
+
+function getLangPair(type) {
+  const source = getSourceLang(type);
+  const target = getTargetLang(type);
+  return source === "auto" && target === "zh-CN" ? "en|zh-CN" : `${source}|${target}`;
+}
+
+function filterSentences(type) {
+  currentFilter = type;
+  renderCurrentFilter();
+}
+
+function getCurrentList() {
+  return currentFilter === "all" ? allSentences : allSentences.filter(item => item.type === currentFilter);
+}
+
+function renderCurrentFilter() {
+  renderSentences(getCurrentList());
+}
+
+function renderSentences(list) {
+  const output = document.getElementById("output");
+  const summary = document.getElementById("summary");
+  const showTranslation = document.getElementById("showTranslation").checked;
+  output.innerHTML = "";
+
+  const enCount = allSentences.filter(i => i.type === "en").length;
+  const zhCount = allSentences.filter(i => i.type === "zh").length;
+  const mixedCount = allSentences.filter(i => i.type === "mixed").length;
+
+  summary.innerText = `共提取 ${allSentences.length} 个句子
+英文 ${enCount} 个，中文 ${zhCount} 个，中英混合 ${mixedCount} 个
+当前显示 ${list.length} 个`;
+
+  list.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.className = `sentence ${item.type}`;
+
+    const header = document.createElement("div");
+    header.className = "sentence-header";
+
+    const tag = document.createElement("span");
+    tag.className = `tag ${item.type}`;
+    tag.innerText = getTypeName(item.type);
+
+    const textSpan = document.createElement("span");
+    textSpan.className = "sentence-text";
+    textSpan.innerText = `${index + 1}. ${item.text}`;
+    textSpan.title = "点击朗读";
+    textSpan.onclick = () => speak(item.text, item.type);
+
+    const translateBtn = document.createElement("button");
+    translateBtn.className = "small green";
+    translateBtn.innerText = "翻译";
+    translateBtn.onclick = () => translateOneSentence(item.id);
+
+    const openBtn = document.createElement("button");
+    openBtn.className = "small secondary";
+    openBtn.innerText = "打开在线翻译";
+    openBtn.onclick = () => openOnlineTranslator(item.text, item.type);
+
+    header.appendChild(tag);
+    header.appendChild(textSpan);
+    header.appendChild(translateBtn);
+    header.appendChild(openBtn);
+    div.appendChild(header);
+
+    if (showTranslation) {
+      const translationDiv = document.createElement("div");
+      translationDiv.className = "translation";
+
+      if (item.translationStatus === "loading") {
+        translationDiv.classList.add("loading");
+        translationDiv.innerText = "正在翻译...";
+      } else if (item.translationStatus === "error") {
+        translationDiv.classList.add("error");
+        translationDiv.innerText = item.translation || "翻译失败，请检查网络或接口。";
+      } else if (item.translation) {
+        translationDiv.innerText = "译文：" + item.translation;
+      } else {
+        translationDiv.innerText = "译文：未翻译";
+      }
+
+      div.appendChild(translationDiv);
+    }
+
+    output.appendChild(div);
+  });
+}
+
+function getTypeName(type) {
+  if (type === "en") return "英文";
+  if (type === "zh") return "中文";
+  if (type === "mixed") return "中英混合";
+  return "其他";
+}
+
+function speak(text, type) {
+  window.speechSynthesis.cancel();
+  const msg = new SpeechSynthesisUtterance(text);
+  msg.lang = type === "zh" ? "zh-CN" : "en-US";
+  msg.rate = 0.9;
+  msg.pitch = 1;
+  window.speechSynthesis.speak(msg);
+}
+
+async function translateVisibleSentences() {
+  for (const item of getCurrentList()) {
+    await translateItem(item);
+  }
+  renderCurrentFilter();
+}
+
+async function translateOneSentence(id) {
+  const item = allSentences.find(i => i.id === id);
+  if (!item) return;
+  await translateItem(item);
+  renderCurrentFilter();
+}
+
+async function translateItem(item) {
+  if (!item.text || item.type === "other") return;
+
+  const langpair = getLangPair(item.type);
+  const cacheKey = `${langpair}::${item.text}`;
+
+  if (translationCache.has(cacheKey)) {
+    item.translation = translationCache.get(cacheKey);
+    item.translationStatus = "done";
+    return;
+  }
+
+  item.translationStatus = "loading";
+  renderCurrentFilter();
+
+  try {
+    const apiBase = document.getElementById("apiBase").value.trim() || "https://api.mymemory.translated.net/get";
+    const url = `${apiBase}?q=${encodeURIComponent(item.text)}&langpair=${encodeURIComponent(langpair)}`;
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("HTTP " + response.status);
+
+    const data = await response.json();
+    const translated = data && data.responseData && data.responseData.translatedText ? data.responseData.translatedText : "";
+    if (!translated) throw new Error("接口未返回译文");
+
+    item.translation = decodeHtml(translated);
+    item.translationStatus = "done";
+    translationCache.set(cacheKey, item.translation);
+  } catch (err) {
+    item.translationStatus = "error";
+    item.translation = "翻译失败：" + err.message;
+  }
+}
+
+function decodeHtml(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
+
+function openOnlineTranslator(text, type) {
+  const target = getTargetLang(type);
+  const source = type === "zh" ? "zh-Hans" : "en";
+  const to = target === "en" ? "en" : "zh-Hans";
+  window.open(`https://www.bing.com/translator?from=${source}&to=${to}&text=${encodeURIComponent(text)}`, "_blank");
+}
+
+async function copyVisibleText() {
+  const list = getCurrentList();
+  const showTranslation = document.getElementById("showTranslation").checked;
+  const text = list.map((item, idx) => {
+    let line = `${idx + 1}. ${item.text}`;
+    if (showTranslation && item.translation) line += `\n译文：${item.translation}`;
+    return line;
+  }).join("\n\n");
+
+  try {
+    await navigator.clipboard.writeText(text);
+    alert("已复制当前显示内容。");
+  } catch (e) {
+    alert("复制失败：" + e.message);
+  }
+}
+
+function clearAll() {
+  document.getElementById("inputText").value = "";
+  allSentences = [];
+  translationCache.clear();
+  savedResults = {
+    choice: [],
+    dictation: []
+  };
+  renderSentences([]);
+  document.getElementById("summary").innerText = "已清空。";
+  resetListeningTest();
+}
+
+function getTestPool() {
+  return allSentences.filter(item => item.type === "en" || item.type === "zh" || item.type === "mixed");
+}
+
+function shuffleArray(arr) {
+  const list = arr.slice();
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+  return list;
+}
+
+function startListeningTest(mode) {
+  const pool = getTestPool();
+  if (!pool.length) {
+    alert("请先提取句子，再开始测试。");
+    return;
+  }
+
+  const questions = document.getElementById("shuffleTest").checked ? shuffleArray(pool) : pool.slice();
+  listeningTest = {
+    mode,
+    questions,
+    index: 0,
+    score: 0,
+    answered: false,
+    results: [],
+    drafts: {},
+    startedAt: new Date().toISOString(),
+    finishedAt: ""
+  };
+  renderTestResults();
+  renderTestQuestion();
+}
+
+function resetListeningTest() {
+  listeningTest = {
+    mode: "",
+    questions: [],
+    index: 0,
+    score: 0,
+    answered: false,
+    results: [],
+    drafts: {},
+    startedAt: "",
+    finishedAt: ""
+  };
+  document.getElementById("testArea").style.display = "none";
+  document.getElementById("testArea").innerHTML = "";
+  document.getElementById("testSummary").innerText = "";
+  renderTestResults();
+}
+
+function prevTestQuestion() {
+  if (!listeningTest.questions.length) return;
+  captureCurrentDraft();
+  if (listeningTest.index > 0) {
+    listeningTest.index--;
+    listeningTest.answered = hasResultForCurrentQuestion();
+    renderTestQuestion();
+  }
+}
+
+function nextTestQuestion() {
+  if (!listeningTest.questions.length) return;
+  completeCurrentQuestionIfNeeded();
+
+  if (listeningTest.index < listeningTest.questions.length - 1) {
+    listeningTest.index++;
+    listeningTest.answered = hasResultForCurrentQuestion();
+    renderTestQuestion();
+  } else {
+    finishCurrentTest();
+  }
+}
+
+function finishCurrentTest() {
+  if (!listeningTest.questions.length) return;
+  completeCurrentQuestionIfNeeded();
+  listeningTest.finishedAt = new Date().toISOString();
+  renderTestSummary(true);
+}
+
+function renderTestSummary(done = false) {
+  const total = listeningTest.questions.length;
+  if (!total) {
+    document.getElementById("testSummary").innerText = "";
+    return;
+  }
+
+  const answeredCount = listeningTest.results.length;
+  const text = `模式：${listeningTest.mode === "choice" ? "选择题" : "默写"} | 进度：${Math.min(listeningTest.index + 1, total)}/${total} | 已作答：${answeredCount}/${total} | 得分：${listeningTest.score}`;
+  document.getElementById("testSummary").innerText = done ? `${text}\n测试结束，可导出结果或重新开始。` : text;
+}
+
+function renderTestQuestion() {
+  const area = document.getElementById("testArea");
+  const question = listeningTest.questions[listeningTest.index];
+  if (!question) return;
+
+  area.style.display = "block";
+  renderTestSummary(false);
+
+  const autoSpeak = document.getElementById("autoSpeakTest").checked;
+  const hideAnswer = document.getElementById("hideAnswerInDictation").checked;
+  area.innerHTML = "";
+
+  const title = document.createElement("div");
+  title.className = "test-question";
+  title.innerText = `第 ${listeningTest.index + 1} 题`;
+  area.appendChild(title);
+
+  const meta = document.createElement("div");
+  meta.className = "test-meta";
+  meta.innerText = `句子类型：${getTypeName(question.type)} | 点击题目可重新朗读`;
+  area.appendChild(meta);
+
+  const prompt = document.createElement("div");
+  prompt.className = "sentence";
+  prompt.style.cursor = "pointer";
+  prompt.innerText = autoSpeak ? "正在朗读题目..." : "点击播放题目";
+  prompt.onclick = () => speak(question.text, question.type);
+  area.appendChild(prompt);
+
+  if (autoSpeak) {
+    setTimeout(() => speak(question.text, question.type), 200);
+  }
+
+  if (listeningTest.mode === "choice") {
+    renderChoiceTest(area, question);
+  } else {
+    renderDictationTest(area, question, hideAnswer);
+  }
+}
+
+function renderChoiceTest(area, question) {
+  const options = buildChoiceOptions(question);
+  const choiceList = document.createElement("div");
+  choiceList.className = "choice-list";
+
+  options.forEach(opt => {
+    const btn = document.createElement("button");
+    btn.className = "choice-btn";
+    btn.innerText = opt;
+    btn.onclick = () => handleChoiceAnswer(btn, opt, question.text, choiceList, question);
+    choiceList.appendChild(btn);
+  });
+
+  area.appendChild(choiceList);
+}
+
+function buildChoiceOptions(question) {
+  const pool = getTestPool().filter(item => item.id !== question.id);
+  const distractors = shuffleArray(pool).slice(0, 3).map(item => item.text);
+  return shuffleArray([question.text, ...distractors]);
+}
+
+function handleChoiceAnswer(btn, picked, answer, container, question) {
+  if (listeningTest.answered) return;
+  listeningTest.answered = true;
+
+  const correct = picked === answer;
+  if (correct) {
+    btn.classList.add("correct");
+    listeningTest.score++;
+  } else {
+    btn.classList.add("wrong");
+    [...container.querySelectorAll("button")].forEach(node => {
+      if (node.innerText === answer) node.classList.add("correct");
+    });
+  }
+
+  recordTestResult({
+    index: listeningTest.index + 1,
+    mode: "choice",
+    type: question.type,
+    prompt: question.text,
+    userAnswer: picked,
+    correctAnswer: answer,
+    correct
+  });
+}
+
+function renderDictationTest(area, question, hideAnswer) {
+  const input = document.createElement("textarea");
+  input.className = "answer-box";
+  input.placeholder = "请输入你听到的内容";
+  input.value = listeningTest.drafts[question.id] || getExistingUserAnswer(question) || "";
+  input.oninput = () => {
+    listeningTest.drafts[question.id] = input.value;
+  };
+  area.appendChild(input);
+
+  const btnRow = document.createElement("div");
+  btnRow.className = "toolbar";
+
+  const resultBox = document.createElement("div");
+  resultBox.className = "test-result";
+  resultBox.innerText = hideAnswer ? "默写模式已开启，先听写再检查。" : `原文：${question.text}`;
+
+  const checkBtn = document.createElement("button");
+  checkBtn.className = "green";
+  checkBtn.innerText = "检查答案";
+  checkBtn.onclick = () => checkDictationAnswer(input.value, question.text, resultBox, question);
+
+  const showBtn = document.createElement("button");
+  showBtn.className = "secondary";
+  showBtn.innerText = "显示原文";
+  showBtn.onclick = () => {
+    resultBox.innerText = `原文：${question.text}`;
+  };
+
+  btnRow.appendChild(checkBtn);
+  btnRow.appendChild(showBtn);
+  area.appendChild(btnRow);
+  area.appendChild(resultBox);
+}
+
+function checkDictationAnswer(userText, answer, resultBox, question) {
+  if (listeningTest.answered) return;
+  listeningTest.answered = true;
+
+  const normalizedUser = normalizeText(userText);
+  const normalizedAnswer = normalizeText(answer);
+  const correct = Boolean(normalizedUser) && normalizedUser === normalizedAnswer;
+
+  if (correct) {
+    listeningTest.score++;
+  }
+
+  resultBox.innerText = correct
+    ? `正确\n原文：${answer}`
+    : `未完全正确\n你的答案：${userText || "未填写"}\n原文：${answer}`;
+
+  recordTestResult({
+    index: listeningTest.index + 1,
+    mode: "dictation",
+    type: question.type,
+    prompt: question.text,
+    userAnswer: userText || "",
+    correctAnswer: answer,
+    correct
+  });
+}
+
+function recordTestResult(result) {
+  const existingIndex = listeningTest.results.findIndex(item => item.index === result.index);
+  if (existingIndex >= 0) listeningTest.results[existingIndex] = result;
+  else listeningTest.results.push(result);
+
+  const store = result.mode === "dictation" ? savedResults.dictation : savedResults.choice;
+  const savedIndex = store.findIndex(item => item.prompt === result.prompt);
+  if (savedIndex >= 0) store[savedIndex] = { ...result };
+  else store.push({ ...result });
+
+  renderTestSummary(false);
+  renderTestResults();
+}
+
+function captureCurrentDraft() {
+  const question = listeningTest.questions[listeningTest.index];
+  if (!question || listeningTest.mode !== "dictation") return;
+  const input = document.querySelector(".answer-box");
+  if (input) listeningTest.drafts[question.id] = input.value;
+}
+
+function getExistingResult(question, mode = listeningTest.mode) {
+  return listeningTest.results.find(item => item.prompt === question.text && item.mode === mode);
+}
+
+function getExistingUserAnswer(question) {
+  const existing = getExistingResult(question, "dictation");
+  return existing ? existing.userAnswer || "" : "";
+}
+
+function hasResultForCurrentQuestion() {
+  const question = listeningTest.questions[listeningTest.index];
+  if (!question) return false;
+  return Boolean(getExistingResult(question));
+}
+
+function completeCurrentQuestionIfNeeded() {
+  const question = listeningTest.questions[listeningTest.index];
+  if (!question || hasResultForCurrentQuestion()) return;
+
+  if (listeningTest.mode === "choice") {
+    recordTestResult({
+      index: listeningTest.index + 1,
+      mode: "choice",
+      type: question.type,
+      prompt: question.text,
+      userAnswer: "",
+      correctAnswer: question.text,
+      correct: false
+    });
+    listeningTest.answered = true;
+    return;
+  }
+
+  captureCurrentDraft();
+  const userText = listeningTest.drafts[question.id] || "";
+  const normalizedUser = normalizeText(userText);
+  const normalizedAnswer = normalizeText(question.text);
+  const correct = Boolean(normalizedUser) && normalizedUser === normalizedAnswer;
+
+  if (correct) listeningTest.score++;
+
+  recordTestResult({
+    index: listeningTest.index + 1,
+    mode: "dictation",
+    type: question.type,
+    prompt: question.text,
+    userAnswer: userText,
+    correctAnswer: question.text,
+    correct
+  });
+  listeningTest.answered = true;
+}
+
+function renderTestResults() {
+  const stats = document.getElementById("resultStats");
+  const list = document.getElementById("resultList");
+  list.innerHTML = "";
+
+  if (!listeningTest.results.length) {
+    stats.innerText = listeningTest.mode ? "测试已开始，作答后这里会显示每题结果。" : "";
+    return;
+  }
+
+  const total = listeningTest.questions.length || listeningTest.results.length;
+  const correctCount = listeningTest.results.filter(item => item.correct).length;
+  const accuracy = total ? Math.round((correctCount / total) * 100) : 0;
+  stats.innerText = `结果汇总：共 ${total} 题，已作答 ${listeningTest.results.length} 题，答对 ${correctCount} 题，正确率 ${accuracy}%`;
+
+  listeningTest.results
+    .slice()
+    .sort((a, b) => a.index - b.index)
+    .forEach(item => {
+      const div = document.createElement("div");
+      div.className = `result-item ${item.correct ? "correct" : "wrong"}`;
+      div.innerText = `第 ${item.index} 题 | ${item.mode === "choice" ? "选择题" : "默写"} | ${item.correct ? "正确" : "错误"}
+原文：${item.correctAnswer}
+你的答案：${item.userAnswer || "未填写"}`;
+      list.appendChild(div);
+    });
+}
+
+function exportChoiceResults(format) {
+  const choiceResults = savedResults.choice
+    .slice()
+    .sort((a, b) => a.index - b.index);
+
+  if (!choiceResults.length) {
+    alert("当前还没有选择题结果可导出。");
+    return;
+  }
+
+  const total = choiceResults.length;
+  const correctCount = choiceResults.filter(item => item.correct).length;
+  const payload = {
+    mode: "choice",
+    total,
+    answered: choiceResults.length,
+    score: correctCount,
+    correctCount,
+    accuracy: total ? `${Math.round((correctCount / total) * 100)}%` : "0%",
+    startedAt: listeningTest.startedAt,
+    finishedAt: listeningTest.finishedAt || "",
+    results: choiceResults
+  };
+
+  let content = "";
+  let type = "";
+  let ext = "";
+
+  if (format === "json") {
+    content = JSON.stringify(payload, null, 2);
+    type = "application/json;charset=utf-8";
+    ext = "json";
+  } else {
+    content = buildTxtReport(payload);
+    type = "text/plain;charset=utf-8";
+    ext = "txt";
+  }
+
+  const blob = new Blob([content], { type });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `choice-test-result-${Date.now()}.${ext}`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+
+function exportDictationResults(format) {
+  const dictationResults = savedResults.dictation
+    .slice()
+    .sort((a, b) => a.index - b.index)
+    .map(item => ({
+      index: item.index,
+      type: item.type,
+      prompt: item.prompt,
+      originalText: item.correctAnswer,
+      userAnswer: item.userAnswer || ""
+    }));
+
+  if (!dictationResults.length) {
+    alert("当前还没有默写结果可导出。");
+    return;
+  }
+
+  const payload = {
+    mode: "dictation",
+    total: dictationResults.length,
+    startedAt: listeningTest.startedAt,
+    finishedAt: listeningTest.finishedAt || "",
+    results: dictationResults
+  };
+
+  let content = "";
+  let type = "";
+  let ext = "";
+
+  if (format === "json") {
+    content = JSON.stringify(payload, null, 2);
+    type = "application/json;charset=utf-8";
+    ext = "json";
+  } else {
+    content = buildDictationTxtReport(payload);
+    type = "text/plain;charset=utf-8";
+    ext = "txt";
+  }
+
+  const blob = new Blob([content], { type });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `dictation-compare-${Date.now()}.${ext}`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+
+function buildTxtReport(payload) {
+  const lines = [
+    "听力测试结果",
+    `模式：${payload.mode === "choice" ? "选择题" : "默写"}`,
+    `总题数：${payload.total}`,
+    `已作答：${payload.answered}`,
+    `得分：${payload.score}`,
+    `答对：${payload.correctCount}`,
+    `正确率：${payload.accuracy}`,
+    `开始时间：${payload.startedAt || ""}`,
+    `结束时间：${payload.finishedAt || ""}`,
+    ""
+  ];
+
+  payload.results.forEach(item => {
+    lines.push(`第 ${item.index} 题 | ${item.mode === "choice" ? "选择题" : "默写"} | ${item.correct ? "正确" : "错误"}`);
+    lines.push(`原文：${item.correctAnswer}`);
+    lines.push(`你的答案：${item.userAnswer || "未填写"}`);
+    lines.push("");
+  });
+
+  return lines.join("\n");
+}
+
+function buildDictationTxtReport(payload) {
+  const lines = [
+    "默写对照结果",
+    `总题数：${payload.total}`,
+    `开始时间：${payload.startedAt || ""}`,
+    `结束时间：${payload.finishedAt || ""}`,
+    ""
+  ];
+
+  payload.results.forEach(item => {
+    lines.push(`第 ${item.index} 题`);
+    lines.push(`原文：${item.originalText}`);
+    lines.push(`你的默写：${item.userAnswer || "未填写"}`);
+    lines.push("");
+  });
+
+  return lines.join("\n");
+}
+
+function normalizeText(text) {
+  return (text || "")
+    .replace(/\s+/g, "")
+    .replace(/[。！？!?.,，、]/g, "")
+    .toLowerCase();
+}
+</script>
+</body>
+</html>
