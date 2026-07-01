@@ -298,6 +298,8 @@ This module supports OBC and DCDC testing."></textarea>
     <button class="orange" onclick="exportChoiceResults('json')">导出选择题 JSON</button>
     <button class="orange" onclick="exportDictationResults('txt')">导出默写对照 TXT</button>
     <button class="orange" onclick="exportDictationResults('json')">导出默写对照 JSON</button>
+    <button class="orange" onclick="exportWrongResults('txt')">导出错题 TXT</button>
+    <button class="orange" onclick="exportWrongResults('json')">导出错题 JSON</button>
   </div>
   <div class="toolbar" style="margin-top:0;">
     <label><input type="checkbox" id="shuffleTest" checked /> 随机打乱题目</label>
@@ -1018,6 +1020,70 @@ function exportDictationResults(format) {
   URL.revokeObjectURL(link.href);
 }
 
+function exportWrongResults(format) {
+  const wrongChoice = savedResults.choice
+    .filter(item => !item.correct)
+    .slice()
+    .sort((a, b) => a.index - b.index)
+    .map(item => ({
+      mode: "choice",
+      index: item.index,
+      type: item.type,
+      prompt: item.prompt,
+      correctAnswer: item.correctAnswer,
+      userAnswer: item.userAnswer || ""
+    }));
+
+  const wrongDictation = savedResults.dictation
+    .filter(item => !item.correct)
+    .slice()
+    .sort((a, b) => a.index - b.index)
+    .map(item => ({
+      mode: "dictation",
+      index: item.index,
+      type: item.type,
+      prompt: item.prompt,
+      correctAnswer: item.correctAnswer,
+      userAnswer: item.userAnswer || ""
+    }));
+
+  const wrongResults = [...wrongChoice, ...wrongDictation];
+
+  if (!wrongResults.length) {
+    alert("当前还没有错题可导出。");
+    return;
+  }
+
+  const payload = {
+    total: wrongResults.length,
+    choiceWrongCount: wrongChoice.length,
+    dictationWrongCount: wrongDictation.length,
+    exportedAt: new Date().toISOString(),
+    results: wrongResults
+  };
+
+  let content = "";
+  let type = "";
+  let ext = "";
+
+  if (format === "json") {
+    content = JSON.stringify(payload, null, 2);
+    type = "application/json;charset=utf-8";
+    ext = "json";
+  } else {
+    content = buildWrongTxtReport(payload);
+    type = "text/plain;charset=utf-8";
+    ext = "txt";
+  }
+
+  const blob = new Blob([content], { type });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `wrong-questions-${Date.now()}.${ext}`;
+  link.click();
+  URL.revokeObjectURL(link.href);
+}
+
 function buildTxtReport(payload) {
   const lines = [
     "听力测试结果",
@@ -1055,6 +1121,26 @@ function buildDictationTxtReport(payload) {
     lines.push(`第 ${item.index} 题`);
     lines.push(`原文：${item.originalText}`);
     lines.push(`你的默写：${item.userAnswer || "未填写"}`);
+    lines.push("");
+  });
+
+  return lines.join("\n");
+}
+
+function buildWrongTxtReport(payload) {
+  const lines = [
+    "错题结果",
+    `错题总数：${payload.total}`,
+    `选择题错题：${payload.choiceWrongCount}`,
+    `默写错题：${payload.dictationWrongCount}`,
+    `导出时间：${payload.exportedAt || ""}`,
+    ""
+  ];
+
+  payload.results.forEach(item => {
+    lines.push(`第 ${item.index} 题 | ${item.mode === "choice" ? "选择题" : "默写"}`);
+    lines.push(`原文：${item.correctAnswer}`);
+    lines.push(`你的答案：${item.userAnswer || "未填写"}`);
     lines.push("");
   });
 
