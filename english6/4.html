@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中英文默写训练工具</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #64748b;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --green: #16a34a;
+      --red: #dc2626;
+      --border: #dbe3ee;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    h2, h3 { margin: 0 0 10px; }
+    .muted { color: var(--muted); font-size: 13px; }
+
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      resize: vertical;
+      min-height: 140px;
+      margin-top: 8px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #fff;
+      background: var(--primary);
+    }
+
+    button:hover { background: var(--primary-dark); }
+    button.secondary { background: #64748b; }
+    button.secondary:hover { background: #475569; }
+    button.green { background: var(--green); }
+    button.green:hover { background: #15803d; }
+    button.red { background: var(--red); }
+    button.red:hover { background: #b91c1c; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    .card-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .card-item {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      background: #fcfdff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-item small { color: var(--muted); display: block; }
+    .card-item .pair { flex: 1; }
+    .card-item .import-badge {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 12px;
+    }
+    .card-item .import-meta {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .card-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .practice-box {
+      margin-top: 10px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px dashed var(--border);
+    }
+
+    .practice-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .practice-status {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 14px;
+    }
+
+    .switch-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .switch-row input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    .order-select {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .practice-question {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .practice-reference {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 14px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .practice-answer {
+      margin-top: 10px;
+      width: 100%;
+      min-height: 90px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    .result {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: #1e3a8a;
+      white-space: pre-wrap;
+    }
+
+    .result.bad { background: #fef2f2; color: #991b1b; }
+    .result.good { background: #f0fdf4; color: #166534; }
+
+    .history-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .history-item {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      background: #fff;
+      white-space: pre-wrap;
+    }
+
+    .history-item.bad { border-left-color: var(--red); }
+    .history-item.good { border-left-color: var(--green); }
+
+    .history-grid {
+      display: grid;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .history-row {
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+    }
+
+    .summary {
+      margin-top: 8px;
+      white-space: pre-wrap;
+      color: var(--muted);
+    }
+
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <h2>中英文默写训练工具</h2>
+      <p class="muted">支持粘贴中英文内容，自动生成可默写的卡片；支持导入错题、导出错题、导出全部。</p>
+      <textarea id="inputText" placeholder="请输入内容，例如：
+Hello world | 你好，世界
+I love English | 我喜欢英语
+This is a test | 这是一个测试"></textarea>
+      <div class="toolbar">
+        <button onclick="buildCards()">生成卡片</button>
+        <button class="secondary" onclick="triggerImportDocument()">导入文档</button>
+        <button class="secondary" onclick="clearAll()">清空</button>
+      </div>
+      <input type="file" id="documentImport" accept=".txt,.md,.html,.htm" class="hidden" onchange="importDocument(event)" />
+      <div class="chips">
+        <span class="chip">支持一行一组：英文 | 中文</span>
+        <span class="chip">也支持连续中英文自动配对</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>卡片列表</h3>
+      <div class="toolbar">
+        <button onclick="startPractice('en', 'all')">默写英文</button>
+        <button onclick="startPractice('zh', 'all')">默写中文</button>
+        <button onclick="startPractice('both', 'all')">双向默写</button>
+        <button class="secondary" onclick="startPractice('en', 'wrong')">练习错题</button>
+        <button class="secondary" onclick="startPractice('en', 'all')">练习全部</button>
+        <button class="green" onclick="triggerImport()">导入错题</button>
+        <button class="green" onclick="exportWrongCards()">导出错题卡片</button>
+        <button class="green" onclick="exportPracticeResults('all', 'json')">导出全部记录(JSON)</button>
+        <button class="green" onclick="exportPracticeResults('wrong', 'json')">导出错题记录(JSON)</button>
+        <button class="green" onclick="exportPracticeResults('wrong', 'txt')">导出错题记录(TXT)</button>
+      </div>
+      <div class="practice-toolbar">
+        <label class="switch-row">
+          <input id="submitToggle" type="checkbox" checked />
+          <span>包含提交按钮</span>
+        </label>
+        <select id="orderSelect" class="order-select">
+          <option value="sequential">顺序</option>
+          <option value="random">乱序</option>
+        </select>
+      </div>
+      <input type="file" id="importFile" accept=".json,.txt" class="hidden" onchange="importWrong(event)" />
+      <div id="summary" class="summary"></div>
+      <div id="cardList" class="card-list"></div>
+    </div>
+
+    <div class="panel">
+      <h3>默写练习</h3>
+      <div id="practiceStatus" class="practice-status"></div>
+      <div id="practiceArea" class="practice-box hidden"></div>
+      <div id="historyPanel" class="summary"></div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+
+  <script>
+    let cards = [];
+    let wrongCards = [];
+    let practiceRecords = [];
+    let practice = {
+      mode: "en",
+      scope: "all",
+      order: "sequential",
+      showSubmitButton: true,
+      index: 0,
+      results: [],
+      current: null,
+      currentAnswered: false,
+      sequence: [],
+      totalQuestions: 0
+    };
+
+    document.addEventListener("keydown", function (event) {
+      const activeElement = document.activeElement;
+      const activeTag = activeElement && activeElement.tagName;
+      const isAnswerBox = activeElement && activeElement.id === "answerInput";
+      const isTypingTarget = activeTag === "TEXTAREA" || activeTag === "INPUT" || activeTag === "SELECT";
+      const isShortcutKey = event.key === "ArrowLeft" || event.key === "ArrowRight" || ((event.ctrlKey || event.metaKey) && event.key === "Enter");
+
+      if (isTypingTarget && !isAnswerBox && !isShortcutKey) return;
+      if (isTypingTarget && isAnswerBox && !isShortcutKey) return;
+
+      const isPracticeShowing = !document.getElementById("practiceArea").classList.contains("hidden") && Boolean(practice.current);
+      if (!isPracticeShowing) return;
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        prevQuestion();
+        return;
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        nextQuestion();
+        return;
+      }
+
+      if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
+        event.preventDefault();
+        if (!practice.showSubmitButton) return;
+        const expected = practice.current && (practice.mode === "en" || (practice.mode === "both" && practice.index % 2 === 0))
+          ? practice.current.en
+          : practice.current.zh;
+        const promptType = practice.mode === "both"
+          ? (practice.index % 2 === 0 ? "en" : "zh")
+          : practice.mode;
+        submitAnswer(promptType, expected);
+      }
+    });
+
+    document.getElementById("submitToggle").addEventListener("change", function () {
+      practice.showSubmitButton = this.checked;
+      if (practice.current) {
+        showPracticeQuestion();
+      }
+    });
+
+    document.getElementById("orderSelect").addEventListener("change", function () {
+      practice.order = this.value;
+      if (practice.current) {
+        const pool = getPracticePool(practice.scope);
+        practice.sequence = buildSequence(pool.length, practice.order);
+        practice.index = Math.min(practice.index, Math.max(practice.sequence.length - 1, 0));
+        showPracticeQuestion();
+      }
+    });
+
+    function buildCards() {
+      const text = document.getElementById("inputText").value;
+      const parsed = parseInput(text);
+      cards = parsed;
+      renderCards();
+      updateSummary();
+    }
+
+    function parseInput(text) {
+      const lines = (text || "")
+        .split(/\r?\n/)
+        .map(line => normalizeLineForParsing(line))
+        .map(line => line.trim())
+        .filter(Boolean);
+
+      if (!lines.length) return [];
+
+      const items = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+
+        const directPair = line.match(/^(.+?)\s*(?:\||｜|：|\/|→)\s*(.+)$/);
+        if (directPair) {
+          items.push({
+            id: makeId(),
+            en: directPair[1].trim(),
+            zh: directPair[2].trim()
+          });
+          continue;
+        }
+
+        const currentLang = detectLanguage(line);
+        const nextLine = lines[i + 1] ? lines[i + 1].trim() : "";
+        const nextLang = nextLine ? detectLanguage(nextLine) : "";
+
+        if (currentLang !== "other" && nextLang !== "other" && currentLang !== nextLang && currentLang !== "mixed" && nextLang !== "mixed") {
+          items.push({
+            id: makeId(),
+            en: currentLang === "en" ? line : nextLine,
+            zh: currentLang === "zh" ? line : nextLine
+          });
+          i++;
+          continue;
+        }
+
+        if (currentLang === "en") {
+          items.push({ id: makeId(), en: line, zh: "" });
+        } else if (currentLang === "zh") {
+          items.push({ id: makeId(), en: "", zh: line });
+        } else {
+          items.push({ id: makeId(), en: line, zh: line });
+        }
+      }
+
+      return items.filter(item => item.en || item.zh);
+    }
+
+    function detectLanguage(text) {
+      const hasEn = /[A-Za-z]/.test(text);
+      const hasZh = /[\u4e00-\u9fa5]/.test(text);
+      if (hasEn && hasZh) return "mixed";
+      if (hasEn) return "en";
+      if (hasZh) return "zh";
+      return "other";
+    }
+
+    function normalizeLineForParsing(line) {
+      return String(line || "")
+        .replace(/^#{1,6}\s*/, "")
+        .replace(/^([-*+]|\d+[.)])\s+/, "")
+        .replace(/[`*_~]/g, "")
+        .replace(/\[(.*?)\]\((.*?)\)/g, "$1")
+        .trim();
+    }
+
+    function triggerImportDocument() {
+      document.getElementById("documentImport").click();
+    }
+
+    function importDocument(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function () {
+        const text = String(reader.result || "");
+        const textarea = document.getElementById("inputText");
+        const existing = textarea.value.trim();
+        textarea.value = existing ? `${existing}\n\n${text}` : text;
+
+        const imported = parseImportedArtifact(text);
+        if (imported.cards.length || imported.practiceRecords.length || imported.wrongCards.length) {
+          if (imported.cards.length) {
+            cards = dedupeCards([...cards, ...imported.cards]);
+            renderCards();
+          }
+          if (imported.wrongCards.length) {
+            wrongCards = dedupeCards([...wrongCards, ...imported.wrongCards]);
+          }
+          if (imported.practiceRecords.length) {
+            const importedRecords = imported.practiceRecords.map(item => ({ ...item, source: item.source || "imported" }));
+            practiceRecords = dedupeRecords([...practiceRecords, ...importedRecords]);
+            const wrongImportedCards = importedRecords.filter(item => !item.correct).map(item => createCardFromRecord(item));
+            if (wrongImportedCards.length) {
+              wrongCards = dedupeCards([...wrongCards, ...wrongImportedCards]);
+            }
+            practice = {
+              ...practice,
+              results: practice.results.length ? [...practice.results, ...importedRecords] : importedRecords.slice(),
+              current: null
+            };
+            renderPracticeHistory();
+          }
+          updateSummary();
+          alert(`已导入并生成卡片：${file.name}`);
+        } else {
+          buildCards();
+          alert(`已导入文档：${file.name}`);
+        }
+      };
+      reader.onerror = function () {
+        alert("文档读取失败，请重试。")
+      };
+      reader.readAsText(file, "utf-8");
+      event.target.value = "";
+    }
+
+    function renderCards() {
+      const list = document.getElementById("cardList");
+      list.innerHTML = "";
+      if (!cards.length) {
+        list.innerHTML = '<div class="muted">当前还没有卡片，请先粘贴内容并生成。</div>';
+        return;
+      }
+
+      cards.forEach((item, index) => {
+        const isImportedRecord = item.sourceType === "practice-record";
+        const meta = item.recordMeta || {};
+        const title = isImportedRecord
+          ? (meta.promptText || item.zh || item.en || "导入记录")
+          : (item.en || "（暂无英文）");
+        const subtitle = isImportedRecord
+          ? (meta.correctAnswer || item.en || item.zh || "（暂无答案）")
+          : (item.zh || "（暂无中文）");
+        const detail = isImportedRecord
+          ? `<div class="import-meta">我的答案：${escapeHtml(meta.userAnswer || "未填写")} · 结果：${meta.correct ? "正确" : "错误"}</div>`
+          : "";
+
+        const div = document.createElement("div");
+        div.className = "card-item";
+        div.innerHTML = `
+          <div class="pair">
+            <div><strong>${index + 1}. ${escapeHtml(title)}</strong></div>
+            <small>${escapeHtml(subtitle)}</small>
+            ${isImportedRecord ? '<div class="import-badge">导入练习记录</div>' : ""}
+            ${detail}
+          </div>
+          <div class="card-actions">
+            <button class="secondary" onclick="speakText('${escapeAttribute(item.en || "")}', 'en')">读英文</button>
+            <button class="secondary" onclick="speakText('${escapeAttribute(item.zh || "")}', 'zh')">读中文</button>
+            <button class="secondary" onclick="removeCard('${item.id}')">删除</button>
+          </div>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    function removeCard(id) {
+      cards = cards.filter(item => item.id !== id);
+      renderCards();
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const summary = document.getElementById("summary");
+      const total = cards.length;
+      const wrong = wrongCards.length;
+      summary.innerText = `当前卡片：${total} 条 | 错题：${wrong} 条`;
+    }
+
+    function getPracticePool(scope) {
+      if (scope === "wrong") {
+        return wrongCards.length ? wrongCards : [];
+      }
+      return cards;
+    }
+
+    function buildSequence(length, order) {
+      if (!length) return [];
+      const sequence = Array.from({ length }, (_, index) => index);
+      if (order === "random") {
+        for (let i = sequence.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [sequence[i], sequence[j]] = [sequence[j], sequence[i]];
+        }
+      }
+      return sequence;
+    }
+
+    function startPractice(mode, scope = "all") {
+      const pool = getPracticePool(scope);
+      if (!pool.length) {
+        alert(scope === "wrong" ? "当前没有错题可练习。" : "请先生成卡片。" );
+        return;
+      }
+      practice = {
+        mode,
+        scope,
+        order: document.getElementById("orderSelect").value,
+        showSubmitButton: document.getElementById("submitToggle").checked,
+        index: 0,
+        results: [],
+        current: null,
+        currentAnswered: false,
+        sequence: buildSequence(pool.length, document.getElementById("orderSelect").value),
+        totalQuestions: pool.length
+      };
+      renderPracticeHistory();
+      renderPracticeStatus();
+      showPracticeQuestion();
+    }
+
+    function showPracticeQuestion() {
+      const area = document.getElementById("practiceArea");
+      area.classList.remove("hidden");
+      const pool = getPracticePool(practice.scope);
+      if (!pool.length) {
+        area.innerHTML = "<div class=\"muted\">没有可练习的卡片。</div>";
+        return;
+      }
+
+      const currentCard = pool[practice.sequence[practice.index]];
+      if (!currentCard) {
+        area.innerHTML = `<div class="result good">练习完成。你已经完成 ${practice.results.length} 题。</div>`;
+        renderPracticeStatus();
+        return;
+      }
+
+      practice.current = currentCard;
+      practice.currentAnswered = false;
+      const promptType = practice.mode === "both"
+        ? (practice.index % 2 === 0 ? "en" : "zh")
+        : practice.mode;
+
+      const promptText = promptType === "en"
+        ? `请默写英文：<br>${escapeHtml(currentCard.zh || "")}`
+        : `请默写中文：<br>${escapeHtml(currentCard.en || "")}`;
+
+      const expected = promptType === "en" ? currentCard.en : currentCard.zh;
+
+      area.innerHTML = `
+        <div class="practice-question">第 ${practice.index + 1} 题 / 共 ${practice.totalQuestions} 题</div>
+        <div>${promptText}</div>
+        <textarea id="answerInput" class="practice-answer" placeholder="请输入你的答案"></textarea>
+        <div class="toolbar">
+          ${practice.showSubmitButton ? `<button onclick="submitAnswer('${promptType}', '${escapeAttribute(expected)}')">提交答案</button>` : ""}
+          <button class="secondary" onclick="speakText('${escapeAttribute(expected)}', '${promptType === 'en' ? 'en' : 'zh'}')">听读题目</button>
+          <button class="secondary" onclick="showAnswer()">查看答案</button>
+          <button class="secondary" onclick="prevQuestion()">上一题</button>
+          <button class="secondary" onclick="nextQuestion()">下一题</button>
+        </div>
+      `;
+      renderPracticeStatus();
+    }
+
+    function submitAnswer(promptType, expected, providedAnswer) {
+      if (!practice.showSubmitButton || practice.currentAnswered) return;
+      const input = document.getElementById("answerInput");
+      const userAnswer = (providedAnswer !== undefined ? providedAnswer : (input ? input.value : "")).trim();
+      if (!input && providedAnswer === undefined) return;
+      const answerText = expected.replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+      const normalizedUserAnswer = normalizeText(userAnswer || "");
+      const normalizedAnswerText = normalizeText(answerText || "");
+      const correct = normalizedUserAnswer === normalizedAnswerText;
+      const score = correct ? 1 : 0;
+      const resultBox = document.createElement("div");
+      resultBox.className = `result ${correct ? "good" : "bad"}`;
+      resultBox.innerText = correct
+        ? `正确\n是否正确：是\n得分：1\n我的答案：${userAnswer || "未填写"}\n正确答案：${answerText}`
+        : `不完全正确\n是否正确：否\n得分：0\n我的答案：${userAnswer || "未填写"}\n正确答案：${answerText}`;
+      const area = document.getElementById("practiceArea");
+      area.appendChild(resultBox);
+
+      const record = {
+        id: makeId(),
+        cardId: practice.current.id,
+        promptType,
+        promptText: practice.current[promptType === "en" ? "zh" : "en"] || "",
+        userAnswer,
+        correctAnswer: answerText,
+        correct,
+        score,
+        answeredAt: new Date().toISOString(),
+        source: "practice"
+      };
+
+      practice.results.push(record);
+      practiceRecords.push(record);
+      practice.currentAnswered = true;
+
+      if (!correct) {
+        addWrongCard(practice.current);
+      }
+
+      renderPracticeHistory();
+      renderPracticeStatus();
+      updateSummary();
+    }
+
+    function showAnswer() {
+      if (!practice.current) return;
+      const area = document.getElementById("practiceArea");
+      const answerText = practice.mode === "en" || (practice.mode === "both" && practice.index % 2 === 0)
+        ? practice.current.en
+        : practice.current.zh;
+      const lang = practice.mode === "en" || (practice.mode === "both" && practice.index % 2 === 0) ? "en" : "zh";
+      const box = document.createElement("div");
+      box.className = "result";
+      box.innerText = `答案：${answerText}`;
+      area.appendChild(box);
+      speakText(answerText, lang);
+    }
+
+    function prevQuestion() {
+      if (practice.index > 0) {
+        if (practice.showSubmitButton && practice.current && !practice.currentAnswered) {
+          const expected = practice.current && (practice.mode === "en" || (practice.mode === "both" && practice.index % 2 === 0))
+            ? practice.current.en
+            : practice.current.zh;
+          const promptType = practice.mode === "both"
+            ? (practice.index % 2 === 0 ? "en" : "zh")
+            : practice.mode;
+          const input = document.getElementById("answerInput");
+          submitAnswer(promptType, expected, input ? input.value : "");
+        }
+        practice.index--;
+        showPracticeQuestion();
+      } else {
+        alert("已经是第一题了。")
+      }
+    }
+
+    function nextQuestion() {
+      if (practice.showSubmitButton && practice.current && !practice.currentAnswered) {
+        const expected = practice.current && (practice.mode === "en" || (practice.mode === "both" && practice.index % 2 === 0))
+          ? practice.current.en
+          : practice.current.zh;
+        const promptType = practice.mode === "both"
+          ? (practice.index % 2 === 0 ? "en" : "zh")
+          : practice.mode;
+        const input = document.getElementById("answerInput");
+        submitAnswer(promptType, expected, input ? input.value : "");
+      }
+      practice.index++;
+      showPracticeQuestion();
+    }
+
+    function renderPracticeStatus() {
+      const panel = document.getElementById("practiceStatus");
+      const currentResults = practice.results || [];
+      const score = currentResults.reduce((sum, item) => sum + (item.correct ? 1 : 0), 0);
+      const total = practice.totalQuestions || currentResults.length || 0;
+      panel.innerHTML = `
+        <span>当前得分：${score}/${total}</span>
+        <span>总分：${total}</span>
+        <span>已做：${currentResults.length}</span>
+        <span>一共：${total}</span>
+      `;
+    }
+
+    function renderPracticeHistory() {
+      const panel = document.getElementById("historyPanel");
+      const list = document.getElementById("historyList");
+      const currentResults = practice.results || [];
+      const score = currentResults.reduce((sum, item) => sum + (item.correct ? 1 : 0), 0);
+      panel.innerText = currentResults.length
+        ? `本次练习：已答 ${currentResults.length} 题 | 得分 ${score}/${currentResults.length} | 正确率 ${Math.round((score / currentResults.length) * 100)}%`
+        : "开始练习后，这里会显示每次作答的答案、正确答案、是否正确和得分。";
+      list.innerHTML = "";
+
+      currentResults.slice().reverse().forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = `history-item ${item.correct ? "good" : "bad"}`;
+        div.innerHTML = `
+          <div><strong>第 ${currentResults.length - index} 次作答</strong></div>
+          <div class="history-grid">
+            <div class="history-row">来源：${item.source === "imported" ? "导入记录" : "本次作答"}</div>
+            <div class="history-row">题目：${escapeHtml(item.promptText || item.correctAnswer || "—")}</div>
+            <div class="history-row">是否正确：${item.correct ? "是" : "否"}</div>
+            <div class="history-row">得分：${item.score}</div>
+            <div class="history-row">我的答案：${escapeHtml(item.userAnswer || "未填写")}</div>
+            <div class="history-row">正确答案：${escapeHtml(item.correctAnswer)}</div>
+          </div>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    function addWrongCard(card) {
+      const exists = wrongCards.some(item => item.id === card.id);
+      if (!exists) {
+        wrongCards.push({ ...card, addedAt: new Date().toISOString() });
+      }
+    }
+
+    function triggerImport() {
+      document.getElementById("importFile").click();
+    }
+
+    function importWrong(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      file.text().then(text => {
+        const imported = parseImportedArtifact(text);
+        if (!imported.cards.length && !imported.practiceRecords.length && !imported.wrongCards.length) {
+          alert("未识别到可用内容。可导入错题卡片 JSON，或练习记录 JSON/TXT。")
+          return;
+        }
+
+        if (imported.practiceRecords.length) {
+          const importedRecords = imported.practiceRecords.map(item => ({ ...item, source: item.source || "imported" }));
+          practiceRecords = dedupeRecords([...practiceRecords, ...importedRecords]);
+          const wrongImportedCards = importedRecords.filter(item => !item.correct).map(item => createCardFromRecord(item));
+          if (wrongImportedCards.length) {
+            wrongCards = dedupeCards([...wrongCards, ...wrongImportedCards]);
+          }
+          cards = dedupeCards([...cards, ...imported.cards]);
+          practice = {
+            ...practice,
+            results: practice.results.length ? [...practice.results, ...importedRecords] : importedRecords.slice(),
+            current: null
+          };
+          renderCards();
+          renderPracticeHistory();
+          updateSummary();
+          alert(`已导入 ${practiceRecords.length} 条练习记录。`);
+        } else {
+          cards = dedupeCards([...cards, ...imported.cards]);
+          wrongCards = dedupeCards([...wrongCards, ...imported.cards, ...imported.wrongCards]);
+          renderCards();
+          updateSummary();
+          alert(`已导入 ${imported.cards.length + imported.wrongCards.length} 条错题。`);
+        }
+      }).catch(err => {
+        alert("导入失败：" + err.message);
+      }).finally(() => {
+        event.target.value = "";
+      });
+    }
+
+    function makeRecordFromItem(item, fallbackSource = "imported") {
+      return {
+        id: item.id || makeId(),
+        cardId: item.cardId || makeId(),
+        promptType: item.promptType || "en",
+        promptText: item.promptText || "",
+        userAnswer: item.userAnswer || "",
+        correctAnswer: item.correctAnswer || "",
+        correct: Boolean(item.correct),
+        score: Number(item.score) || 0,
+        answeredAt: item.answeredAt || new Date().toISOString(),
+        source: item.source || fallbackSource
+      };
+    }
+
+    function createCardFromRecord(record) {
+      const promptType = record.promptType || "en";
+      const meta = {
+        promptText: record.promptText || "",
+        correctAnswer: record.correctAnswer || "",
+        userAnswer: record.userAnswer || "",
+        correct: Boolean(record.correct),
+        score: Number(record.score) || 0,
+        source: record.source || "imported"
+      };
+      if (promptType === "zh") {
+        return {
+          id: record.id || makeId(),
+          en: meta.promptText || "",
+          zh: meta.correctAnswer || "",
+          sourceType: "practice-record",
+          recordMeta: meta
+        };
+      }
+      return {
+        id: record.id || makeId(),
+        en: meta.correctAnswer || "",
+        zh: meta.promptText || "",
+        sourceType: "practice-record",
+        recordMeta: meta
+      };
+    }
+
+    function parseImportedArtifact(text) {
+      const trimmed = (text || "").trim();
+      if (!trimmed) return { cards: [], wrongCards: [], practiceRecords: [] };
+
+      if (trimmed.startsWith("[") || trimmed.startsWith("{")) {
+        try {
+          const parsed = JSON.parse(trimmed);
+
+          if (parsed && Array.isArray(parsed.results)) {
+            const practiceRecords = parsed.results.map(item => makeRecordFromItem(item, "imported"));
+            const cards = createCardsFromPracticeRecords(practiceRecords);
+            const wrongCards = practiceRecords.filter(item => !item.correct).map(item => createCardFromRecord(item));
+            return { cards, wrongCards, practiceRecords };
+          }
+
+          if (Array.isArray(parsed)) {
+            const firstItem = parsed[0] || {};
+            if (firstItem.userAnswer !== undefined || firstItem.correctAnswer !== undefined || firstItem.correct !== undefined) {
+              const practiceRecords = parsed.map(item => makeRecordFromItem(item, "imported"));
+              const cards = createCardsFromPracticeRecords(practiceRecords);
+              const wrongCards = practiceRecords.filter(item => !item.correct).map(item => createCardFromRecord(item));
+              return { cards, wrongCards, practiceRecords };
+            }
+
+            const cards = parsed.filter(item => item && (item.en || item.zh || item.english || item.chinese || item.answer || item.translation)).map(item => ({
+              id: item.id || makeId(),
+              en: item.en || item.english || item.answer || item.text || "",
+              zh: item.zh || item.chinese || item.translation || item.meaning || ""
+            }));
+            return { cards, wrongCards: [], practiceRecords: [] };
+          }
+
+          if (parsed && (parsed.userAnswer !== undefined || parsed.correctAnswer !== undefined || parsed.correct !== undefined)) {
+            const practiceRecords = [makeRecordFromItem(parsed, "imported")];
+            const cards = createCardsFromPracticeRecords(practiceRecords);
+            const wrongCards = practiceRecords.filter(item => !item.correct).map(item => createCardFromRecord(item));
+            return { cards, wrongCards, practiceRecords };
+          }
+
+          const list = parsed.results || parsed.cards || parsed.wrongCards || [];
+          const cards = list.filter(item => item && (item.en || item.zh || item.english || item.chinese || item.answer || item.translation)).map(item => ({
+            id: item.id || makeId(),
+            en: item.en || item.english || item.answer || item.text || "",
+            zh: item.zh || item.chinese || item.translation || item.meaning || ""
+          }));
+          const wrongCards = Array.isArray(parsed.wrongCards)
+            ? parsed.wrongCards.filter(item => item && (item.en || item.zh || item.english || item.chinese || item.answer || item.translation)).map(item => ({
+                id: item.id || makeId(),
+                en: item.en || item.english || item.answer || item.text || "",
+                zh: item.zh || item.chinese || item.translation || item.meaning || ""
+              }))
+            : [];
+          return { cards, wrongCards, practiceRecords: [] };
+        } catch (err) {
+          return { cards: [], wrongCards: [], practiceRecords: [] };
+        }
+      }
+
+      const blocks = trimmed.split(/\r?\n\s*\r?\n/).map(block => block.trim()).filter(Boolean);
+      const hasRecordMarkers = blocks.some(block => block.includes("我的答案") || block.includes("正确答案") || block.includes("是否正确") || block.includes("得分"));
+      if (hasRecordMarkers) {
+        const practiceRecords = blocks.map(block => {
+          const correctMatch = block.match(/正确答案[:：]\s*(.+)/);
+          const userMatch = block.match(/我的答案[:：]\s*(.+)/);
+          const scoreMatch = block.match(/得分[:：]\s*(\d+)/);
+          const correct = /是否正确[:：]\s*是/.test(block);
+          const correctAnswer = correctMatch ? correctMatch[1].trim() : "";
+          const userAnswer = userMatch ? userMatch[1].trim() : "";
+          return makeRecordFromItem({
+            id: makeId(),
+            cardId: makeId(),
+            promptType: "en",
+            promptText: "",
+            userAnswer,
+            correctAnswer,
+            correct,
+            score: scoreMatch ? Number(scoreMatch[1]) : (correct ? 1 : 0),
+            answeredAt: new Date().toISOString(),
+            source: "imported"
+          });
+        }).filter(item => item.correctAnswer || item.userAnswer);
+
+        const cards = createCardsFromPracticeRecords(practiceRecords);
+        return { cards, wrongCards: [], practiceRecords };
+      }
+
+      const cards = trimmed.split(/\r?\n/).map(line => line.trim()).filter(Boolean).map(line => {
+        const pair = line.match(/^(.+?)\s*(?:\||｜|：|\/|→)\s*(.+)$/);
+        if (pair) {
+          return { id: makeId(), en: pair[1].trim(), zh: pair[2].trim() };
+        }
+        return { id: makeId(), en: line, zh: line };
+      });
+
+      return { cards, wrongCards: [], practiceRecords: [] };
+    }
+
+    function createCardsFromPracticeRecords(records) {
+      return (records || []).map(record => {
+        const promptType = record.promptType || "en";
+        const meta = {
+          promptText: record.promptText || "",
+          correctAnswer: record.correctAnswer || "",
+          userAnswer: record.userAnswer || "",
+          correct: Boolean(record.correct),
+          score: Number(record.score) || 0,
+          source: record.source || "practice"
+        };
+        if (promptType === "zh") {
+          return {
+            id: record.id || makeId(),
+            en: meta.promptText || "",
+            zh: meta.correctAnswer || "",
+            sourceType: "practice-record",
+            recordMeta: meta
+          };
+        }
+        return {
+          id: record.id || makeId(),
+          en: meta.correctAnswer || "",
+          zh: meta.promptText || "",
+          sourceType: "practice-record",
+          recordMeta: meta
+        };
+      }).filter(item => item.en || item.zh);
+    }
+
+    function exportWrongCards() {
+      if (!wrongCards.length) {
+        alert("当前没有错题可导出。")
+        return;
+      }
+      downloadFile(JSON.stringify(wrongCards, null, 2), "wrong-cards.json", "application/json;charset=utf-8");
+    }
+
+    function exportPracticeResults(scope, format) {
+      const records = scope === "wrong"
+        ? practiceRecords.filter(item => !item.correct)
+        : practiceRecords;
+
+      if (!records.length) {
+        alert(scope === "wrong" ? "当前没有错题记录可导出。" : "当前没有练习记录可导出。");
+        return;
+      }
+
+      const payload = {
+        exportedAt: new Date().toISOString(),
+        scope,
+        total: records.length,
+        score: records.reduce((sum, item) => sum + item.score, 0),
+        results: records.map(item => ({
+          id: item.id,
+          cardId: item.cardId,
+          promptType: item.promptType,
+          promptText: item.promptText,
+          userAnswer: item.userAnswer,
+          correctAnswer: item.correctAnswer,
+          correct: item.correct,
+          score: item.score,
+          answeredAt: item.answeredAt
+        })),
+        cards: records.map(item => ({
+          id: item.id,
+          en: (item.promptType === "zh" ? item.promptText : item.correctAnswer) || "",
+          zh: (item.promptType === "zh" ? item.correctAnswer : item.promptText) || "",
+          sourceType: "practice-record",
+          recordMeta: {
+            promptText: item.promptText || "",
+            correctAnswer: item.correctAnswer || "",
+            userAnswer: item.userAnswer || "",
+            correct: Boolean(item.correct),
+            score: Number(item.score) || 0,
+            source: "export"
+          }
+        }))
+      };
+
+      if (format === "txt") {
+        const content = payload.results.map(item => [
+          `是否正确：${item.correct ? "是" : "否"}`,
+          `得分：${item.score}`,
+          `我的答案：${item.userAnswer || "未填写"}`,
+          `正确答案：${item.correctAnswer}`
+        ].join("\n")).join("\n\n");
+        downloadFile(content, scope === "wrong" ? "wrong-practice-records.txt" : "all-practice-records.txt", "text/plain;charset=utf-8");
+      } else {
+        downloadFile(JSON.stringify(payload, null, 2), scope === "wrong" ? "wrong-practice-records.json" : "all-practice-records.json", "application/json;charset=utf-8");
+      }
+    }
+
+    function downloadFile(content, fileName, type) {
+      const blob = new Blob([content], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = fileName;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function clearAll() {
+      document.getElementById("inputText").value = "";
+      cards = [];
+      wrongCards = [];
+      practiceRecords = [];
+      practice = {
+        mode: "en",
+        scope: "all",
+        order: document.getElementById("orderSelect").value,
+        showSubmitButton: document.getElementById("submitToggle").checked,
+        index: 0,
+        results: [],
+        current: null,
+        currentAnswered: false,
+        sequence: [],
+        totalQuestions: 0
+      };
+      document.getElementById("cardList").innerHTML = "";
+      document.getElementById("practiceArea").classList.add("hidden");
+      document.getElementById("historyPanel").innerText = "";
+      document.getElementById("historyList").innerHTML = "";
+      document.getElementById("practiceStatus").innerHTML = "";
+      updateSummary();
+    }
+
+    function speakText(text, lang = "en") {
+      const value = String(text || "").trim();
+      if (!value) {
+        alert("没有可朗读内容。");
+        return;
+      }
+      if (!window.speechSynthesis) {
+        alert("当前浏览器不支持语音朗读。");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(value);
+      utterance.lang = lang === "zh" ? "zh-CN" : "en-US";
+      utterance.rate = 0.95;
+      utterance.pitch = 1;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function normalizeText(text) {
+      return (text || "")
+        .toLowerCase()
+        .replace(/\s+/g, "")
+        .replace(/[，。！？,.!?；;：:、()（）\[\]【】"“”'‘’]/g, "");
+    }
+
+    function makeId() {
+      return "id_" + Math.random().toString(36).slice(2, 10);
+    }
+
+    function dedupeCards(list) {
+      const map = new Map();
+      list.forEach(item => {
+        const key = `${(item.en || "").trim()}::${(item.zh || "").trim()}`;
+        if (!map.has(key)) map.set(key, item);
+      });
+      return [...map.values()];
+    }
+
+    function dedupeRecords(list) {
+      const map = new Map();
+      list.forEach(item => {
+        const key = item.id || `${(item.promptText || "").trim()}::${(item.correctAnswer || "").trim()}::${(item.userAnswer || "").trim()}`;
+        if (!map.has(key)) map.set(key, item);
+      });
+      return [...map.values()];
+    }
+
+    function escapeHtml(text) {
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function escapeAttribute(text) {
+      return escapeHtml(text).replace(/\n/g, " ");
+    }
+  </script>
+</body>
+</html>
