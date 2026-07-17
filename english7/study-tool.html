@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中英文学习工具</title>
+  <style>
+    :root {
+      --bg: #f3f6fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #64748b;
+      --line: #dbe4f0;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --green: #16a34a;
+      --red: #dc2626;
+      --amber: #d97706;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, #dbeafe 0, transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      margin-bottom: 16px;
+    }
+    h1, h2, h3 { margin: 0 0 10px; }
+    h1 { font-size: 30px; }
+    .muted { color: var(--muted); font-size: 14px; }
+    textarea, input[type="text"], select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 15px;
+      background: #fff;
+      color: var(--text);
+    }
+    textarea { min-height: 180px; resize: vertical; }
+    .toolbar, .toolbar-tight {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+      align-items: center;
+    }
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 9px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      color: #fff;
+      background: var(--primary);
+    }
+    button:hover { background: var(--primary-dark); }
+    button:disabled { opacity: 0.55; cursor: not-allowed; }
+    button.secondary { background: #64748b; }
+    button.green { background: var(--green); }
+    button.red { background: var(--red); }
+    button.amber { background: var(--amber); }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .tab {
+      background: #eef4ff;
+      color: #1d4ed8;
+      border: 1px solid #cfe0ff;
+    }
+    .tab.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .view { display: none; }
+    .view.active { display: block; }
+    .summary {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      white-space: pre-wrap;
+      color: #475569;
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--primary);
+      border-radius: 14px;
+      padding: 12px;
+      background: #fcfdff;
+    }
+    .card .en {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .card .zh {
+      color: #475569;
+      margin-bottom: 10px;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .practice-box {
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px dashed #bfd3ef;
+      background: #f8fbff;
+    }
+    .practice-question {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .practice-meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .result {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #eff6ff;
+      color: #1e3a8a;
+      white-space: pre-wrap;
+    }
+    .result.good { background: #f0fdf4; color: #166534; }
+    .result.bad { background: #fef2f2; color: #991b1b; }
+    .history-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .history-item {
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fff;
+    }
+    .history-item.bad { border-left-color: var(--red); }
+    .history-item.good { border-left-color: var(--green); }
+    .history-item .record-time {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .empty-state {
+      padding: 18px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .data-grid {
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) minmax(260px, 2fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .import-preview {
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid #f3c77b;
+      border-radius: 12px;
+      background: #fffbeb;
+      color: #92400e;
+      white-space: pre-wrap;
+    }
+    .dialog-backdrop {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(15, 23, 42, 0.45);
+      z-index: 10;
+    }
+    .dialog-box {
+      width: min(440px, 100%);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.2);
+    }
+    .cloud-status {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #f8fafc;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .cloud-status.good { background: #f0fdf4; color: #166534; }
+    .cloud-status.pending { background: #fffbeb; color: #92400e; }
+    .cloud-status.bad { background: #fef2f2; color: #991b1b; }
+    .inline-select {
+      width: auto;
+      min-width: 160px;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    @media (max-width: 700px) {
+      body { padding: 12px; }
+      .panel { padding: 14px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="cloud-sync.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <h1>中英文学习工具</h1>
+      <div class="muted">统一输入一次 <code>英文 | 中文</code>，下面两个功能共用同一份内容。</div>
+      <textarea id="inputText" placeholder="请输入内容，例如：
+I think software testing is important. | 我认为软件测试很重要。
+This module supports OBC testing. | 这个模块支持 OBC 测试。
+Please check the connector. | 请检查连接器。"></textarea>
+      <div class="data-grid">
+        <input id="datasetName" type="text" placeholder="题库名称，例如：软件测试英语句库" onchange="saveMetadata()" />
+        <input id="datasetDescription" type="text" placeholder="题库备注 / 共享说明 / 标签" onchange="saveMetadata()" />
+      </div>
+      <div class="toolbar">
+        <button onclick="buildDataset()">生成内容</button>
+        <button class="secondary" onclick="loadSample()">示例内容</button>
+        <button class="green" onclick="copyPairs()">复制全部</button>
+        <button class="green" onclick="exportQuestionBank('txt')">导出题库 TXT</button>
+        <button class="green" onclick="copyShareData()">复制共享 JSON</button>
+        <button class="green" onclick="exportShareData()">导出共享题库 JSON</button>
+        <button class="green" onclick="exportAllData()">导出完整备份 JSON</button>
+        <button class="amber" onclick="openImportFile()">导入题库/备份</button>
+        <select id="importMode" class="inline-select" title="选择导入时如何处理当前数据">
+          <option value="merge">合并导入</option>
+          <option value="replace">覆盖恢复</option>
+        </select>
+        <input id="importFile" type="file" accept=".json,.txt,text/plain,application/json" style="display:none" onchange="importFromFile(this)" />
+        <button class="red" onclick="clearAll()">清空</button>
+      </div>
+      <div class="chips">
+        <div class="chip">输入格式：英文 | 中文</div>
+        <div class="chip">两个功能共用同一份数据</div>
+        <div class="chip">支持三种练习模式</div>
+      </div>
+      <div id="topSummary" class="summary">还没有内容，请先输入 <code>英文 | 中文</code> 并点击“生成内容”。</div>
+      <div class="tabs">
+        <button class="tab active" data-view="viewLibrary" onclick="switchView('viewLibrary', this)">句库学习</button>
+        <button class="tab" data-view="viewPractice" onclick="switchView('viewPractice', this)">默写练习</button>
+        <button class="tab" data-view="viewWrong" onclick="switchView('viewWrong', this)">错题复习</button>
+        <button class="tab" data-view="viewData" onclick="switchView('viewData', this)">数据管理</button>
+      </div>
+    </div>
+
+    <div id="viewLibrary" class="view active">
+      <div class="panel">
+        <h2>句库学习</h2>
+        <div class="toolbar-tight">
+          <input id="searchText" type="text" placeholder="搜索英文或中文" oninput="renderLibrary()" />
+          <select id="libraryMode" class="inline-select" onchange="renderLibrary()">
+            <option value="all">显示双语</option>
+            <option value="en">只看英文</option>
+            <option value="zh">只看中文</option>
+          </select>
+        </div>
+        <div id="librarySummary" class="summary">句库为空。</div>
+        <div id="libraryList" class="grid"></div>
+      </div>
+    </div>
+
+    <div id="viewPractice" class="view">
+      <div class="panel">
+        <h2>默写练习</h2>
+        <div class="muted">支持三种模式：听英文默写英文、看中文默写英文、看英文默写中文。</div>
+        <div class="toolbar-tight">
+          <button onclick="startPractice()">开始练习</button>
+          <button class="red" onclick="startWrongPractice()">开始错题复习</button>
+          <button class="secondary" onclick="exitPractice()">退出默写</button>
+          <button class="secondary" onclick="prevQuestion()">上一题</button>
+          <button class="secondary" onclick="nextQuestion()">下一题</button>
+          <button class="green" onclick="repeatAudio()">重听英文</button>
+          <button class="amber" onclick="showHint()">显示提示</button>
+          <select id="practiceMode" class="inline-select">
+            <option value="listen-en-write-en">听英文默写英文</option>
+            <option value="look-zh-write-en">看中文默写英文</option>
+            <option value="look-en-write-zh">看英文默写中文</option>
+          </select>
+          <label class="chip"><input id="autoSpeak" type="checkbox" checked /> 自动朗读</label>
+          <label class="chip"><input id="shuffleMode" type="checkbox" checked /> 随机顺序</label>
+          <label class="chip"><input id="autoSubmitNext" type="checkbox" checked /> 下一题自动提交</label>
+        </div>
+        <div id="practiceStatus" class="summary">还没有开始练习。</div>
+        <div id="practiceArea" class="practice-box">
+          <div class="muted">生成内容后，点击“开始练习”。</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>练习记录</h3>
+        <div id="historySummary" class="summary">还没有练习记录。</div>
+        <div class="toolbar-tight">
+          <select id="historyFilter" class="inline-select" onchange="renderHistory()">
+            <option value="all">全部记录</option>
+            <option value="wrong">只看不通过</option>
+            <option value="correct">只看通过</option>
+          </select>
+          <button class="green" onclick="exportSessionHistory('json')">导出本轮 JSON</button>
+          <button class="green" onclick="exportSessionHistory('txt')">导出本轮 TXT</button>
+          <button class="green" onclick="exportHistory('json')">导出全部 JSON</button>
+          <button class="green" onclick="exportHistory('txt')">导出全部 TXT</button>
+          <button class="red" onclick="clearHistory()">清空记录</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </div>
+    </div>
+
+    <div id="viewWrong" class="view">
+      <div class="panel">
+        <h2>错题复习</h2>
+        <div class="muted">按题目和默写类型管理当前错题；复习时会优先使用该题最近一次做错的默写类型。</div>
+        <div id="wrongSummary" class="summary">还没有错题。</div>
+        <div class="toolbar-tight">
+          <input id="wrongSearchText" type="text" placeholder="搜索错题英文或中文" oninput="renderWrong()" />
+          <select id="wrongModeFilter" class="inline-select" onchange="renderWrong()">
+            <option value="all">全部默写类型</option>
+            <option value="listen-en-write-en">听英文默写英文</option>
+            <option value="look-zh-write-en">看中文默写英文</option>
+            <option value="look-en-write-zh">看英文默写中文</option>
+          </select>
+          <select id="wrongRoundFilter" class="inline-select" onchange="renderWrong()">
+            <option value="current">当前未解决错题</option>
+            <option value="all">全部历史错题</option>
+          </select>
+          <select id="wrongQuestionFilter" class="inline-select" onchange="renderWrong()">
+            <option value="all">全部题目</option>
+          </select>
+        </div>
+        <div class="toolbar-tight">
+          <button class="red" onclick="startWrongPractice()">批量复习筛选错题</button>
+          <button class="green" onclick="exportWrongSession('json')">导出本轮错题 JSON</button>
+          <button class="green" onclick="exportWrongSession('txt')">导出本轮错题 TXT</button>
+          <button class="green" onclick="exportWrong('json')">导出全部错题 JSON</button>
+          <button class="green" onclick="exportWrong('txt')">导出全部错题 TXT</button>
+        </div>
+        <div id="wrongList" class="history-list"></div>
+      </div>
+    </div>
+
+    <div id="viewData" class="view">
+      <div class="panel">
+        <h2>数据管理与共享</h2>
+        <div class="muted">共享给别人时使用“共享题库 JSON”，只包含题库，不包含你的个人答题记录。自己换设备或备份时使用“完整备份 JSON”。</div>
+        <div id="dataSummary" class="summary">暂无数据。</div>
+        <div class="toolbar-tight">
+          <button class="green" onclick="exportQuestionBank('txt')">导出题库 TXT</button>
+          <button class="green" onclick="copyShareData()">复制共享 JSON</button>
+          <button class="green" onclick="exportShareData()">导出共享题库 JSON</button>
+          <button class="green" onclick="exportAllData()">导出完整备份 JSON</button>
+          <button class="amber" onclick="openImportFile()">选择文件导入</button>
+          <select id="dataImportMode" class="inline-select" onchange="syncImportMode(this.value); renderImportPreview()">
+            <option value="merge">合并导入</option>
+            <option value="replace">覆盖恢复</option>
+          </select>
+        </div>
+        <div id="importPreview" class="import-preview" style="display:none;"></div>
+        <div class="toolbar-tight" id="importActions" style="display:none;">
+          <button class="green" onclick="confirmPendingImport()">确认导入</button>
+          <button class="secondary" onclick="cancelPendingImport()">取消</button>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>电脑 / 手机自动同步</h2>
+        <div class="muted">配置 Supabase 后，登录同一个账号即可同步题库、默写记录、错题和默写类型。不配置时仍使用本地保存。</div>
+        <div id="cloudStatus" class="cloud-status">尚未配置云同步。</div>
+        <div class="data-grid">
+          <input id="cloudUrl" type="url" placeholder="Supabase Project URL，例如 https://xxx.supabase.co" />
+          <input id="cloudAnonKey" type="text" placeholder="Supabase anon public key" />
+        </div>
+        <div class="toolbar-tight">
+          <button class="amber" onclick="saveCloudConfig()">保存云配置</button>
+          <button class="secondary" onclick="syncCloudNow()">立即同步</button>
+        </div>
+        <div class="data-grid">
+          <input id="cloudEmail" type="email" placeholder="同步账号邮箱" />
+          <input id="cloudPassword" type="password" placeholder="同步账号密码" />
+        </div>
+        <div class="toolbar-tight">
+          <button onclick="cloudSignUp()">注册同步账号</button>
+          <button class="green" onclick="cloudSignIn()">登录同步账号</button>
+          <button class="secondary" onclick="cloudSignOut()">退出同步账号</button>
+        </div>
+        <div class="muted">首次使用前，请在 Supabase 执行项目中的 `supabase-sync.sql`，并在 Authentication 中启用 Email 登录。</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="exitPracticeDialog" class="dialog-backdrop" role="dialog" aria-modal="true" aria-labelledby="exitPracticeTitle">
+    <div class="dialog-box">
+      <h3 id="exitPracticeTitle">退出默写</h3>
+      <div class="muted">本轮已提交的答案可以保存，也可以放弃。未点击“提交答案”的输入内容不会计入答题记录。</div>
+      <div class="toolbar">
+        <button class="green" onclick="finishExitPractice(true)">保存本轮并退出</button>
+        <button class="red" onclick="finishExitPractice(false)">不保存本轮并退出</button>
+        <button class="secondary" onclick="cancelExitPractice()">继续默写</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var STORAGE_KEY = "bilingual-study-tool-state-v2";
+    var DATA_SCHEMA = "bilingual-study-tool";
+    var items = [];
+    var datasetMeta = {
+      name: "我的英语题库",
+      description: ""
+    };
+    var pendingImport = null;
+    var lastSessionId = "";
+    var practice = {
+      queue: [],
+      index: 0,
+      current: null,
+      currentAnswered: false,
+      currentRecordId: null,
+      results: [],
+      autoCorrect: false,
+      mode: "listen-en-write-en",
+      sessionId: "",
+      sessionAnswered: 0,
+      isWrongReview: false
+    };
+
+    function initialize() {
+      restoreState();
+      resetPractice();
+      syncInputFromItems();
+      syncMetadataInputs();
+      syncImportMode(document.getElementById("importMode").value);
+      syncCloudInputs();
+      updateTopSummary();
+      renderLibrary();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      document.getElementById("practiceStatus").innerText = items.length ? "内容已恢复，可以开始练习。" : "还没有开始练习。";
+      document.getElementById("practiceArea").innerHTML = items.length ? '<div class="muted">点击“开始练习”进入默写模式。</div>' : '<div class="muted">生成内容后，点击“开始练习”。</div>';
+      if (window.cloudSync) window.cloudSync.init();
+    }
+
+    function switchView(viewId, button) {
+      if (viewId !== "viewPractice" && practice.queue.length && practice.sessionAnswered > 0) {
+        exitPractice();
+        return;
+      }
+      var views = document.querySelectorAll(".view");
+      var tabs = document.querySelectorAll(".tab");
+      for (var i = 0; i < views.length; i++) views[i].classList.toggle("active", views[i].id === viewId);
+      for (var j = 0; j < tabs.length; j++) tabs[j].classList.toggle("active", tabs[j] === button);
+    }
+
+    function activateView(viewId) {
+      var button = document.querySelector('.tab[data-view="' + viewId + '"]');
+      switchView(viewId, button);
+    }
+
+    function makeId(prefix) {
+      return prefix + "_" + Date.now() + "_" + Math.random().toString(36).slice(2, 9);
+    }
+
+    function loadSample() {
+      document.getElementById("inputText").value =
+        "I think software testing is important. | 我认为软件测试很重要。\n" +
+        "This module supports OBC testing. | 这个模块支持 OBC 测试。\n" +
+        "Please check the connector. | 请检查连接器。";
+      buildDataset();
+    }
+
+    function buildDataset() {
+      var text = document.getElementById("inputText").value || "";
+      if (practice.sessionAnswered > 0) lastSessionId = practice.sessionId;
+      var lines = text.split(/\r?\n/);
+      var nextItems = [];
+      var skipped = 0;
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (!line) continue;
+        var parts = line.split("|");
+        if (parts.length < 2) {
+          skipped++;
+          continue;
+        }
+        var en = parts[0].trim();
+        var zh = parts.slice(1).join("|").trim();
+        if (!en && !zh) {
+          skipped++;
+          continue;
+        }
+        nextItems.push({ id: makeId("item"), en: en, zh: zh });
+      }
+      items = dedupeItems(nextItems);
+      resetPractice();
+      saveState();
+      updateTopSummary();
+      renderLibrary();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      document.getElementById("practiceStatus").innerText = items.length ? "内容已生成，可以开始练习。" : "没有识别到有效内容，请按“英文 | 中文”格式输入。";
+      document.getElementById("practiceArea").innerHTML = items.length ? '<div class="muted">点击“开始练习”进入默写模式。</div>' : '<div class="muted">内容为空。</div>';
+      if (skipped) alert("已生成 " + items.length + " 组内容，忽略了 " + skipped + " 行无效格式。\n正确格式：英文 | 中文");
+    }
+
+    function dedupeItems(list) {
+      var map = {};
+      var result = [];
+      for (var i = 0; i < list.length; i++) {
+        var key = pairKey(list[i].en, list[i].zh);
+        if (!map[key]) {
+          map[key] = true;
+          result.push(list[i]);
+        }
+      }
+      return result;
+    }
+
+    function pairKey(en, zh) {
+      return normalizeText(en) + "||" + normalizeText(zh);
+    }
+
+    function resultKey(record) {
+      return pairKey(record.en, record.zh) + "||" + normalizeMode(record.mode);
+    }
+
+    function normalizeMode(mode) {
+      if (mode === "look-zh-write-en" || mode === "look-en-write-zh") return mode;
+      return "listen-en-write-en";
+    }
+
+    function getModeLabel(mode) {
+      mode = normalizeMode(mode);
+      if (mode === "look-zh-write-en") return "看中文默写英文";
+      if (mode === "look-en-write-zh") return "看英文默写中文";
+      return "听英文默写英文";
+    }
+
+    function updateTopSummary() {
+      var summary = document.getElementById("topSummary");
+      if (!items.length) {
+        summary.innerText = "还没有内容，请先输入 `英文 | 中文` 并点击“生成内容”。";
+        return;
+      }
+      summary.innerText = "题库：" + (datasetMeta.name || "未命名题库") + "，已生成 " + items.length + " 组双语内容，累计练习 " + practice.results.length + " 题，当前错题 " + getWrongRecords().length + " 道。\n题库、答题内容、答案、默写类型和判定结果都会自动保存在本机；共享使用题库 JSON，迁移使用完整备份 JSON。";
+    }
+
+    function syncMetadataInputs() {
+      document.getElementById("datasetName").value = datasetMeta.name || "";
+      document.getElementById("datasetDescription").value = datasetMeta.description || "";
+    }
+
+    function saveMetadata() {
+      datasetMeta.name = (document.getElementById("datasetName").value || "").trim() || "我的英语题库";
+      datasetMeta.description = (document.getElementById("datasetDescription").value || "").trim();
+      saveState();
+      updateTopSummary();
+      renderDataSummary();
+    }
+
+    function renderDataSummary() {
+      var summary = document.getElementById("dataSummary");
+      if (!summary) return;
+      summary.innerText = "题库名称：" + (datasetMeta.name || "未命名题库") + "\n题目：" + items.length + " 组 | 答题记录：" + practice.results.length + " 条 | 当前错题：" + getWrongRecords().length + " 道\n备注：" + (datasetMeta.description || "无");
+    }
+
+    function syncImportMode(value) {
+      var top = document.getElementById("importMode");
+      var manager = document.getElementById("dataImportMode");
+      var selected = value === "replace" ? "replace" : "merge";
+      if (top) top.value = selected;
+      if (manager) manager.value = selected;
+    }
+
+    function setCloudStatus(message, kind) {
+      var status = document.getElementById("cloudStatus");
+      if (!status) return;
+      status.innerText = message;
+      status.className = "cloud-status " + (kind || "");
+    }
+
+    function syncCloudInputs() {
+      if (!window.cloudSync) return;
+      var config = window.cloudSync.getConfig();
+      document.getElementById("cloudUrl").value = config.url || "";
+      document.getElementById("cloudAnonKey").value = config.anonKey || "";
+    }
+
+    function saveCloudConfig() {
+      if (!window.cloudSync) {
+        setCloudStatus("同步组件未加载，请联网后刷新页面。", "bad");
+        return;
+      }
+      window.cloudSync.configure(
+        document.getElementById("cloudUrl").value,
+        document.getElementById("cloudAnonKey").value
+      );
+    }
+
+    function cloudSignUp() {
+      if (!window.cloudSync) return;
+      window.cloudSync.signUp(
+        document.getElementById("cloudEmail").value,
+        document.getElementById("cloudPassword").value
+      );
+    }
+
+    function cloudSignIn() {
+      if (!window.cloudSync) return;
+      window.cloudSync.signIn(
+        document.getElementById("cloudEmail").value,
+        document.getElementById("cloudPassword").value
+      );
+    }
+
+    function cloudSignOut() {
+      if (window.cloudSync) window.cloudSync.signOut();
+    }
+
+    function syncCloudNow() {
+      if (window.cloudSync) window.cloudSync.syncNow();
+    }
+
+    function renderLibrary() {
+      var list = document.getElementById("libraryList");
+      var summary = document.getElementById("librarySummary");
+      var mode = document.getElementById("libraryMode").value;
+      var search = normalizeText(document.getElementById("searchText").value || "");
+      var filtered = [];
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        var haystack = normalizeText(item.en + " " + item.zh);
+        if (!search || haystack.indexOf(search) >= 0) filtered.push(item);
+      }
+      summary.innerText = "共 " + items.length + " 组，当前显示 " + filtered.length + " 组。";
+      if (!filtered.length) {
+        list.innerHTML = '<div class="empty-state">没有匹配内容。</div>';
+        return;
+      }
+      var html = "";
+      for (var j = 0; j < filtered.length; j++) {
+        var row = filtered[j];
+        html += '<div class="card">';
+        if (mode !== "zh") html += '<div class="en">' + escapeHtml((j + 1) + ". " + row.en) + "</div>";
+        if (mode !== "en") html += '<div class="zh">' + escapeHtml(row.zh) + "</div>";
+        html += '<div class="toolbar-tight">';
+        html += '<button type="button" onclick="speakText(' + escapeHtml(quoteJs(row.en)) + ', \'en\')">读英文</button>';
+        html += '<button type="button" class="secondary" onclick="speakText(' + escapeHtml(quoteJs(row.zh)) + ', \'zh\')">读中文</button>';
+        html += '<button type="button" class="green" onclick="copyLine(' + escapeHtml(quoteJs(row.en + " | " + row.zh)) + ')">复制本行</button>';
+        html += "</div></div>";
+      }
+      list.innerHTML = html;
+    }
+
+    function startPractice() {
+      if (!items.length) {
+        alert("请先生成内容。");
+        return;
+      }
+      if (practice.queue.length && practice.sessionAnswered > 0) {
+        exitPractice();
+        return;
+      }
+      resetPractice();
+      practice.mode = normalizeMode(document.getElementById("practiceMode").value);
+      var indexes = buildOrder(items.length, document.getElementById("shuffleMode").checked);
+      for (var i = 0; i < indexes.length; i++) practice.queue.push({ item: items[indexes[i]], mode: practice.mode });
+      practice.isWrongReview = false;
+      activateView("viewPractice");
+      showQuestion();
+    }
+
+    function startWrongPractice() {
+      if (practice.queue.length && practice.sessionAnswered > 0) {
+        exitPractice();
+        return;
+      }
+      var wrong = getFilteredWrongRecords();
+      if (!wrong.length) {
+        alert("当前没有错题。先完成练习并判定为“不通过”后，这里会自动生成错题。");
+        return;
+      }
+      resetPractice();
+      var seenItems = {};
+      for (var i = 0; i < wrong.length; i++) {
+        var wrongKey = pairKey(wrong[i].en, wrong[i].zh);
+        if (seenItems[wrongKey]) continue;
+        seenItems[wrongKey] = true;
+        practice.queue.push({ item: itemFromRecord(wrong[i]), mode: normalizeMode(wrong[i].mode) });
+      }
+      if (document.getElementById("shuffleMode").checked) shuffleArray(practice.queue);
+      practice.isWrongReview = true;
+      activateView("viewPractice");
+      showQuestion();
+    }
+
+    function startSingleWrongPractice(recordId) {
+      if (practice.queue.length && practice.sessionAnswered > 0) {
+        exitPractice();
+        return;
+      }
+      var record = findRecord(recordId);
+      if (!record || record.correct) return;
+      resetPractice();
+      practice.queue.push({ item: itemFromRecord(record), mode: normalizeMode(record.mode) });
+      practice.isWrongReview = true;
+      activateView("viewPractice");
+      showQuestion();
+    }
+
+    function exitPractice() {
+      if (!practice.queue.length) {
+        activateView("viewLibrary");
+        return;
+      }
+      if (!practice.sessionAnswered) {
+        finishExitPractice(true);
+        return;
+      }
+      document.getElementById("exitPracticeDialog").style.display = "flex";
+    }
+
+    function finishExitPractice(save) {
+      var exitingSessionId = practice.sessionId;
+      if (!save) {
+        var kept = [];
+        for (var i = 0; i < practice.results.length; i++) {
+          if (practice.results[i].sessionId !== exitingSessionId) kept.push(practice.results[i]);
+        }
+        practice.results = kept;
+      } else if (practice.sessionAnswered > 0) {
+        lastSessionId = exitingSessionId;
+      }
+      document.getElementById("exitPracticeDialog").style.display = "none";
+      resetPractice();
+      saveState();
+      updateTopSummary();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      document.getElementById("practiceStatus").innerText = save ? "本轮默写已保存并退出。" : "本轮默写已放弃，记录未保存。";
+      document.getElementById("practiceArea").innerHTML = '<div class="muted">已退出默写。点击“开始练习”进入下一轮。</div>';
+      activateView("viewLibrary");
+    }
+
+    function cancelExitPractice() {
+      document.getElementById("exitPracticeDialog").style.display = "none";
+    }
+
+    function buildOrder(length, shuffle) {
+      var arr = [];
+      for (var i = 0; i < length; i++) arr.push(i);
+      if (shuffle) shuffleArray(arr);
+      return arr;
+    }
+
+    function shuffleArray(arr) {
+      for (var i = arr.length - 1; i > 0; i--) {
+        var k = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i];
+        arr[i] = arr[k];
+        arr[k] = tmp;
+      }
+    }
+
+    function resetPractice() {
+      practice.queue = [];
+      practice.index = 0;
+      practice.current = null;
+      practice.currentAnswered = false;
+      practice.currentRecordId = null;
+      practice.autoCorrect = false;
+      practice.sessionId = makeId("session");
+      practice.sessionAnswered = 0;
+      practice.isWrongReview = false;
+    }
+
+    function getPracticeConfig() {
+      var mode = normalizeMode(practice.mode);
+      if (mode === "look-zh-write-en") {
+        return {
+          title: "看中文默写英文",
+          prompt: "请根据中文写出对应英文",
+          questionText: practice.current ? practice.current.zh : "",
+          placeholder: "请输入英文答案",
+          answer: practice.current ? practice.current.en : "",
+          canRepeatAudio: false,
+          autoSpeak: false,
+          hint: practice.current ? practice.current.en : ""
+        };
+      }
+      if (mode === "look-en-write-zh") {
+        return {
+          title: "看英文默写中文",
+          prompt: "请根据英文写出对应中文",
+          questionText: practice.current ? practice.current.en : "",
+          placeholder: "请输入中文答案",
+          answer: practice.current ? practice.current.zh : "",
+          canRepeatAudio: false,
+          autoSpeak: false,
+          hint: practice.current ? practice.current.zh : ""
+        };
+      }
+      return {
+        title: "听英文默写英文",
+        prompt: "请听英文并写出你听到的内容",
+        questionText: "点击“重听英文”可重复播放。",
+        placeholder: "请输入你听到的英文",
+        answer: practice.current ? practice.current.en : "",
+        canRepeatAudio: true,
+        autoSpeak: true,
+        hint: practice.current ? practice.current.zh : ""
+      };
+    }
+
+    function showQuestion() {
+      var area = document.getElementById("practiceArea");
+      if (!practice.queue.length) {
+        area.innerHTML = '<div class="muted">还没有题目，请点击“开始练习”。</div>';
+        return;
+      }
+      if (practice.index < 0) practice.index = 0;
+      if (practice.index >= practice.queue.length) practice.index = practice.queue.length - 1;
+      var entry = practice.queue[practice.index];
+      practice.current = entry.item;
+      practice.mode = normalizeMode(entry.mode);
+      document.getElementById("practiceMode").value = practice.mode;
+      practice.currentAnswered = false;
+      practice.currentRecordId = null;
+      var config = getPracticeConfig();
+      area.innerHTML =
+        '<div class="practice-question">第 ' + (practice.index + 1) + ' 题' + (practice.isWrongReview ? '（错题复习）' : '') + '</div>' +
+        '<div class="practice-meta">' + escapeHtml(config.title) + ' | ' + escapeHtml(config.prompt) + '</div>' +
+        '<div class="result">' + escapeHtml(config.questionText) + '</div>' +
+        '<textarea id="answerInput" placeholder="' + escapeHtml(config.placeholder) + '"></textarea>' +
+        '<div class="toolbar">' +
+        '<button onclick="submitAnswer()">提交答案</button>' +
+        '<button class="secondary" onclick="redoCurrentQuestion()">重做本题</button>' +
+        '<button class="secondary" onclick="repeatAudio()" ' + (config.canRepeatAudio ? "" : 'style="display:none;"') + '>重听英文</button>' +
+        '<button class="amber" onclick="showHint()">显示提示</button>' +
+        '</div>' +
+        '<div id="questionResult"></div>';
+      updatePracticeStatus();
+      if (config.autoSpeak && document.getElementById("autoSpeak").checked) speakText(practice.current.en, "en");
+    }
+
+    function redoCurrentQuestion() {
+      if (!practice.current) return;
+      practice.currentAnswered = false;
+      practice.currentRecordId = null;
+      var input = document.getElementById("answerInput");
+      var result = document.getElementById("questionResult");
+      if (input) {
+        input.value = "";
+        input.focus();
+      }
+      if (result) result.innerHTML = "";
+    }
+
+    function updatePracticeStatus() {
+      var correctCount = 0;
+      for (var i = 0; i < practice.results.length; i++) {
+        if (practice.results[i].sessionId === practice.sessionId && practice.results[i].correct) correctCount++;
+      }
+      var total = practice.queue.length || items.length || 0;
+      document.getElementById("practiceStatus").innerText = total
+        ? (practice.isWrongReview ? "错题批量复习 | 当前类型：" + getModeLabel(practice.mode) : "模式：" + getModeLabel(practice.mode)) + " | 进度：" + (practice.current ? (practice.index + 1) : 0) + "/" + total + " | 本轮已作答：" + practice.sessionAnswered + " | 本轮通过：" + correctCount
+        : "还没有开始练习。";
+    }
+
+    function submitAnswer() {
+      if (!practice.current || practice.currentAnswered) return;
+      var input = document.getElementById("answerInput");
+      var userAnswer = (input ? input.value : "").trim();
+      var config = getPracticeConfig();
+      var correctAnswer = config.answer;
+      var answerLanguage = practice.mode === "look-en-write-zh" ? "zh" : "en";
+      var correct = normalizeAnswerText(userAnswer, answerLanguage) === normalizeAnswerText(correctAnswer, answerLanguage);
+      practice.autoCorrect = correct;
+      var record = {
+        id: makeId("record"),
+        itemId: practice.current.id || "",
+        sessionId: practice.sessionId,
+        index: practice.index + 1,
+        mode: practice.mode,
+        modeLabel: config.title,
+        question: config.questionText,
+        en: practice.current.en,
+        zh: practice.current.zh,
+        userAnswer: userAnswer,
+        correctAnswer: correctAnswer,
+        autoCorrect: correct,
+        judgment: "auto",
+        correct: correct,
+        score: correct ? 1 : 0,
+        answeredAt: new Date().toISOString()
+      };
+      practice.results = dedupeSessionRecords(practice.results);
+      var existingIndex = findSessionRecordIndex(record);
+      if (existingIndex >= 0) {
+        record.id = practice.results[existingIndex].id;
+        practice.results[existingIndex] = record;
+      } else {
+        practice.results.push(record);
+        practice.sessionAnswered++;
+      }
+      practice.currentRecordId = record.id;
+      practice.currentAnswered = true;
+      saveState();
+      renderQuestionResult(record);
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      updateTopSummary();
+      updatePracticeStatus();
+    }
+
+    function renderQuestionResult(record) {
+      var box = document.getElementById("questionResult");
+      if (!box) return;
+      var html = '';
+      html += '<div class="result ' + (record.correct ? 'good' : 'bad') + '">';
+      html += (record.correct ? '当前判定：通过' : '当前判定：不通过') + '\n';
+      html += '你的答案：' + escapeHtml(record.userAnswer || '未填写') + '\n';
+      html += '正确答案：' + escapeHtml(record.correctAnswer);
+      html += '</div>';
+      html += '<div class="toolbar-tight">';
+      html += '<select class="inline-select" onchange="setManualJudge(this.value)">';
+      html += '<option value="auto" ' + (record.judgment === "auto" ? "selected" : "") + '>恢复默认判定</option>';
+      html += '<option value="pass" ' + (record.judgment === "manual-pass" ? "selected" : "") + '>手动改为通过</option>';
+      html += '<option value="fail" ' + (record.judgment === "manual-fail" ? "selected" : "") + '>手动改为不通过</option>';
+      html += '</select>';
+      html += '</div>';
+      box.innerHTML = html;
+    }
+
+    function setManualJudge(mode) {
+      setRecordJudge(practice.currentRecordId, mode);
+    }
+
+    function setRecordJudge(recordId, mode) {
+      if (!recordId) return;
+      var record = findRecord(recordId);
+      if (!record) return;
+      var judgedCorrect = mode === "pass" ? true : mode === "fail" ? false : !!record.autoCorrect;
+      record.correct = judgedCorrect;
+      record.score = judgedCorrect ? 1 : 0;
+      record.judgment = mode === "pass" ? "manual-pass" : mode === "fail" ? "manual-fail" : "auto";
+      record.judgedAt = new Date().toISOString();
+      saveState();
+      if (recordId === practice.currentRecordId) renderQuestionResult(record);
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      updateTopSummary();
+      updatePracticeStatus();
+    }
+
+    function findRecord(recordId) {
+      for (var i = 0; i < practice.results.length; i++) if (practice.results[i].id === recordId) return practice.results[i];
+      return null;
+    }
+
+    function sessionRecordKey(record) {
+      return "session::" + String(record.sessionId || "") + "::" + pairKey(record.en, record.zh);
+    }
+
+    function findSessionRecordIndex(record) {
+      var key = sessionRecordKey(record);
+      for (var i = 0; i < practice.results.length; i++) {
+        if (sessionRecordKey(practice.results[i]) === key) return i;
+      }
+      return -1;
+    }
+
+    function deleteRecord(recordId) {
+      var index = -1;
+      for (var i = 0; i < practice.results.length; i++) {
+        if (practice.results[i].id === recordId) {
+          index = i;
+          break;
+        }
+      }
+      if (index < 0) return;
+      if (!confirm("确定删除这条练习记录吗？删除后无法恢复，但题库不会受影响。")) return;
+      var record = practice.results[index];
+      practice.results.splice(index, 1);
+      if (record.sessionId === practice.sessionId && practice.sessionAnswered > 0) {
+        practice.sessionAnswered = Math.max(0, practice.sessionAnswered - 1);
+      }
+      if (practice.currentRecordId === recordId) {
+        practice.currentRecordId = null;
+        practice.currentAnswered = false;
+        var questionResult = document.getElementById("questionResult");
+        if (questionResult) questionResult.innerHTML = "";
+      }
+      if (lastSessionId && !hasSessionRecords(lastSessionId)) {
+        lastSessionId = practice.results.length ? practice.results[practice.results.length - 1].sessionId : "";
+      }
+      saveState();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      updateTopSummary();
+      updatePracticeStatus();
+    }
+
+    function hasSessionRecords(sessionId) {
+      for (var i = 0; i < practice.results.length; i++) {
+        if (practice.results[i].sessionId === sessionId) return true;
+      }
+      return false;
+    }
+
+    function prevQuestion() {
+      if (!practice.queue.length) return;
+      if (practice.index > 0) {
+        practice.index--;
+        showQuestion();
+      }
+    }
+
+    function nextQuestion() {
+      if (!practice.queue.length) return;
+      if (!practice.currentAnswered && document.getElementById("autoSubmitNext").checked) submitAnswer();
+      if (practice.index < practice.queue.length - 1) {
+        practice.index++;
+        showQuestion();
+      } else if (practice.currentAnswered) {
+        document.getElementById("practiceStatus").innerText += " | 已到最后一题";
+      }
+    }
+
+    function repeatAudio() {
+      if (!practice.current || practice.mode !== "listen-en-write-en") return;
+      speakText(practice.current.en, "en");
+    }
+
+    function showHint() {
+      if (!practice.current) return;
+      var config = getPracticeConfig();
+      var box = document.getElementById("questionResult");
+      if (!box) return;
+      var hint = document.createElement("div");
+      hint.className = "result";
+      hint.innerText = "提示：" + config.hint;
+      box.appendChild(hint);
+    }
+
+    function renderHistory() {
+      var list = document.getElementById("historyList");
+      var summary = document.getElementById("historySummary");
+      var filter = document.getElementById("historyFilter").value;
+      if (!practice.results.length) {
+        summary.innerText = "还没有练习记录。";
+        list.innerHTML = "";
+        return;
+      }
+      var correctCount = 0;
+      var visible = [];
+      for (var i = 0; i < practice.results.length; i++) {
+        var record = practice.results[i];
+        if (record.correct) correctCount++;
+        if (filter === "wrong" && record.correct) continue;
+        if (filter === "correct" && !record.correct) continue;
+        visible.push({ record: record, number: i + 1 });
+      }
+      summary.innerText = "累计 " + practice.results.length + " 题，当前通过 " + correctCount + " 题，正确率 " + Math.round(correctCount / practice.results.length * 100) + "%；当前显示 " + visible.length + " 条。每条记录都保留题目、答案、你的作答、默写类型和判定方式。";
+      if (!visible.length) {
+        list.innerHTML = '<div class="empty-state">没有符合筛选条件的记录。</div>';
+        return;
+      }
+      var html = "";
+      for (var j = visible.length - 1; j >= 0; j--) {
+        var entry = visible[j];
+        var item = entry.record;
+        var judge = item.judgment || "auto";
+        html += '<div class="history-item ' + (item.correct ? 'good' : 'bad') + '">';
+        html += '<strong>记录 #' + entry.number + '</strong> <span class="muted">（本轮第 ' + item.index + ' 题）</span><br>';
+        html += '默写类型：' + escapeHtml(item.modeLabel || getModeLabel(item.mode)) + '<br>';
+        html += '题目：' + escapeHtml(item.question || (item.mode === "look-zh-write-en" ? item.zh : item.en)) + '<br>';
+        html += '英文：' + escapeHtml(item.en) + '<br>';
+        html += '中文：' + escapeHtml(item.zh) + '<br>';
+        html += '你的答案：' + escapeHtml(item.userAnswer || '未填写') + '<br>';
+        html += '正确答案：' + escapeHtml(item.correctAnswer) + '<br>';
+        html += '结果：' + (item.correct ? '通过' : '不通过') + '（' + (judge === "auto" ? '默认判定' : judge === "manual-pass" ? '手动改为通过' : judge === "imported-wrong" ? '导入错题' : '手动改为不通过') + '）';
+        html += '<div class="toolbar-tight"><select class="inline-select" onchange="setRecordJudge(' + escapeHtml(quoteJs(item.id)) + ', this.value)">';
+        html += '<option value="auto" ' + (judge === "auto" ? "selected" : "") + '>恢复默认判定</option>';
+        html += '<option value="pass" ' + (judge === "manual-pass" ? "selected" : "") + '>手动改为通过</option>';
+        html += '<option value="fail" ' + (judge === "manual-fail" ? "selected" : "") + '>手动改为不通过</option>';
+        html += '</select><button type="button" class="red" onclick="deleteRecord(' + escapeHtml(quoteJs(item.id)) + ')">删除记录</button></div>';
+        html += '<div class="record-time">作答时间：' + escapeHtml(formatDate(item.answeredAt)) + '</div>';
+        html += '</div>';
+      }
+      list.innerHTML = html;
+    }
+
+    function getWrongRecords() {
+      var latest = {};
+      for (var i = 0; i < practice.results.length; i++) {
+        var record = practice.results[i];
+        var key = resultKey(record);
+        var previous = latest[key];
+        if (!previous || recordTime(record) >= recordTime(previous)) latest[key] = record;
+      }
+      var wrong = [];
+      for (var key in latest) if (latest[key] && !latest[key].correct) wrong.push(latest[key]);
+      wrong.sort(function (a, b) { return String(a.answeredAt).localeCompare(String(b.answeredAt)); });
+      return wrong;
+    }
+
+    function getWrongAttempts(record) {
+      var count = 0;
+      var key = resultKey(record);
+      for (var i = 0; i < practice.results.length; i++) {
+        if (resultKey(practice.results[i]) === key && !practice.results[i].correct) count++;
+      }
+      return count;
+    }
+
+    function getWrongHistoryRecords() {
+      var wrong = [];
+      for (var i = 0; i < practice.results.length; i++) {
+        if (!practice.results[i].correct) wrong.push(practice.results[i]);
+      }
+      wrong.sort(function (a, b) { return recordTime(b) - recordTime(a); });
+      return wrong;
+    }
+
+    function getWrongPoolBeforeQuestion() {
+      var roundInput = document.getElementById("wrongRoundFilter");
+      var round = roundInput ? roundInput.value : "current";
+      var wrong = round === "current" ? getWrongRecords() : getWrongHistoryRecords();
+      if (round !== "current" && round !== "all") {
+        wrong = [];
+        for (var i = 0; i < practice.results.length; i++) {
+          var record = practice.results[i];
+          if (!record.correct && record.sessionId === round) wrong.push(record);
+        }
+      }
+      var searchInput = document.getElementById("wrongSearchText");
+      var modeInput = document.getElementById("wrongModeFilter");
+      var search = normalizeText(searchInput ? searchInput.value : "");
+      var mode = modeInput ? modeInput.value : "all";
+      var filtered = [];
+      for (var i = 0; i < wrong.length; i++) {
+        var record = wrong[i];
+        if (mode !== "all" && normalizeMode(record.mode) !== mode) continue;
+        var text = normalizeText(record.en + " " + record.zh + " " + (record.question || ""));
+        if (search && text.indexOf(search) < 0) continue;
+        filtered.push(record);
+      }
+      filtered.sort(function (a, b) { return recordTime(b) - recordTime(a); });
+      return filtered;
+    }
+
+    function getWrongRounds() {
+      var map = {};
+      for (var i = 0; i < practice.results.length; i++) {
+        var record = practice.results[i];
+        if (record.correct) continue;
+        var sessionId = String(record.sessionId || "imported");
+        if (!Object.prototype.hasOwnProperty.call(map, sessionId)) {
+          map[sessionId] = { id: sessionId, firstTime: recordTime(record), count: 0 };
+        }
+        map[sessionId].firstTime = Math.min(map[sessionId].firstTime, recordTime(record));
+        map[sessionId].count++;
+      }
+      var rounds = [];
+      for (var key in map) rounds.push(map[key]);
+      rounds.sort(function (a, b) { return a.firstTime - b.firstTime; });
+      return rounds;
+    }
+
+    function renderWrongRoundOptions() {
+      var select = document.getElementById("wrongRoundFilter");
+      if (!select) return;
+      var selected = select.value || "current";
+      var rounds = getWrongRounds();
+      var html = '<option value="current">当前未解决错题</option><option value="all">全部历史错题</option>';
+      for (var i = 0; i < rounds.length; i++) {
+        html += '<option value="' + escapeHtml(rounds[i].id) + '">第 ' + (i + 1) + ' 轮 | ' + escapeHtml(formatDate(rounds[i].firstTime)) + ' | 错题 ' + rounds[i].count + ' 道</option>';
+      }
+      select.innerHTML = html;
+      var found = selected === "current" || selected === "all";
+      for (var j = 0; j < rounds.length; j++) if (rounds[j].id === selected) found = true;
+      select.value = found ? selected : "current";
+    }
+
+    function renderWrongQuestionOptions(pool) {
+      var select = document.getElementById("wrongQuestionFilter");
+      if (!select) return;
+      var selected = select.value || "all";
+      var rounds = getWrongRounds();
+      var html = '<option value="all">全部题目</option>';
+      for (var i = 0; i < pool.length; i++) {
+        var item = pool[i];
+        var roundNumber = "历史";
+        for (var r = 0; r < rounds.length; r++) if (rounds[r].id === item.sessionId) roundNumber = "第 " + (r + 1) + " 轮";
+        html += '<option value="' + escapeHtml(item.id) + '">' + roundNumber + ' / 第 ' + (item.index || "?") + ' 题 | ' + escapeHtml(item.modeLabel || getModeLabel(item.mode)) + ' | ' + escapeHtml(item.en || item.zh) + '</option>';
+      }
+      select.innerHTML = html;
+      var valid = selected === "all";
+      for (var j = 0; j < pool.length; j++) if (pool[j].id === selected) valid = true;
+      select.value = valid ? selected : "all";
+    }
+
+    function getFilteredWrongRecords() {
+      var wrong = getWrongPoolBeforeQuestion();
+      var questionInput = document.getElementById("wrongQuestionFilter");
+      var questionId = questionInput ? questionInput.value : "all";
+      if (questionId !== "all") {
+        wrong = wrong.filter(function (record) { return record.id === questionId; });
+      }
+      return wrong;
+    }
+
+    function getResolvedWrongCount() {
+      var failed = {};
+      var active = {};
+      var wrong = getWrongRecords();
+      for (var i = 0; i < practice.results.length; i++) {
+        if (!practice.results[i].correct) failed[resultKey(practice.results[i])] = true;
+      }
+      for (var j = 0; j < wrong.length; j++) active[resultKey(wrong[j])] = true;
+      var count = 0;
+      for (var key in failed) if (!active[key]) count++;
+      return count;
+    }
+
+    function recordTime(record) {
+      var time = new Date(record && record.answeredAt ? record.answeredAt : 0).getTime();
+      return isNaN(time) ? 0 : time;
+    }
+
+    function itemFromRecord(record) {
+      for (var i = 0; i < items.length; i++) {
+        if (pairKey(items[i].en, items[i].zh) === pairKey(record.en, record.zh)) return items[i];
+      }
+      return { id: record.itemId || makeId("item"), en: record.en || "", zh: record.zh || "" };
+    }
+
+    function renderWrong() {
+      var list = document.getElementById("wrongList");
+      var summary = document.getElementById("wrongSummary");
+      renderWrongRoundOptions();
+      renderWrongQuestionOptions(getWrongPoolBeforeQuestion());
+      var allWrong = getWrongRecords();
+      var wrong = getFilteredWrongRecords();
+      var failedAttempts = 0;
+      for (var a = 0; a < practice.results.length; a++) if (!practice.results[a].correct) failedAttempts++;
+      var resolvedCount = getResolvedWrongCount();
+      if (!wrong.length) {
+        summary.innerText = allWrong.length
+          ? "当前筛选没有匹配错题。当前未解决 " + allWrong.length + " 道，历史错误 " + failedAttempts + " 次，已解决 " + resolvedCount + " 组。"
+          : "当前没有错题。历史错误 " + failedAttempts + " 次，已解决 " + resolvedCount + " 组。";
+        list.innerHTML = '<div class="empty-state">没有符合筛选条件的错题。</div>';
+        return;
+      }
+      summary.innerText = "当前显示 " + wrong.length + " 道错题 | 当前未解决 " + allWrong.length + " 道 | 历史错误 " + failedAttempts + " 次 | 已解决 " + resolvedCount + " 组。历史轮次中的错题可单独调出复习。";
+      var html = "";
+      for (var i = 0; i < wrong.length; i++) {
+        var item = wrong[i];
+        var attempts = getWrongAttempts(item);
+        html += '<div class="history-item bad">';
+        html += '<strong>' + escapeHtml(item.modeLabel || getModeLabel(item.mode)) + '</strong><br>';
+        html += '题目：' + escapeHtml(item.question || item.en) + '<br>';
+        html += '英文：' + escapeHtml(item.en) + '<br>';
+        html += '中文：' + escapeHtml(item.zh) + '<br>';
+        html += '上次作答：' + escapeHtml(item.userAnswer || '未填写') + '<br>';
+        html += '正确答案：' + escapeHtml(item.correctAnswer) + '<br>';
+        html += '错误次数：' + attempts + ' 次<br>';
+        html += '<div class="toolbar-tight">';
+        html += '<button type="button" onclick="startSingleWrongPractice(' + escapeHtml(quoteJs(item.id)) + ')">复习本题</button>';
+        html += '<button type="button" onclick="speakText(' + escapeHtml(quoteJs(item.en)) + ', \'en\')">读英文</button>';
+        html += '<button type="button" class="secondary" onclick="speakText(' + escapeHtml(quoteJs(item.zh)) + ', \'zh\')">读中文</button>';
+        html += '<button type="button" class="green" onclick="copyLine(' + escapeHtml(quoteJs(item.en + " | " + item.zh)) + ')">复制本题</button>';
+        html += '<button type="button" class="red" onclick="deleteRecord(' + escapeHtml(quoteJs(item.id)) + ')">删除此错题</button>';
+        html += '</div>';
+        html += '<div class="record-time">最近作答：' + escapeHtml(formatDate(item.answeredAt)) + '</div>';
+        html += '</div>';
+      }
+      list.innerHTML = html;
+    }
+
+    function exportShareData() {
+      if (!items.length) {
+        alert("当前没有题库可共享。");
+        return;
+      }
+      var stamp = getExportTimestamp();
+      downloadFile(JSON.stringify(buildShareData(stamp), null, 2), safeFileName(datasetMeta.name, "question-bank") + "-" + stamp.file + "-shared.json", "application/json;charset=utf-8");
+    }
+
+    function copyShareData() {
+      if (!items.length) {
+        alert("当前没有题库可共享。");
+        return;
+      }
+      copyLine(JSON.stringify(buildShareData(), null, 2));
+    }
+
+    function buildShareData(stamp) {
+      stamp = stamp || getExportTimestamp();
+      return {
+        schema: DATA_SCHEMA,
+        version: 2,
+        type: "shared-question-bank",
+        exportedAt: stamp.iso,
+        meta: datasetMeta,
+        items: items
+      };
+    }
+
+    function exportAllData() {
+      if (!items.length && !practice.results.length) {
+        alert("当前没有题库或练习记录可导出。");
+        return;
+      }
+      var stamp = getExportTimestamp();
+      var data = {
+        schema: DATA_SCHEMA,
+        version: 2,
+        type: "full-backup",
+        exportedAt: stamp.iso,
+        meta: datasetMeta,
+        lastSessionId: lastSessionId,
+        items: items,
+        results: practice.results,
+        settings: {
+          autoSpeak: document.getElementById("autoSpeak").checked,
+          shuffleMode: document.getElementById("shuffleMode").checked,
+          autoSubmitNext: document.getElementById("autoSubmitNext").checked,
+          libraryMode: document.getElementById("libraryMode").value
+        }
+      };
+      downloadFile(JSON.stringify(data, null, 2), safeFileName(datasetMeta.name, "bilingual-study") + "-" + stamp.file + "-backup.json", "application/json;charset=utf-8");
+    }
+
+    function exportQuestionBank(format) {
+      if (!items.length) {
+        alert("当前没有题库可导出。");
+        return;
+      }
+      if (format === "json") {
+        var jsonStamp = getExportTimestamp();
+        downloadFile(JSON.stringify({ schema: DATA_SCHEMA, version: 2, type: "question-bank", exportedAt: jsonStamp.iso, meta: datasetMeta, items: items }, null, 2), safeFileName(datasetMeta.name, "question-bank") + "-" + jsonStamp.file + ".json", "application/json;charset=utf-8");
+        return;
+      }
+      var textStamp = getExportTimestamp();
+      var lines = [];
+      lines.push("题库名称：" + (datasetMeta.name || "未命名题库"));
+      lines.push("导出时间：" + textStamp.local);
+      lines.push("");
+      for (var i = 0; i < items.length; i++) lines.push(items[i].en + " | " + items[i].zh);
+      downloadFile(lines.join("\n"), safeFileName(datasetMeta.name, "question-bank") + "-" + textStamp.file + ".txt", "text/plain;charset=utf-8");
+    }
+
+    function exportHistory(format) {
+      if (!practice.results.length) {
+        alert("当前没有练习记录可导出。");
+        return;
+      }
+      if (format === "json") {
+        var jsonStamp = getExportTimestamp();
+        downloadFile(JSON.stringify({ schema: DATA_SCHEMA, version: 2, type: "history", exportedAt: jsonStamp.iso, meta: datasetMeta, lastSessionId: lastSessionId, results: practice.results }, null, 2), safeFileName(datasetMeta.name, "practice") + "-" + jsonStamp.file + "-history.json", "application/json;charset=utf-8");
+        return;
+      }
+      var textStamp = getExportTimestamp();
+      downloadFile(recordsToText(practice.results, "全部练习记录", textStamp), safeFileName(datasetMeta.name, "practice") + "-" + textStamp.file + "-history.txt", "text/plain;charset=utf-8");
+    }
+
+    function exportWrong(format) {
+      var wrong = getWrongRecords();
+      if (!wrong.length) {
+        alert("当前没有错题可导出。");
+        return;
+      }
+      if (format === "json") {
+        var jsonStamp = getExportTimestamp();
+        downloadFile(JSON.stringify({ schema: DATA_SCHEMA, version: 2, type: "wrong", exportedAt: jsonStamp.iso, meta: datasetMeta, results: wrong }, null, 2), safeFileName(datasetMeta.name, "wrong-questions") + "-" + jsonStamp.file + ".json", "application/json;charset=utf-8");
+        return;
+      }
+      var textStamp = getExportTimestamp();
+      downloadFile(recordsToText(wrong, "全部错题", textStamp), safeFileName(datasetMeta.name, "wrong-questions") + "-" + textStamp.file + ".txt", "text/plain;charset=utf-8");
+    }
+
+    function recordsToText(records, title, stamp) {
+      stamp = stamp || getExportTimestamp();
+      var lines = [
+        "题库名称：" + (datasetMeta.name || "未命名题库"),
+        "导出内容：" + (title || "练习记录"),
+        "导出时间：" + stamp.local,
+        ""
+      ];
+      for (var i = 0; i < records.length; i++) {
+        var item = records[i];
+        lines.push("题目：" + (item.question || ""));
+        lines.push("默写类型：" + (item.modeLabel || getModeLabel(item.mode)));
+        lines.push("英文：" + item.en);
+        lines.push("中文：" + item.zh);
+        lines.push("你的答案：" + (item.userAnswer || "未填写"));
+        lines.push("正确答案：" + item.correctAnswer);
+        lines.push("结果：" + (item.correct ? "通过" : "不通过"));
+        lines.push("判定：" + (item.judgment === "auto" ? "默认" : item.judgment === "manual-pass" ? "手动通过" : item.judgment === "imported-wrong" ? "导入错题" : "手动不通过"));
+        lines.push("作答时间：" + formatDate(item.answeredAt));
+        lines.push("");
+      }
+      return lines.join("\n");
+    }
+
+    function getExportSessionId() {
+      if (practice.sessionAnswered > 0 && practice.sessionId) return practice.sessionId;
+      return lastSessionId;
+    }
+
+    function getSessionResults() {
+      var sessionId = getExportSessionId();
+      if (!sessionId) return [];
+      var records = [];
+      for (var i = 0; i < practice.results.length; i++) {
+        if (practice.results[i].sessionId === sessionId) records.push(practice.results[i]);
+      }
+      return records;
+    }
+
+    function getSessionWrongRecords() {
+      var sessionId = getExportSessionId();
+      if (!sessionId) return [];
+      var wrong = getWrongRecords();
+      var result = [];
+      for (var i = 0; i < wrong.length; i++) {
+        if (wrong[i].sessionId === sessionId) result.push(wrong[i]);
+      }
+      return result;
+    }
+
+    function exportSessionHistory(format) {
+      var records = getSessionResults();
+      if (!records.length) {
+        alert("当前没有可导出的本轮记录。请先提交答案，或退出时选择保存本轮。" );
+        return;
+      }
+      if (format === "json") {
+        var jsonStamp = getExportTimestamp();
+        downloadFile(JSON.stringify({ schema: DATA_SCHEMA, version: 2, type: "session-history", exportedAt: jsonStamp.iso, sessionId: getExportSessionId(), meta: datasetMeta, results: records }, null, 2), safeFileName(datasetMeta.name, "practice") + "-" + jsonStamp.file + "-current-session.json", "application/json;charset=utf-8");
+        return;
+      }
+      var textStamp = getExportTimestamp();
+      downloadFile(recordsToText(records, "本轮练习记录", textStamp), safeFileName(datasetMeta.name, "practice") + "-" + textStamp.file + "-current-session.txt", "text/plain;charset=utf-8");
+    }
+
+    function exportWrongSession(format) {
+      var wrong = getSessionWrongRecords();
+      if (!wrong.length) {
+        alert("本轮没有当前错题可导出。" );
+        return;
+      }
+      if (format === "json") {
+        var jsonStamp = getExportTimestamp();
+        downloadFile(JSON.stringify({ schema: DATA_SCHEMA, version: 2, type: "session-wrong", exportedAt: jsonStamp.iso, sessionId: getExportSessionId(), meta: datasetMeta, results: wrong }, null, 2), safeFileName(datasetMeta.name, "wrong-questions") + "-" + jsonStamp.file + "-current-session.json", "application/json;charset=utf-8");
+        return;
+      }
+      var textStamp = getExportTimestamp();
+      downloadFile(recordsToText(wrong, "本轮错题", textStamp), safeFileName(datasetMeta.name, "wrong-questions") + "-" + textStamp.file + "-current-session.txt", "text/plain;charset=utf-8");
+    }
+
+    function getExportTimestamp() {
+      var date = new Date();
+      function pad(value) { return value < 10 ? "0" + value : String(value); }
+      return {
+        iso: date.toISOString(),
+        local: formatDate(date.toISOString()),
+        file: date.getFullYear() + pad(date.getMonth() + 1) + pad(date.getDate()) + "-" + pad(date.getHours()) + pad(date.getMinutes()) + pad(date.getSeconds())
+      };
+    }
+
+    function safeFileName(value, fallback) {
+      var name = String(value || fallback || "data").replace(/[\\/:*?"<>|]/g, "_").trim();
+      return name || fallback || "data";
+    }
+
+    function clearHistory() {
+      if (!practice.results.length) return;
+      if (!confirm("确定清空全部练习记录和错题吗？题库不会被删除。")) return;
+      practice.results = [];
+      lastSessionId = "";
+      saveState();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      updateTopSummary();
+      updatePracticeStatus();
+    }
+
+    function openImportFile() {
+      document.getElementById("importFile").click();
+    }
+
+    function importFromFile(input) {
+      var file = input.files && input.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function () {
+        try {
+          prepareImport(String(reader.result || ""), file.name);
+        } catch (e) {
+          pendingImport = null;
+          renderImportPreview();
+          alert("导入失败：文件格式无法识别。完整备份请使用 JSON 文件，题库文本请使用每行“英文 | 中文”。");
+        }
+        input.value = "";
+      };
+      reader.onerror = function () {
+        alert("导入失败：无法读取文件。");
+        input.value = "";
+      };
+      reader.readAsText(file, "UTF-8");
+    }
+
+    function prepareImport(raw, fileName) {
+      var parsed = readImportContent(raw, fileName);
+      pendingImport = {
+        fileName: fileName || "未命名文件",
+        items: parsed.items,
+        results: parsed.results,
+        meta: parsed.meta,
+        settings: parsed.settings,
+        lastSessionId: parsed.lastSessionId,
+        promoteAsLatestWrong: parsed.promoteAsLatestWrong
+      };
+      activateView("viewData");
+      renderImportPreview();
+    }
+
+    function readImportContent(raw, fileName) {
+      var importedItems = [];
+      var importedResults = [];
+      var importedMeta = { name: "", description: "" };
+      var importedSettings = {};
+      var importedLastSessionId = "";
+      var promoteAsLatestWrong = false;
+      var trimmed = raw.trim();
+      if (!trimmed) throw new Error("empty");
+      if (trimmed.charAt(0) === "{" || trimmed.charAt(0) === "[") {
+        var parsed = JSON.parse(trimmed);
+        if (Array.isArray(parsed)) {
+          if (parsed.length && (parsed[0].userAnswer !== undefined || parsed[0].correctAnswer !== undefined || parsed[0].mode !== undefined)) importedResults = normalizeRecords(parsed);
+          else importedItems = normalizeItems(parsed);
+        } else {
+          importedItems = normalizeItems(parsed.items || []);
+          importedResults = normalizeRecords(parsed.results || parsed.history || parsed.records || []);
+          importedMeta = normalizeMeta(parsed.meta || parsed.metadata || {});
+          importedSettings = parsed.settings || {};
+          importedLastSessionId = String(parsed.lastSessionId || parsed.sessionId || "");
+          promoteAsLatestWrong = parsed.type === "wrong" || parsed.type === "session-wrong";
+        }
+      } else {
+        importedItems = parsePairText(trimmed);
+        if (!importedItems.length) {
+          importedResults = normalizeRecords(parseRecordText(trimmed));
+          promoteAsLatestWrong = /wrong|错题/i.test(fileName || "");
+        }
+      }
+      if (!importedItems.length && !importedResults.length) throw new Error("empty");
+      for (var i = 0; i < importedResults.length; i++) {
+        if (!importedItems.some(function (item) { return pairKey(item.en, item.zh) === pairKey(importedResults[i].en, importedResults[i].zh); })) {
+          importedItems.push({ id: importedResults[i].itemId || makeId("item"), en: importedResults[i].en, zh: importedResults[i].zh });
+        }
+      }
+      if (promoteAsLatestWrong) {
+        var promoted = promoteWrongRecords(importedResults);
+        importedResults = promoted.records;
+        importedLastSessionId = promoted.sessionId;
+      }
+      return { items: dedupeItems(importedItems), results: importedResults, meta: importedMeta, settings: importedSettings, lastSessionId: importedLastSessionId, promoteAsLatestWrong: promoteAsLatestWrong };
+    }
+
+    function renderImportPreview() {
+      var preview = document.getElementById("importPreview");
+      var actions = document.getElementById("importActions");
+      if (!pendingImport) {
+        preview.style.display = "none";
+        actions.style.display = "none";
+        preview.innerText = "";
+        return;
+      }
+      var mode = document.getElementById("importMode").value === "replace" ? "覆盖当前数据" : "合并到当前数据";
+      preview.innerText = "待导入文件：" + pendingImport.fileName + "\n" +
+        "题目：" + pendingImport.items.length + " 组\n" +
+        "答题记录：" + pendingImport.results.length + " 条\n" +
+        "题库名称：" + (pendingImport.meta.name || "未提供") + "\n" +
+        "导入处理：" + (pendingImport.promoteAsLatestWrong ? "作为最新一轮错题" : "按文件原有记录导入") + "\n" +
+        "导入方式：" + mode + "\n" +
+        "确认后才会写入当前数据。";
+      preview.style.display = "block";
+      actions.style.display = "flex";
+    }
+
+    function confirmPendingImport() {
+      if (!pendingImport) return;
+      var data = pendingImport;
+      var mode = document.getElementById("importMode").value;
+      if (mode === "replace") {
+        items = dedupeItems(data.items);
+        practice.results = dedupeSessionRecords(normalizeRecords(data.results));
+        datasetMeta = normalizeMeta(data.meta);
+        applyImportedSettings(data.settings);
+        lastSessionId = data.lastSessionId || (practice.results.length ? practice.results[practice.results.length - 1].sessionId : "");
+      } else {
+        var hadItems = items.length > 0;
+        items = dedupeItems(items.concat(data.items));
+        mergeResults(data.results);
+        if (data.promoteAsLatestWrong) lastSessionId = data.lastSessionId || lastSessionId;
+        if (!hadItems && data.meta && data.meta.name) datasetMeta = normalizeMeta(data.meta);
+      }
+      resetPractice();
+      syncInputFromItems();
+      syncMetadataInputs();
+      saveState();
+      updateTopSummary();
+      renderLibrary();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      document.getElementById("practiceStatus").innerText = "导入完成，可以开始练习。";
+      document.getElementById("practiceArea").innerHTML = '<div class="muted">导入了题库和历史记录，点击“开始练习”或“开始错题复习”。</div>';
+      var fileName = data.fileName;
+      var importedItems = data.items;
+      var importedResults = data.results;
+      pendingImport = null;
+      renderImportPreview();
+      alert("导入完成：题库 " + importedItems.length + " 组，练习记录 " + importedResults.length + " 条。\n文件：" + fileName);
+    }
+
+    function cancelPendingImport() {
+      pendingImport = null;
+      renderImportPreview();
+    }
+
+    function normalizeMeta(meta) {
+      meta = meta || {};
+      return {
+        name: String(meta.name || meta.title || "我的英语题库").trim() || "我的英语题库",
+        description: String(meta.description || meta.note || "").trim()
+      };
+    }
+
+    function applyImportedSettings(settings) {
+      settings = settings || {};
+      if (settings.autoSpeak !== undefined) document.getElementById("autoSpeak").checked = !!settings.autoSpeak;
+      if (settings.shuffleMode !== undefined) document.getElementById("shuffleMode").checked = !!settings.shuffleMode;
+      if (settings.autoSubmitNext !== undefined) document.getElementById("autoSubmitNext").checked = !!settings.autoSubmitNext;
+      if (settings.libraryMode) document.getElementById("libraryMode").value = settings.libraryMode;
+    }
+
+    function parsePairText(text) {
+      var result = [];
+      var lines = text.split(/\r?\n/);
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (!line) continue;
+        var parts = line.split("|");
+        if (parts.length < 2) continue;
+        var en = parts[0].trim();
+        var zh = parts.slice(1).join("|").trim();
+        if (en || zh) result.push({ id: makeId("item"), en: en, zh: zh });
+      }
+      return dedupeItems(result);
+    }
+
+    function parseRecordText(text) {
+      var records = [];
+      var blocks = text.split(/\r?\n\s*\r?\n/);
+      for (var i = 0; i < blocks.length; i++) {
+        var block = blocks[i];
+        var record = {
+          question: readRecordLabel(block, "题目"),
+          modeLabel: readRecordLabel(block, "默写类型"),
+          en: readRecordLabel(block, "英文"),
+          zh: readRecordLabel(block, "中文"),
+          userAnswer: readRecordLabel(block, "你的答案"),
+          correctAnswer: readRecordLabel(block, "正确答案"),
+          correct: false,
+          forceWrong: true,
+          mode: modeFromLabel(readRecordLabel(block, "默写类型"))
+        };
+        if (record.userAnswer === "未填写") record.userAnswer = "";
+        if ((record.en || record.zh) && record.correctAnswer) records.push(record);
+      }
+      return records;
+    }
+
+    function readRecordLabel(block, label) {
+      var match = block.match(new RegExp("(?:^|\\n)" + label + "[:：]([^\\n]*)"));
+      return match ? String(match[1]).trim() : "";
+    }
+
+    function modeFromLabel(label) {
+      if (label === "看中文默写英文") return "look-zh-write-en";
+      if (label === "看英文默写中文") return "look-en-write-zh";
+      return "listen-en-write-en";
+    }
+
+    function promoteWrongRecords(records) {
+      var sessionId = makeId("imported-wrong");
+      var startTime = Date.now();
+      for (var i = 0; i < records.length; i++) {
+        records[i].id = makeId("record");
+        records[i].sessionId = sessionId;
+        records[i].index = i + 1;
+        records[i].correct = false;
+        records[i].score = 0;
+        records[i].forceWrong = true;
+        records[i].judgment = "imported-wrong";
+        records[i].answeredAt = new Date(startTime + i).toISOString();
+        records[i].judgedAt = "";
+      }
+      return { records: dedupeSessionRecords(records), sessionId: sessionId };
+    }
+
+    function normalizeItems(list) {
+      var result = [];
+      if (!Array.isArray(list)) return result;
+      for (var i = 0; i < list.length; i++) {
+        var row = list[i];
+        if (!row || typeof row !== "object") continue;
+        var en = String(row.en !== undefined ? row.en : row.english !== undefined ? row.english : "").trim();
+        var zh = String(row.zh !== undefined ? row.zh : row.chinese !== undefined ? row.chinese : "").trim();
+        if (en || zh) result.push({ id: String(row.id || makeId("item")), en: en, zh: zh });
+      }
+      return dedupeItems(result);
+    }
+
+    function normalizeRecords(list) {
+      var result = [];
+      if (!Array.isArray(list)) return result;
+      for (var i = 0; i < list.length; i++) {
+        var row = list[i];
+        if (!row || typeof row !== "object") continue;
+        var mode = normalizeMode(row.mode);
+        var en = String(row.en || "").trim();
+        var zh = String(row.zh || "").trim();
+        if (!en && !zh) continue;
+        var userAnswer = String(row.userAnswer || "");
+        var correctAnswer = String(row.correctAnswer !== undefined ? row.correctAnswer : mode === "look-en-write-zh" ? zh : en);
+        var answerLanguage = mode === "look-en-write-zh" ? "zh" : "en";
+        var autoCorrect = normalizeAnswerText(userAnswer, answerLanguage) === normalizeAnswerText(correctAnswer, answerLanguage);
+        var forceWrong = !!row.forceWrong || row.judgment === "imported-wrong";
+        var judgment = forceWrong ? "imported-wrong" : row.judgment === "manual-pass" || row.judgment === "manual-fail" ? row.judgment : "auto";
+        var finalCorrect = forceWrong ? false : judgment === "manual-pass" ? true : judgment === "manual-fail" ? false : autoCorrect;
+        result.push({
+          id: String(row.id || makeId("record")),
+          itemId: String(row.itemId || ""),
+          sessionId: String(row.sessionId || "imported"),
+          index: Number(row.index) || i + 1,
+          mode: mode,
+          modeLabel: row.modeLabel || getModeLabel(mode),
+          question: String(row.question !== undefined ? row.question : mode === "look-zh-write-en" ? zh : mode === "look-en-write-zh" ? en : "点击“重听英文”可重复播放。"),
+          en: en,
+          zh: zh,
+          userAnswer: userAnswer,
+          correctAnswer: correctAnswer,
+          autoCorrect: autoCorrect,
+          judgment: judgment,
+          forceWrong: forceWrong,
+          correct: finalCorrect,
+          score: finalCorrect ? 1 : 0,
+          answeredAt: row.answeredAt || new Date().toISOString(),
+          judgedAt: row.judgedAt || ""
+        });
+      }
+      return result;
+    }
+
+    function dedupeSessionRecords(list) {
+      var positions = {};
+      var result = [];
+      for (var i = 0; i < list.length; i++) {
+        var record = list[i];
+        var key = sessionRecordKey(record);
+        if (Object.prototype.hasOwnProperty.call(positions, key)) {
+          result[positions[key]] = record;
+        } else {
+          positions[key] = result.length;
+          result.push(record);
+        }
+      }
+      return result;
+    }
+
+    function mergeResults(incoming) {
+      var existing = {};
+      for (var i = 0; i < practice.results.length; i++) existing[practice.results[i].id] = true;
+      for (var j = 0; j < incoming.length; j++) {
+        var record = incoming[j];
+        if (!existing[record.id]) {
+          practice.results.push(record);
+          existing[record.id] = true;
+        }
+      }
+      practice.results = dedupeSessionRecords(practice.results);
+    }
+
+    function recordChangedTime(record) {
+      var answered = recordTime(record);
+      var judged = record && record.judgedAt ? new Date(record.judgedAt).getTime() : 0;
+      return Math.max(answered, isNaN(judged) ? 0 : judged);
+    }
+
+    function mergeCloudRecords(localRecords, remoteRecords) {
+      var byKey = {};
+      var all = localRecords.concat(remoteRecords);
+      for (var i = 0; i < all.length; i++) {
+        var record = all[i];
+        var key = sessionRecordKey(record);
+        if (!byKey[key] || recordChangedTime(record) >= recordChangedTime(byKey[key])) byKey[key] = record;
+      }
+      var merged = [];
+      for (var key in byKey) merged.push(byKey[key]);
+      merged.sort(function (a, b) { return recordTime(a) - recordTime(b); });
+      return merged;
+    }
+
+    function applyCloudState(remote) {
+      if (!remote || typeof remote !== "object") return;
+      var remoteItems = normalizeItems(remote.items || []);
+      var remoteResults = dedupeSessionRecords(normalizeRecords(remote.results || []));
+      items = dedupeItems(items.concat(remoteItems));
+      practice.results = mergeCloudRecords(practice.results, remoteResults);
+      if (remote.meta && remote.meta.name) datasetMeta = normalizeMeta(remote.meta);
+      if (remote.lastSessionId) lastSessionId = remote.lastSessionId;
+      applyImportedSettings(remote.settings || {});
+      syncInputFromItems();
+      syncMetadataInputs();
+      saveState(true);
+      updateTopSummary();
+      renderLibrary();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      setCloudStatus("云端数据已合并到当前设备。", "good");
+    }
+
+    function restoreState() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        var data = JSON.parse(raw);
+        items = normalizeItems(data.items || []);
+        practice.results = dedupeSessionRecords(normalizeRecords(data.results || []));
+        lastSessionId = String(data.lastSessionId || "");
+        if (!lastSessionId && practice.results.length) lastSessionId = practice.results[practice.results.length - 1].sessionId;
+        datasetMeta = normalizeMeta(data.meta || data.metadata || {});
+        var settings = data.settings || {};
+        if (settings.autoSpeak !== undefined) document.getElementById("autoSpeak").checked = !!settings.autoSpeak;
+        if (settings.shuffleMode !== undefined) document.getElementById("shuffleMode").checked = !!settings.shuffleMode;
+        if (settings.autoSubmitNext !== undefined) document.getElementById("autoSubmitNext").checked = !!settings.autoSubmitNext;
+        if (settings.libraryMode) document.getElementById("libraryMode").value = settings.libraryMode;
+      } catch (e) {
+        items = [];
+        practice.results = [];
+      }
+    }
+
+    function buildPersistedState() {
+      return {
+        schema: DATA_SCHEMA,
+        version: 2,
+        savedAt: new Date().toISOString(),
+        meta: datasetMeta,
+        lastSessionId: lastSessionId,
+        items: items,
+        results: practice.results,
+        settings: {
+          autoSpeak: document.getElementById("autoSpeak").checked,
+          shuffleMode: document.getElementById("shuffleMode").checked,
+          autoSubmitNext: document.getElementById("autoSubmitNext").checked,
+          libraryMode: document.getElementById("libraryMode").value
+        }
+      };
+    }
+
+    function getCloudState() {
+      return buildPersistedState();
+    }
+
+    function saveState(skipCloudUpload) {
+      try {
+        var state = buildPersistedState();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        if (!skipCloudUpload && window.cloudSync) window.cloudSync.queueUpload(state);
+      } catch (e) {
+        // Private browsing or browser restrictions may disable local storage; export still works.
+      }
+    }
+
+    function syncInputFromItems() {
+      var lines = [];
+      for (var i = 0; i < items.length; i++) lines.push(items[i].en + " | " + items[i].zh);
+      document.getElementById("inputText").value = lines.join("\n");
+    }
+
+    function copyPairs() {
+      if (!items.length) {
+        alert("当前没有可复制内容。");
+        return;
+      }
+      var text = "";
+      for (var i = 0; i < items.length; i++) text += items[i].en + " | " + items[i].zh + "\n";
+      copyLine(text.trim());
+    }
+
+    function copyLine(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { alert("已复制。"); }).catch(function () { fallbackCopy(text); });
+      } else fallbackCopy(text);
+    }
+
+    function fallbackCopy(text) {
+      var temp = document.createElement("textarea");
+      temp.value = text;
+      document.body.appendChild(temp);
+      temp.select();
+      try { document.execCommand("copy"); alert("已复制。"); } catch (e) { alert("复制失败，请手动复制。"); }
+      document.body.removeChild(temp);
+    }
+
+    function clearAll() {
+      if ((items.length || practice.results.length) && !confirm("确定清空题库、答题记录和错题吗？此操作建议先导出完整备份。")) return;
+      items = [];
+      practice.results = [];
+      lastSessionId = "";
+      datasetMeta = { name: "我的英语题库", description: "" };
+      pendingImport = null;
+      resetPractice();
+      document.getElementById("inputText").value = "";
+      document.getElementById("searchText").value = "";
+      syncMetadataInputs();
+      renderImportPreview();
+      saveState();
+      updateTopSummary();
+      renderLibrary();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      document.getElementById("practiceStatus").innerText = "还没有开始练习。";
+      document.getElementById("practiceArea").innerHTML = '<div class="muted">生成内容后，点击“开始练习”。</div>';
+    }
+
+    function speakText(text, lang) {
+      var value = String(text || "").trim();
+      if (!value) { alert("没有可朗读内容。"); return; }
+      if (!window.speechSynthesis) { alert("当前浏览器不支持语音朗读。"); return; }
+      window.speechSynthesis.cancel();
+      var utter = new SpeechSynthesisUtterance(value);
+      utter.lang = lang === "zh" ? "zh-CN" : "en-US";
+      utter.rate = 0.95;
+      utter.pitch = 1;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function normalizeText(text) {
+      return String(text || "").toLowerCase().replace(/\s+/g, " ").replace(/[.,!?;:'"()，。！？；：“”‘’]/g, "").trim();
+    }
+
+    function normalizeAnswerText(text, language) {
+      var value = String(text || "").toLowerCase();
+      if (language === "zh") {
+        return value.replace(/[\s.,!?;:'"()[\]{}，。！？；：“”‘’（）【】、…\-–—]+/g, "");
+      }
+      return value
+        .replace(/['’]/g, "")
+        .replace(/[\s.,!?;:"()[\]{}，。！？；：“”‘’（）【】、…\-–—]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function formatDate(value) {
+      if (!value) return "未知";
+      var date = new Date(value);
+      if (isNaN(date.getTime())) return String(value);
+      return date.toLocaleString();
+    }
+
+    function escapeHtml(text) {
+      return String(text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function quoteJs(text) {
+      return JSON.stringify(String(text || ""));
+    }
+
+    function downloadFile(content, fileName, type) {
+      var blob = new Blob(["\ufeff", content], { type: type });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    }
+
+    document.getElementById("autoSpeak").addEventListener("change", saveState);
+    document.getElementById("shuffleMode").addEventListener("change", saveState);
+    document.getElementById("autoSubmitNext").addEventListener("change", saveState);
+    document.getElementById("libraryMode").addEventListener("change", saveState);
+    document.getElementById("importMode").addEventListener("change", function () {
+      syncImportMode(this.value);
+      renderImportPreview();
+    });
+    window.addEventListener("beforeunload", function () {
+      datasetMeta.name = (document.getElementById("datasetName").value || "").trim() || "我的英语题库";
+      datasetMeta.description = (document.getElementById("datasetDescription").value || "").trim();
+      saveState();
+    });
+    window.setCloudStatus = setCloudStatus;
+    window.getCloudState = getCloudState;
+    window.applyCloudState = applyCloudState;
+    initialize();
+  </script>
+</body>
+</html>
