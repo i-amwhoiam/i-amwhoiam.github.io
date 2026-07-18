@@ -369,9 +369,15 @@ Please check the connector. | 请检查连接器。"></textarea>
           <select id="wrongQuestionFilter" class="inline-select" onchange="renderWrong()">
             <option value="all">全部题目</option>
           </select>
+          <label>从 <input id="wrongDateFrom" type="date" onchange="renderWrong()" /></label>
+          <label>到 <input id="wrongDateTo" type="date" onchange="renderWrong()" /></label>
         </div>
         <div class="toolbar-tight">
-          <button class="red" onclick="startWrongPractice()">批量复习筛选错题</button>
+          <button class="secondary" onclick="selectAllVisibleWrong()">全选当前筛选</button>
+          <button class="secondary" onclick="clearWrongSelection()">取消全选</button>
+          <button id="wrongSelectedViewButton" class="secondary" onclick="toggleSelectedWrongView()">复习已选</button>
+          <button class="red" onclick="startWrongPractice(true)">默写已选</button>
+          <button onclick="startWrongPractice(false)">默写当前筛选</button>
           <button class="green" onclick="exportWrongSession('json')">导出本轮错题 JSON</button>
           <button class="green" onclick="exportWrongSession('txt')">导出本轮错题 TXT</button>
           <button class="green" onclick="exportWrong('json')">导出全部错题 JSON</button>
@@ -419,12 +425,21 @@ Please check the connector. | 请检查连接器。"></textarea>
           <input id="cloudEmail" type="email" placeholder="同步账号邮箱" />
           <input id="cloudPassword" type="password" placeholder="同步账号密码" />
         </div>
+        <label><input id="rememberCloudCredentials" type="checkbox" onchange="saveCloudCredentials()" /> 记住同步账号和密码（仅保存在当前浏览器）</label>
         <div class="toolbar-tight">
           <button onclick="cloudSignUp()">注册同步账号</button>
           <button class="green" onclick="cloudSignIn()">登录同步账号</button>
           <button class="secondary" onclick="cloudSignOut()">退出同步账号</button>
         </div>
         <div class="muted">首次使用前，请在 Supabase 执行项目中的 `supabase-sync.sql`，并在 Authentication 中启用 Email 登录。</div>
+      </div>
+      <div class="panel">
+        <h2>回收箱</h2>
+        <div id="trashSummary" class="summary">回收箱为空。</div>
+        <div class="toolbar-tight">
+          <button class="red" onclick="emptyTrash()">清空回收箱</button>
+        </div>
+        <div id="trashList" class="history-list"></div>
       </div>
     </div>
   </div>
@@ -443,6 +458,7 @@ Please check the connector. | 请检查连接器。"></textarea>
 
   <script>
     var STORAGE_KEY = "bilingual-study-tool-state-v2";
+    var CLOUD_CREDENTIALS_KEY = "bilingual-study-cloud-credentials-v1";
     var DATA_SCHEMA = "bilingual-study-tool";
     var items = [];
     var datasetMeta = {
@@ -451,6 +467,10 @@ Please check the connector. | 请检查连接器。"></textarea>
     };
     var pendingImport = null;
     var lastSessionId = "";
+    var deletedRecordIds = {};
+    var recordTrash = {};
+    var selectedWrongIds = {};
+    var wrongOnlySelected = false;
     var practice = {
       queue: [],
       index: 0,
@@ -477,6 +497,7 @@ Please check the connector. | 请检查连接器。"></textarea>
       renderHistory();
       renderWrong();
       renderDataSummary();
+      renderTrash();
       document.getElementById("practiceStatus").innerText = items.length ? "内容已恢复，可以开始练习。" : "还没有开始练习。";
       document.getElementById("practiceArea").innerHTML = items.length ? '<div class="muted">点击“开始练习”进入默写模式。</div>' : '<div class="muted">生成内容后，点击“开始练习”。</div>';
       if (window.cloudSync) window.cloudSync.init();
@@ -603,7 +624,9 @@ Please check the connector. | 请检查连接器。"></textarea>
     function renderDataSummary() {
       var summary = document.getElementById("dataSummary");
       if (!summary) return;
-      summary.innerText = "题库名称：" + (datasetMeta.name || "未命名题库") + "\n题目：" + items.length + " 组 | 答题记录：" + practice.results.length + " 条 | 当前错题：" + getWrongRecords().length + " 道\n备注：" + (datasetMeta.description || "无");
+      var trashCount = 0;
+      for (var id in recordTrash) if (recordTrash[id] && recordTrash[id].status === "trashed") trashCount++;
+      summary.innerText = "题库名称：" + (datasetMeta.name || "未命名题库") + "\n题目：" + items.length + " 组 | 答题记录：" + practice.results.length + " 条 | 当前错题：" + getWrongRecords().length + " 道 | 回收箱：" + trashCount + " 条\n备注：" + (datasetMeta.description || "无");
     }
 
     function syncImportMode(value) {
@@ -626,6 +649,26 @@ Please check the connector. | 请检查连接器。"></textarea>
       var config = window.cloudSync.getConfig();
       document.getElementById("cloudUrl").value = config.url || "";
       document.getElementById("cloudAnonKey").value = config.anonKey || "";
+      try {
+        var credentials = JSON.parse(localStorage.getItem(CLOUD_CREDENTIALS_KEY) || "{}");
+        document.getElementById("cloudEmail").value = credentials.email || "";
+        document.getElementById("cloudPassword").value = credentials.password || "";
+        document.getElementById("rememberCloudCredentials").checked = !!(credentials.email || credentials.password);
+      } catch (e) {
+        localStorage.removeItem(CLOUD_CREDENTIALS_KEY);
+      }
+    }
+
+    function saveCloudCredentials() {
+      var remember = document.getElementById("rememberCloudCredentials").checked;
+      if (!remember) {
+        localStorage.removeItem(CLOUD_CREDENTIALS_KEY);
+        return;
+      }
+      localStorage.setItem(CLOUD_CREDENTIALS_KEY, JSON.stringify({
+        email: (document.getElementById("cloudEmail").value || "").trim(),
+        password: document.getElementById("cloudPassword").value || ""
+      }));
     }
 
     function saveCloudConfig() {
@@ -641,6 +684,7 @@ Please check the connector. | 请检查连接器。"></textarea>
 
     function cloudSignUp() {
       if (!window.cloudSync) return;
+      saveCloudCredentials();
       window.cloudSync.signUp(
         document.getElementById("cloudEmail").value,
         document.getElementById("cloudPassword").value
@@ -649,6 +693,7 @@ Please check the connector. | 请检查连接器。"></textarea>
 
     function cloudSignIn() {
       if (!window.cloudSync) return;
+      saveCloudCredentials();
       window.cloudSync.signIn(
         document.getElementById("cloudEmail").value,
         document.getElementById("cloudPassword").value
@@ -712,14 +757,15 @@ Please check the connector. | 请检查连接器。"></textarea>
       showQuestion();
     }
 
-    function startWrongPractice() {
+    function startWrongPractice(selectedOnly) {
       if (practice.queue.length && practice.sessionAnswered > 0) {
         exitPractice();
         return;
       }
-      var wrong = getFilteredWrongRecords();
+      var wrong = getFilteredWrongRecords(false);
+      if (selectedOnly) wrong = wrong.filter(function (record) { return !!selectedWrongIds[record.id]; });
       if (!wrong.length) {
-        alert("当前没有错题。先完成练习并判定为“不通过”后，这里会自动生成错题。");
+        alert(selectedOnly ? "请先勾选要默写的错题。" : "当前筛选没有可默写的错题。");
         return;
       }
       resetPractice();
@@ -1024,9 +1070,11 @@ Please check the connector. | 请检查连接器。"></textarea>
         }
       }
       if (index < 0) return;
-      if (!confirm("确定删除这条练习记录吗？删除后无法恢复，但题库不会受影响。")) return;
+      if (!confirm("确定把这条练习记录移入回收箱吗？之后可以恢复或彻底删除。")) return;
       var record = practice.results[index];
       practice.results.splice(index, 1);
+      delete selectedWrongIds[record.id];
+      recordTrash[record.id] = { status: "trashed", updatedAt: new Date().toISOString(), record: record };
       if (record.sessionId === practice.sessionId && practice.sessionAnswered > 0) {
         practice.sessionAnswered = Math.max(0, practice.sessionAnswered - 1);
       }
@@ -1045,6 +1093,82 @@ Please check the connector. | 请检查连接器。"></textarea>
       renderDataSummary();
       updateTopSummary();
       updatePracticeStatus();
+      renderTrash();
+    }
+
+    function restoreTrashRecord(recordId) {
+      var entry = recordTrash[recordId];
+      if (!entry || entry.status !== "trashed" || !entry.record) return;
+      var record = normalizeRecords([entry.record])[0];
+      if (!record) return;
+      if (!findRecord(record.id)) practice.results.push(record);
+      practice.results.sort(function (a, b) { return recordTime(a) - recordTime(b); });
+      recordTrash[recordId] = { status: "restored", updatedAt: new Date().toISOString(), record: record };
+      saveState();
+      renderHistory();
+      renderWrong();
+      renderDataSummary();
+      updateTopSummary();
+      updatePracticeStatus();
+      renderTrash();
+    }
+
+    function permanentlyDeleteRecord(recordId) {
+      var entry = recordTrash[recordId];
+      if (!entry || entry.status !== "trashed") return;
+      if (!confirm("确定彻底删除这条记录吗？此操作会同步到其他设备，且无法恢复。")) return;
+      var deletedAt = new Date().toISOString();
+      deletedRecordIds[recordId] = deletedAt;
+      recordTrash[recordId] = { status: "deleted", updatedAt: deletedAt, record: null };
+      saveState();
+      renderTrash();
+      renderDataSummary();
+    }
+
+    function emptyTrash() {
+      var ids = [];
+      for (var id in recordTrash) if (recordTrash[id] && recordTrash[id].status === "trashed") ids.push(id);
+      if (!ids.length) return;
+      if (!confirm("确定清空回收箱吗？其中 " + ids.length + " 条记录将永久删除，并同步到其他设备。")) return;
+      var deletedAt = new Date().toISOString();
+      for (var i = 0; i < ids.length; i++) {
+        deletedRecordIds[ids[i]] = deletedAt;
+        recordTrash[ids[i]] = { status: "deleted", updatedAt: deletedAt, record: null };
+      }
+      saveState();
+      renderTrash();
+      renderDataSummary();
+    }
+
+    function renderTrash() {
+      var list = document.getElementById("trashList");
+      var summary = document.getElementById("trashSummary");
+      if (!list || !summary) return;
+      var entries = [];
+      for (var id in recordTrash) {
+        var entry = recordTrash[id];
+        if (entry && entry.status === "trashed" && entry.record) entries.push(entry);
+      }
+      entries.sort(function (a, b) { return String(b.updatedAt).localeCompare(String(a.updatedAt)); });
+      summary.innerText = entries.length ? "回收箱中有 " + entries.length + " 条练习记录。" : "回收箱为空。";
+      if (!entries.length) {
+        list.innerHTML = "";
+        return;
+      }
+      var html = "";
+      for (var i = 0; i < entries.length; i++) {
+        var entry = entries[i];
+        var item = entry.record;
+        html += '<div class="history-item">';
+        html += '<strong>' + escapeHtml(item.en) + '</strong><br>';
+        html += '中文：' + escapeHtml(item.zh) + '<br>';
+        html += '你的答案：' + escapeHtml(item.userAnswer || '未填写') + '<br>';
+        html += '<div class="record-time">移入时间：' + escapeHtml(formatDate(entry.updatedAt)) + '</div>';
+        html += '<div class="toolbar-tight"><button type="button" class="green" onclick="restoreTrashRecord(' + escapeHtml(quoteJs(item.id)) + ')">恢复</button>';
+        html += '<button type="button" class="red" onclick="permanentlyDeleteRecord(' + escapeHtml(quoteJs(item.id)) + ')">彻底删除</button></div>';
+        html += '</div>';
+      }
+      list.innerHTML = html;
     }
 
     function hasSessionRecords(sessionId) {
@@ -1182,12 +1306,19 @@ Please check the connector. | 请检查连接器。"></textarea>
       }
       var searchInput = document.getElementById("wrongSearchText");
       var modeInput = document.getElementById("wrongModeFilter");
+      var dateFromInput = document.getElementById("wrongDateFrom");
+      var dateToInput = document.getElementById("wrongDateTo");
       var search = normalizeText(searchInput ? searchInput.value : "");
       var mode = modeInput ? modeInput.value : "all";
+      var dateFrom = dateFromInput && dateFromInput.value ? new Date(dateFromInput.value + "T00:00:00").getTime() : 0;
+      var dateTo = dateToInput && dateToInput.value ? new Date(dateToInput.value + "T23:59:59.999").getTime() : 0;
       var filtered = [];
       for (var i = 0; i < wrong.length; i++) {
         var record = wrong[i];
         if (mode !== "all" && normalizeMode(record.mode) !== mode) continue;
+        var answeredTime = recordTime(record);
+        if (dateFrom && answeredTime < dateFrom) continue;
+        if (dateTo && answeredTime > dateTo) continue;
         var text = normalizeText(record.en + " " + record.zh + " " + (record.question || ""));
         if (search && text.indexOf(search) < 0) continue;
         filtered.push(record);
@@ -1247,14 +1378,46 @@ Please check the connector. | 请检查连接器。"></textarea>
       select.value = valid ? selected : "all";
     }
 
-    function getFilteredWrongRecords() {
+    function getFilteredWrongRecords(applySelectionView) {
       var wrong = getWrongPoolBeforeQuestion();
       var questionInput = document.getElementById("wrongQuestionFilter");
       var questionId = questionInput ? questionInput.value : "all";
       if (questionId !== "all") {
         wrong = wrong.filter(function (record) { return record.id === questionId; });
       }
+      if (applySelectionView !== false && wrongOnlySelected) {
+        wrong = wrong.filter(function (record) { return !!selectedWrongIds[record.id]; });
+      }
       return wrong;
+    }
+
+    function toggleWrongSelection(recordId, checked) {
+      if (checked) selectedWrongIds[recordId] = true;
+      else delete selectedWrongIds[recordId];
+      renderWrong();
+    }
+
+    function selectAllVisibleWrong() {
+      var wrong = getFilteredWrongRecords(false);
+      for (var i = 0; i < wrong.length; i++) selectedWrongIds[wrong[i].id] = true;
+      renderWrong();
+    }
+
+    function clearWrongSelection() {
+      selectedWrongIds = {};
+      wrongOnlySelected = false;
+      renderWrong();
+    }
+
+    function toggleSelectedWrongView() {
+      var selectedCount = 0;
+      for (var id in selectedWrongIds) if (selectedWrongIds[id]) selectedCount++;
+      if (!selectedCount && !wrongOnlySelected) {
+        alert("请先勾选要查看的错题。");
+        return;
+      }
+      wrongOnlySelected = !wrongOnlySelected;
+      renderWrong();
     }
 
     function getResolvedWrongCount() {
@@ -1289,6 +1452,10 @@ Please check the connector. | 请检查连接器。"></textarea>
       renderWrongQuestionOptions(getWrongPoolBeforeQuestion());
       var allWrong = getWrongRecords();
       var wrong = getFilteredWrongRecords();
+      var selectedCount = 0;
+      for (var selectedId in selectedWrongIds) if (selectedWrongIds[selectedId]) selectedCount++;
+      var selectedViewButton = document.getElementById("wrongSelectedViewButton");
+      if (selectedViewButton) selectedViewButton.innerText = wrongOnlySelected ? "返回筛选列表" : "复习已选";
       var failedAttempts = 0;
       for (var a = 0; a < practice.results.length; a++) if (!practice.results[a].correct) failedAttempts++;
       var resolvedCount = getResolvedWrongCount();
@@ -1299,13 +1466,13 @@ Please check the connector. | 请检查连接器。"></textarea>
         list.innerHTML = '<div class="empty-state">没有符合筛选条件的错题。</div>';
         return;
       }
-      summary.innerText = "当前显示 " + wrong.length + " 道错题 | 当前未解决 " + allWrong.length + " 道 | 历史错误 " + failedAttempts + " 次 | 已解决 " + resolvedCount + " 组。历史轮次中的错题可单独调出复习。";
+      summary.innerText = "当前显示 " + wrong.length + " 道错题 | 已选 " + selectedCount + " 道 | 当前未解决 " + allWrong.length + " 道 | 历史错误 " + failedAttempts + " 次 | 已解决 " + resolvedCount + " 组。";
       var html = "";
       for (var i = 0; i < wrong.length; i++) {
         var item = wrong[i];
         var attempts = getWrongAttempts(item);
         html += '<div class="history-item bad">';
-        html += '<strong>' + escapeHtml(item.modeLabel || getModeLabel(item.mode)) + '</strong><br>';
+        html += '<label><input type="checkbox" ' + (selectedWrongIds[item.id] ? 'checked ' : '') + 'onchange="toggleWrongSelection(' + escapeHtml(quoteJs(item.id)) + ', this.checked)" /> <strong>' + escapeHtml(item.modeLabel || getModeLabel(item.mode)) + '</strong></label><br>';
         html += '题目：' + escapeHtml(item.question || item.en) + '<br>';
         html += '英文：' + escapeHtml(item.en) + '<br>';
         html += '中文：' + escapeHtml(item.zh) + '<br>';
@@ -1524,7 +1691,12 @@ Please check the connector. | 请检查连接器。"></textarea>
 
     function clearHistory() {
       if (!practice.results.length) return;
-      if (!confirm("确定清空全部练习记录和错题吗？题库不会被删除。")) return;
+      if (!confirm("确定把全部练习记录和错题移入回收箱吗？题库不会被删除。")) return;
+      var trashedAt = new Date().toISOString();
+      for (var i = 0; i < practice.results.length; i++) {
+        var record = practice.results[i];
+        recordTrash[record.id] = { status: "trashed", updatedAt: trashedAt, record: record };
+      }
       practice.results = [];
       lastSessionId = "";
       saveState();
@@ -1533,6 +1705,7 @@ Please check the connector. | 请检查连接器。"></textarea>
       renderDataSummary();
       updateTopSummary();
       updatePracticeStatus();
+      renderTrash();
     }
 
     function openImportFile() {
@@ -1868,8 +2041,23 @@ Please check the connector. | 请检查连接器。"></textarea>
       if (!remote || typeof remote !== "object") return;
       var remoteItems = normalizeItems(remote.items || []);
       var remoteResults = dedupeSessionRecords(normalizeRecords(remote.results || []));
+      var remoteRecordTrash = remote.recordTrash && typeof remote.recordTrash === "object" ? remote.recordTrash : {};
+      for (var trashId in remoteRecordTrash) {
+        var remoteEntry = remoteRecordTrash[trashId];
+        var localEntry = recordTrash[trashId];
+        if (remoteEntry && (!localEntry || String(remoteEntry.updatedAt || "") > String(localEntry.updatedAt || ""))) {
+          recordTrash[trashId] = remoteEntry;
+        }
+      }
+      var remoteDeletedRecordIds = remote.deletedRecordIds && typeof remote.deletedRecordIds === "object" ? remote.deletedRecordIds : {};
+      for (var deletedId in remoteDeletedRecordIds) {
+        if (!deletedRecordIds[deletedId] || remoteDeletedRecordIds[deletedId] > deletedRecordIds[deletedId]) {
+          deletedRecordIds[deletedId] = remoteDeletedRecordIds[deletedId];
+        }
+      }
       items = dedupeItems(items.concat(remoteItems));
       practice.results = mergeCloudRecords(practice.results, remoteResults);
+      applyRecordLifecycle();
       if (remote.meta && remote.meta.name) datasetMeta = normalizeMeta(remote.meta);
       if (remote.lastSessionId) lastSessionId = remote.lastSessionId;
       applyImportedSettings(remote.settings || {});
@@ -1881,7 +2069,32 @@ Please check the connector. | 请检查连接器。"></textarea>
       renderHistory();
       renderWrong();
       renderDataSummary();
+      renderTrash();
       setCloudStatus("云端数据已合并到当前设备。", "good");
+    }
+
+    function applyRecordLifecycle() {
+      var activeById = {};
+      for (var i = 0; i < practice.results.length; i++) activeById[practice.results[i].id] = true;
+      for (var id in recordTrash) {
+        var entry = recordTrash[id];
+        if (!entry) continue;
+        var permanentlyDeletedAt = String(deletedRecordIds[id] || "");
+        var lifecycleAt = String(entry.updatedAt || "");
+        if (permanentlyDeletedAt && permanentlyDeletedAt >= lifecycleAt) entry.status = "deleted";
+        if (entry.status === "restored" && entry.record && !activeById[id] && !permanentlyDeletedAt) {
+          var restored = normalizeRecords([entry.record])[0];
+          if (restored) {
+            practice.results.push(restored);
+            activeById[id] = true;
+          }
+        }
+      }
+      practice.results = practice.results.filter(function (record) {
+        var entry = recordTrash[record.id];
+        return !deletedRecordIds[record.id] && (!entry || entry.status === "restored");
+      });
+      practice.results.sort(function (a, b) { return recordTime(a) - recordTime(b); });
     }
 
     function restoreState() {
@@ -1891,6 +2104,9 @@ Please check the connector. | 请检查连接器。"></textarea>
         var data = JSON.parse(raw);
         items = normalizeItems(data.items || []);
         practice.results = dedupeSessionRecords(normalizeRecords(data.results || []));
+        deletedRecordIds = data.deletedRecordIds && typeof data.deletedRecordIds === "object" ? data.deletedRecordIds : {};
+        recordTrash = data.recordTrash && typeof data.recordTrash === "object" ? data.recordTrash : {};
+        applyRecordLifecycle();
         lastSessionId = String(data.lastSessionId || "");
         if (!lastSessionId && practice.results.length) lastSessionId = practice.results[practice.results.length - 1].sessionId;
         datasetMeta = normalizeMeta(data.meta || data.metadata || {});
@@ -1914,6 +2130,8 @@ Please check the connector. | 请检查连接器。"></textarea>
         lastSessionId: lastSessionId,
         items: items,
         results: practice.results,
+        deletedRecordIds: deletedRecordIds,
+        recordTrash: recordTrash,
         settings: {
           autoSpeak: document.getElementById("autoSpeak").checked,
           shuffleMode: document.getElementById("shuffleMode").checked,
@@ -1969,7 +2187,12 @@ Please check the connector. | 请检查连接器。"></textarea>
     }
 
     function clearAll() {
-      if ((items.length || practice.results.length) && !confirm("确定清空题库、答题记录和错题吗？此操作建议先导出完整备份。")) return;
+      if ((items.length || practice.results.length) && !confirm("确定清空题库并把答题记录和错题移入回收箱吗？此操作建议先导出完整备份。")) return;
+      var trashedAt = new Date().toISOString();
+      for (var i = 0; i < practice.results.length; i++) {
+        var record = practice.results[i];
+        recordTrash[record.id] = { status: "trashed", updatedAt: trashedAt, record: record };
+      }
       items = [];
       practice.results = [];
       lastSessionId = "";
@@ -1986,6 +2209,7 @@ Please check the connector. | 请检查连接器。"></textarea>
       renderHistory();
       renderWrong();
       renderDataSummary();
+      renderTrash();
       document.getElementById("practiceStatus").innerText = "还没有开始练习。";
       document.getElementById("practiceArea").innerHTML = '<div class="muted">生成内容后，点击“开始练习”。</div>';
     }
