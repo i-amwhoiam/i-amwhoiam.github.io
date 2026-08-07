@@ -235,6 +235,7 @@
       padding: 8px 10px;
       border-radius: 10px;
     }
+    .voice-select { width: min(440px, 100%); }
     @media (max-width: 700px) {
       body { padding: 12px; }
       .panel { padding: 14px; }
@@ -277,6 +278,12 @@ Please check the connector. | 请检查连接器。"></textarea>
         <div class="chip">输入格式：英文 | 中文</div>
         <div class="chip">两个功能共用同一份数据</div>
         <div class="chip">支持三种练习模式</div>
+      </div>
+      <div class="toolbar-tight">
+        <select id="englishVoice" class="inline-select voice-select" title="选择英语口音和发音声线" onchange="changeEnglishVoice(this.value)">
+          <option value="">英语发音：自动选择（推荐）</option>
+        </select>
+        <button type="button" class="secondary" onclick="previewEnglishVoice()">试听发音</button>
       </div>
       <div id="topSummary" class="summary">还没有内容，请先输入 <code>英文 | 中文</code> 并点击“生成内容”。</div>
       <div class="tabs">
@@ -471,6 +478,7 @@ Please check the connector. | 请检查连接器。"></textarea>
     var recordTrash = {};
     var selectedWrongIds = {};
     var wrongOnlySelected = false;
+    var preferredEnglishVoice = "";
     var practice = {
       queue: [],
       index: 0,
@@ -1540,7 +1548,8 @@ Please check the connector. | 请检查连接器。"></textarea>
           autoSpeak: document.getElementById("autoSpeak").checked,
           shuffleMode: document.getElementById("shuffleMode").checked,
           autoSubmitNext: document.getElementById("autoSubmitNext").checked,
-          libraryMode: document.getElementById("libraryMode").value
+          libraryMode: document.getElementById("libraryMode").value,
+          englishVoice: getEnglishVoicePreference()
         }
       };
       downloadFile(JSON.stringify(data, null, 2), safeFileName(datasetMeta.name, "bilingual-study") + "-" + stamp.file + "-backup.json", "application/json;charset=utf-8");
@@ -1867,6 +1876,7 @@ Please check the connector. | 请检查连接器。"></textarea>
       if (settings.shuffleMode !== undefined) document.getElementById("shuffleMode").checked = !!settings.shuffleMode;
       if (settings.autoSubmitNext !== undefined) document.getElementById("autoSubmitNext").checked = !!settings.autoSubmitNext;
       if (settings.libraryMode) document.getElementById("libraryMode").value = settings.libraryMode;
+      if (settings.englishVoice !== undefined) setEnglishVoicePreference(settings.englishVoice);
     }
 
     function parsePairText(text) {
@@ -2115,6 +2125,7 @@ Please check the connector. | 请检查连接器。"></textarea>
         if (settings.shuffleMode !== undefined) document.getElementById("shuffleMode").checked = !!settings.shuffleMode;
         if (settings.autoSubmitNext !== undefined) document.getElementById("autoSubmitNext").checked = !!settings.autoSubmitNext;
         if (settings.libraryMode) document.getElementById("libraryMode").value = settings.libraryMode;
+        if (settings.englishVoice !== undefined) setEnglishVoicePreference(settings.englishVoice);
       } catch (e) {
         items = [];
         practice.results = [];
@@ -2136,7 +2147,8 @@ Please check the connector. | 请检查连接器。"></textarea>
           autoSpeak: document.getElementById("autoSpeak").checked,
           shuffleMode: document.getElementById("shuffleMode").checked,
           autoSubmitNext: document.getElementById("autoSubmitNext").checked,
-          libraryMode: document.getElementById("libraryMode").value
+          libraryMode: document.getElementById("libraryMode").value,
+          englishVoice: getEnglishVoicePreference()
         }
       };
     }
@@ -2214,16 +2226,134 @@ Please check the connector. | 请检查连接器。"></textarea>
       document.getElementById("practiceArea").innerHTML = '<div class="muted">生成内容后，点击“开始练习”。</div>';
     }
 
+    var speechVoices = [];
+    var speechRequestId = 0;
+
+    function refreshSpeechVoices() {
+      if (!window.speechSynthesis) return;
+      speechVoices = window.speechSynthesis.getVoices() || [];
+      populateEnglishVoiceOptions();
+    }
+
+    function speechVoiceKey(voice) {
+      return String(voice.voiceURI || (voice.name + "|" + voice.lang));
+    }
+
+    function getAccentLabel(lang) {
+      var labels = {
+        "en-US": "美式", "en-GB": "英式", "en-AU": "澳洲",
+        "en-CA": "加拿大", "en-IN": "印度", "en-IE": "爱尔兰",
+        "en-NZ": "新西兰", "en-ZA": "南非"
+      };
+      return labels[lang] || lang || "英语";
+    }
+
+    function populateEnglishVoiceOptions() {
+      var select = document.getElementById("englishVoice");
+      if (!select) return;
+      var desired = preferredEnglishVoice || "";
+      var englishVoices = speechVoices.filter(function (voice) {
+        return String(voice.lang || "").toLowerCase().indexOf("en") === 0;
+      });
+      englishVoices.sort(function (a, b) {
+        var langCompare = String(a.lang).localeCompare(String(b.lang));
+        return langCompare || String(a.name).localeCompare(String(b.name));
+      });
+
+      select.innerHTML = "";
+      var automatic = document.createElement("option");
+      automatic.value = "";
+      automatic.textContent = "英语发音：自动选择（推荐）";
+      select.appendChild(automatic);
+      for (var i = 0; i < englishVoices.length; i++) {
+        var voice = englishVoices[i];
+        var option = document.createElement("option");
+        option.value = speechVoiceKey(voice);
+        option.textContent = getAccentLabel(voice.lang) + " · " + voice.name + (voice.localService ? "（本机）" : "（在线）");
+        select.appendChild(option);
+      }
+      select.value = desired;
+      if (select.value !== desired) select.value = "";
+    }
+
+    function getEnglishVoicePreference() {
+      return preferredEnglishVoice || "";
+    }
+
+    function setEnglishVoicePreference(value) {
+      preferredEnglishVoice = String(value || "");
+      populateEnglishVoiceOptions();
+    }
+
+    function changeEnglishVoice(value) {
+      setEnglishVoicePreference(value);
+      saveState();
+    }
+
+    function previewEnglishVoice() {
+      var sample = practice.current && practice.current.en
+        ? practice.current.en
+        : (items.length && items[0].en ? items[0].en : "pronunciation");
+      speakText(sample, "en");
+    }
+
+    function selectSpeechVoice(language) {
+      refreshSpeechVoices();
+      var target = language === "zh" ? "zh-CN" : "en-US";
+      var prefix = target.slice(0, 2).toLowerCase();
+      var candidates = speechVoices.filter(function (voice) {
+        return String(voice.lang || "").toLowerCase().indexOf(prefix) === 0;
+      });
+
+      if (language !== "zh" && preferredEnglishVoice) {
+        for (var i = 0; i < candidates.length; i++) {
+          if (speechVoiceKey(candidates[i]) === preferredEnglishVoice) return candidates[i];
+        }
+      }
+
+      candidates.sort(function (a, b) {
+        function score(voice) {
+          var voiceLang = String(voice.lang || "").toLowerCase();
+          var name = String(voice.name || "").toLowerCase();
+          var value = 0;
+          if (voiceLang === target.toLowerCase()) value += 100;
+          if (/natural|enhanced|premium|online/.test(name)) value += 40;
+          if (language !== "zh" && /aria|jenny|guy|samantha|google us english/.test(name)) value += 20;
+          if (language === "zh" && /xiaoxiao|yunxi|huihui|google.*chinese/.test(name)) value += 20;
+          if (voice.default) value += 5;
+          return value;
+        }
+        return score(b) - score(a);
+      });
+      return candidates[0] || null;
+    }
+
+    if (window.speechSynthesis) {
+      refreshSpeechVoices();
+      window.speechSynthesis.addEventListener("voiceschanged", refreshSpeechVoices);
+    }
+
     function speakText(text, lang) {
       var value = String(text || "").trim();
       if (!value) { alert("没有可朗读内容。"); return; }
       if (!window.speechSynthesis) { alert("当前浏览器不支持语音朗读。"); return; }
+      speechRequestId += 1;
+      var requestId = speechRequestId;
       window.speechSynthesis.cancel();
       var utter = new SpeechSynthesisUtterance(value);
       utter.lang = lang === "zh" ? "zh-CN" : "en-US";
+      var voice = selectSpeechVoice(lang);
+      if (voice) {
+        utter.voice = voice;
+        utter.lang = voice.lang || utter.lang;
+      }
       utter.rate = 0.95;
       utter.pitch = 1;
-      window.speechSynthesis.speak(utter);
+      utter.volume = 1;
+      // Chrome may drop a new utterance when speak() immediately follows cancel().
+      window.setTimeout(function () {
+        if (requestId === speechRequestId) window.speechSynthesis.speak(utter);
+      }, 60);
     }
 
     function normalizeText(text) {
