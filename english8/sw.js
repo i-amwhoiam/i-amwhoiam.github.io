@@ -1,4 +1,4 @@
-const CACHE_NAME = 'eng-learn-cache-v2'; // Updated cache version
+const CACHE_NAME = 'eng-learn-cache-v3'; // Updated cache version
 const urlsToCache = [
   './',
   './index.html',
@@ -38,6 +38,8 @@ self.addEventListener('activate', event => {
 // Network-first strategy for HTML pages, Cache-first for assets (or just Network-first for everything for simplicity & freshness)
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
+  // Ignore non-HTTP requests (like chrome-extension://)
+  if (!event.request.url.startsWith('http')) return;
 
   event.respondWith(
     fetch(event.request)
